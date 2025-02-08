@@ -1,0 +1,4 @@
+// Vuetify의 전역 스타일
+@use "vuetify" with (
+  $body-font-family: "Roboto",
+);

@@ -1,0 +1,25 @@
+.v-btn {
+  &.v-btn--size-large {
+    --v-btn-height: 56px;
+    --v-btn-size: 16px;
+    padding: 0 20px;
+  }
+
+  &.v-btn--size-default {
+    --v-btn-height: 48px;
+    --v-btn-size: 16px;
+    padding: 0 20px;
+  }
+
+  &.v-btn--size-small {
+    --v-btn-height: 36px;
+    --v-btn-size: 14px;
+     padding: 0 16px;
+  }
+
+  &.v-btn--size-x-small {
+    --v-btn-height: 28px;
+    --v-btn-size: 12px;
+     padding: 0 14px;
+  }
+}

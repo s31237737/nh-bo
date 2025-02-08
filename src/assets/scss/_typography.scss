@@ -1,0 +1,33 @@
+@import 'mixin';
+
+.t1 {
+  @include typography(24px, bold, 125%);
+}
+
+.t2 {
+  @include typography(18px, 600, normal);
+}
+
+.p1 {
+  @include typography(16px, normal, 150%);
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.semibold {
+    font-weight: 600;
+  }
+}
+
+.p2 {
+  @include typography(14px, 600, 150%);
+
+  &.regular {
+    font-weight: normal;
+  }
+}
+
+.c1 {
+  @include typography(14px, normal, normal);
+}
