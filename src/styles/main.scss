@@ -1,4 +1,23 @@
-// Vuetify의 전역 스타일
-@use "vuetify" with (
-  $body-font-family: "Roboto",
-);
+@import "variables";
+@import "fonts";
+@import "typography";
+@import "button";
+@import "layout";
+
+html, body {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

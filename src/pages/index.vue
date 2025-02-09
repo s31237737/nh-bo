@@ -31,7 +31,7 @@
     size="48"
     color="red"
   >
-    custom:view
+    custom:arrow-up
   </v-icon>  <!-- 커스텀 아이콘 -->
   <v-row
     align="center"
