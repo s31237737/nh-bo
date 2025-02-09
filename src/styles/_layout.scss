@@ -1,4 +1,12 @@
 @import "mixin";
+.header {
+  .v-badge {
+    &__badge {
+      bottom: calc(100% - 0.8125rem) !important;
+      left: calc(100% - 0.8125rem) !important;
+    }
+  }
+}
 .lnb {
   border-color: #e5e5e5 !important;
   .v-list {

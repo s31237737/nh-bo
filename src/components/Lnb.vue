@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    width="252"
+    width="253"
     permanent
     class="lnb"
   >
