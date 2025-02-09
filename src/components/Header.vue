@@ -11,7 +11,10 @@
       />
     </template>
     <template #append>
-      <v-btn icon>
+      <v-btn
+        icon
+        size="32"
+      >
         <!-- 알림이 있을 때만 v-badge가 보이도록 조건부 렌더링 -->
         <v-badge
           v-if="hasNotification"
@@ -30,6 +33,17 @@
           color="white"
           size="32"
         />
+      </v-btn>
+      <v-btn
+        icon
+        size="40"
+      >
+        <v-avatar>
+          <img
+            width="40"
+            src="@/assets/images/profile.png"
+          >
+        </v-avatar>
       </v-btn>
     </template>
   </v-app-bar>

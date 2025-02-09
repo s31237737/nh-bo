@@ -1,5 +1,10 @@
 @import "mixin";
 .header {
+  .v-toolbar {
+    &__append {
+      gap: 16px;
+    }
+  }
   .v-badge {
     &__badge {
       bottom: calc(100% - 0.8125rem) !important;
@@ -56,7 +61,6 @@
     }
     .is-active {
       background: rgba(87, 101, 229, 0.1);
-
       color: #4150d5;
       .v-list-item-title {
         font-weight: 600;
