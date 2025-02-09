@@ -11,8 +11,28 @@
       left: calc(100% - 0.8125rem) !important;
     }
   }
+  .login-session {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    .timer {
+      display: flex;
+      align-items: center;
+      @include typography(1rem, 400, 150%);
+      color: #fefefe;
+    }
+  }
 }
 .lnb {
+  // .v-navigation-drawer {
+  //   &__content {
+  //     scrollbar-width: none;
+  //     &::-webkit-scrollbar {
+  //       display: none;
+  //     }
+  //   }
+  // }
+
   border-color: #e5e5e5 !important;
   .v-list {
     padding: 1.25rem 1rem;
