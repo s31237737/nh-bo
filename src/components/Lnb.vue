@@ -2,6 +2,7 @@
   <v-navigation-drawer
     width="252"
     permanent
+    class="lnb"
   >
     <v-list v-model:opened="open">
       <v-list-item
@@ -10,18 +11,24 @@
         title="앱 관리"
         rounded="lg"
       />
+      <v-list-item
+        link
+        prepend-icon="custom:mobile"
+        title="앱 관리"
+        rounded="lg"
+      />
 
-      <v-list-group value="application">
+      <v-list-group value="apply">
         <template #activator="{ props }">
           <v-list-item
             v-bind="props"
-            prepend-icon="mdi-account-circle"
+            prepend-icon="custom:apply"
             title="사용신청 관리"
           />
         </template>
 
         <v-list-item
-          v-for="(title, i) in application"
+          v-for="(title, i) in apply"
           :key="i"
           :title="title"
           :value="title"
@@ -30,13 +37,13 @@
       </v-list-group>
       <v-list-item
         to="/authority"
-        prepend-icon="mdi-home"
+        prepend-icon="custom:authority"
         title="권한 관리"
         rounded="lg"
       />
       <v-list-item
         to="/display"
-        prepend-icon="mdi-home"
+        prepend-icon="custom:display"
         title="전시 관리"
         rounded="lg"
       />
@@ -44,7 +51,7 @@
         <template #activator="{ props }">
           <v-list-item
             v-bind="props"
-            prepend-icon="mdi-account-circle"
+            prepend-icon="custom:board"
             title="게시판 관리"
           />
         </template>
@@ -59,7 +66,7 @@
       </v-list-group>
       <v-list-item
         to="/channel"
-        prepend-icon="mdi-home"
+        prepend-icon="custom:channel"
         title="업스토어 채널 관리"
         rounded="lg"
       />
@@ -67,7 +74,7 @@
         <template #activator="{ props }">
           <v-list-item
             v-bind="props"
-            prepend-icon="mdi-account-circle"
+            prepend-icon="custom:monitoring"
             title="모니터링"
           />
         </template>
@@ -82,7 +89,7 @@
       </v-list-group>
       <v-list-item
         to="/terms"
-        prepend-icon="mdi-home"
+        prepend-icon="custom:terms"
         title="약관 관리"
         rounded="lg"
       />
@@ -93,7 +100,7 @@
 <script setup>
 import { ref } from "vue";
 const open = ref([null]);
-const application = ref(["사용신청 관리", "사용내역 관리"]);
+const apply = ref(["사용신청 관리", "사용내역 관리"]);
 
 const board = ref([
   "공지사항",

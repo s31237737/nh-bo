@@ -20,18 +20,19 @@
   <p class="c1">
     typography
   </p>
-  <v-btn
-    small
+
+  <v-icon
+    size="32"
+    color="red"
   >
-    ffff
-    <v-icon
-      icon="custom:icon-mobile"
-    />
-  </v-btn>
-  <v-icon>mdi-account-circle</v-icon>  <!-- MDI 아이콘 -->
-  <v-icon>custom:icon-mobile</v-icon>  <!-- 커스텀 아이콘 -->
-  <v-icon>custom:icon-mobile</v-icon>  <!-- 커스텀 아이콘 -->
-  <v-icon>mdi:account-circle</v-icon>
+    mdi-home
+  </v-icon>  <!-- 커스텀 아이콘 -->
+  <v-icon
+    size="48"
+    color="red"
+  >
+    custom:view
+  </v-icon>  <!-- 커스텀 아이콘 -->
   <v-row
     align="center"
     justify="center"

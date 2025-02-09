@@ -7,11 +7,10 @@
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
-import '@/styles/main.scss'
 import '@/assets/scss/main.scss'
 // Composables
 import { createVuetify } from 'vuetify'
-import { aliases } from 'vuetify/lib/iconsets/mdi-svg'
+import { aliases, mdi } from 'vuetify/lib/iconsets/mdi-svg'
 import { custom } from '@/utils/vuetifyIcons'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
