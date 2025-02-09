@@ -20,25 +20,47 @@
   <p class="c1">
     typography
   </p>
-
+  <v-btn
+    small
+  >
+    ffff
+    <v-icon
+      icon="custom:icon-mobile"
+    />
+  </v-btn>
+  <v-icon>mdi-account-circle</v-icon>  <!-- MDI 아이콘 -->
+  <v-icon>custom:icon-mobile</v-icon>  <!-- 커스텀 아이콘 -->
+  <v-icon>custom:icon-mobile</v-icon>  <!-- 커스텀 아이콘 -->
+  <v-icon>mdi:account-circle</v-icon>
   <v-row
     align="center"
     justify="center"
   >
     <v-col cols="auto">
-      <v-btn size="x-small" color="primary" flat>
+      <v-btn
+        size="x-small"
+        color="primary"
+        flat
+      >
         Extra small Button
       </v-btn>
     </v-col>
 
     <v-col cols="auto">
-      <v-btn size="small" color="red" flat variant="outlined">
+      <v-btn
+        size="small"
+        color="red"
+        flat
+        variant="outlined"
+      >
         Small Button
       </v-btn>
     </v-col>
 
     <v-col cols="auto">
-      <v-btn variant="outlined">Regular Button</v-btn>
+      <v-btn variant="outlined">
+        Regular Button
+      </v-btn>
     </v-col>
 
     <v-col cols="auto">

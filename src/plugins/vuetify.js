@@ -11,6 +11,8 @@ import '@/styles/main.scss'
 import '@/assets/scss/main.scss'
 // Composables
 import { createVuetify } from 'vuetify'
+import { aliases } from 'vuetify/lib/iconsets/mdi-svg'
+import { custom } from '@/utils/vuetifyIcons'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
@@ -24,4 +26,15 @@ export default createVuetify({
       },
     },
   },
+  icons: {
+    defaultSet: 'mdi',
+    aliases: {
+      ...aliases,
+    },
+    sets: {
+    //  mdi,
+      custom,
+    },
+  },
+
 })
