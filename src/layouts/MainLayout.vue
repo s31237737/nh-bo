@@ -1,11 +1,9 @@
 <template>
-  <v-app>
-    <Header />
-    <Lnb />
-    <v-main>
-      <slot />
-    </v-main>
-  </v-app>
+  <Header />
+  <Lnb />
+  <v-main>
+    <slot />
+  </v-main>
 </template>
 
 <script setup>
