@@ -66,9 +66,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 
-// 알림 상태 (알림유무로 true/false로 설정)
-const hasNotification = ref(true);
-
 // 남은 시간을 초 단위로 관리
 const remainingTime = ref(5 * 60);
 // 남은 시간을 "분:초" 형식으로 반환하는 계산된 속성
