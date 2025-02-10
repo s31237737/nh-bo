@@ -80,7 +80,10 @@
     </v-col>
 
     <v-col cols="auto">
-      <v-btn size="large" color="state_warn">
+      <v-btn
+        size="large"
+        color="state_warn"
+      >
         Large Button
       </v-btn>
     </v-col>

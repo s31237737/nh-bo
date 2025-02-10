@@ -129,6 +129,7 @@ export default createVuetify({
     VListItem: {
       ripple: false,
     },
+    VMenu: { location: "bottom", offset: "10" }
   },
 });
 

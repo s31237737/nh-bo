@@ -2,7 +2,7 @@
 .header {
   .v-toolbar {
     &__append {
-      gap: 16px;
+      gap: 1rem;
     }
   }
   .v-badge {
@@ -62,10 +62,10 @@
       }
       &__items {
         .v-list-item:first-child {
-          margin-top: 4px;
+          margin-top: 0.25rem;
         }
         .v-list-item:last-child {
-          margin-bottom: 16px;
+          margin-bottom: 1rem;
         }
       }
       &--open {
