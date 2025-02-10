@@ -1,4 +1,4 @@
-@import 'mixin';
+@use 'mixins' as *;
 
 .t1 {
   @include typography(1.5rem, 700, 125%);
