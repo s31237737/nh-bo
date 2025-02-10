@@ -1,4 +1,4 @@
-@import "mixin";
+@use 'mixins' as *;
 .header {
   .v-toolbar {
     &__append {
