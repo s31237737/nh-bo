@@ -5,13 +5,13 @@
  */
 
 // Styles
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
-import '@/styles/main.scss'
+import "@mdi/font/css/materialdesignicons.css";
+import "vuetify/styles";
+import "@/styles/main.scss";
 // Composables
-import { createVuetify } from 'vuetify'
-import { aliases, mdi } from 'vuetify/lib/iconsets/mdi-svg'
-import { custom } from '@/utils/vuetifyIcons'
+import { createVuetify } from "vuetify";
+import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
+import { custom } from "@/utils/vuetifyIcons";
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
@@ -129,7 +129,17 @@ export default createVuetify({
     VListItem: {
       ripple: false,
     },
-    VMenu: { location: "bottom", offset: "10" }
+    VMenu: {
+      location: "bottom",
+      offset: "10",
+    },
+    VDialog: {
+      scrollable: true,
+      width: "auto",
+      VCard: { maxHeight: "720" },
+      VCardTitle: {
+        VBtn: { width: "32", height: "32" },
+      },
+    },
   },
 });
-
