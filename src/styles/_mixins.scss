@@ -1,9 +1,0 @@
-$font-family: 'Pretendard', sans-serif;
-
-@mixin typography($size, $weight, $line-height) {
-  font-family: $font-family;
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-  letter-spacing: 0;
-}

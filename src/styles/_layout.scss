@@ -1,4 +1,5 @@
-@use "mixins" as *;
+@use "typography" as *;
+
 .header {
   .v-toolbar {
     &__append {
@@ -18,7 +19,7 @@
     .timer {
       display: flex;
       align-items: center;
-      @include typography(1rem, 400, 150%);
+      @extend .text-1;
       color: #fefefe;
     }
   }
@@ -105,7 +106,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0.75rem 0.75rem 0.75rem 1.5rem;
-      @include typography(1.125rem, 600, 125%);
+      @extend .title-2;
       border-bottom: 1px solid #e5e5e5;
       .v-btn {
         padding: 0;

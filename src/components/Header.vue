@@ -9,6 +9,14 @@
         width="100"
         src="@/assets/images/logo.png"
       />
+      <v-btn
+        size="x-small"
+        class="ml-5"
+        elevation=""
+        color="white"
+        text="guide"
+        to="/guide"
+      />
     </template>
     <template #append>
       <!-- 로그인연장 -->

@@ -65,50 +65,50 @@ export default createVuetify({
         typography: {
           // Title 1 (T1)
           h1: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 700, // Bold
+            fontFamily: "Pretendard",
+            fontWeight: 700,
             fontSize: "24px",
             lineHeight: "125%",
-            letterSpacing: "0", // letter-spacing: 0
+            letterSpacing: "0",
           },
           // Title 2 (T2)
           h2: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 600, // SemiBold
+            fontFamily: "Pretendard",
+            fontWeight: 600,
             fontSize: "18px",
-            lineHeight: "auto", // 자동으로 라인 높이 설정
-            letterSpacing: "0", // letter-spacing: 0
+            lineHeight: "auto",
+            letterSpacing: "0",
           },
           // Paragraph 1 (P1)
           body1: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 700, // Bold
+            fontFamily: "Pretendard",
+            fontWeight: 700, 
             fontSize: "16px",
-            lineHeight: "150%", // 150% line height
-            letterSpacing: "0", // letter-spacing: 0
+            lineHeight: "150%",
+            letterSpacing: "0",
           },
           body2: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 600, // SemiBold
+            fontFamily: "Pretendard",
+            fontWeight: 600,
             fontSize: "16px",
-            lineHeight: "150%", // 150% line height
-            letterSpacing: "0", // letter-spacing: 0
+            lineHeight: "150%",
+            letterSpacing: "0",
           },
           // Paragraph 2 (P2)
           body3: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 400, // Regular
+            fontFamily: "Pretendard",
+            fontWeight: 400,
             fontSize: "14px",
-            lineHeight: "150%", // 150% line height
-            letterSpacing: "0", // letter-spacing: 0
+            lineHeight: "150%",
+            letterSpacing: "0",
           },
           // Caption 1 (C1)
           caption: {
-            fontFamily: "Pretendard, sans-serif", // Pretendard 폰트
-            fontWeight: 400, // Regular
+            fontFamily: "Pretendard",
+            fontWeight: 400,
             fontSize: "14px",
-            lineHeight: "auto", // 자동으로 라인 높이 설정
-            letterSpacing: "0", // letter-spacing: 0
+            lineHeight: "auto",
+            letterSpacing: "0",
           },
         },
       },

@@ -1,12 +1,16 @@
 <template>
   <v-row>
-    <v-col>
+    <v-col cols="auto">
       <v-btn @click="dialog1 = true">
         popup-sm(alert)
       </v-btn>
+    </v-col>
+    <v-col cols="auto">
       <v-btn @click="dialog2 = true">
         popup-md
       </v-btn>
+    </v-col>
+    <v-col cols="auto">
       <v-btn @click="dialog3 = true">
         popup-lg
       </v-btn>
