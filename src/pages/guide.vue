@@ -26,46 +26,266 @@
       </p>
 
       <p class="caption">
-        caption 작은 캡션 스타일입니다. (14px, Regular, 150%) 
+        caption 작은 캡션 스타일입니다. (14px, Regular, 150%)
       </p>
+    </v-col>
+  </v-row>
+  <v-row>
+    <!-- x-small/Primary -->
+    <v-col cols="auto">
+      <v-btn
+        size="x-small"
+        color="primary"
+      >
+        x-small/Primary
+      </v-btn>
+    </v-col>
+
+    <!-- x-small/Secondary -->
+    <v-col cols="auto">
+      <v-btn
+        size="x-small"
+        color="secondary"
+      >
+        x-small/Secondary
+      </v-btn>
+    </v-col>
+
+    <!-- x-small/Tertiary -->
+    <v-col cols="auto">
+      <v-btn
+        size="x-small"
+        color="tertiary"
+        variant="outlined"
+      >
+        x-small/Tertiary
+      </v-btn>
+    </v-col>
+
+    <!-- x-small/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        size="x-small"
+        color="warning"
+      >
+        x-small/Warning
+      </v-btn>
+    </v-col>
+    <v-col cols="auto">
+      <v-btn
+        size="x-small"
+        color="warning"
+        variant="outlined"
+      >
+        x-small/Warning
+      </v-btn>
+    </v-col>
+  </v-row>
+  <v-row>
+    <!-- small/Primary -->
+    <v-col cols="auto">
+      <v-btn
+        size="small"
+        color="primary"
+      >
+        small/Primary
+      </v-btn>
+    </v-col>
+
+    <!-- small/Secondary -->
+    <v-col cols="auto">
+      <v-btn
+        size="small"
+        color="secondary"
+      >
+        small/Secondary
+      </v-btn>
+    </v-col>
+
+    <!-- small/Tertiary -->
+    <v-col cols="auto">
+      <v-btn
+        size="small"
+        color="tertiary"
+        variant="outlined"
+      >
+        small/Tertiary
+      </v-btn>
+    </v-col>
+
+    <!-- small/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        size="small"
+        color="warning"
+      >
+        small/Warning
+      </v-btn>
+    </v-col>
+    <v-col cols="auto">
+      <v-btn
+        size="small"
+        color="warning"
+        variant="outlined"
+      >
+        small/Warning
+      </v-btn>
+    </v-col>
+  </v-row>
+  <v-row>
+    <!-- default/Primary -->
+    <v-col cols="auto">
+      <v-btn color="primary">
+        default/Primary
+      </v-btn>
+    </v-col>
+
+    <!-- default/Secondary -->
+    <v-col cols="auto">
+      <v-btn color="secondary">
+        default/Secondary
+      </v-btn>
+    </v-col>
+
+    <!-- default/Tertiary -->
+    <v-col cols="auto">
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+      >
+        default/Tertiary
+      </v-btn>
+    </v-col>
+
+    <!-- default/Warning -->
+    <v-col cols="auto">
+      <v-btn color="warning">
+        default/Warning
+      </v-btn>
+    </v-col>
+    <!-- default/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        color="warning"
+        variant="outlined"
+      >
+        default/Warning
+      </v-btn>
+    </v-col>
+  </v-row>
+  <v-row>
+    <!-- icon/Primary -->
+    <v-col cols="auto">
+      <v-btn
+        color="primary"
+        prepend-icon="mdi:mdi-plus"
+      >
+        icon/Primary
+      </v-btn>
+    </v-col>
+
+    <!-- icon/Secondary -->
+    <v-col cols="auto">
+      <v-btn
+        color="secondary"
+        prepend-icon="mdi:mdi-plus"
+      >
+        icon/Secondary
+      </v-btn>
+    </v-col>
+
+    <!-- icon/Tertiary -->
+    <v-col cols="auto">
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+        append-icon="mdi:mdi-plus"
+      >
+        icon/Tertiary
+      </v-btn>
+    </v-col>
+
+    <!-- icon/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        color="warning"
+        append-icon="mdi:mdi-plus"
+      >
+        icon/Warning
+      </v-btn>
+    </v-col>
+    <!-- icon/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        color="warning"
+        variant="outlined"
+        append-icon="mdi:mdi-plus"
+      >
+        icon/Warning
+      </v-btn>
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="black"
-      >
-        Extra small Button
-      </v-btn>
-    </v-col>
-
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="red"
-        variant="outlined"
-      >
-        Small Button
-      </v-btn>
-    </v-col>
-
-    <v-col cols="auto">
-      <v-btn variant="outlined">
-        Regular Button
-      </v-btn>
-    </v-col>
-
+    <!-- large/Primary -->
     <v-col cols="auto">
       <v-btn
         size="large"
-        color="state_warn"
+        color="primary"
       >
-        Large Button
+        large/Primary
+      </v-btn>
+    </v-col>
+
+    <!-- large/Secondary -->
+    <v-col cols="auto">
+      <v-btn
+        size="large"
+        color="secondary"
+      >
+        large/Secondary
+      </v-btn>
+    </v-col>
+
+    <!-- large/Tertiary -->
+    <v-col cols="auto">
+      <v-btn
+        size="large"
+        color="tertiary"
+        variant="outlined"
+      >
+        large/Tertiary
+      </v-btn>
+    </v-col>
+
+    <!-- large/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        size="large"
+        color="warning"
+      >
+        large/Warning
+      </v-btn>
+    </v-col>
+
+    <!-- large/Warning -->
+    <v-col cols="auto">
+      <v-btn
+        size="large"
+        color="warning"
+        variant="outlined"
+      >
+        large/Warning
       </v-btn>
     </v-col>
   </v-row>
+
+
+
+
+
+
+
   <Popup />
 
   <v-row />

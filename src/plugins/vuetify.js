@@ -20,6 +20,10 @@ export default createVuetify({
     themes: {
       light: {
         colors: {
+          primary: "#1c1c1c",
+          secondary: "#f5f5f5",
+          tertiary: "#f5f5f5",
+          warning: "#d32226",
           // Background Colors
           background: "#fefefe", // 기본 배경 색상
           surface: "#fafafa", // 서페이스 색상
@@ -62,55 +66,6 @@ export default createVuetify({
           state_warn: "#ffb800", // 경고 상태 색상
           state_in_progress: "#ffb800", // 진행중 상태 색상
         },
-        typography: {
-          // Title 1 (T1)
-          h1: {
-            fontFamily: "Pretendard",
-            fontWeight: 700,
-            fontSize: "24px",
-            lineHeight: "125%",
-            letterSpacing: "0",
-          },
-          // Title 2 (T2)
-          h2: {
-            fontFamily: "Pretendard",
-            fontWeight: 600,
-            fontSize: "18px",
-            lineHeight: "auto",
-            letterSpacing: "0",
-          },
-          // Paragraph 1 (P1)
-          body1: {
-            fontFamily: "Pretendard",
-            fontWeight: 700, 
-            fontSize: "16px",
-            lineHeight: "150%",
-            letterSpacing: "0",
-          },
-          body2: {
-            fontFamily: "Pretendard",
-            fontWeight: 600,
-            fontSize: "16px",
-            lineHeight: "150%",
-            letterSpacing: "0",
-          },
-          // Paragraph 2 (P2)
-          body3: {
-            fontFamily: "Pretendard",
-            fontWeight: 400,
-            fontSize: "14px",
-            lineHeight: "150%",
-            letterSpacing: "0",
-          },
-          // Caption 1 (C1)
-          caption: {
-            fontFamily: "Pretendard",
-            fontWeight: 400,
-            fontSize: "14px",
-            lineHeight: "auto",
-            letterSpacing: "0",
-          },
-        },
       },
     },
   },
@@ -125,7 +80,7 @@ export default createVuetify({
     },
   },
   defaults: {
-    VBtn: { variant: "flat" },
+    VBtn: { variant: "flat" ,textTransform: "none"},
     VListItem: {
       ripple: false,
     },

@@ -14,12 +14,16 @@
   &.v-btn--size-small {
     --v-btn-height: 36px;
     --v-btn-size: 14px;
-     padding: 0 16px;
+    padding: 0 16px;
   }
 
   &.v-btn--size-x-small {
     --v-btn-height: 28px;
     --v-btn-size: 12px;
-     padding: 0 14px;
+    padding: 0 14px;
+  }
+  &.text-tertiary {
+    color: #1c1c1c !important;
+    border-color: #C2C2C2;
   }
 }
