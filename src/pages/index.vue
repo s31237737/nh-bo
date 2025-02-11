@@ -13,11 +13,6 @@
       <p class="body-2">
         This is a semi-bold paragraph using body2 style (16px, 150% line height).
       </p>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col>
       <p class="body-1">
         P1 - Bold Paragraph
       </p>
@@ -27,29 +22,27 @@
       <p class="body-3">
         P3 - Regular Paragraph
       </p>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col>
       <p class="caption">
         Caption 1 (C1) - Regular Caption
       </p>
     </v-col>
   </v-row>
+  <v-row>
+    <v-icon
+      size="32"
+      color="red"
+    >
+      mdi-home
+    </v-icon>  <!-- 커스텀 아이콘 -->
+    <v-icon
+      size="48"
+      color="red"
+    >
+      custom:arrow-up
+    </v-icon>  <!-- 커스텀 아이콘 -->
+  </v-row>
 
-  <v-icon
-    size="32"
-    color="red"
-  >
-    mdi-home
-  </v-icon>  <!-- 커스텀 아이콘 -->
-  <v-icon
-    size="48"
-    color="red"
-  >
-    custom:arrow-up
-  </v-icon>  <!-- 커스텀 아이콘 -->
+
   <v-row
     align="center"
     justify="center"
@@ -88,8 +81,11 @@
       </v-btn>
     </v-col>
   </v-row>
+  <Popup />
 </template>
 
 <script setup>
+import Popup from '@/components/popup.vue';
+
   //
 </script>
