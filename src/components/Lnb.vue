@@ -15,9 +15,7 @@
           v-if="!item.submenu"
           :to="item.to"
           :prepend-icon="item.icon"
-
           :title="item.title"
-          :ripple="false"
         />
 
         <!-- 하위 항목이 있으면 v-list-group로 표시 -->
@@ -31,7 +29,6 @@
               :prepend-icon="item.icon"
               append-icon="custom:arrow-down"
               :title="item.title"
-              :ripple="false"
             />
           </template>
 
@@ -40,7 +37,6 @@
             :key="index"
             :to="subItem.to"
             :title="subItem.title"
-            :ripple="false"
             class="sub-menu"
           />
         </v-list-group>
