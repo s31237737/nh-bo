@@ -145,11 +145,17 @@
   th {
     background: $bg-box-gray;
     border-bottom: none !important;
+    @extend .text-2-md;
+  }
+  td {
+    @extend .text-1;
   }
   &.tbl-row{
     --v-table-row-height: 4.25rem;
     border-top: thin solid $border-subtle;
-    th {text-align: center !important;}
+    th {
+      text-align: center !important;
+    }
     th, td {
       padding: 0.75rem !important;
       border-bottom: thin solid $border-subtle !important;
