@@ -1,5 +1,64 @@
 <template>
   <v-row>
+    <v-sheet
+      class="pa-12 pb-8"
+      width="448"
+    >
+      <!-- v-text-field에서 label 슬롯을 사용 -->
+      <v-text-field
+        v-model="email"
+        density="compact"
+        label="First name"
+        prepend-inner-icon="mdi-email-outline"
+        variant="outlined"
+        :rules="emailRules"
+        :persistent-placeholder="true"
+      />
+      <v-select
+        label="Select"
+        :persistent-placeholder="true"
+        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+      />
+    </v-sheet>
+    <v-sheet
+      class="pa-12 pb-8"
+      width="448"
+    >
+      <div class="text-subtitle-1 text-medium-emphasis">
+        Account
+      </div>
+
+      <v-text-field
+        v-model="email"
+        density="compact"
+        placeholder="Email address"
+        prepend-inner-icon="mdi-email-outline"
+        variant="outlined"
+        :rules="emailRules"
+      />
+    </v-sheet>
+    <v-sheet
+      class="mx-auto"
+      width="300"
+    >
+      <v-form @submit.prevent>
+        <v-text-field
+          v-model="firstName"
+          :rules="rules"
+          label="First name"
+          :persistent-placeholder="true"
+        />
+        <v-btn
+          class="mt-2"
+          type="submit"
+          block
+        >
+          Submit
+        </v-btn>
+      </v-form>
+    </v-sheet>
+  </v-row>
+  <v-row>
     <v-col>
       <p class="title-1">
         title-1 큰 제목입니다 (24px, Bold, 125%)
@@ -293,6 +352,29 @@
 
 <script setup>
 import Popup from '@/components/popup.vue';
+import { ref, computed } from 'vue';
 
-  //
+// firstName을 ref로 선언
+const firstName = ref('');
+
+const rules = computed(() => [
+  value => {
+    if (value) return true;
+    return 'You must enter a first name.';
+  },
+]);
+
+const email = ref('');
+
+// email validation 규칙 정의
+const emailRules = computed(() => [
+  value => {
+    if (value) return true;
+    return 'You must enter a first name.';
+  },
+]);
 </script>
+<style lang="scss" scoped>
+.v-field--active.v-field--variant-outlined .v-field__outline__notch::before {opacity: 1;}
+.v-field--variant-outlined .v-label.v-field-label--floating{}
+</style>
