@@ -1,3 +1,4 @@
+@use "variables" as *;
 .v-btn {
   &.v-btn--size-large {
     --v-btn-height: 56px;
@@ -23,11 +24,11 @@
     padding: 0 16px;
   }
   &.text-tertiary {
-    color: #1c1c1c !important;
-    border-color: #C2C2C2;
+    color: $text-primary !important;
+    border-color: $border-strong;
   }
   &__prepend {
-    margin-inline:0.25rem -0.25rem !important;
+    margin-inline:-0.25rem 0.25rem !important;
   }
   &__append {
     margin-inline:0.25rem -0.25rem !important;

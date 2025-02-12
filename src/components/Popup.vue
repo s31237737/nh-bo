@@ -1,17 +1,29 @@
 <template>
   <v-row>
     <v-col cols="auto">
-      <v-btn @click="dialog1 = true">
+      <v-btn
+        size="small"
+        color="blue"
+        @click="dialog1 = true"
+      >
         popup-sm(alert)
       </v-btn>
     </v-col>
     <v-col cols="auto">
-      <v-btn @click="dialog2 = true">
+      <v-btn
+        size="small"
+        color="blue"
+        @click="dialog2 = true"
+      >
         popup-md
       </v-btn>
     </v-col>
     <v-col cols="auto">
-      <v-btn @click="dialog3 = true">
+      <v-btn
+        size="small"
+        color="blue"
+        @click="dialog3 = true"
+      >
         popup-lg
       </v-btn>
     </v-col>

@@ -13,7 +13,7 @@
     }
   }
   .v-btn--icon {
-    --v-btn-height: 32px;
+    --v-btn-height: 2rem;
   }
   .login-session {
     display: flex;
@@ -23,7 +23,7 @@
       display: flex;
       align-items: center;
       @extend .text-1;
-      color: #fefefe;
+      color: $bg-default;
     }
   }
 }
@@ -37,7 +37,7 @@
   //   }
   // }
 
-  border-color: #e5e5e5 !important;
+  border-color: $border-subtle !important;
   .v-list {
     padding: 1.25rem 1rem;
     &-item {
@@ -110,7 +110,7 @@
       align-items: center;
       padding: 0.75rem 0.75rem 0.75rem 1.5rem;
       @extend .title-2;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid $border-subtle;
       .v-btn {
         padding: 0;
       }
@@ -147,8 +147,11 @@
     border-bottom: none !important;
   }
   &.tbl-row{
+    --v-table-row-height: 4.25rem;
     border-top: thin solid $border-subtle;
+    th {text-align: center !important;}
     th, td {
+      padding: 0.75rem !important;
       border-bottom: thin solid $border-subtle !important;
     }
   }

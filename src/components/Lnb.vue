@@ -16,6 +16,7 @@
           :to="item.to"
           :prepend-icon="item.icon"
           :title="item.title"
+          :class="{'is-active':item.isActive}"
         />
 
         <!-- 하위 항목이 있으면 v-list-group로 표시 -->
@@ -37,7 +38,7 @@
             :key="index"
             :to="subItem.to"
             :title="subItem.title"
-            class="sub-menu"
+            :class="['sub-menu',{'is-active':item.isActive}]"
           />
         </v-list-group>
       </template>
@@ -51,7 +52,7 @@ import { ref } from "vue";
 const open = ref([null]);
 
 const menuItems = ref([
-  { to: "/app", icon: "custom:mobile", title: "앱 관리" },
+  { to: "/app", icon: "custom:mobile", title: "앱 관리" , isActive: true },
   {
     title: "사용신청 관리",
     icon: "custom:apply",
