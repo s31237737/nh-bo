@@ -2,13 +2,13 @@
   &.v-btn--size-large {
     --v-btn-height: 56px;
     --v-btn-size: 16px;
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
   &.v-btn--size-default {
     --v-btn-height: 48px;
     --v-btn-size: 16px;
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
   &.v-btn--size-small {
@@ -20,10 +20,16 @@
   &.v-btn--size-x-small {
     --v-btn-height: 28px;
     --v-btn-size: 12px;
-    padding: 0 14px;
+    padding: 0 16px;
   }
   &.text-tertiary {
     color: #1c1c1c !important;
     border-color: #C2C2C2;
+  }
+  &__prepend {
+    margin-inline:0.25rem -0.25rem !important;
+  }
+  &__append {
+    margin-inline:0.25rem -0.25rem !important;
   }
 }

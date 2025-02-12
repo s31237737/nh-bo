@@ -12,6 +12,7 @@ import "@/styles/main.scss";
 import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
+import { VTable } from "vuetify/components";
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
@@ -26,13 +27,13 @@ export default createVuetify({
           warning: "#d32226",
           // Background Colors
           background: "#fefefe", // 기본 배경 색상
-          surface: "#fafafa", // 서페이스 색상
-          bg_overlay: "rgba(0, 0, 0, 0.5)", // 오버레이 배경 색상
-          bg_layer: "#fefefe", // 레이어 배경 색상
-          bg_box_deepgray: "#c2c2c2", // 깊은 회색 배경 박스 색상
-          bg_box_white: "#fefefe", // 하얀색 배경 박스 색상
-          bg_box_gray: "#f5f5f5", // 회색 배경 박스 색상
-          bg_box_black: "#1c1c1c", // 검정 배경 박스 색상
+          // surface: "#fafafa", // 서페이스 색상
+          // bg_overlay: "rgba(0, 0, 0, 0.5)", // 오버레이 배경 색상
+          // bg_layer: "#fefefe", // 레이어 배경 색상
+          // bg_box_deepgray: "#c2c2c2", // 깊은 회색 배경 박스 색상
+          // bg_box_white: "#fefefe", // 하얀색 배경 박스 색상
+          // bg_box_gray: "#f5f5f5", // 회색 배경 박스 색상
+          // bg_box_black: "#1c1c1c", // 검정 배경 박스 색상
 
           // Text Colors
           text_primary: "#1c1c1c", // 기본 텍스트 색상
@@ -79,8 +80,11 @@ export default createVuetify({
       custom,
     },
   },
+  aliases: {
+    VTableRow: VTable,
+  },
   defaults: {
-    VBtn: { variant: "flat" ,textTransform: "none"},
+    VBtn: { variant: "flat" ,textTransform: "none" },
     VListItem: {
       ripple: false,
     },
@@ -96,5 +100,11 @@ export default createVuetify({
         VBtn: { width: "32", height: "32" },
       },
     },
+    VMain: {
+      VBtn: { rounded:"lg"},
+    },
+    VTableRow:{
+      class: ['tbl-row'],
+    }
   },
 });

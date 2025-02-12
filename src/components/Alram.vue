@@ -4,7 +4,6 @@
       <v-btn
         v-bind="props"
         icon
-        size="32"
       >
         <v-badge
           v-if="hasNotification"

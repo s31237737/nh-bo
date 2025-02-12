@@ -6,17 +6,19 @@
     >
       <!-- v-text-field에서 label 슬롯을 사용 -->
       <v-text-field
-        v-model="email"
+        v-model="form"
         density="compact"
         label="First name"
         prepend-inner-icon="mdi-email-outline"
         variant="outlined"
-        :rules="emailRules"
+        :rules="rules"
         :persistent-placeholder="true"
       />
       <v-select
+        class="mt-8"
         label="Select"
         :persistent-placeholder="true"
+        variant="outlined"
         :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
       />
     </v-sheet>
@@ -37,27 +39,8 @@
         :rules="emailRules"
       />
     </v-sheet>
-    <v-sheet
-      class="mx-auto"
-      width="300"
-    >
-      <v-form @submit.prevent>
-        <v-text-field
-          v-model="firstName"
-          :rules="rules"
-          label="First name"
-          :persistent-placeholder="true"
-        />
-        <v-btn
-          class="mt-2"
-          type="submit"
-          block
-        >
-          Submit
-        </v-btn>
-      </v-form>
-    </v-sheet>
   </v-row>
+  <!-- 텍스트 -->
   <v-row>
     <v-col>
       <p class="title-1">
@@ -89,274 +72,387 @@
       </p>
     </v-col>
   </v-row>
-  <v-row>
-    <!-- x-small/Primary -->
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="primary"
-      >
-        x-small/Primary
-      </v-btn>
-    </v-col>
+  <!-- // 텍스트 -->
+  <!-- 버튼 -->
+  <div>
+    <v-row>
+      <!-- x-small/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-small"
+          color="primary"
+        >
+          x-small/Primary
+        </v-btn>
+      </v-col>
 
-    <!-- x-small/Secondary -->
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="secondary"
-      >
-        x-small/Secondary
-      </v-btn>
-    </v-col>
+      <!-- x-small/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-small"
+          color="secondary"
+        >
+          x-small/Secondary
+        </v-btn>
+      </v-col>
 
-    <!-- x-small/Tertiary -->
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="tertiary"
-        variant="outlined"
-      >
-        x-small/Tertiary
-      </v-btn>
-    </v-col>
+      <!-- x-small/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-small"
+          color="tertiary"
+          variant="outlined"
+        >
+          x-small/Tertiary
+        </v-btn>
+      </v-col>
 
-    <!-- x-small/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="warning"
-      >
-        x-small/Warning
-      </v-btn>
-    </v-col>
-    <v-col cols="auto">
-      <v-btn
-        size="x-small"
-        color="warning"
-        variant="outlined"
-      >
-        x-small/Warning
-      </v-btn>
-    </v-col>
-  </v-row>
-  <v-row>
-    <!-- small/Primary -->
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="primary"
-      >
-        small/Primary
-      </v-btn>
-    </v-col>
+      <!-- x-small/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-small"
+          color="warning"
+        >
+          x-small/Warning
+        </v-btn>
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          size="x-small"
+          color="warning"
+          variant="outlined"
+        >
+          x-small/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+      <!-- small/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="primary"
+        >
+          small/Primary
+        </v-btn>
+      </v-col>
 
-    <!-- small/Secondary -->
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="secondary"
-      >
-        small/Secondary
-      </v-btn>
-    </v-col>
+      <!-- small/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="secondary"
+        >
+          small/Secondary
+        </v-btn>
+      </v-col>
 
-    <!-- small/Tertiary -->
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="tertiary"
-        variant="outlined"
-      >
-        small/Tertiary
-      </v-btn>
-    </v-col>
+      <!-- small/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="tertiary"
+          variant="outlined"
+        >
+          small/Tertiary
+        </v-btn>
+      </v-col>
 
-    <!-- small/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="warning"
-      >
-        small/Warning
-      </v-btn>
-    </v-col>
-    <v-col cols="auto">
-      <v-btn
-        size="small"
-        color="warning"
-        variant="outlined"
-      >
-        small/Warning
-      </v-btn>
-    </v-col>
-  </v-row>
-  <v-row>
-    <!-- default/Primary -->
-    <v-col cols="auto">
-      <v-btn color="primary">
-        default/Primary
-      </v-btn>
-    </v-col>
+      <!-- small/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+        >
+          small/Warning
+        </v-btn>
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+          variant="outlined"
+        >
+          small/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+      <!-- default/Primary -->
+      <v-col cols="auto">
+        <v-btn color="primary">
+          default/Primary
+        </v-btn>
+      </v-col>
 
-    <!-- default/Secondary -->
-    <v-col cols="auto">
-      <v-btn color="secondary">
-        default/Secondary
-      </v-btn>
-    </v-col>
+      <!-- default/Secondary -->
+      <v-col cols="auto">
+        <v-btn color="secondary">
+          default/Secondary
+        </v-btn>
+      </v-col>
 
-    <!-- default/Tertiary -->
-    <v-col cols="auto">
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-      >
-        default/Tertiary
-      </v-btn>
-    </v-col>
+      <!-- default/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          color="tertiary"
+          variant="outlined"
+        >
+          default/Tertiary
+        </v-btn>
+      </v-col>
 
-    <!-- default/Warning -->
-    <v-col cols="auto">
-      <v-btn color="warning">
-        default/Warning
-      </v-btn>
-    </v-col>
-    <!-- default/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        color="warning"
-        variant="outlined"
-      >
-        default/Warning
-      </v-btn>
-    </v-col>
-  </v-row>
-  <v-row>
-    <!-- icon/Primary -->
-    <v-col cols="auto">
-      <v-btn
-        color="primary"
-        prepend-icon="mdi:mdi-plus"
-      >
-        icon/Primary
-      </v-btn>
-    </v-col>
-
-    <!-- icon/Secondary -->
-    <v-col cols="auto">
-      <v-btn
-        color="secondary"
-        prepend-icon="mdi:mdi-plus"
-      >
-        icon/Secondary
-      </v-btn>
-    </v-col>
-
-    <!-- icon/Tertiary -->
-    <v-col cols="auto">
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-        append-icon="mdi:mdi-plus"
-      >
-        icon/Tertiary
-      </v-btn>
-    </v-col>
-
-    <!-- icon/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        color="warning"
-        append-icon="mdi:mdi-plus"
-      >
-        icon/Warning
-      </v-btn>
-    </v-col>
-    <!-- icon/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        color="warning"
-        variant="outlined"
-        append-icon="mdi:mdi-plus"
-      >
-        icon/Warning
-      </v-btn>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <!-- large/Primary -->
-    <v-col cols="auto">
-      <v-btn
-        size="large"
-        color="primary"
-      >
-        large/Primary
-      </v-btn>
-    </v-col>
-
-    <!-- large/Secondary -->
-    <v-col cols="auto">
-      <v-btn
-        size="large"
-        color="secondary"
-      >
-        large/Secondary
-      </v-btn>
-    </v-col>
-
-    <!-- large/Tertiary -->
-    <v-col cols="auto">
-      <v-btn
-        size="large"
-        color="tertiary"
-        variant="outlined"
-      >
-        large/Tertiary
-      </v-btn>
-    </v-col>
-
-    <!-- large/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        size="large"
-        color="warning"
-      >
-        large/Warning
-      </v-btn>
-    </v-col>
-
-    <!-- large/Warning -->
-    <v-col cols="auto">
-      <v-btn
-        size="large"
-        color="warning"
-        variant="outlined"
-      >
-        large/Warning
-      </v-btn>
-    </v-col>
-  </v-row>
+      <!-- default/Warning -->
+      <v-col cols="auto">
+        <v-btn color="warning">
+          default/Warning
+        </v-btn>
+      </v-col>
+      <!-- default/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          color="warning"
+          variant="outlined"
+        >
+          default/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
 
 
+    <v-row>
+      <!-- large/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          color="primary"
+        >
+          large/Primary
+        </v-btn>
+      </v-col>
 
+      <!-- large/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          color="secondary"
+        >
+          large/Secondary
+        </v-btn>
+      </v-col>
 
+      <!-- large/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          color="tertiary"
+          variant="outlined"
+        >
+          large/Tertiary
+        </v-btn>
+      </v-col>
 
+      <!-- large/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          color="warning"
+        >
+          large/Warning
+        </v-btn>
+      </v-col>
 
+      <!-- large/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          color="warning"
+          variant="outlined"
+        >
+          large/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
 
+    <v-row>
+      <!-- icon/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="primary"
+          prepend-icon="mdi:mdi-plus"
+        >
+          icon/Primary
+        </v-btn>
+      </v-col>
+
+      <!-- icon/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="secondary"
+          prepend-icon="mdi:mdi-plus"
+        >
+          icon/Secondary
+        </v-btn>
+      </v-col>
+
+      <!-- icon/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="tertiary"
+          variant="outlined"
+          append-icon="mdi:mdi-plus"
+        >
+          icon/Tertiary
+        </v-btn>
+      </v-col>
+
+      <!-- icon/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+          append-icon="mdi:mdi-plus"
+        >
+          icon/Warning
+        </v-btn>
+      </v-col>
+      <!-- icon/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+          variant="outlined"
+          append-icon="mdi:mdi-plus"
+        >
+          icon/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <!-- icon/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="primary"
+          icon="mdi:mdi-plus"
+        />
+      </v-col>
+
+      <!-- icon/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="secondary"
+          icon="mdi:mdi-plus"
+        />
+      </v-col>
+
+      <!-- icon/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="tertiary"
+          variant="outlined"
+          icon="mdi:mdi-plus"
+        />
+      </v-col>
+
+      <!-- icon/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+          icon="mdi:mdi-plus"
+        />
+      </v-col>
+      <!-- icon/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="small"
+          color="warning"
+          variant="outlined"
+          icon="mdi:mdi-plus"
+          rounded="lg"
+        />
+      </v-col>
+    </v-row>
+  </div>
+  <!-- //버튼 -->
   <Popup />
 
-  <v-row />
+  <!-- table -->
+  <v-row>
+    <v-col cols="auto">
+      <v-table>
+        <thead>
+          <tr>
+            <th class="text-left">
+              Name
+            </th>
+            <th class="text-left">
+              Calories
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="item in desserts"
+            :key="item.name"
+          >
+            <td>{{ item.name }}</td>
+            <td>{{ item.calories }}</td>
+          </tr>
+        </tbody>
+      </v-table>
+    </v-col>
+    <v-col cols="8">
+      <v-table-row>
+        <tbody>
+          <!-- 일반 데이터 -->
+          <tr
+            v-for="(row, index) in tableData"
+            :key="index"
+          >
+            <th width="20%">
+              {{ row.label }}
+            </th>
+            <td>{{ row.value }}</td>
+            <th>
+              {{ row.label2 }}
+            </th>
+            <td>{{ row.value2 }}</td>
+          </tr>
+
+          <!-- 내용 (한 줄 전체 차지) -->
+          <tr>
+            <th>
+              내용
+            </th>
+            <td
+              colspan="3"
+              class="text-left"
+            >
+              {{ content }}
+            </td>
+          </tr>
+        </tbody>
+      </v-table-row>
+    </v-col>
+  </v-row>
+
+  <!-- // table -->
 </template>
 
 <script setup>
-import Popup from '@/components/popup.vue';
 import { ref, computed } from 'vue';
 
-// firstName을 ref로 선언
-const firstName = ref('');
+const form = ref('');
 
+// email validation 규칙 정의
 const rules = computed(() => [
   value => {
     if (value) return true;
@@ -364,15 +460,31 @@ const rules = computed(() => [
   },
 ]);
 
-const email = ref('');
-
-// email validation 규칙 정의
-const emailRules = computed(() => [
-  value => {
-    if (value) return true;
-    return 'You must enter a first name.';
+const desserts = ref([
+  {
+    name: 'Frozen Yogurt',
+    calories: 159,
+  },
+  {
+    name: 'Ice cream sandwich',
+    calories: 237,
+  },
+  {
+    name: 'Eclair',
+    calories: 262,
+  },
+  {
+    name: 'Cupcake',
+    calories: 305,
   },
 ]);
+
+const tableData = ref([
+  { label: '공개상태', value: '공개', label2: '등록일', value2: '25.09.09' },
+  { label: '제목', value: '개인정보처리방침', label2: '버전', value2: 'v0.8' },
+]);
+
+const content = ref('1.1.1 업데이트 내용 '.repeat(20));
 </script>
 <style lang="scss" scoped>
 .v-field--active.v-field--variant-outlined .v-field__outline__notch::before {opacity: 1;}
