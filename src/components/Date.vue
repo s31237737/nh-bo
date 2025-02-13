@@ -1,10 +1,10 @@
 <template>
-  <v-menu>
+  <v-menu v-model="display">
     <template #activator="{ props }">
       <div class="date-wrap">
         <v-text-field
           v-bind="props"
-          v-model="date"
+          :model-value="formatted"
           density="compact"
           variant="outlined"
           label="Date"
@@ -20,8 +20,7 @@
       </div>
     </template>
     <v-date-picker
-      v-model="date"
-      hide-actions
+      v-model="date" @update:model-value="display = false"
     >
       <template #header />
     </v-date-picker>
@@ -31,12 +30,14 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-const menu = ref(false);
+const display = ref(false);
 const date = ref(new Date());
-
-// 오늘 날짜로 설정하는 함수
+const formatted = computed(() => {
+  return date.value.toLocaleDateString()
+})
+// Today
 const setToday = () => {
-  date.value = new Date(); // 오늘 날짜로 업데이트
+  date.value = new Date();
 };
 
 </script>
