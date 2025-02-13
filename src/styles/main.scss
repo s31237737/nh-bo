@@ -8,6 +8,11 @@ html, body {
   scrollbar-width: thin;
 }
 
+.is-loading {
+  overflow: hidden;
+  height: calc(100vh - 80px);
+}
+
 ::-webkit-scrollbar {
   width: 0.25rem;
   height: 0.25rem;

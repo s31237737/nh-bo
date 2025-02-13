@@ -2,18 +2,17 @@
   <Header />
   <Lnb />
   <v-main>
-    <v-container fluid>
+    <v-container
+      fluid
+      :class="{'is-loading':loading}"
+    >
       <!-- loading persistent속성 추가 필요-->
       <v-overlay
-        :model-value="overlay"
+        :model-value="loading"
         contained
+        @click="handleLoadingClose"
       >
-        <v-progress-circular
-          :size="35"
-          :width="5"
-          color="white"
-          indeterminate
-        />
+        <v-progress-circular />
       </v-overlay>
       <!-- // loading -->
       <slot />
@@ -23,7 +22,10 @@
 
 <script setup>
 import { ref } from "vue";
-const overlay = ref(true);
+const loading = ref(true);
+const handleLoadingClose = () => {
+  loading.value = false;
+};
 </script>
 
 <style scoped>

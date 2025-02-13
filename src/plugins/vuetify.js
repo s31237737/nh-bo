@@ -73,6 +73,7 @@ export default createVuetify({
           state_warn: "#ffb800", // 경고 상태 색상
           state_in_progress: "#ffb800", // 진행중 상태 색상
         },
+
       },
     },
   },
@@ -105,6 +106,12 @@ export default createVuetify({
       VCardTitle: {
         VBtn: { width: "32", height: "32" },
       },
+    },
+    VProgressCircular: {
+      size: 35,
+      width: 5,
+      color: 'white',
+      indeterminate: true,
     },
     VMain: {
       VBtn: { rounded:"lg"},
