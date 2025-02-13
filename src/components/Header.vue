@@ -19,153 +19,58 @@
       />
       <!-- // 퍼블가이드 확인용 -->
     </template>
-    <!-- 로그인연장 -->
-    <div class="login-session">
-      <span class="timer">
-        <v-icon
-          size="32"
-          color="white"
-        >
-          custom:clock
-        </v-icon>
-        {{ timeLeftFormatted }}
-      </span>
-      <v-btn
-        color="white"
-        size="x-small"
-        variant="outlined"
-        @click="onExtendClick"
-      >
-        연장
-      </v-btn>
-    </div>
-    <!-- 알림 -->
-    <Alarm />
-    <v-menu :close-on-content-click="false">
-      <template #activator="{ props }">
-        <v-btn
-          v-bind="props"
-          icon
-        >
-          <v-badge
-            v-if="hasNotification"
-            dot
-            color="error"
-          >
-            <v-icon
-              icon="custom:alarm"
-              color="#c2c2c2"
-              size="32"
-            />
-          </v-badge>
+    <template #append>
+      <!-- 로그인연장 -->
+      <div class="login-session">
+        <span class="timer">
           <v-icon
-            v-else
-            icon="custom:alarm"
-            color="#c2c2c2"
             size="32"
-          />
-        </v-btn>
-      </template>
-
-      <v-card
-        width="300"
-        max-height="300"
-      >
-        <v-toolbar
-          :floating="true"
-          class="position-sticky bg-red top-0"
-        >
-          <v-btn
-            icon
+            color="white"
           >
-            <v-icon>mdi-arrow-left</v-icon>
-          </v-btn>
-          <v-toolbar-title>알림</v-toolbar-title>
-          <v-btn
-            icon
-          >
-            <v-icon>mdi-cog</v-icon> <!-- 설정 아이콘 -->
-          </v-btn>
-        </v-toolbar>
-        <!-- 알림 헤더 -->
-
-        <!-- 탭 메뉴 -->
-        <v-tabs
-          v-model="activeTab"
-        >
-          <v-tab value="general">
-            일반 알림
-          </v-tab>
-          <v-tab value="admin">
-            관리자 알림
-          </v-tab>
-        </v-tabs>
-
-        <!-- 알림 리스트 -->
-        <v-window
-          v-model="activeTab"
-        >
-          <!-- 일반 알림 -->
-          <v-window-item value="general">
-            <v-list v-if="notifications.length">
-              <v-list-item
-                v-for="(item, index) in notifications"
-                :key="index"
-              >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                <v-list-item-subtitle>{{ item.date }}</v-list-item-subtitle>
-              </v-list-item>
-            </v-list>
-            <v-container
-              v-else
-              class="text-center py-6"
-            >
-              <v-icon size="48">
-                mdi-bell-off-outline
-              </v-icon>
-              <p>알림이 없습니다.</p>
-            </v-container>
-          </v-window-item>
-
-          <!-- 관리자 알림 -->
-          <v-window-item value="admin">
-            <v-container class="text-center py-6">
-              <v-icon size="48">
-                mdi-bell-off-outline
-              </v-icon>
-              <p>알림이 없습니다.</p>
-            </v-container>
-          </v-window-item>
-        </v-window>
-      </v-card>
-    </v-menu>
-    <!-- 프로필 -->
-    <v-menu>
-      <template #activator="{ props }">
+            custom:clock
+          </v-icon>
+          {{ timeLeftFormatted }}
+        </span>
         <v-btn
-          icon
-          size="40"
-          v-bind="props"
+          color="white"
+          size="x-small"
+          variant="outlined"
+          @click="onExtendClick"
         >
-          <v-avatar>
-            <img
-              width="40"
-              src="@/assets/images/profile.png"
-            >
-          </v-avatar>
+          연장
         </v-btn>
-      </template>
+      </div>
+      <!-- 알림 -->
+      <Alarm />
 
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-          :value="index"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+      <!-- 프로필 -->
+      <v-menu>
+        <template #activator="{ props }">
+          <v-btn
+            icon
+            size="40"
+            v-bind="props"
+          >
+            <v-avatar>
+              <img
+                width="40"
+                src="@/assets/images/profile.png"
+              >
+            </v-avatar>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            :value="index"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </template>
   </v-app-bar>
 </template>
 
@@ -200,26 +105,4 @@ const onExtendClick = () => {
   { title: '로그아웃' },
 ]);
 
-const hasNotification = ref(true); // 알림이 있는지 여부
-const activeTab = ref('general'); // 현재 활성화된 탭
-
-// 더미 알림 데이터
-const notifications = ref([
-  { title: '업스토어 알림', date: 'YYYY-MM-DD 00:00' },
-  { title: '알림내용', date: 'YYYY-MM-DD 00:00' },
-  { title: '업스토어 알림', date: 'YYYY-MM-DD 00:00' },
-  { title: '알림내용', date: 'YYYY-MM-DD 00:00' },
-  { title: '업스토어 알림', date: 'YYYY-MM-DD 00:00' },
-  { title: '알림내용', date: 'YYYY-MM-DD 00:00' },
-  { title: '업스토어 알림', date: 'YYYY-MM-DD 00:00' },
-  { title: '알림내용', date: 'YYYY-MM-DD 00:00' },
-  { title: '업스토어 알림', date: 'YYYY-MM-DD 00:00' },
-  { title: '알림내용', date: 'YYYY-MM-DD 00:00' },
-]);
-
-
 </script>
-
-<style scoped lang="sass">
-
-</style>

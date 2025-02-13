@@ -64,22 +64,22 @@ const menuItems = ref([
     title: "게시판 관리",
     icon: "custom:board",
     submenu: [
-      { title: "공지사항", to: "/board/notice" },
-      { title: "자주 묻는 질문", to: "/board/faq" },
-      { title: "Q&A", to: "/board/qna" },
-      { title: "앱 가이드", to: "/board/app-guide" },
-      { title: "커뮤니티", to: "/board/community" },
-      { title: "불편신고", to: "/board/complaint" },
+      { title: "공지사항", to: "/notice" },
+      { title: "자주 묻는 질문", to: "/faq" },
+      { title: "Q&A", to: "/qna" },
+      { title: "앱 가이드", to: "/app-guide" },
+      { title: "커뮤니티", to: "/community" },
+      { title: "불편신고", to: "/complaint" },
     ],
     submenuProps: { value: "board" },
   },
-  { to: "/channel", icon: "custom:channel", title: "업스토어 채널 관리" },
+  { to: "", icon: "custom:channel", title: "업스토어 채널 관리" },
   {
     title: "모니터링",
     icon: "custom:monitoring",
     submenu: [
-      { title: "앱 사용현황", to: "/monitoring/app-status" },
-      { title: "라이선스 현황", to: "/monitoring/license-status" }
+      { title: "앱 사용현황", to: "" },
+      { title: "라이선스 현황", to: "" }
     ],
     submenuProps: { value: "monitoring" },
   },
