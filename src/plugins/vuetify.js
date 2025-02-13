@@ -86,7 +86,7 @@ export default createVuetify({
     },
     VMenu: {
       location: "bottom",
-      offset: "10",
+      offset: "18",
     },
     VDialog: {
       scrollable: true,

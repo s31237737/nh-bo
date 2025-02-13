@@ -9,8 +9,10 @@
   }
   .v-badge {
     &__badge {
-      bottom: calc(100% - 0.8125rem) !important;
-      left: calc(100% - 0.8125rem) !important;
+      bottom: calc(100% - 15px) !important;
+      left: calc(100% - 15px) !important;
+      align-items: inherit;
+      line-height: 12px;
     }
   }
   .v-btn--icon {
@@ -182,14 +184,29 @@
 }
 
 .popover {
-  min-width: 160px;
-  padding: 0 8px !important;
-  border: thin solid $border-subtle !important;
-  .v-list-item {
-    border-radius: 8px !important;
-    .v-list-item-title {@extend .text-2;}
-    &:hover{
-      .v-list-item-title {font-weight: 600;}
+  .v-card {
+    position: relative;
+    min-width: 160px;
+    padding: 0 8px !important;
+    border: thin solid $border-subtle !important;
+    .v-list-item {
+      border-radius: 8px !important;
+      .v-list-item-title {@extend .text-2;}
+      &:hover{
+        .v-list-item-title {font-weight: 600;}
+      }
     }
+  }
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    top: -6px;
+    right: 12px;
+    border-bottom: 8px solid #ffffff;
   }
 }

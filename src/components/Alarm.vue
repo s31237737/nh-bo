@@ -7,8 +7,7 @@
       >
         <v-badge
           v-if="hasNotification"
-          content="2"
-          color="error"
+          content="99"
         >
           <v-icon
             icon="custom:alarm"

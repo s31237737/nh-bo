@@ -44,7 +44,7 @@
       <Alarm />
 
       <!-- 프로필 -->
-      <v-menu>
+      <v-menu content-class="popover">
         <template #activator="{ props }">
           <v-btn
             icon
@@ -59,7 +59,7 @@
             </v-avatar>
           </v-btn>
         </template>
-        <v-card class="popover">
+        <v-card>
           <v-list :items="items" />
         </v-card>
       </v-menu>
