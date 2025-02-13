@@ -24,9 +24,24 @@
     </template>
     <v-date-picker
       v-model="date"
+      scrollable
       @update:model-value="display = false"
     >
-      <template #header />
+      <v-spacer />
+      <v-btn
+        text
+        color="primary"
+        @click="display = false"
+      >
+        Cancel
+      </v-btn>
+      <v-btn
+        text
+        color="primary"
+        @click="$refs.menu.save(date)"
+      >
+        OK
+      </v-btn>
     </v-date-picker>
   </v-menu>
 </template>

@@ -113,7 +113,8 @@ export default createVuetify({
       class: ['tbl-row'],
     },
     VDatePicker: {
-      showAdjacentMonths: true
+      showAdjacentMonths: true,
+      hideHeader: true
     }
   },
 });
