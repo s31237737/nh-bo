@@ -1,4 +1,5 @@
 <template>
+  <Date />
   <v-row>
     <v-sheet
       class="pa-12 pb-8"
@@ -31,12 +32,12 @@
       </div>
 
       <v-text-field
-        v-model="email"
+        v-model="form"
         density="compact"
         placeholder="Email address"
         prepend-inner-icon="mdi-email-outline"
         variant="outlined"
-        :rules="emailRules"
+        :rules="rules"
       />
     </v-sheet>
   </v-row>

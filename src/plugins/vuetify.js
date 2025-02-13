@@ -14,16 +14,25 @@ import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
 import { VTable } from "vuetify/components";
 
+import { ko } from 'vuetify/locale'
+
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
-  //theme: false,
+  locale: {
+    locale: 'ko',
+    fallback: 'en',
+    messages: { ko },
+  },
+  date: {
+
+  },
   theme: {
     themes: {
       light: {
         colors: {
           primary: "#1c1c1c",
           secondary: "#f5f5f5",
-          tertiary: "#f5f5f5",
+          tertiary: "#fff",
           warning: "#d32226",
           // Background Colors
           background: "#fefefe", // 기본 배경 색상

@@ -12,7 +12,6 @@
       <v-btn
         size="x-small"
         class="ml-5"
-        elevation=""
         color="white"
         text="guide"
         to="/guide"
