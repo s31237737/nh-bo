@@ -14,17 +14,10 @@ import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
 import { VTable } from "vuetify/components";
 
-import { ko } from 'vuetify/locale'
-
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   locale: {
     locale: 'ko',
-    fallback: 'en',
-    messages: { ko },
-  },
-  date: {
-
   },
   theme: {
     themes: {

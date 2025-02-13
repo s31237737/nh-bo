@@ -27,6 +27,7 @@
     }
   }
 }
+
 .lnb {
   // .v-navigation-drawer {
   //   &__content {
@@ -97,6 +98,7 @@
   position: relative;
   height: 100%;
 }
+
 .v-overlay {
   align-items: center;
   justify-content: center;
@@ -160,5 +162,15 @@
       padding: 0.75rem !important;
       border-bottom: thin solid $border-subtle !important;
     }
+  }
+}
+
+.date-wrap {
+  position: relative;
+  width: 290px;
+  .v-btn {
+    position: absolute;
+    top:5px;
+    right: 10px;
   }
 }

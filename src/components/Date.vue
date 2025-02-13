@@ -1,23 +1,23 @@
 <template>
   <v-menu>
     <template #activator="{ props }">
-      <v-row>
-        <v-col>
-          <v-text-field
-            v-bind="props"
-            v-model="date"
-            density="compact"
-            variant="outlined"
-            label="Date"
-            readonly
-          />
-        </v-col>
-        <v-col>
-          <v-btn size="x-small" color="secondary" @click="setToday">
-            today
-          </v-btn>
-        </v-col>
-      </v-row>
+      <div class="date-wrap">
+        <v-text-field
+          v-bind="props"
+          v-model="date"
+          density="compact"
+          variant="outlined"
+          label="Date"
+          readonly
+        />
+        <v-btn
+          size="x-small"
+          color="secondary"
+          @click="setToday"
+        >
+          today
+        </v-btn>
+      </div>
     </template>
     <v-date-picker
       v-model="date"
@@ -29,13 +29,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
-// `date`를 Date 객체로 초기화
+const menu = ref(false);
 const date = ref(new Date());
 
 // 오늘 날짜로 설정하는 함수
 const setToday = () => {
   date.value = new Date(); // 오늘 날짜로 업데이트
 };
+
 </script>
