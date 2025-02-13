@@ -109,8 +109,11 @@ export default createVuetify({
     VMain: {
       VBtn: { rounded:"lg"},
     },
-    VTableRow:{
+    VTableRow: {
       class: ['tbl-row'],
+    },
+    VDatePicker: {
+      showAdjacentMonths: true
     }
   },
 });

@@ -1,5 +1,8 @@
 <template>
-  <v-menu v-model="display">
+  <v-menu
+    v-model="display"
+    :close-on-content-click="false"
+  >
     <template #activator="{ props }">
       <div class="date-wrap">
         <v-text-field
@@ -20,7 +23,8 @@
       </div>
     </template>
     <v-date-picker
-      v-model="date" @update:model-value="display = false"
+      v-model="date"
+      @update:model-value="display = false"
     >
       <template #header />
     </v-date-picker>
@@ -33,8 +37,11 @@ import { ref, computed } from 'vue';
 const display = ref(false);
 const date = ref(new Date());
 const formatted = computed(() => {
-  return date.value.toLocaleDateString()
-})
+  const year = date.value.getFullYear();
+  const month = (date.value.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.value.getDate().toString().padStart(2, '0');
+  return `${year}.${month}.${day}`;
+});
 // Today
 const setToday = () => {
   date.value = new Date();
