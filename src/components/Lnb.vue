@@ -1,7 +1,6 @@
 <template>
   <v-navigation-drawer>
-    <!-- To개발: v-list-item 활성화시 .is-active 클래스 추가 -->
-    <v-list v-model:opened="open">
+    <v-list>
       <template
         v-for="(item, i) in menuItems"
         :key="i"
@@ -12,7 +11,7 @@
           :to="item.to"
           :prepend-icon="item.icon"
           :title="item.title"
-          :class="{'is-active':item.isActive}"
+          active-class="is-active"
         />
 
         <!-- 하위 항목이 있으면 v-list-group로 표시 -->
@@ -45,10 +44,9 @@
 <script setup>
 import { ref } from "vue";
 
-const open = ref([null]);
 
 const menuItems = ref([
-  { to: "/app", icon: "custom:mobile", title: "앱 관리" , isActive: true },
+  { to: "/", icon: "custom:mobile", title: "앱 관리" },
   {
     title: "사용신청 관리",
     icon: "custom:apply",

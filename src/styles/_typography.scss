@@ -34,7 +34,3 @@ $font-family: 'Pretendard';
 .text-2-md {
   @include typography(0.875rem, 600, 150%);
 }
-
-.caption {
-  @include typography(0.875rem, 400, 150%);
-}

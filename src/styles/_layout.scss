@@ -180,3 +180,16 @@
     right: 10px;
   }
 }
+
+.popover {
+  min-width: 160px;
+  padding: 0 8px !important;
+  border: thin solid $border-subtle !important;
+  .v-list-item {
+    border-radius: 8px !important;
+    .v-list-item-title {@extend .text-2;}
+    &:hover{
+      .v-list-item-title {font-weight: 600;}
+    }
+  }
+}

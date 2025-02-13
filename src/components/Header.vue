@@ -59,16 +59,9 @@
             </v-avatar>
           </v-btn>
         </template>
-
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            :value="index"
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
+        <v-card class="popover">
+          <v-list :items="items" />
+        </v-card>
       </v-menu>
     </template>
   </v-app-bar>
@@ -101,8 +94,14 @@ const onExtendClick = () => {
 
 // 프로필
  const items = ref([
-  { title: '업스토어로 이동' },
-  { title: '로그아웃' },
+  {
+    title: '업스토어로 이동',
+    value: 1,
+  },
+  {
+    title: '로그아웃',
+    value: 2,
+  },
 ]);
 
 </script>

@@ -7,7 +7,7 @@
       >
         <v-badge
           v-if="hasNotification"
-          dot
+          content="2"
           color="error"
         >
           <v-icon
