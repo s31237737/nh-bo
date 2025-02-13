@@ -75,7 +75,10 @@ export default createVuetify({
     VNavigationDrawer: {
       width:"253",
       permanent: true,
-      class:'lnb'
+      class:'lnb',
+      VListItem: {
+        minHeight: "52"
+      }
     },
     VBtn: { variant: "flat" ,textTransform: "none" },
     VListItem: {
