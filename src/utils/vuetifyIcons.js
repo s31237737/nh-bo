@@ -4,7 +4,7 @@ const modules = import.meta.glob('@/components/SvgIcon/*.vue', { eager: true })
 const customIcons = {}
 
 Object.entries(modules).forEach(([path, module]) => {
-  const iconName = path.split('/').pop().replace('.vue', '').replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+  const iconName = path.split('/').pop().replace('.vue', '').replace(/^Icon/, '').replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
   customIcons[iconName] = module.default;
 })
 

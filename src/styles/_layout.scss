@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "typography" as *;
+
 .header {
   .v-toolbar {
     &__append {
@@ -22,8 +23,15 @@
     .timer {
       display: flex;
       align-items: center;
+      width: 4.6875rem;
       @extend .text-1;
       color: $bg-default;
+    }
+    .v-btn {
+      width: 2.75rem;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: 500;
     }
   }
 }
