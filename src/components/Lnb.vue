@@ -1,10 +1,6 @@
 <template>
-  <v-navigation-drawer
-    width="253"
-    permanent
-    class="lnb"
-  >
-    <!-- 개발: v-list-item .is-active 클래스 추가 -->
+  <v-navigation-drawer>
+    <!-- To개발: v-list-item 활성화시 .is-active 클래스 추가 -->
     <v-list v-model:opened="open">
       <template
         v-for="(item, i) in menuItems"

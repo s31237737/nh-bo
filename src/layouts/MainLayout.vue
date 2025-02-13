@@ -15,6 +15,8 @@
         <v-progress-circular />
       </v-overlay>
       <!-- // loading -->
+
+      <!-- contents 영역 -->
       <slot />
     </v-container>
   </v-main>

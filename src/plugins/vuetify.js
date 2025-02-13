@@ -91,6 +91,11 @@ export default createVuetify({
     VTableRow: VTable,
   },
   defaults: {
+    VNavigationDrawer: {
+      width:"253",
+      permanent: true,
+      class:'lnb'
+    },
     VBtn: { variant: "flat" ,textTransform: "none" },
     VListItem: {
       ripple: false,
