@@ -184,6 +184,7 @@
 }
 
 .popover {
+  border-radius: 8px !important;
   .v-card {
     position: relative;
     min-width: 160px;
@@ -197,7 +198,7 @@
     }
   }
   .alram {
-    padding: 0;
+    padding: 0 0 12px;
     .v-toolbar {
       .v-toolbar-title {
         @extend .text-1-bd;
@@ -207,29 +208,40 @@
       }
     }
     .v-card-text {
-      height: 379px;
+      height: 367px;
       overflow-y: scroll;
-      .v-list-item-title {
-        @include line-clamp(2);
-        &.dot {
-          position: relative;
-          padding-left: 12px;
-          &::before {
-            content: '';
-            position: absolute;
-            top: 6px;
-            left: 0;
-            width: 6px;
-            height: 6px;
-            border-radius: 100%;
-            background-color: $icon-red;
+      padding: 0 24px;
+
+      .v-list {
+        padding: 0;
+        &-item {
+          padding: 12px 0;
+          cursor: pointer;
+          &-title {
+            @include line-clamp(2);
+            &.dot {
+              position: relative;
+              padding-left: 12px;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                background-color: $icon-red;
+              }
+            }
+          }
+
+          &-subtitle {
+            margin-top: 6px;
+            @extend .text-3; // 텍스트 스타일 확장
+            color: $text-date; // 날짜 텍스트 색상 변수
           }
         }
-      }
-      .v-list-item-subtitle {
-        margin-top: 6px;
-        @extend .text-3;
-        color: $text-date;
       }
     }
   }

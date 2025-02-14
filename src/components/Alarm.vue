@@ -74,45 +74,46 @@ const activeTab = ref('general'); // 현재 활성화된 탭
 // 더미 알림 데이터
 const notifications = ref([
   {
-    title: '알림 내용은 최대 2줄까지 제공 최대 글자 수 초과 시 닷(...) 처리',
-    date: 'YYYY-MM-DD 00:00',
+    title: '알림 내용은 최대 2줄까지 제공 최대 글자 수 초과 시 닷(...) 처리 알림 내용은 최대 2줄까지',
+    date: '2025-09-30 09:38',
     new: true,
   },
   {
     title: '알림내용',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
+    new: true,
   },
   {
     title: '업스토어 알림',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '알림내용',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '업스토어 알림',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '알림내용',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '업스토어 알림',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '알림내용',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '업스토어 알림',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
   {
     title: '알림내용',
-    date: 'YYYY-MM-DD 00:00'
+    date: '2025-09-30 09:38',
   },
 ]);
 </script>

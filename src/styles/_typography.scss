@@ -28,7 +28,7 @@ $font-family: 'Pretendard';
 }
 
 .text-2 {
-  @include typography(0.875rem, 400, 150%);
+  @include typography(0.875rem, 400, 125%);
 }
 
 .text-2-md {
@@ -36,7 +36,7 @@ $font-family: 'Pretendard';
 }
 
 .text-3 {
-  @include typography(0.75rem, 400, 120%);
+  @include typography(0.75rem, 400, 125%);
 }
 
 @mixin line-clamp($lines) {
