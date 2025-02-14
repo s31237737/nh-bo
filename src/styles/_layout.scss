@@ -187,16 +187,53 @@
   .v-card {
     position: relative;
     min-width: 160px;
-    padding: 0 8px !important;
-    border: thin solid $border-subtle !important;
+    padding: 0 8px;
+    border: thin solid $border-subtle;
     .v-list-item {
-      border-radius: 8px !important;
       .v-list-item-title {@extend .text-2;}
       &:hover{
         .v-list-item-title {font-weight: 600;}
       }
     }
   }
+  .alram {
+    padding: 0;
+    .v-toolbar {
+      .v-toolbar-title {
+        @extend .text-1-bd;
+      }
+      .v-btn:last-child{
+        margin-inline-end: 12px;
+      }
+    }
+    .v-card-text {
+      height: 379px;
+      overflow-y: scroll;
+      .v-list-item-title {
+        @include line-clamp(2);
+        &.dot {
+          position: relative;
+          padding-left: 12px;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: $icon-red;
+          }
+        }
+      }
+      .v-list-item-subtitle {
+        margin-top: 6px;
+        @extend .text-3;
+        color: $text-date;
+      }
+    }
+  }
+
   &::before {
     z-index: 1;
     content: '';
@@ -210,3 +247,4 @@
     border-bottom: 8px solid #ffffff;
   }
 }
+

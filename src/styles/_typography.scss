@@ -34,3 +34,16 @@ $font-family: 'Pretendard';
 .text-2-md {
   @include typography(0.875rem, 600, 150%);
 }
+
+.text-3 {
+  @include typography(0.75rem, 400, 120%);
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}

@@ -12,9 +12,9 @@ import "@/styles/main.scss";
 import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
-import { VTable } from "vuetify/components";
+import { VTable, VToolbar } from "vuetify/components";
 
-import { ko } from 'vuetify/locale'
+import { he, ko } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
@@ -75,7 +75,7 @@ export default createVuetify({
     VNavigationDrawer: {
       width:"253",
       permanent: true,
-      class:'lnb',
+      class: 'lnb',
       VListItem: {
         minHeight: "52"
       }
@@ -83,10 +83,15 @@ export default createVuetify({
     VBtn: { variant: "flat" ,textTransform: "none" },
     VListItem: {
       ripple: false,
+      rounded: "8",
     },
     VMenu: {
       location: "bottom",
       offset: "18",
+      VToolbar:{
+        height: "56",
+        color: "transparent",
+      }
     },
     VDialog: {
       scrollable: true,

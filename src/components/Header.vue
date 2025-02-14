@@ -44,25 +44,25 @@
       <Alarm />
 
       <!-- 프로필 -->
-      <v-menu content-class="popover">
-        <template #activator="{ props }">
-          <v-btn
-            icon
-            size="40"
-            v-bind="props"
+      <v-btn
+        icon
+        size="40"
+      >
+        <v-avatar>
+          <img
+            width="40"
+            src="@/assets/images/profile.png"
           >
-            <v-avatar>
-              <img
-                width="40"
-                src="@/assets/images/profile.png"
-              >
-            </v-avatar>
-          </v-btn>
-        </template>
-        <v-card>
-          <v-list :items="items" />
-        </v-card>
-      </v-menu>
+        </v-avatar>
+        <v-menu
+          activator="parent"
+          content-class="popover"
+        >
+          <v-card>
+            <v-list :items="items" />
+          </v-card>
+        </v-menu>
+      </v-btn>
     </template>
   </v-app-bar>
 </template>
