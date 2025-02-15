@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "typography" as *;
+@use "button" as *;
 
 .header {
   .v-toolbar {
@@ -244,6 +245,21 @@
             color: $text-date; // 날짜 텍스트 색상 변수
           }
         }
+      }
+    }
+  }
+  .popover-tab {
+    padding:16px 20px 8px;
+    .v-chip {
+      margin: 0;
+      margin-right: 4px;
+      border-color: $border-strong;
+      color: $text-primary;
+      &.selected {
+        background: $bg-box-black;
+        border-color: $bg-box-black;
+        color: $text-on;
+        font-weight: 700;
       }
     }
   }

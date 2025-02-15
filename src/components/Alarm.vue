@@ -62,18 +62,26 @@
         <!-- // 일반 알림 -->
         <!-- 관리자 알림 -->
         <template v-else>
-          <v-tabs
+          <v-chip-group
             v-model="activeTab"
-            fixed-tabs
+            variant="outlined"
+            class="popover-tab"
+            selected-class="selected"
+            mandatory
           >
-            <v-tab value="store">
+            <v-chip
+              size="small"
+              value="store"
+            >
               업스토어 알림
-            </v-tab>
-            <v-tab value="admin">
+            </v-chip>
+            <v-chip
+              size="small"
+              value="admin"
+            >
               관리자 알림
-            </v-tab>
-          </v-tabs>
-
+            </v-chip>
+          </v-chip-group>
           <v-card-text
             style="height:319px"
           >
@@ -132,7 +140,7 @@ import { ref } from 'vue';
 const hasNotification = ref(true); // 알림이 있는지 여부
 const isAdmin= ref(true); // 관리자 권한이 있는지 여부
 const activeTab = ref('store'); // 현재 활성화된 탭
-
+console.log(activeTab)
 // 더미 알림 데이터
 const notifications = ref([
   {
@@ -141,20 +149,20 @@ const notifications = ref([
     new: true,
   },
   {
-    title: '알림내용',
+    title: '업스토어 신규 앱 출시에 따라 땡땡땡땡 앱 업데이트 버전이 출시되었습니다. 지금 바로',
     date: '2025-09-30 09:38',
     new: true,
   },
   {
-    title: '업스토어 알림',
+    title: '신규가입이 완료되었습니다.',
     date: '2025-09-30 09:38',
   },
   {
-    title: '알림내용',
+    title: 'NH QR 앱 사용 신청이 수락되었습니다.',
     date: '2025-09-30 09:38',
   },
   {
-    title: '업스토어 알림',
+    title: '사용중이신 [앱 이름] 앱이 업데이트 되었습니다. : 댓글기능 개선, 작성 입력 시 오류 최소화',
     date: '2025-09-30 09:38',
   },
   {
