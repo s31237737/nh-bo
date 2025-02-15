@@ -12,9 +12,9 @@ import "@/styles/main.scss";
 import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
-import { VTable, VToolbar } from "vuetify/components";
+import { VTable } from "vuetify/components";
 
-import { he, ko } from 'vuetify/locale'
+import { ko } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
@@ -106,6 +106,11 @@ export default createVuetify({
       width: 5,
       color: 'white',
       indeterminate: true,
+    },
+    VSwitch: {
+      color: '#0279fe',
+      inset: 'true',
+      hideDetails: 'true',
     },
     VMain: {
       VBtn: { rounded:"lg"},
