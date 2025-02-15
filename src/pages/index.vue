@@ -14,8 +14,9 @@
   <v-pagination
     v-model="page"
     show-first-last-page
-    :length="10"
-    :total-visible="5"
+    :length="100"
+    boundary-links
+    :total-visible="4"
   />
 </template>
 
