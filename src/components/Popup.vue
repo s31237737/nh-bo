@@ -34,7 +34,7 @@
   >
     <v-card>
       <v-card-title>
-        <span>로그인 연장</span>
+        <span>Sm(312)얼럿</span>
         <v-btn
           icon="mdi-close"
           variant="text"
@@ -44,7 +44,7 @@
 
       <v-card-text>
         <p class="text-2">
-          로그인 연장을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
+          등록을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
         </p>
         <p class="text-1-md mt-5">
           남은 시간 : 60초
@@ -60,7 +60,7 @@
         <v-btn
           color="primary"
         >
-          로그인 연장
+          등록
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -144,7 +144,7 @@
         <v-btn
           color="primary"
         >
-          로그인 연장
+          등록
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -176,7 +176,7 @@
         <v-btn
           color="primary"
         >
-          로그인 연장
+          등록
         </v-btn>
       </v-card-actions>
     </v-card>

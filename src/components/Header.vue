@@ -14,12 +14,57 @@
         size="x-small"
         class="ml-5"
         color="white"
-        text="guide"
+        text="pub"
         to="/guide"
       />
       <!-- // 퍼블가이드 확인용 -->
     </template>
     <template #append>
+      <!-- 로그인 연장 팝업 -->
+      <v-btn
+        size="x-small"
+        color="white"
+        text="로그인 연장 팝업"
+        @click="loginPop = true"
+      />
+      <v-dialog
+        v-model="loginPop"
+        class="popup-sm"
+      >
+        <v-card>
+          <v-card-title>
+            <span>로그인 연장</span>
+            <v-btn
+              icon="mdi-close"
+              variant="text"
+              @click="loginPop = false"
+            />
+          </v-card-title>
+
+          <v-card-text>
+            <p class="text-2">
+              로그인 연장을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
+            </p>
+            <p class="text-1-md mt-5">
+              남은 시간 : 60초
+            </p>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              color="secondary"
+              @click="loginPop = false"
+            >
+              취소
+            </v-btn>
+            <v-btn
+              color="primary"
+            >
+              로그인 연장
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <!-- // 로그인 연장 팝업 -->
       <!-- 로그인연장 -->
       <div class="login-session">
         <span class="timer">
@@ -91,6 +136,8 @@ onMounted(() => {
 const onExtendClick = () => {
   remainingTime.value += 60 * 60;
 };
+
+const loginPop = ref(false);
 
 // 프로필
  const items = ref([
