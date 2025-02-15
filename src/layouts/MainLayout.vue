@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 const loading = ref(true);
 const handleLoadingClose = () => {
   loading.value = false;

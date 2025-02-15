@@ -8,6 +8,7 @@
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
 import "@/styles/main.scss";
+
 // Composables
 import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
