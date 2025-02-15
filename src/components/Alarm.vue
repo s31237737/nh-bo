@@ -9,21 +9,20 @@
     >
       <v-icon
         icon="custom:alarm"
-        color="#c2c2c2"
+        color="gray"
         size="32"
       />
     </v-badge>
     <v-icon
       v-else
       icon="custom:alarm"
-      color="#c2c2c2"
+      color="gray"
       size="32"
     />
     <v-menu
       activator="parent"
       content-class="popover"
       :close-on-content-click="false"
-      width="300px"
     >
       <v-card
         class="alram"
@@ -40,7 +39,8 @@
           />
         </v-toolbar>
         <v-divider />
-        <v-card-text>
+        <!-- 일반 알림 -->
+        <v-card-text v-if="!isAdmin">
           <v-list v-if="notifications.length">
             <v-list-item
               v-for="(item, index) in notifications"
@@ -52,16 +52,77 @@
               <v-list-item-subtitle>{{ item.date }}</v-list-item-subtitle>
             </v-list-item>
           </v-list>
-          <v-container
+          <v-empty-state
             v-else
-            class="text-center py-6"
-          >
-            <v-icon size="48">
-              mdi-bell-off-outline
-            </v-icon>
-            <p>알림이 없습니다.</p>
-          </v-container>
+            text="알림이 없습니다."
+            icon="custom:warning"
+            size="40"
+          />
         </v-card-text>
+        <!-- // 일반 알림 -->
+        <!-- 관리자 알림 -->
+        <template v-else>
+          <v-tabs
+            v-model="activeTab"
+            fixed-tabs
+          >
+            <v-tab value="store">
+              업스토어 알림
+            </v-tab>
+            <v-tab value="admin">
+              관리자 알림
+            </v-tab>
+          </v-tabs>
+
+          <v-card-text
+            style="height:319px"
+          >
+            <v-window
+              v-model="activeTab"
+            >
+              <v-window-item value="store">
+                <v-list v-if="notifications.length">
+                  <v-list-item
+                    v-for="(item, index) in notifications"
+                    :key="index"
+                  >
+                    <v-list-item-title :class="{'dot':item.new}">
+                      {{ item.title }}
+                    </v-list-item-title>
+                    <v-list-item-subtitle>{{ item.date }}</v-list-item-subtitle>
+                  </v-list-item>
+                </v-list>
+                <v-empty-state
+                  v-else
+                  text="알림이 없습니다."
+                  icon="custom:warning"
+                  size="40"
+                />
+              </v-window-item>
+
+              <v-window-item value="admin">
+                <v-list v-if="notifications.length">
+                  <v-list-item
+                    v-for="(item, index) in notifications"
+                    :key="index"
+                  >
+                    <v-list-item-title :class="{'dot':item.new}">
+                      {{ item.title }}
+                    </v-list-item-title>
+                    <v-list-item-subtitle>{{ item.date }}</v-list-item-subtitle>
+                  </v-list-item>
+                </v-list>
+                <v-empty-state
+                  v-else
+                  text="알림이 없습니다."
+                  icon="custom:warning"
+                  size="40"
+                />
+              </v-window-item>
+            </v-window>
+          </v-card-text>
+        </template>
+        <!-- // 관리자 알림 -->
       </v-card>
     </v-menu>
   </v-btn>
@@ -69,7 +130,8 @@
 <script setup>
 import { ref } from 'vue';
 const hasNotification = ref(true); // 알림이 있는지 여부
-const activeTab = ref('general'); // 현재 활성화된 탭
+const isAdmin= ref(true); // 관리자 권한이 있는지 여부
+const activeTab = ref('store'); // 현재 활성화된 탭
 
 // 더미 알림 데이터
 const notifications = ref([

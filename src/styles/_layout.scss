@@ -193,12 +193,14 @@
     .v-list-item {
       .v-list-item-title {@extend .text-2;}
       &:hover{
+        border-radius: 8px;
         .v-list-item-title {font-weight: 600;}
       }
     }
   }
   .alram {
     padding: 0 0 12px;
+    width: 300px;
     .v-toolbar {
       .v-toolbar-title {
         @extend .text-1-bd;
@@ -210,12 +212,12 @@
     .v-card-text {
       height: 367px;
       overflow-y: scroll;
-      padding: 0 24px;
+      padding: 0 8px;
 
       .v-list {
         padding: 0;
         &-item {
-          padding: 12px 0;
+          padding: 12px 16px;
           cursor: pointer;
           &-title {
             @include line-clamp(2);
@@ -257,6 +259,11 @@
     top: -6px;
     right: 12px;
     border-bottom: 8px solid #ffffff;
+  }
+}
+.v-empty-state {
+  &__media {
+    margin-bottom: 1.25rem;
   }
 }
 
