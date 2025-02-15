@@ -106,7 +106,7 @@
               </v-chip>
             </v-chip-group>
             <v-card-text
-              style="height:319px"
+              style="height:317px"
             >
               <v-window
                 v-model="activeTab"
@@ -162,7 +162,7 @@
 <script setup>
 import { ref } from 'vue';
 const hasNotification = ref(true); // 알림이 있는지 여부
-const isSetting= ref(true); // 설정 버튼 클릭시
+const isSetting= ref(false); // 설정 버튼 클릭시
 const isAdmin= ref(true); // 관리자 권한이 있는지 여부
 
 const activeTab = ref('store'); // 현재 활성화된 탭
