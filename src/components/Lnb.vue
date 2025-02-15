@@ -84,6 +84,3 @@ const menuItems = ref([
   { to: "/terms", icon: "custom:terms", title: "약관 관리" },
 ]);
 </script>
-
-<style scoped lang="sass">
-</style>
