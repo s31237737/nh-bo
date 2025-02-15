@@ -140,8 +140,7 @@ import { ref } from 'vue';
 const hasNotification = ref(true); // 알림이 있는지 여부
 const isAdmin= ref(true); // 관리자 권한이 있는지 여부
 const activeTab = ref('store'); // 현재 활성화된 탭
-console.log(activeTab)
-// 더미 알림 데이터
+
 const notifications = ref([
   {
     title: '알림 내용은 최대 2줄까지 제공 최대 글자 수 초과 시 닷(...) 처리 알림 내용은 최대 2줄까지',

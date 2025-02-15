@@ -1,6 +1,5 @@
 @use "variables" as *;
 @use "typography" as *;
-@use "button" as *;
 
 .header {
   .v-toolbar {
@@ -214,6 +213,9 @@
       height: 367px;
       overflow-y: scroll;
       padding: 0 8px;
+      .v-empty-state {
+        height: 319px;
+      }
 
       .v-list {
         padding: 0;
@@ -277,7 +279,9 @@
     border-bottom: 8px solid #ffffff;
   }
 }
+
 .v-empty-state {
+  height: 100%;
   &__media {
     margin-bottom: 1.25rem;
   }
