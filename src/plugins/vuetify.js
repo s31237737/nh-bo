@@ -80,7 +80,10 @@ export default createVuetify({
         minHeight: "52"
       }
     },
-    VBtn: { variant: "flat" ,textTransform: "none" },
+    VBtn: {
+      variant: "flat",
+      textTransform: "none"
+    },
     VListItem: {
       ripple: false,
       rounded: "8",
@@ -96,10 +99,15 @@ export default createVuetify({
     VDialog: {
       scrollable: true,
       width: "auto",
-      VCard: { maxHeight: "720" },
+      VCard: {
+        maxHeight: "720",
+      },
       VCardTitle: {
         VBtn: { width: "32", height: "32" },
       },
+      VCardActions: {
+        VBtn: { variant: "flat"},
+      }
     },
     VProgressCircular: {
       size: 35,

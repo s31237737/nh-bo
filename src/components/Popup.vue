@@ -34,7 +34,7 @@
   >
     <v-card>
       <v-card-title>
-        <span>Sm(312)얼럿</span>
+        <span>로그인 연장</span>
         <v-btn
           icon="mdi-close"
           variant="text"
@@ -43,14 +43,26 @@
       </v-card-title>
 
       <v-card-text>
-        팝업텍스트팝업텍스트팝업텍스트팝업텍스트
+        <p class="text-2">
+          로그인 연장을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
+        </p>
+        <p class="text-1-md mt-5">
+          남은 시간 : 60초
+        </p>
       </v-card-text>
-      <template #actions>
+      <v-card-actions>
         <v-btn
-          text="Ok"
+          color="secondary"
           @click="dialog1 = false"
-        />
-      </template>
+        >
+          취소
+        </v-btn>
+        <v-btn
+          color="primary"
+        >
+          로그인 연장
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
   <v-dialog
@@ -122,12 +134,19 @@
         팝업텍스트팝업텍스트팝업텍스트팝업텍스트
         팝업텍스트팝업텍스트팝업텍스트팝업텍스트
       </v-card-text>
-      <template #actions>
+      <v-card-actions>
         <v-btn
-          text="Ok"
+          color="secondary"
           @click="dialog2 = false"
-        />
-      </template>
+        >
+          취소
+        </v-btn>
+        <v-btn
+          color="primary"
+        >
+          로그인 연장
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
   <v-dialog
@@ -146,12 +165,20 @@
       <v-card-text>
         팝업텍스트팝업텍스트팝업텍스트팝업텍스트
       </v-card-text>
-      <template #actions>
+      <v-card-actions>
         <v-btn
-          text="Ok"
+          color="secondary"
           @click="dialog3 = false"
-        />
-      </template>
+        >
+          취소
+        </v-btn>
+        <v-spacer />
+        <v-btn
+          color="primary"
+        >
+          로그인 연장
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>

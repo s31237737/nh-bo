@@ -128,15 +128,26 @@
       }
     }
     .v-card-actions {
+      justify-content: center !important;
       padding: 1rem 1rem 1.5rem;
+      &:not(:has(.v-spacer)) .v-btn {
+        width: 180px;
+      }
     }
   }
   &.popup-sm {
     .v-card {
       width: 19.5rem;
     }
+    .v-card-text {
+      padding: 16px 24px !important;
+      text-align: center;
+    }
     .v-card-actions {
       padding: 1rem;
+      .v-btn {
+        flex: 1;
+      }
     }
   }
   &.popup-md {
