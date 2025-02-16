@@ -4,7 +4,6 @@
       :model-value="modelValue"
       variant="outlined"
       label="Date"
-      width="290"
       @update:model-value="updateDate"
     />
     <v-btn

@@ -13,7 +13,7 @@ import "@/styles/main.scss";
 import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
-import { VTable } from "vuetify/components";
+import { VDatePicker, VTable } from "vuetify/components";
 import { VDateInput } from 'vuetify/labs/VDateInput'
 
 import { ko } from 'vuetify/locale'
@@ -128,10 +128,6 @@ export default createVuetify({
     VTableRow: {
       class: ['tbl-row'],
     },
-    VDatePicker: {
-      showAdjacentMonths: true,
-      hideHeader: true,
-    },
     VSelect: {
       persistentPlaceholder: true,
       variant: 'outlined',
@@ -147,7 +143,7 @@ export default createVuetify({
       cancelText: '취소',
       okText: '선택완료',
       showAdjacentMonths: true,
-      VBtn: { variant: "flat"},
+      width: 290,
     },
   }
 });
