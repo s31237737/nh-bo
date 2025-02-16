@@ -11,12 +11,10 @@
   <div>
     테이블
   </div>
-  <v-pagination
-    v-model="page"
-    show-first-last-page
-    :length="100"
-    boundary-links
-    :total-visible="4"
+  <Pagination
+    :total-items="80"
+    :items-per-page="10"
+    :current-page="3"
   />
 </template>
 

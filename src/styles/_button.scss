@@ -1,6 +1,6 @@
 @use "variables" as *;
 body {
-  .v-btn:not(.v-btn--icon) {
+  .v-btn:not(.v-btn--icon):not(.v-btn--variant-text) {
     &.v-btn--size-large {
       --v-btn-height: 56px;
       --v-btn-size: 16px;
@@ -36,5 +36,13 @@ body {
     &__append {
       margin-inline: 0.25rem -0.25rem !important;
     }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     .v-btn {
+      min-width: auto;
+     }
   }
 }
