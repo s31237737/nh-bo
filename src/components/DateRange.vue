@@ -4,7 +4,7 @@
       :model-value="modelValue"
       variant="outlined"
       label="Date"
-      width="290"
+      multiple="range"
       @update:model-value="updateDate"
     />
     <v-btn
@@ -21,8 +21,8 @@ import { defineProps, defineEmits } from 'vue';
 
 defineProps({
   modelValue: {
-    type: Date,
-    default: () => new Date(),
+    type: Array,
+    default: () => [],
   },
 });
 
@@ -34,6 +34,6 @@ const updateDate = (newDate) => {
 
 const setToday = () => {
   const today = new Date();
-  emit('update:modelValue', today);
+  emit('update:modelValue', [today, today]);
 };
 </script>

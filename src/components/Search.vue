@@ -20,7 +20,6 @@
           v-model="form"
           label="샘플"
           placeholder="Email address"
-          :rules="rules"
         />
       </v-col>
       <v-col>
@@ -30,7 +29,6 @@
           class="required"
           placeholder="Email address"
           append-inner-icon="custom:search"
-          :rules="rules"
         />
       </v-col>
 
@@ -40,20 +38,10 @@
         icon="custom:refresh"
       />
       <v-col>
-        <div class="date-wrap">
-          <v-date-input
-            variant="outlined"
-            label="Date"
-          />
-          <v-btn
-            color="secondary"
-          >
-            today
-          </v-btn>
-        </div>
+        <DateRange v-model="dateRange" />
       </v-col>
       <v-col>
-        <Date />
+        <Date v-model="date" />
       </v-col>
     </v-row>
   </v-form>
@@ -61,13 +49,8 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue';
-
 const form = ref('');
-// email validation 규칙 정의
-const rules = computed(() => [
-  value => {
-    if (value) return true;
-    return 'You must enter a first name.';
-  },
-]);
+const date = ref(new Date());
+const dateRange =  ref([new Date(), new Date()]);
+
 </script>

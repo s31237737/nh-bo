@@ -190,16 +190,6 @@ body {
     }
   }
 
-  .date-wrap {
-    position: relative;
-    width: 290px;
-    .v-btn {
-      position: absolute;
-      bottom: 6px;
-      right: 10px;
-    }
-  }
-
   .popover {
     border-radius: 8px !important;
     .v-card {
@@ -397,8 +387,32 @@ body {
     }
   }
 
+  .date-wrap {
+    position: relative;
+    width: 290px;
+    .v-btn {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+    }
+  }
   .v-date-picker {
     border-radius: 8px;
     border: thin solid $border-subtle;
+    .v-picker__body {padding: 0 0.75rem;}
+    .v-date-picker-month__day {
+      width: 28px;
+      height: 28px;
+      .v-btn.v-date-picker-month__day-btn {
+        --v-btn-height: 12px;
+      }
+    }
+    .v-picker__actions {
+      justify-content: center !important;
+      padding: 0.75rem 1.5rem 1.5rem;
+      .v-btn {
+        flex: 1;
+      }
+    }
   }
 }

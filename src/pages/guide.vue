@@ -9,7 +9,6 @@
       <v-text-field
         v-model="form"
         prepend-inner-icon="mdi-email-outline"
-        :rules="rules"
       />
       <v-select
         class="mt-8"
@@ -29,7 +28,6 @@
         density="compact"
         placeholder="Email address"
         prepend-inner-icon="mdi-email-outline"
-        :rules="rules"
       />
     </v-sheet>
   </v-row>
@@ -445,14 +443,6 @@
   import { ref, computed } from 'vue';
 
   const form = ref('');
-
-  // email validation 규칙 정의
-  const rules = computed(() => [
-    value => {
-      if (value) return true;
-      return 'You must enter a first name.';
-    },
-  ]);
 
   const desserts = ref([
     {
