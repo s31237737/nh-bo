@@ -37,7 +37,6 @@
         <span>Sm(312)얼럿</span>
         <v-btn
           icon="mdi-close"
-          variant="text"
           @click="dialog1 = false"
         />
       </v-card-title>
@@ -53,12 +52,14 @@
       <v-card-actions>
         <v-btn
           color="secondary"
+          size="large"
           @click="dialog1 = false"
         >
           취소
         </v-btn>
         <v-btn
           color="primary"
+          size="large"
         >
           등록
         </v-btn>
@@ -137,12 +138,14 @@
       <v-card-actions>
         <v-btn
           color="secondary"
+          size="large"
           @click="dialog2 = false"
         >
           취소
         </v-btn>
         <v-btn
           color="primary"
+          size="large"
         >
           등록
         </v-btn>
@@ -168,6 +171,7 @@
       <v-card-actions>
         <v-btn
           color="secondary"
+          size="large"
           @click="dialog3 = false"
         >
           취소
@@ -175,6 +179,7 @@
         <v-spacer />
         <v-btn
           color="primary"
+          size="large"
         >
           등록
         </v-btn>

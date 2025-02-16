@@ -1,32 +1,17 @@
 @use "variables" as *;
 @use "typography" as *;
 body {
-  .v-btn:not(.v-btn--icon):not(.v-btn--variant-text) {
-    &.v-btn--size-large {
+  .v-btn {
+    border-radius: 8px;
+    &.v-btn--size-x-large {
       --v-btn-height: 56px;
       --v-btn-size: 16px;
       padding: 0 16px;
     }
-
-    &.v-btn--size-default {
-      --v-btn-height: 48px;
-      --v-btn-size: 16px;
+    &.v-btn--size-large {
+     --v-btn-height: 48px;
       padding: 0 16px;
     }
-
-    &.v-btn--size-small {
-      --v-btn-height: 36px;
-      --v-btn-size: 14px;
-      padding: 0 16px;
-    }
-
-    &.v-btn--size-x-small {
-      --v-btn-height: 28px;
-      --v-btn-size: 12px;
-      padding: 0 16px;
-    }
-  }
-  .v-btn {
     &.text-tertiary {
       color: $text-primary !important;
       border-color: $border-strong;

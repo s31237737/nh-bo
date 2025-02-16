@@ -8,7 +8,6 @@
       <!-- v-text-field에서 label 슬롯을 사용 -->
       <v-text-field
         v-model="form"
-        density="compact"
         label="First name"
         prepend-inner-icon="mdi-email-outline"
         variant="outlined"
@@ -76,57 +75,6 @@
   <!-- // 텍스트 -->
   <!-- 버튼 -->
   <div>
-    <v-row>
-      <!-- x-small/Primary -->
-      <v-col cols="auto">
-        <v-btn
-          size="x-small"
-          color="primary"
-        >
-          x-small/Primary
-        </v-btn>
-      </v-col>
-
-      <!-- x-small/Secondary -->
-      <v-col cols="auto">
-        <v-btn
-          size="x-small"
-          color="secondary"
-        >
-          x-small/Secondary
-        </v-btn>
-      </v-col>
-
-      <!-- x-small/Tertiary -->
-      <v-col cols="auto">
-        <v-btn
-          size="x-small"
-          color="tertiary"
-          variant="outlined"
-        >
-          x-small/Tertiary
-        </v-btn>
-      </v-col>
-
-      <!-- x-small/Warning -->
-      <v-col cols="auto">
-        <v-btn
-          size="x-small"
-          color="warning"
-        >
-          x-small/Warning
-        </v-btn>
-      </v-col>
-      <v-col cols="auto">
-        <v-btn
-          size="x-small"
-          color="warning"
-          variant="outlined"
-        >
-          x-small/Warning
-        </v-btn>
-      </v-col>
-    </v-row>
     <v-row>
       <!-- small/Primary -->
       <v-col cols="auto">
@@ -275,6 +223,59 @@
       </v-col>
     </v-row>
 
+
+    <v-row>
+      <!-- x-large/Primary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-large"
+          color="primary"
+        >
+          x-large/Primary
+        </v-btn>
+      </v-col>
+
+      <!-- x-large/Secondary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-large"
+          color="secondary"
+        >
+          x-large/Secondary
+        </v-btn>
+      </v-col>
+
+      <!-- x-large/Tertiary -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-large"
+          color="tertiary"
+          variant="outlined"
+        >
+          x-large/Tertiary
+        </v-btn>
+      </v-col>
+
+      <!-- x-large/Warning -->
+      <v-col cols="auto">
+        <v-btn
+          size="x-large"
+          color="warning"
+        >
+          x-large/Warning
+        </v-btn>
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          size="x-large"
+          color="warning"
+          variant="outlined"
+        >
+          x-large/Warning
+        </v-btn>
+      </v-col>
+    </v-row>
+
     <v-row>
       <!-- icon/Primary -->
       <v-col cols="auto">
@@ -377,7 +378,6 @@
           color="warning"
           variant="outlined"
           icon="mdi:mdi-plus"
-          rounded="lg"
         />
       </v-col>
     </v-row>

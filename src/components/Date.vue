@@ -8,13 +8,11 @@
         <v-text-field
           v-bind="props"
           :model-value="formatted"
-          density="compact"
           variant="outlined"
           label="Date"
           readonly
         />
         <v-btn
-          size="x-small"
           color="secondary"
           @click="setToday"
         >

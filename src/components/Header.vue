@@ -11,7 +11,7 @@
       />
       <!-- 퍼블가이드 확인용 -->
       <v-btn
-        size="x-small"
+        size="small"
         class="ml-5"
         color="white"
         text="pub"
@@ -22,7 +22,7 @@
     <template #append>
       <!-- 로그인 연장 팝업 -->
       <v-btn
-        size="x-small"
+        size="small"
         color="white"
         text="로그인 연장 팝업"
         @click="loginPop = true"
@@ -52,12 +52,14 @@
           <v-card-actions>
             <v-btn
               color="secondary"
+              size="large"
               @click="loginPop = false"
             >
               취소
             </v-btn>
             <v-btn
               color="primary"
+              size="large"
             >
               로그인 연장
             </v-btn>
@@ -78,7 +80,7 @@
         </span>
         <v-btn
           color="white"
-          size="x-small"
+          size="small"
           variant="outlined"
           @click="onExtendClick"
         >

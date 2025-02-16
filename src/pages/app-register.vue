@@ -1,9 +1,12 @@
 <template>
   <PageHeader
-    title="앱 관리"
+    title="앱 등록"
+    prev-link="/"
   />
 
-  <Search />
+  <div>
+    서치
+  </div>
   <div>
     필터
   </div>

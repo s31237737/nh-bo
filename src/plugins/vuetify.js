@@ -121,9 +121,6 @@ export default createVuetify({
       inset: 'true',
       hideDetails: 'true',
     },
-    VMain: {
-      VBtn: { rounded:"lg"},
-    },
     VTableRow: {
       class: ['tbl-row'],
     },
