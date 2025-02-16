@@ -338,4 +338,27 @@ body {
       transform: translateX(-6px) !important;
     }
   }
+  .v-field--variant-outlined
+  .v-field__outline__notch {display: none;}
+
+  .v-input {
+    padding-top: 24px;
+    .v-label {
+      all: unset;
+      transform: none !important;
+      visibility: initial !important;
+      position: absolute;
+      top: -24px !important;
+      @extend .text-3-md;
+      color: $text-secondary;
+    }
+    &.required {
+      .v-label:after {
+        display: inline-block;
+        content: '*';
+        margin-left: 2px;
+        color: #e6171b;
+      }
+    }
+  }
 }

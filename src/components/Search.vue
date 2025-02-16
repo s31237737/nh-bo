@@ -4,20 +4,38 @@
       align="end"
     >
       <v-col>
-        <label class="text-subtitle-1 text-medium-emphasis">
-          Account
-        </label>
-
+        <v-select
+          label="앱 타입"
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        />
+      </v-col>
+      <v-col>
+        <v-select
+          label="상태"
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        />
+      </v-col>
+      <v-col>
         <v-text-field
           v-model="form"
+          label="샘플"
           placeholder="Email address"
           :rules="rules"
         />
       </v-col>
       <v-col>
-        <v-select
-          class="mt-8"
-          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        <v-text-field
+          v-model="form"
+          placeholder="Email address"
+          append-inner-icon="custom:search"
+          :rules="rules"
+        />
+      </v-col>
+      <v-col>
+        <v-btn
+          color="tertiary"
+          variant="outlined"
+          icon="custom:refresh"
         />
       </v-col>
     </v-row>
@@ -28,7 +46,6 @@
 import { ref, onMounted, computed } from 'vue';
 
 const form = ref('');
-
 // email validation 규칙 정의
 const rules = computed(() => [
   value => {

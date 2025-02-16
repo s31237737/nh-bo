@@ -442,45 +442,41 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+  import { ref, computed } from 'vue';
 
-const form = ref('');
+  const form = ref('');
 
-// email validation 규칙 정의
-const rules = computed(() => [
-  value => {
-    if (value) return true;
-    return 'You must enter a first name.';
-  },
-]);
+  // email validation 규칙 정의
+  const rules = computed(() => [
+    value => {
+      if (value) return true;
+      return 'You must enter a first name.';
+    },
+  ]);
 
-const desserts = ref([
-  {
-    name: 'Frozen Yogurt',
-    calories: 159,
-  },
-  {
-    name: 'Ice cream sandwich',
-    calories: 237,
-  },
-  {
-    name: 'Eclair',
-    calories: 262,
-  },
-  {
-    name: 'Cupcake',
-    calories: 305,
-  },
-]);
+  const desserts = ref([
+    {
+      name: 'Frozen Yogurt',
+      calories: 159,
+    },
+    {
+      name: 'Ice cream sandwich',
+      calories: 237,
+    },
+    {
+      name: 'Eclair',
+      calories: 262,
+    },
+    {
+      name: 'Cupcake',
+      calories: 305,
+    },
+  ]);
 
-const tableData = ref([
-  { label: '공개상태', value: '공개', label2: '등록일', value2: '25.09.09' },
-  { label: '제목', value: '개인정보처리방침', label2: '버전', value2: 'v0.8' },
-]);
+  const tableData = ref([
+    { label: '공개상태', value: '공개', label2: '등록일', value2: '25.09.09' },
+    { label: '제목', value: '개인정보처리방침', label2: '버전', value2: 'v0.8' },
+  ]);
 
-const content = ref('1.1.1 업데이트 내용 '.repeat(20));
+  const content = ref('1.1.1 업데이트 내용 '.repeat(20));
 </script>
-<style lang="scss" scoped>
-.v-field--active.v-field--variant-outlined .v-field__outline__notch::before {opacity: 1;}
-.v-field--variant-outlined .v-label.v-field-label--floating{}
-</style>
