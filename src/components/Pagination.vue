@@ -1,34 +1,41 @@
 <template>
   <div class="pagination">
     <v-btn
+      :ripple="false"
       icon="custom:arrow-first"
       :disabled="currentPage === 1"
       @click="goToPage(1)"
     />
 
     <v-btn
+      :ripple="false"
       icon="custom:arrow-left"
       :disabled="currentPage === 1"
       @click="goToPage(currentPage - 1)"
     />
 
-    <v-btn
-      v-for="page in pageNumbers"
-      :key="page"
-      variant="text"
-      :class="{ active: currentPage === page }"
-      @click="goToPage(page)"
-    >
-      {{ page }}
-    </v-btn>
+    <div class="numbers">
+      <v-btn
+        v-for="page in pageNumbers"
+        :key="page"
+        :ripple="false"
+        variant="text"
+        :class="{ active: currentPage === page }"
+        @click="goToPage(page)"
+      >
+        {{ page }}
+      </v-btn>
+    </div>
 
     <v-btn
+      :ripple="false"
       icon="custom:arrow-right"
       :disabled="currentPage === totalPages"
       @click="goToPage(currentPage + 1)"
     />
 
     <v-btn
+      :ripple="false"
       icon="custom:arrow-last"
       :disabled="currentPage === totalPages"
       @click="goToPage(totalPages)"

@@ -20,6 +20,5 @@
 
 <script setup>
 import { ref } from 'vue';
- const page = ref(1)
   //
 </script>

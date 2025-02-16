@@ -129,7 +129,7 @@ export default createVuetify({
     },
     VDatePicker: {
       showAdjacentMonths: true,
-      hideHeader: true
-    }
-  },
+      hideHeader: true,
+    },
+  }
 });
