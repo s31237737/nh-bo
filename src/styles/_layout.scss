@@ -195,7 +195,7 @@ body {
     width: 290px;
     .v-btn {
       position: absolute;
-      top: 5px;
+      bottom: 6px;
       right: 10px;
     }
   }
@@ -367,6 +367,12 @@ body {
     }
   }
   .v-field {
+    &__prepend-inner {
+      color: $icon-black;
+      .v-icon {
+        opacity: 1;
+      }
+    }
     &.v-field--variant-outlined {
       .v-field__outline {
         .v-label {
@@ -389,5 +395,10 @@ body {
     &.v-field--focused .v-field__outline {
       --v-field-border-width: 1px !important;
     }
+  }
+
+  .v-date-picker {
+    border-radius: 8px;
+    border: thin solid $border-subtle;
   }
 }

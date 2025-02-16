@@ -14,6 +14,7 @@ import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
 import { VTable } from "vuetify/components";
+import { VDateInput } from 'vuetify/labs/VDateInput'
 
 import { ko } from 'vuetify/locale'
 
@@ -71,6 +72,9 @@ export default createVuetify({
   },
   aliases: {
     VTableRow: VTable,
+  },
+  components: {
+    VDateInput,
   },
   defaults: {
     VNavigationDrawer: {
@@ -135,6 +139,11 @@ export default createVuetify({
     VTextField: {
       clearable: true,
       variant: 'outlined',
+    },
+    VDateInput: {
+      variant: 'outlined',
+      prependIcon: '',
+      prependInnerIcon: 'custom:calendar'
     }
   }
 });

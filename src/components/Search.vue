@@ -33,12 +33,27 @@
           :rules="rules"
         />
       </v-col>
+
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+        icon="custom:refresh"
+      />
       <v-col>
-        <v-btn
-          color="tertiary"
-          variant="outlined"
-          icon="custom:refresh"
-        />
+        <div class="date-wrap">
+          <v-date-input
+            variant="outlined"
+            label="Date"
+          />
+          <v-btn
+            color="secondary"
+          >
+            today
+          </v-btn>
+        </div>
+      </v-col>
+      <v-col>
+        <Date />
       </v-col>
     </v-row>
   </v-form>
