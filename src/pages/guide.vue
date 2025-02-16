@@ -1,5 +1,5 @@
 <template>
-  <Date />
+  <Search />
   <v-row>
     <v-sheet
       class="pa-12 pb-8"

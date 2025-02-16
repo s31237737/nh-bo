@@ -389,13 +389,13 @@ body {
 
   .date-wrap {
     position: relative;
-    width: 290px;
     .v-btn {
       position: absolute;
       bottom: 6px;
       right: 10px;
     }
   }
+
   .v-date-picker {
     border-radius: 8px;
     border: thin solid $border-subtle;
@@ -421,5 +421,26 @@ body {
         }
       }
     }
+  }
+
+  .search-wrap {
+    &:has(.v-form) {
+      > .v-form{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-end;
+      }
+    }
+    &:not(:has(.v-form)){
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-end;
+    }
+  }
+  .v-input {
+    max-width: 338px;
+    flex: 1;
   }
 }

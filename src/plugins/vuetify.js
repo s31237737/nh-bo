@@ -143,7 +143,7 @@ export default createVuetify({
       cancelText: '취소',
       okText: '선택완료',
       showAdjacentMonths: true,
-      width: 290,
+      width: 338,
     },
   }
 });
