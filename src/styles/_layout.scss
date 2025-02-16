@@ -176,13 +176,14 @@ body {
     td {
       @extend .text-1;
     }
-    &.tbl-row{
+    &.tbl-row {
       --v-table-row-height: 4.25rem;
       border-top: thin solid $border-subtle;
       th {
         text-align: center !important;
       }
-      th, td {
+      th,
+      td {
         padding: 0.75rem !important;
         border-bottom: thin solid $border-subtle !important;
       }
@@ -194,7 +195,7 @@ body {
     width: 290px;
     .v-btn {
       position: absolute;
-      top:5px;
+      top: 5px;
       right: 10px;
     }
   }
@@ -207,10 +208,14 @@ body {
       padding: 0 8px;
       border: thin solid $border-subtle;
       .v-list-item {
-        .v-list-item-title {@extend .text-2;}
-        &:hover{
+        .v-list-item-title {
+          @extend .text-2;
+        }
+        &:hover {
           border-radius: 8px;
-          .v-list-item-title {font-weight: 600;}
+          .v-list-item-title {
+            font-weight: 600;
+          }
         }
       }
     }
@@ -221,13 +226,13 @@ body {
         .v-toolbar-title {
           @extend .text-1-bd;
         }
-        .v-btn:first-child{
+        .v-btn:first-child {
           margin-inline-start: 12px;
           & + .v-toolbar-title {
             margin-left: 4px;
           }
         }
-        .v-btn:last-child{
+        .v-btn:last-child {
           margin-inline-end: 12px;
         }
       }
@@ -252,7 +257,7 @@ body {
                 padding-left: 12px;
 
                 &::before {
-                  content: '';
+                  content: "";
                   position: absolute;
                   top: 6px;
                   left: 0;
@@ -284,7 +289,7 @@ body {
       }
     }
     .popover-tab {
-      padding:16px 20px 8px;
+      padding: 16px 20px 8px;
       .v-chip {
         margin: 0;
         margin-right: 4px;
@@ -301,7 +306,7 @@ body {
 
     &::before {
       z-index: 1;
-      content: '';
+      content: "";
       position: absolute;
       width: 0;
       height: 0;
@@ -329,36 +334,60 @@ body {
         @extend .text-2;
       }
     }
-    .v-selection-control--dirty{
-    .v-selection-control__input{
+    .v-selection-control--dirty {
+      .v-selection-control__input {
         transform: translateX(6px) !important;
       }
     }
-    .v-selection-control__input{
+    .v-selection-control__input {
       transform: translateX(-6px) !important;
     }
   }
-  .v-field--variant-outlined
-  .v-field__outline__notch {display: none;}
 
   .v-input {
     padding-top: 24px;
+    position: relative;
     .v-label {
-      all: unset;
-      transform: none !important;
-      visibility: initial !important;
-      position: absolute;
-      top: -24px !important;
-      @extend .text-3-md;
-      color: $text-secondary;
+      display: none;
     }
     &.required {
       .v-label:after {
         display: inline-block;
-        content: '*';
+        content: "*";
         margin-left: 2px;
         color: #e6171b;
       }
+    }
+     .v-input__details {
+      padding-inline: 0;
+      position: absolute;
+      top: 4px;
+      padding: 0;
+      min-height: 14px;
+    }
+  }
+  .v-field {
+    &.v-field--variant-outlined {
+      .v-field__outline {
+        .v-label {
+          contain: unset;
+          margin: 0;
+          transform: unset;
+          visibility: unset !important;
+          opacity: 1;
+          display: block;
+          margin-top: -24px;
+          pointer-events: stroke;
+          @extend .text-3-md;
+          color: $text-secondary;
+        }
+        .v-field__outline__notch::before {
+          opacity: var(--v-field-border-opacity);
+        }
+      }
+    }
+    &.v-field--focused .v-field__outline {
+      --v-field-border-width: 1px !important;
     }
   }
 }

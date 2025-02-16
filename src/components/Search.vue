@@ -26,6 +26,8 @@
       <v-col>
         <v-text-field
           v-model="form"
+          label="샘플"
+          class="required"
           placeholder="Email address"
           append-inner-icon="custom:search"
           :rules="rules"
