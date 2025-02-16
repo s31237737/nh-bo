@@ -8,17 +8,11 @@
       <!-- v-text-field에서 label 슬롯을 사용 -->
       <v-text-field
         v-model="form"
-        label="First name"
         prepend-inner-icon="mdi-email-outline"
-        variant="outlined"
         :rules="rules"
-        :persistent-placeholder="true"
       />
       <v-select
         class="mt-8"
-        label="Select"
-        :persistent-placeholder="true"
-        variant="outlined"
         :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
       />
     </v-sheet>
@@ -35,7 +29,6 @@
         density="compact"
         placeholder="Email address"
         prepend-inner-icon="mdi-email-outline"
-        variant="outlined"
         :rules="rules"
       />
     </v-sheet>
@@ -82,7 +75,7 @@
           size="small"
           color="primary"
         >
-          small/Primary
+          28px/small/Primary
         </v-btn>
       </v-col>
 
@@ -130,7 +123,7 @@
       <!-- default/Primary -->
       <v-col cols="auto">
         <v-btn color="primary">
-          default/Primary
+          36px/default/Primary
         </v-btn>
       </v-col>
 
@@ -176,7 +169,7 @@
           size="large"
           color="primary"
         >
-          large/Primary
+          48px/large/Primary
         </v-btn>
       </v-col>
 
@@ -231,7 +224,7 @@
           size="x-large"
           color="primary"
         >
-          x-large/Primary
+          56px/x-large/Primary
         </v-btn>
       </v-col>
 

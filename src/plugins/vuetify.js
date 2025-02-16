@@ -128,5 +128,13 @@ export default createVuetify({
       showAdjacentMonths: true,
       hideHeader: true,
     },
+    VSelect: {
+      persistentPlaceholder: true,
+      variant: 'outlined',
+    },
+    VTextField: {
+      clearable: true,
+      variant: 'outlined',
+    }
   }
 });

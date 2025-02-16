@@ -42,11 +42,16 @@ body {
       .v-btn {
         width: 30px;
         height: 30px;
-        color: $text-gray;
+
         @extend .text-2;
         &.active {
-          color: $text-primary;
-           @extend .text-2-md;
+          @extend .text-2-md;
+          .v-btn__content {
+            color: $text-primary;
+          }
+        }
+        &__content {
+          color: $text-gray;
         }
       }
     }

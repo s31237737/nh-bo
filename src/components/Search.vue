@@ -1,31 +1,27 @@
 <template>
-  <v-row
-    align="end"
-  >
-    <v-col>
-      <div class="text-subtitle-1 text-medium-emphasis">
-        Account
-      </div>
+  <v-form>
+    <v-row
+      align="end"
+    >
+      <v-col>
+        <label class="text-subtitle-1 text-medium-emphasis">
+          Account
+        </label>
 
-      <v-text-field
-        v-model="form"
-        density="comfortable"
-        placeholder="Email address"
-        prepend-inner-icon="mdi-email-outline"
-        variant="outlined"
-        :rules="rules"
-      />
-    </v-col>
-    <v-col>
-      <v-select
-        class="mt-8"
-        label="Select"
-        :persistent-placeholder="true"
-        variant="outlined"
-        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-      />
-    </v-col>
-  </v-row>
+        <v-text-field
+          v-model="form"
+          placeholder="Email address"
+          :rules="rules"
+        />
+      </v-col>
+      <v-col>
+        <v-select
+          class="mt-8"
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        />
+      </v-col>
+    </v-row>
+  </v-form>
 </template>
 
 <script setup>
