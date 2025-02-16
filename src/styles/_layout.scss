@@ -106,6 +106,16 @@ body {
     justify-content: center;
   }
 
+  .page-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 62px;
+    .v-btn:not(:hover) {
+      --v-theme-overlay-multiplier: 0;
+    }
+  }
+
   .v-dialog {
     &[class*="popup-"] {
       .v-card-title {

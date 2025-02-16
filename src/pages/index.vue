@@ -1,7 +1,9 @@
 <template>
-  <h1 class="title-1">
-    App bars
-  </h1>
+  <PageHeader
+    title="앱 관리"
+    prev-link="/"
+  />
+
   <div>
     서치
   </div>
