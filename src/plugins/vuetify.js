@@ -93,13 +93,19 @@ export default createVuetify({
       ripple: false,
       rounded: "8",
     },
+
+    VAppBar: {
+      VMenu: {
+        offset: "18",
+        VToolbar: {
+          height: "56",
+          color: "transparent",
+        },
+      },
+    },
     VMenu: {
       location: "bottom",
-      offset: "18",
-      VToolbar: {
-        height: "56",
-        color: "transparent",
-      },
+      offset: "4",
     },
     VDialog: {
       scrollable: true,
@@ -131,9 +137,6 @@ export default createVuetify({
     VSelect: {
       persistentPlaceholder: true,
       variant: "outlined",
-      VMenu: {
-        offset: "4",
-      }
     },
     VTextField: {
       clearable: true,
@@ -150,10 +153,6 @@ export default createVuetify({
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
       width: 338,
-      VMenu: {
-        location: "bottom",
-        offset: "4",
-      },
     },
   },
 });
