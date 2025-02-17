@@ -320,8 +320,9 @@ body {
       justify-content: space-between;
       flex-direction: row-reverse;
       .v-label {
+        display: inline-flex;
         padding-inline-start: 0;
-        @extend .text-2;
+        @extend .text-2;        
       }
     }
     .v-selection-control--dirty {
