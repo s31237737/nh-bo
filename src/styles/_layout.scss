@@ -438,7 +438,7 @@ body {
       align-items: flex-end;
     }
     .v-input {
-      padding-top: 24px;
+      padding-top: 20px;
       position: relative;
        max-width: 338px;
       flex: 1;
@@ -477,7 +477,9 @@ body {
             visibility: unset !important;
             opacity: 1;
             display: block;
-            margin-top: -24px;
+            position: fixed;
+            top: -20px;
+            left: 0;
             pointer-events: stroke;
             @extend .text-3-md;
             color: $text-secondary;
@@ -500,6 +502,12 @@ body {
       bottom: 6px;
       right: 10px;
     }
+    .v-icon {pointer-events: none;}
+    .v-field--focused .v-icon,
+    .v-field--active .v-icon {opacity:1; }
+    &.v-input--dirty {
+      .v-icon {pointer-events: all;}
+    }
   }
   .select-over {
     padding: 0 8px 8px;
@@ -510,7 +518,6 @@ body {
       .v-list-item-title {
         @extend .text-2;
       }
-      
     }
   }
 }
