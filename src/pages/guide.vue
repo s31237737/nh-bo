@@ -329,46 +329,27 @@
       <!-- icon/Primary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="primary"
-          icon="mdi:mdi-plus"
+          icon="custom:refresh"
         />
       </v-col>
 
       <!-- icon/Secondary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="secondary"
           icon="mdi:mdi-plus"
+          density="comfortable"
         />
       </v-col>
 
       <!-- icon/Tertiary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="tertiary"
+          density="compact"
           variant="outlined"
-          icon="mdi:mdi-plus"
-        />
-      </v-col>
-
-      <!-- icon/Warning -->
-      <v-col cols="auto">
-        <v-btn
-          size="small"
-          color="warning"
-          icon="mdi:mdi-plus"
-        />
-      </v-col>
-      <!-- icon/Warning -->
-      <v-col cols="auto">
-        <v-btn
-          size="small"
-          color="warning"
-          variant="outlined"
-          icon="mdi:mdi-plus"
+          icon="custom:refresh"
         />
       </v-col>
     </v-row>

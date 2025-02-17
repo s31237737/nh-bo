@@ -222,6 +222,9 @@ body {
             margin-left: 4px;
           }
         }
+        .v-btn--icon {
+          border-radius: 50%;
+        }
         .v-btn:last-child {
           margin-inline-end: 12px;
         }
@@ -334,8 +337,6 @@ body {
     }
   }
 
-
-
   .date-wrap {
     position: relative;
     .v-btn {
@@ -351,14 +352,26 @@ body {
 
     &-month {
       padding: 0;
+      &__day {
+        width: 36px;
+         @extend .text-3;
+      }
     }
     &-years__content {
       padding-inline: 0;
+      .v-btn--active {
+        background: $bg-box-black;
+        color: $text-on;
+      }
     }
     &-months__content {
-      grid-gap: 0;
+      grid-gap: 0px 8px;
       padding-inline-start: 0;
       padding-inline-end: 0;
+      .v-btn--active {
+        background: $bg-box-black;
+        color: $text-on;
+      }
     }
     &-controls {
       padding:0 0 12px;

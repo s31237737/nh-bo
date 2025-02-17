@@ -3,26 +3,33 @@
 body {
   .v-btn {
     border-radius: 8px;
-    &.v-btn--size-x-large {
-      --v-btn-height: 56px;
-      --v-btn-size: 16px;
-      padding: 0 16px;
-    }
-    &.v-btn--size-large {
-     --v-btn-height: 48px;
-      padding: 0 16px;
-    }
-    &.text-tertiary {
-      color: $text-primary !important;
-      border-color: $border-strong;
-    }
+
     &__prepend {
       margin-inline: -0.25rem 0.25rem !important;
     }
     &__append {
       margin-inline: 0.25rem -0.25rem !important;
     }
+
   }
+  .v-btn--size-x-large {
+    --v-btn-height: 56px;
+    --v-btn-size: 16px;
+    padding: 0 16px;
+  }
+  .v-btn--size-large {
+    --v-btn-height: 48px;
+    padding: 0 16px;
+  }
+  .text-tertiary {
+    color: $text-primary !important;
+    border-color: $border-strong;
+  }
+
+  .v-btn--icon.v-btn--density-default {
+    --v-btn-size: 1.3338rem;
+  }
+
   .pagination {
     display: flex;
     justify-content: center;

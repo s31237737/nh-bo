@@ -16,15 +16,32 @@
         label="샘플"
         placeholder="Email address"
       />
+      <div class="search-inp">
+        <v-text-field
+          v-model="form"
+          label="샘플"
+          class="required"
+          placeholder="Email address"
+        />
+        <v-btn
+          icon="custom:search"
+          density="compact"
+        />
+      </div>
 
-      <v-text-field
-        v-model="form"
-        label="샘플"
-        class="required"
-        placeholder="Email address"
-        append-inner-icon="custom:search"
+
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+        icon="custom:refresh"
+        density="compact"
       />
-
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+        icon="custom:refresh"
+        density="comfortable"
+      />
       <v-btn
         color="tertiary"
         variant="outlined"
