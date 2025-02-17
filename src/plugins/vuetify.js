@@ -143,6 +143,9 @@ export default createVuetify({
       cancelText: "취소",
       okText: "선택완료",
       showAdjacentMonths: true,
+      modeIcon: "custom:arrow-down",
+      nextIcon: "custom:arrow-right",
+      prevIcon: "custom:arrow-left",
       width: 338,
       VMenu: {
         location: "bottom",
