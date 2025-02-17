@@ -14,15 +14,15 @@ import { createVuetify } from "vuetify";
 import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
 import { VDatePicker, VTable } from "vuetify/components";
-import { VDateInput } from 'vuetify/labs/VDateInput'
+import { VDateInput } from "vuetify/labs/VDateInput";
 
-import { ko } from 'vuetify/locale'
+import { ko } from "vuetify/locale";
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   locale: {
-    locale: 'ko',
-    fallback: 'en',
+    locale: "ko",
+    fallback: "en",
     messages: { ko },
   },
   theme: {
@@ -78,16 +78,16 @@ export default createVuetify({
   },
   defaults: {
     VNavigationDrawer: {
-      width:"253",
+      width: "253",
       permanent: true,
-      class: 'lnb',
+      class: "lnb",
       VListItem: {
-        minHeight: "52"
-      }
+        minHeight: "52",
+      },
     },
     VBtn: {
       variant: "flat",
-      textTransform: "none"
+      textTransform: "none",
     },
     VListItem: {
       ripple: false,
@@ -96,10 +96,10 @@ export default createVuetify({
     VMenu: {
       location: "bottom",
       offset: "18",
-      VToolbar:{
+      VToolbar: {
         height: "56",
         color: "transparent",
-      }
+      },
     },
     VDialog: {
       scrollable: true,
@@ -111,30 +111,33 @@ export default createVuetify({
         VBtn: { width: "32", height: "32" },
       },
       VCardActions: {
-        VBtn: { variant: "flat"},
-      }
+        VBtn: { variant: "flat" },
+      },
     },
     VProgressCircular: {
       size: 35,
       width: 5,
-      color: 'white',
+      color: "white",
       indeterminate: true,
     },
     VSwitch: {
-      color: '#0279fe',
-      inset: 'true',
-      hideDetails: 'true',
+      color: "#0279fe",
+      inset: "true",
+      hideDetails: "true",
     },
     VTableRow: {
-      class: ['tbl-row'],
+      class: ["tbl-row"],
     },
     VSelect: {
       persistentPlaceholder: true,
-      variant: 'outlined',
+      variant: "outlined",
+      VMenu: {
+        offset: "4",
+      }
     },
     VTextField: {
       clearable: true,
-      variant: 'outlined',
+      variant: "outlined",
     },
     VDateInput: {
       variant: "outlined",
@@ -152,5 +155,5 @@ export default createVuetify({
         offset: "4",
       },
     },
-  }
+  },
 });
