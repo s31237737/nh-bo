@@ -137,13 +137,17 @@ export default createVuetify({
       variant: 'outlined',
     },
     VDateInput: {
-      variant: 'outlined',
-      prependIcon: '',
-      prependInnerIcon: 'custom:calendar',
-      cancelText: '취소',
-      okText: '선택완료',
+      variant: "outlined",
+      prependIcon: "",
+      prependInnerIcon: "custom:calendar",
+      cancelText: "취소",
+      okText: "선택완료",
       showAdjacentMonths: true,
       width: 338,
+      VMenu: {
+        location: "bottom",
+        offset: "4",
+      },
     },
   }
 });
