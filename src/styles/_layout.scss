@@ -493,4 +493,12 @@ body {
     }
   }
 
+  .search-inp {
+    position: relative;
+    .v-btn {
+      position: absolute;
+      bottom: 6px;
+      right: 10px;
+    }
+  }
 }

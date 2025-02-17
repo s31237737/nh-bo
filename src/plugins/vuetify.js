@@ -140,6 +140,7 @@ export default createVuetify({
     },
     VTextField: {
       clearable: true,
+      clearIcon: "custom:clear",
       variant: "outlined",
     },
     VDateInput: {

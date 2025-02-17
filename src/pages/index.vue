@@ -19,10 +19,11 @@
 
       <v-text-field
         v-model="form"
-        label="샘플"
-        class="required"
+        class="search-inp"
         placeholder="Email address"
         append-inner-icon="custom:search"
+        clearable
+        @click:append-inner="onAppendClick"
       />
 
       <v-btn
@@ -48,4 +49,8 @@
 <script setup>
 import { ref } from 'vue';
 const date = ref(new Date());
+const form = ref('');
+const onAppendClick = () => {
+  alert('Append icon clicked!');
+}
 </script>
