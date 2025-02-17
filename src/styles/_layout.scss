@@ -501,4 +501,16 @@ body {
       right: 10px;
     }
   }
+  .select-over {
+    padding: 0 8px 8px;
+    border: thin solid $border-subtle;
+    .v-list-item {
+      margin-top: 8px;
+      border-radius: 4px;
+      .v-list-item-title {
+        @extend .text-2;
+      }
+      
+    }
+  }
 }

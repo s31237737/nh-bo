@@ -93,7 +93,6 @@ export default createVuetify({
       ripple: false,
       rounded: "8",
     },
-
     VAppBar: {
       VMenu: {
         offset: "18",
@@ -137,6 +136,13 @@ export default createVuetify({
     VSelect: {
       persistentPlaceholder: true,
       variant: "outlined",
+      VList: {
+        class: "select-over",
+        density:"compact",
+        VListItem: {
+          minHeight: "32px",
+        },
+      },
     },
     VTextField: {
       clearable: true,

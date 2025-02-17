@@ -8,6 +8,7 @@
       <v-select
         label="앱 타입"
         :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+
       />
 
       <v-select
