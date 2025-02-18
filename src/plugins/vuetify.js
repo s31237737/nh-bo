@@ -85,6 +85,11 @@ export default createVuetify({
         minHeight: "52",
       },
     },
+    VMain: { scrollable: true,},
+    VContainer: {
+      fluid: true,
+      minWidth: "1661px",
+    },
     VBtn: {
       variant: "flat",
       textTransform: "none",

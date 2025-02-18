@@ -3,7 +3,6 @@
   <Lnb />
   <v-main>
     <v-container
-      fluid
       :class="{'is-loading':loading}"
     >
       <!-- loading persistent속성 추가 필요-->
