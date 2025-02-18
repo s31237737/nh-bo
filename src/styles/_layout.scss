@@ -359,6 +359,7 @@ body {
   .date-wrap {
     position: relative;
     min-width: 338px;
+    flex-shrink: 0;
     .v-btn {
       position: absolute;
       bottom: 6px;
@@ -465,6 +466,7 @@ body {
       padding-top: 20px;
       position: relative;
       min-width: 338px;
+      flex-shrink: 0;
       .v-label {
         display: none;
       }
@@ -517,7 +519,8 @@ body {
       }
     }
     .search-inp {
-      width: 100%;
+      min-width: 0;
+      flex-grow: 1;
     }
   }
 
