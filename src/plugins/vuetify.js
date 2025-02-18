@@ -150,13 +150,6 @@ export default createVuetify({
       persistentPlaceholder: true,
       variant: "outlined",
       hideDetails: true,
-      VList: {
-        class: "select-over",
-        density:"compact",
-        VListItem: {
-          minHeight: "32px",
-        },
-      },
     },
     VTextField: {
       clearable: true,

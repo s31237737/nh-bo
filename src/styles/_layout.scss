@@ -168,9 +168,10 @@ body {
 
   .v-table {
     th {
-      background: $bg-box-gray;
+      background: $bg-box-gray !important;
       border-bottom: none !important;
       @extend .text-2-md;
+      box-shadow: none !important;
     }
     td {
       @extend .text-1;
@@ -567,17 +568,21 @@ body {
     }
   }
 
-  .select-over {
-    padding: 0 8px 8px;
-    border: thin solid $border-subtle;
-    .v-list-item {
-      margin-top: 8px;
-      border-radius: 4px;
-      .v-list-item-title {
-        @extend .text-2;
+  .v-select {
+    min-width: 120px;
+    &__content {
+      .v-list {
+        padding: 0 8px 8px;
+        border: thin solid $border-subtle;
+        .v-list-item {
+          margin-top: 8px;
+          border-radius: 4px;
+           min-height: 32px;
+          .v-list-item-title {
+            @extend .text-2;
+          }
+        }
       }
     }
   }
-
-  .v-select {min-width: 120px;}
 }
