@@ -159,7 +159,6 @@ export default createVuetify({
       modeIcon: "custom:arrow-down",
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
-      width: 338,
     },
   },
 });
