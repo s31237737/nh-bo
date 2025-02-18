@@ -6,13 +6,15 @@
   <div class="search-wrap">
     <v-form>
       <v-select
+        v-model="select"
         label="앱 타입"
-        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        :items="['전체','타입1','타입2']"
       />
 
       <v-select
+        v-model="select"
         label="상태"
-        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        :items="['전체','상태1','상태2']"
       />
 
       <Date v-model="date" />
@@ -38,7 +40,7 @@
   </div>
   <div>
     <v-data-table
-      v-model="selected"
+      v-model="checked"
       :headers="headers"
       :items="apps"
       show-select
@@ -65,11 +67,13 @@
 import { ref } from 'vue';
 const date = ref(new Date());
 const form = ref('');
+const select = ref('전체');
+
 const onAppendClick = () => {
   alert('Append icon clicked!');
 }
 
-const selected = ref([]);
+const checked = ref([]);
 
 const headers = [
   { title: "순서", key: "id"},
