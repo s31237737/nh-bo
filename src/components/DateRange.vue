@@ -3,7 +3,7 @@
     <v-date-input
       :model-value="modelValue"
       variant="outlined"
-      label="Date"
+      label="기간"
       multiple="range"
       @update:model-value="updateDate"
     />
