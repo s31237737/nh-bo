@@ -4,6 +4,7 @@
       :ripple="false"
       icon="custom:arrow-first"
       :disabled="currentPage === 1"
+      density="compact"
       @click="goToPage(1)"
     />
 
@@ -11,6 +12,7 @@
       :ripple="false"
       icon="custom:arrow-left"
       :disabled="currentPage === 1"
+      density="compact"
       @click="goToPage(currentPage - 1)"
     />
 
@@ -31,6 +33,7 @@
       :ripple="false"
       icon="custom:arrow-right"
       :disabled="currentPage === totalPages"
+      density="compact"
       @click="goToPage(currentPage + 1)"
     />
 
@@ -38,6 +41,7 @@
       :ripple="false"
       icon="custom:arrow-last"
       :disabled="currentPage === totalPages"
+      density="compact"
       @click="goToPage(totalPages)"
     />
   </div>
@@ -95,7 +99,3 @@ const goToPage = (page) => {
   emit('paging', { page: currentPage.value });
 };
 </script>
-
-<style scoped>
-
-</style>
