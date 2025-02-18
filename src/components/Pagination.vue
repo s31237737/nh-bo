@@ -99,3 +99,7 @@ const goToPage = (page) => {
   emit('paging', { page: currentPage.value });
 };
 </script>
+
+<style scoped>
+
+</style>
