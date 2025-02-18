@@ -22,7 +22,7 @@
       <v-text-field
         v-model="form"
         class="search-inp"
-        placeholder="Email address"
+        placeholder="전체 앱 이름, 코드를 검색해주세요."
         append-inner-icon="custom:search"
         clearable
         @click:append-inner="onAppendClick"
@@ -47,6 +47,11 @@
       hover
       hide-default-footer
     >
+      <template #item.appName="{ item }">
+        <div class="text-ellipsis">
+          {{ item.appName }}
+        </div>
+      </template>
       <template #no-data>
         <v-empty-state
           text="검색결과가 없습니다."
@@ -76,39 +81,39 @@ const onAppendClick = () => {
 const checked = ref([]);
 
 const headers = [
-  { title: "순서", key: "id"},
-  { title: "앱 코드", key: "appCode", sortable: false },
-  { title: "앱 이름", key: "appName", sortable: false },
-  { title: "앱 타입", key: "appType", sortable: false },
-  { title: "상태", key: "status", sortable: false },
-  { title: "등록자", key: "registrant", sortable: false },
-  { title: "등록 날짜", key: "createdDate", sortable: false },
-  { title: "업데이트 날짜", key: "updatedDate", sortable: false },
-  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false },
+  { title: "순서", key: "id", minWidth: '80px'},
+  { title: "앱 코드", key: "appCode", sortable: false, minWidth: '110px'},
+  { title: "앱 이름", key: "appName", sortable: false, minWidth: '500px' },
+  { title: "앱 타입", key: "appType", sortable: false, minWidth: '110px'},
+  { title: "상태", key: "status", sortable: false, minWidth: '110px'},
+  { title: "등록자", key: "registrant", sortable: false, minWidth: '150px' },
+  { title: "등록 날짜", key: "createdDate", sortable: false, minWidth: '150px'},
+  { title: "업데이트 날짜", key: "updatedDate", sortable: false, minWidth: '150px' },
+  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false, minWidth: '150px' },
 ];
 
 const apps = ref([
-  // {
-  //   id: 1,
-  //   appCode: "APP001",
-  //   appName: "테스트 앱 1",
-  //   appType: "모바일",
-  //   status: "활성",
-  //   registrant: "홍길동",
-  //   createdDate: "2024-01-01",
-  //   updatedDate: "2024-02-01",
-  //   lastModifiedDate: "2024-02-15",
-  // },
-  // {
-  //   id: 2,
-  //   appCode: "APP002",
-  //   appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
-  //   appType: "웹",
-  //   status: "비활성",
-  //   registrant: "김철수",
-  //   createdDate: "2024-01-10",
-  //   updatedDate: "2024-02-05",
-  //   lastModifiedDate: "2024-02-16",
-  // },
+  {
+    id: 1,
+    appCode: "APP001",
+    appName: "테스트 앱 1",
+    appType: "모바일",
+    status: "활성",
+    registrant: "홍길동",
+    createdDate: "2024-01-01",
+    updatedDate: "2024-02-01",
+    lastModifiedDate: "2024-02-15",
+  },
+  {
+    id: 2,
+    appCode: "APP002",
+    appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    appType: "웹",
+    status: "비활성",
+    registrant: "김철수",
+    createdDate: "2024-01-10",
+    updatedDate: "2024-02-05",
+    lastModifiedDate: "2024-02-16",
+  },
 ]);
 </script>
