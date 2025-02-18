@@ -95,6 +95,7 @@ body {
       }
     }
   }
+
   .v-container {
     position: relative;
     padding: 34px 24px;
@@ -204,9 +205,29 @@ body {
       }
     }
     &.v-data-table {
+      margin-top: 50px;
       .text-ellipsis {
         @include line-clamp(1);
       }
+    }
+  }
+
+  .table-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 16px;
+    .control {
+      display: flex;
+      flex-direction: column;
+    }
+    .control-input {
+      display: flex;
+      gap: 8px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
     }
   }
 
@@ -457,9 +478,6 @@ body {
         flex-direction: row;
         gap: 12px;
         align-items: flex-end;
-        > * {
-          flex-basis: auto;
-        }
       }
     }
     &:not(:has(.v-form)) {
@@ -471,8 +489,8 @@ body {
     .v-input {
       padding-top: 20px;
       position: relative;
-      min-width: 338px;
-      flex-shrink: 0;
+      flex-basis: 338px;
+      flex-grow: 0;
       .v-label {
         display: none;
       }
@@ -523,10 +541,10 @@ body {
 
     }
     .search-inp {
-      min-width: 0;
       flex-grow: 1;
     }
   }
+
   .v-field--focused .v-field__outline {
     --v-field-border-width: 1px !important;
   }
@@ -558,24 +576,6 @@ body {
       .v-list-item-title {
         @extend .text-2;
       }
-    }
-  }
-
-  .table-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    .control {
-      display: flex;
-      flex-direction: column;
-    }
-    .control-input {
-      display: flex;
-      gap: 8px;
-    }
-    .btns {
-      display: flex;
-      gap: 12px;
     }
   }
 

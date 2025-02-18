@@ -36,57 +36,58 @@
     </v-form>
   </div>
 
-  <div class="table-top">
-    <div class="control">
-      <strong class="control-total">전체 (6,102)</strong>
-      <div class="control-input">
-        <v-select
-          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-        />
-        <v-select
-          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-        />
-      </div>
-    </div>
-    <div class="btns">
-      <v-btn
-        size="large"
-        color="tertiary"
-        variant="outlined"
-      >
-        앱 타입 설정
-      </v-btn>
-      <v-btn
-        size="large"
-        color="tertiary"
-        variant="outlined"
-      >
-        카테고리 태그 설정
-      </v-btn>
-      <v-btn
-        size="large"
-        color="warning"
-        variant="outlined"
-        prepend-icon="custom:remove"
-      >
-        삭제
-      </v-btn>
-      <v-btn
-        size="large"
-        color="primary"
-      >
-        등록
-      </v-btn>
-    </div>
-  </div>
+
   <v-data-table
     v-model="checked"
     :headers="headers"
     :items="apps"
-    show-select
-    hover
-    hide-default-footer
   >
+    <template #top>
+      <div class="table-top">
+        <div class="control">
+          <strong class="control-total">전체 (6,102)</strong>
+          <div class="control-input">
+            <v-select
+              :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+            />
+            <v-select
+              :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+            />
+          </div>
+        </div>
+        <div class="btns">
+          <v-btn
+            size="large"
+            color="tertiary"
+            variant="outlined"
+          >
+            앱 타입 설정
+          </v-btn>
+          <v-btn
+            size="large"
+            color="tertiary"
+            variant="outlined"
+          >
+            카테고리 태그 설정
+          </v-btn>
+          <v-btn
+            size="large"
+            color="warning"
+            variant="outlined"
+            prepend-icon="custom:remove"
+          >
+            삭제
+          </v-btn>
+          <v-btn
+            size="large"
+            color="primary"
+          >
+            등록
+          </v-btn>
+        </div>
+      </div>
+    </template>
+
     <template #item.appName="{ item }">
       <div class="text-ellipsis">
         {{ item.appName }}
@@ -99,12 +100,14 @@
         size="60"
       />
     </template>
+    <template #bottom>
+      <Pagination
+        :total-items="80"
+        :items-per-page="10"
+        :current-page="3"
+      />
+    </template>
   </v-data-table>
-  <Pagination
-    :total-items="80"
-    :items-per-page="10"
-    :current-page="3"
-  />
 </template>
 
 <script setup>

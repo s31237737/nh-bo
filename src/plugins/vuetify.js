@@ -85,7 +85,9 @@ export default createVuetify({
         minHeight: "52",
       },
     },
-    VMain: { scrollable: true },
+    VMain: {
+      scrollable: true
+    },
     VContainer: {
       fluid: true,
       minWidth: "1661px",
@@ -132,16 +134,22 @@ export default createVuetify({
     },
     VSwitch: {
       color: "#0279fe",
-      inset: "true",
-      hideDetails: "true",
+      inset: true,
+      hideDetails: true,
     },
     VTableRow: {
       class: ["tbl-row"],
     },
+    VDataTable: {
+      fixedHeader: true,
+      hover: true,
+      showSelect: true,
+      hideDefaultFooter: true,
+    },
     VSelect: {
       persistentPlaceholder: true,
       variant: "outlined",
-      hideDetails: "true",
+      hideDetails: true,
       VList: {
         class: "select-over",
         density:"compact",
@@ -154,6 +162,7 @@ export default createVuetify({
       clearable: true,
       clearIcon: "custom:clear",
       variant: "outlined",
+      hideDetails: true,
     },
     VDateInput: {
       variant: "outlined",
