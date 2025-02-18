@@ -1,39 +1,31 @@
 <template>
   <div class="search-wrap">
     <v-form>
-      <v-select
-        label="앱 타입"
-        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-      />
+      <div>
+        <v-select
+          label="앱 타입"
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        />
 
-      <v-select
-        label="상태"
-        :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
-      />
-
-      <v-text-field
-        v-model="form"
-        label="샘플"
-        placeholder="Email address"
-      />
-      <div class="search-inp">
         <v-text-field
           v-model="form"
           label="샘플"
-          class="required"
           placeholder="Email address"
         />
-        <v-btn
-          icon="custom:search"
-          density="comfortable"
-        />
-      </div>
 
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-        icon="custom:refresh"
-      />
+        <div class="search-inp">
+          <v-text-field
+            v-model="form"
+            label="샘플"
+            class="required"
+            placeholder="Email address"
+          />
+          <v-btn
+            icon="custom:search"
+            density="comfortable"
+          />
+        </div>
+      </div>
 
       <DateRange v-model="dateRange" />
 

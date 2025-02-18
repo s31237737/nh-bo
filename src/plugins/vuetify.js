@@ -85,7 +85,7 @@ export default createVuetify({
         minHeight: "52",
       },
     },
-    VMain: { scrollable: true,},
+    VMain: { scrollable: true },
     VContainer: {
       fluid: true,
       minWidth: "1661px",
@@ -141,6 +141,7 @@ export default createVuetify({
     VSelect: {
       persistentPlaceholder: true,
       variant: "outlined",
+      hideDetails: "true",
       VList: {
         class: "select-over",
         density:"compact",

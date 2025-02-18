@@ -520,14 +520,15 @@ body {
           }
         }
       }
-      &.v-field--focused .v-field__outline {
-        --v-field-border-width: 1px !important;
-      }
+
     }
     .search-inp {
       min-width: 0;
       flex-grow: 1;
     }
+  }
+  .v-field--focused .v-field__outline {
+    --v-field-border-width: 1px !important;
   }
 
   .search-inp {
@@ -547,6 +548,7 @@ body {
       }
     }
   }
+
   .select-over {
     padding: 0 8px 8px;
     border: thin solid $border-subtle;
@@ -558,4 +560,24 @@ body {
       }
     }
   }
+
+  .table-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    .control {
+      display: flex;
+      flex-direction: column;
+    }
+    .control-input {
+      display: flex;
+      gap: 8px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  .v-select {min-width: 120px;}
 }

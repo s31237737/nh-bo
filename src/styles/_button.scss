@@ -20,6 +20,10 @@ body {
   .v-btn--size-large {
     --v-btn-height: 48px;
     padding: 0 16px;
+    .v-btn__prepend .v-icon,
+    .v-btn__append .v-icon {
+       font-size: 1.5rem;
+    }
   }
   .text-tertiary {
     color: $text-primary !important;

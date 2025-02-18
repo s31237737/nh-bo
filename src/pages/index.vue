@@ -35,32 +35,71 @@
       />
     </v-form>
   </div>
-  <div>
-    필터
-  </div>
-  <div>
-    <v-data-table
-      v-model="checked"
-      :headers="headers"
-      :items="apps"
-      show-select
-      hover
-      hide-default-footer
-    >
-      <template #item.appName="{ item }">
-        <div class="text-ellipsis">
-          {{ item.appName }}
-        </div>
-      </template>
-      <template #no-data>
-        <v-empty-state
-          text="검색결과가 없습니다."
-          icon="custom:warning"
-          size="60"
+
+  <div class="table-top">
+    <div class="control">
+      <strong class="control-total">전체 (6,102)</strong>
+      <div class="control-input">
+        <v-select
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
         />
-      </template>
-    </v-data-table>
+        <v-select
+          :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        />
+      </div>
+    </div>
+    <div class="btns">
+      <v-btn
+        size="large"
+        color="tertiary"
+        variant="outlined"
+      >
+        앱 타입 설정
+      </v-btn>
+      <v-btn
+        size="large"
+        color="tertiary"
+        variant="outlined"
+      >
+        카테고리 태그 설정
+      </v-btn>
+      <v-btn
+        size="large"
+        color="warning"
+        variant="outlined"
+        prepend-icon="custom:remove"
+      >
+        삭제
+      </v-btn>
+      <v-btn
+        size="large"
+        color="primary"
+      >
+        등록
+      </v-btn>
+    </div>
   </div>
+  <v-data-table
+    v-model="checked"
+    :headers="headers"
+    :items="apps"
+    show-select
+    hover
+    hide-default-footer
+  >
+    <template #item.appName="{ item }">
+      <div class="text-ellipsis">
+        {{ item.appName }}
+      </div>
+    </template>
+    <template #no-data>
+      <v-empty-state
+        text="검색결과가 없습니다."
+        icon="custom:warning"
+        size="60"
+      />
+    </template>
+  </v-data-table>
   <Pagination
     :total-items="80"
     :items-per-page="10"
@@ -81,15 +120,15 @@ const onAppendClick = () => {
 const checked = ref([]);
 
 const headers = [
-  { title: "순서", key: "id", minWidth: '80px'},
-  { title: "앱 코드", key: "appCode", sortable: false, minWidth: '110px'},
+  { title: "순서", key: "id", width: '80px'},
+  { title: "앱 코드", key: "appCode", sortable: false, width: '110px'},
   { title: "앱 이름", key: "appName", sortable: false, minWidth: '500px' },
-  { title: "앱 타입", key: "appType", sortable: false, minWidth: '110px'},
-  { title: "상태", key: "status", sortable: false, minWidth: '110px'},
-  { title: "등록자", key: "registrant", sortable: false, minWidth: '150px' },
-  { title: "등록 날짜", key: "createdDate", sortable: false, minWidth: '150px'},
-  { title: "업데이트 날짜", key: "updatedDate", sortable: false, minWidth: '150px' },
-  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false, minWidth: '150px' },
+  { title: "앱 타입", key: "appType", sortable: false, width: '110px'},
+  { title: "상태", key: "status", sortable: false, width: '110px'},
+  { title: "등록자", key: "registrant", sortable: false, width: '150px' },
+  { title: "등록 날짜", key: "createdDate", sortable: false, width: '150px'},
+  { title: "업데이트 날짜", key: "updatedDate", sortable: false, width: '150px' },
+  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false, width: '150px' },
 ];
 
 const apps = ref([
