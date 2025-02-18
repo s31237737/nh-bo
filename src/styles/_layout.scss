@@ -503,10 +503,8 @@ body {
       right: 10px;
     }
     .v-icon {pointer-events: none;}
-    .v-field--focused .v-icon,
-    .v-field--active .v-icon {opacity:1; }
     &.v-input--dirty {
-      .v-icon {pointer-events: all;}
+      .v-icon {pointer-events: all; opacity:1;}
     }
   }
   .select-over {
