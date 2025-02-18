@@ -42,8 +42,17 @@
       :headers="headers"
       :items="apps"
       show-select
+      hover
       hide-default-footer
-    />
+    >
+      <template #no-data>
+        <v-empty-state
+          text="검색결과가 없습니다."
+          icon="custom:warning"
+          size="60"
+        />
+      </template>
+    </v-data-table>
   </div>
   <Pagination
     :total-items="80"
@@ -75,27 +84,27 @@ const headers = [
 ];
 
 const apps = ref([
-  {
-    id: 1,
-    appCode: "APP001",
-    appName: "테스트 앱 1",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "2024-01-01",
-    updatedDate: "2024-02-01",
-    lastModifiedDate: "2024-02-15",
-  },
-  {
-    id: 2,
-    appCode: "APP002",
-    appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "2024-01-10",
-    updatedDate: "2024-02-05",
-    lastModifiedDate: "2024-02-16",
-  },
+  // {
+  //   id: 1,
+  //   appCode: "APP001",
+  //   appName: "테스트 앱 1",
+  //   appType: "모바일",
+  //   status: "활성",
+  //   registrant: "홍길동",
+  //   createdDate: "2024-01-01",
+  //   updatedDate: "2024-02-01",
+  //   lastModifiedDate: "2024-02-15",
+  // },
+  // {
+  //   id: 2,
+  //   appCode: "APP002",
+  //   appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+  //   appType: "웹",
+  //   status: "비활성",
+  //   registrant: "김철수",
+  //   createdDate: "2024-01-10",
+  //   updatedDate: "2024-02-05",
+  //   lastModifiedDate: "2024-02-16",
+  // },
 ]);
 </script>
