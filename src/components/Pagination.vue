@@ -75,6 +75,7 @@ const currentPage = ref(props.currentPage);
 
 watch(() => props.itemsPerPage, () => {
   currentPage.value = 1;
+   emit('paging', { page: currentPage.value });
 });
 
 const pageNumbers = computed(() => {
