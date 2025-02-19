@@ -479,6 +479,7 @@ body {
   }
 
   .search-wrap {
+    margin-bottom: 50px;
     &:has(.v-form) {
       > .v-form {
         display: flex;

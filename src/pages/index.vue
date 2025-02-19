@@ -65,6 +65,7 @@
             size="large"
             color="tertiary"
             variant="outlined"
+            @click="openPop01"
           >
             앱 타입 설정
           </v-btn>
@@ -484,4 +485,6 @@ const dataTableItem = ref([
     lastModifiedDate: "2024-03-12",
   }
 ]);
+
+//팝업 호출
 </script>

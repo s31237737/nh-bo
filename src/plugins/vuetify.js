@@ -90,7 +90,7 @@ export default createVuetify({
     },
     VContainer: {
       fluid: true,
-      minWidth: "1661px",
+      minWidth: "1654px",
     },
     VBtn: {
       variant: "flat",
