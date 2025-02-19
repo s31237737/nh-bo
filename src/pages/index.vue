@@ -65,7 +65,7 @@
             size="large"
             color="tertiary"
             variant="outlined"
-            @click="openPop01"
+            to="pop-app01"
           >
             앱 타입 설정
           </v-btn>
