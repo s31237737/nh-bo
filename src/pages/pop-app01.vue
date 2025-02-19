@@ -32,35 +32,8 @@
             <div class="table-top">
               <div class="control">
                 <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-                <div class="control-input">
-                  <v-select
-                    v-model="itemsPerPage"
-                    :items="pageSort"
-                    item-title="title"
-                    item-value="value"
-                  />
-                  <v-select
-                    v-model="selectDate"
-                    :items="['최신순', '업데이트순', '마지막 수정순']"
-                  />
-                </div>
               </div>
               <div class="btns">
-                <v-btn
-                  size="large"
-                  color="tertiary"
-                  variant="outlined"
-                  to="pop-app01"
-                >
-                  앱 타입 설정
-                </v-btn>
-                <v-btn
-                  size="large"
-                  color="tertiary"
-                  variant="outlined"
-                >
-                  카테고리 태그 설정
-                </v-btn>
                 <v-btn
                   size="large"
                   color="warning"
@@ -115,26 +88,13 @@ const dialog = ref(false);
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref('최신순');
 const checked = ref([]);
-const pageSort = ref([
-  { title: '10개', value: 10 },
-  { title: '20개', value: 20 },
-  { title: '30개', value: 30 },
-  { title: '50개', value: 50 },
-  { title: '100개', value: 100 },
-],);
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
-  { title: "앱 코드", key: "appCode", sortable: false, width: '110px'},
-  { title: "앱 이름", key: "appName", sortable: false, },
-  { title: "앱 타입", key: "appType", sortable: false, width: '110px'},
-  { title: "상태", key: "status", sortable: false, width: '110px'},
-  { title: "등록자", key: "registrant", sortable: false, width: '150px' },
-  { title: "등록 날짜", key: "createdDate", sortable: false, width: '150px'},
-  { title: "업데이트 날짜", key: "updatedDate", sortable: false, width: '150px' },
-  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false, width: '150px' },
+  { title: "앱 타입 코드", key: "appCode", sortable: false, width: '110px'},
+  { title: "앱 타입명", key: "appName", sortable: false, },
+  { title: "상태", key: "status", sortable: false, width: '150px'},
 ];
 
 const dataTableItem = ref([
@@ -143,7 +103,7 @@ const dataTableItem = ref([
     appCode: "APP001",
     appName: "테스트 앱 1",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "홍길동",
     createdDate: "2024-01-01",
     updatedDate: "2024-02-01",
@@ -154,7 +114,7 @@ const dataTableItem = ref([
     appCode: "APP002",
     appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "김철수",
     createdDate: "2024-01-10",
     updatedDate: "2024-02-05",
@@ -165,7 +125,7 @@ const dataTableItem = ref([
     appCode: "APP003",
     appName: "앱3",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "이민수",
     createdDate: "2024-01-12",
     updatedDate: "2024-02-03",
@@ -176,7 +136,7 @@ const dataTableItem = ref([
     appCode: "APP004",
     appName: "앱4",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "박지은",
     createdDate: "2024-01-15",
     updatedDate: "2024-02-07",
@@ -187,7 +147,7 @@ const dataTableItem = ref([
     appCode: "APP005",
     appName: "앱5",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "최영희",
     createdDate: "2024-01-20",
     updatedDate: "2024-02-08",
@@ -198,7 +158,7 @@ const dataTableItem = ref([
     appCode: "APP006",
     appName: "앱6",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "정호준",
     createdDate: "2024-01-25",
     updatedDate: "2024-02-09",
@@ -209,7 +169,7 @@ const dataTableItem = ref([
     appCode: "APP007",
     appName: "앱7",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "홍길동",
     createdDate: "2024-02-01",
     updatedDate: "2024-02-10",
@@ -220,7 +180,7 @@ const dataTableItem = ref([
     appCode: "APP008",
     appName: "앱8",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "김철수",
     createdDate: "2024-02-02",
     updatedDate: "2024-02-11",
@@ -231,7 +191,7 @@ const dataTableItem = ref([
     appCode: "APP009",
     appName: "앱9",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "이민수",
     createdDate: "2024-02-05",
     updatedDate: "2024-02-12",
@@ -242,7 +202,7 @@ const dataTableItem = ref([
     appCode: "APP010",
     appName: "앱10",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "박지은",
     createdDate: "2024-02-08",
     updatedDate: "2024-02-13",
@@ -253,7 +213,7 @@ const dataTableItem = ref([
     appCode: "APP011",
     appName: "앱11",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "최영희",
     createdDate: "2024-02-10",
     updatedDate: "2024-02-14",
@@ -264,7 +224,7 @@ const dataTableItem = ref([
     appCode: "APP012",
     appName: "앱12",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "정호준",
     createdDate: "2024-02-12",
     updatedDate: "2024-02-15",
@@ -275,7 +235,7 @@ const dataTableItem = ref([
     appCode: "APP013",
     appName: "앱13",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "홍길동",
     createdDate: "2024-02-15",
     updatedDate: "2024-02-16",
@@ -286,7 +246,7 @@ const dataTableItem = ref([
     appCode: "APP014",
     appName: "앱14",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "김철수",
     createdDate: "2024-02-16",
     updatedDate: "2024-02-17",
@@ -297,7 +257,7 @@ const dataTableItem = ref([
     appCode: "APP015",
     appName: "앱15",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "이민수",
     createdDate: "2024-02-17",
     updatedDate: "2024-02-18",
@@ -308,7 +268,7 @@ const dataTableItem = ref([
     appCode: "APP016",
     appName: "앱16",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "박지은",
     createdDate: "2024-02-18",
     updatedDate: "2024-02-19",
@@ -319,7 +279,7 @@ const dataTableItem = ref([
     appCode: "APP017",
     appName: "앱17",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "최영희",
     createdDate: "2024-02-20",
     updatedDate: "2024-02-21",
@@ -330,7 +290,7 @@ const dataTableItem = ref([
     appCode: "APP018",
     appName: "앱18",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "정호준",
     createdDate: "2024-02-22",
     updatedDate: "2024-02-23",
@@ -341,7 +301,7 @@ const dataTableItem = ref([
     appCode: "APP019",
     appName: "앱19",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "홍길동",
     createdDate: "2024-02-25",
     updatedDate: "2024-02-26",
@@ -352,7 +312,7 @@ const dataTableItem = ref([
     appCode: "APP020",
     appName: "앱20",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "김철수",
     createdDate: "2024-02-28",
     updatedDate: "2024-02-29",
@@ -363,7 +323,7 @@ const dataTableItem = ref([
     appCode: "APP021",
     appName: "앱21",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "이민수",
     createdDate: "2024-03-01",
     updatedDate: "2024-03-02",
@@ -374,7 +334,7 @@ const dataTableItem = ref([
     appCode: "APP022",
     appName: "앱22",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "박지은",
     createdDate: "2024-03-02",
     updatedDate: "2024-03-03",
@@ -385,7 +345,7 @@ const dataTableItem = ref([
     appCode: "APP023",
     appName: "앱23",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "최영희",
     createdDate: "2024-03-03",
     updatedDate: "2024-03-04",
@@ -396,7 +356,7 @@ const dataTableItem = ref([
     appCode: "APP024",
     appName: "앱24",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "정호준",
     createdDate: "2024-03-04",
     updatedDate: "2024-03-05",
@@ -407,7 +367,7 @@ const dataTableItem = ref([
     appCode: "APP025",
     appName: "앱25",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "홍길동",
     createdDate: "2024-03-05",
     updatedDate: "2024-03-06",
@@ -418,7 +378,7 @@ const dataTableItem = ref([
     appCode: "APP026",
     appName: "앱26",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "김철수",
     createdDate: "2024-03-06",
     updatedDate: "2024-03-07",
@@ -429,7 +389,7 @@ const dataTableItem = ref([
     appCode: "APP027",
     appName: "앱27",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "이민수",
     createdDate: "2024-03-07",
     updatedDate: "2024-03-08",
@@ -440,7 +400,7 @@ const dataTableItem = ref([
     appCode: "APP028",
     appName: "앱28",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "박지은",
     createdDate: "2024-03-08",
     updatedDate: "2024-03-09",
@@ -451,7 +411,7 @@ const dataTableItem = ref([
     appCode: "APP029",
     appName: "앱29",
     appType: "모바일",
-    status: "활성",
+    status: "사용",
     registrant: "최영희",
     createdDate: "2024-03-09",
     updatedDate: "2024-03-10",
@@ -462,7 +422,7 @@ const dataTableItem = ref([
     appCode: "APP030",
     appName: "앱30",
     appType: "웹",
-    status: "비활성",
+    status: "미사용",
     registrant: "정호준",
     createdDate: "2024-03-10",
     updatedDate: "2024-03-11",
