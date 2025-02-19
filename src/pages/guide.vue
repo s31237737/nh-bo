@@ -273,7 +273,7 @@
         <v-btn
           size="small"
           color="primary"
-          prepend-icon="mdi:mdi-plus"
+          prepend-icon="mdi-plus"
         >
           icon/Primary
         </v-btn>
@@ -284,7 +284,7 @@
         <v-btn
           size="small"
           color="secondary"
-          prepend-icon="mdi:mdi-plus"
+          prepend-icon="mdi-plus"
         >
           icon/Secondary
         </v-btn>
@@ -296,7 +296,7 @@
           size="small"
           color="tertiary"
           variant="outlined"
-          append-icon="mdi:mdi-plus"
+          append-icon="mdi-plus"
         >
           icon/Tertiary
         </v-btn>
@@ -307,7 +307,7 @@
         <v-btn
           size="small"
           color="warning"
-          append-icon="mdi:mdi-plus"
+          append-icon="mdi-plus"
         >
           icon/Warning
         </v-btn>
@@ -318,7 +318,7 @@
           size="small"
           color="warning"
           variant="outlined"
-          append-icon="mdi:mdi-plus"
+          append-icon="mdi-plus"
         >
           icon/Warning
         </v-btn>
@@ -338,7 +338,7 @@
       <v-col cols="auto">
         <v-btn
           color="secondary"
-          icon="mdi:mdi-plus"
+          icon="mdi-plus"
           density="comfortable"
         />
       </v-col>
