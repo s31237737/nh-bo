@@ -78,6 +78,7 @@
             color="warning"
             variant="outlined"
             prepend-icon="custom:remove"
+            :disabled="!checked.length"
           >
             삭제
           </v-btn>
@@ -132,7 +133,7 @@ const checked = ref([]);
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "앱 코드", key: "appCode", sortable: false, width: '110px'},
-  { title: "앱 이름", key: "appName", sortable: false, minWidth: '500px' },
+  { title: "앱 이름", key: "appName", sortable: false, },
   { title: "앱 타입", key: "appType", sortable: false, width: '110px'},
   { title: "상태", key: "status", sortable: false, width: '110px'},
   { title: "등록자", key: "registrant", sortable: false, width: '150px' },
