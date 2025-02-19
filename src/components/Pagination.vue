@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 
 const props = defineProps({
   totalItems: {
@@ -72,6 +72,10 @@ const totalPages = computed(() => {
 });
 
 const currentPage = ref(props.currentPage);
+
+watch(() => props.itemsPerPage, () => {
+  currentPage.value = 1;
+});
 
 const pageNumbers = computed(() => {
   const pageLimit = 5; // 최대 페이지 번호 수
