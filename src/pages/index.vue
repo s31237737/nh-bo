@@ -50,7 +50,9 @@
           <div class="control-input">
             <v-select
               v-model="itemsPerPage"
-              :items="['10', '20', '30', '50', '100']"
+              :items="pageSort"
+              item-title="title"
+              item-value="value"
             />
             <v-select
               v-model="selectDate"
@@ -116,6 +118,8 @@
 
 <script setup>
 import { ref } from 'vue';
+
+// 조회조건
 const date = ref(new Date());
 const form = ref('');
 const select = ref('전체');
@@ -123,12 +127,18 @@ const onAppendClick = () => {
   alert('Append icon clicked!');
 }
 
-
-
+// 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
 const selectDate = ref('최신순');
 const checked = ref([]);
+const pageSort = ref([
+  { title: '10개', value: 10 },
+  { title: '20개', value: 20 },
+  { title: '30개', value: 30 },
+  { title: '50개', value: 50 },
+  { title: '100개', value: 100 },
+],);
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
