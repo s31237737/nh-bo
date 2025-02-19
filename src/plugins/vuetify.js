@@ -145,6 +145,7 @@ export default createVuetify({
       hover: true,
       showSelect: true,
       hideDefaultFooter: true,
+      height: "616px",
     },
     VSelect: {
       persistentPlaceholder: true,
