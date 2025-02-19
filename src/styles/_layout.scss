@@ -120,6 +120,9 @@ body {
           border-radius: 50%;
         }
       }
+      .v-card-text {
+        padding: 24px !important;
+      }
       .v-card-actions {
         justify-content: center !important;
         padding: 1rem 1rem 1.5rem;

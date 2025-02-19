@@ -117,7 +117,7 @@ export default createVuetify({
       scrollable: true,
       width: "auto",
       VCard: {
-        maxHeight: "864",
+        maxHeight: "872",
       },
       VCardTitle: {
         VBtn: { width: "32", height: "32" },
