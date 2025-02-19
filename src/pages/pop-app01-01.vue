@@ -25,7 +25,7 @@
           <tbody>
             <tr>
               <th width="20%">
-                앱 타입명
+                앱 타입명 <i class="required" />
               </th>
               <td>d</td>
             </tr>
