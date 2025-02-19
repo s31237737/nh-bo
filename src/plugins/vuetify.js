@@ -86,7 +86,7 @@ export default createVuetify({
       },
     },
     VMain: {
-      scrollable: true
+      scrollable: true,
     },
     VContainer: {
       fluid: true,
@@ -146,6 +146,8 @@ export default createVuetify({
       showSelect: true,
       hideDefaultFooter: true,
       height: "616px",
+      sortAscIcon: "custom:sort-asc",
+      sortDescIcon: "custom:sort-desc",
     },
     VSelect: {
       persistentPlaceholder: true,
