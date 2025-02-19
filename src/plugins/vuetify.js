@@ -148,6 +148,9 @@ export default createVuetify({
       height: "616px",
       sortAscIcon: "custom:sort-asc",
       sortDescIcon: "custom:sort-desc",
+      VCheckboxBtn: {
+        baseColor: "#c2c2c2",
+      },
     },
     VSelect: {
       persistentPlaceholder: true,
@@ -170,6 +173,9 @@ export default createVuetify({
       modeIcon: "custom:arrow-down",
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
+    },
+    VCheckbox: {
+      baseColor: "#c2c2c2",
     },
   },
 });
