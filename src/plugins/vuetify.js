@@ -55,7 +55,7 @@ export default createVuetify({
 
           // State Colors
           state_positive: "#12852a", // 긍정적인 상태 색상 (성공)
-          state_warn: "#ffb800", // 경고 상태 색상
+          state_warn: "1B4DD6", // 경고 상태 색상
         },
       },
     },

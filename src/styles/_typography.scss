@@ -1,10 +1,10 @@
 $font-family: 'Pretendard';
 
 @mixin typography($size, $weight, $line-height) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-  letter-spacing: 0;
+  font-size: $size !important;
+  font-weight: $weight !important;
+  line-height: $line-height !important;
+  letter-spacing: 0 !important;
 }
 
 .title-1 {

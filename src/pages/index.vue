@@ -73,6 +73,7 @@
             size="large"
             color="tertiary"
             variant="outlined"
+            to="pop-app02"
           >
             카테고리 태그 설정
           </v-btn>
@@ -486,5 +487,4 @@ const dataTableItem = ref([
   }
 ]);
 
-//팝업 호출
 </script>
