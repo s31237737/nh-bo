@@ -99,22 +99,11 @@ body {
   .v-container {
     position: relative;
     padding: 34px 24px;
-    height: 100%;
   }
 
   .v-overlay {
     align-items: center;
     justify-content: center;
-  }
-
-  .page-header {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-bottom: 62px;
-    .v-btn:not(:hover) {
-      --v-theme-overlay-multiplier: 0;
-    }
   }
 
   .v-dialog {
@@ -163,6 +152,16 @@ body {
       .v-card {
         width: 75rem;
       }
+    }
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 62px;
+    .v-btn:not(:hover) {
+      --v-theme-overlay-multiplier: 0;
     }
   }
 
@@ -221,6 +220,10 @@ body {
     .control {
       display: flex;
       flex-direction: column;
+      gap: 12px;
+    }
+    .control-total {
+      @extend .title-2;
     }
     .control-input {
       display: flex;
@@ -539,7 +542,6 @@ body {
           }
         }
       }
-
     }
     .search-inp {
       flex-grow: 1;
@@ -577,7 +579,7 @@ body {
         .v-list-item {
           margin-top: 8px;
           border-radius: 4px;
-           min-height: 32px;
+          min-height: 32px;
           .v-list-item-title {
             @extend .text-2;
           }
