@@ -37,6 +37,7 @@
         <span>Sm(312)얼럿</span>
         <v-btn
           icon="mdi-close"
+          density="comfortable"
           @click="dialog1 = false"
         />
       </v-card-title>
@@ -76,6 +77,7 @@
         <v-btn
           icon="mdi-close"
           variant="text"
+          density="comfortable"
           @click="dialog2 = false"
         />
       </v-card-title>
@@ -161,6 +163,7 @@
         <span>popup-lg</span>
         <v-btn
           icon="mdi-close"
+          density="comfortable"
           @click="dialog3 = false"
         />
       </v-card-title>
