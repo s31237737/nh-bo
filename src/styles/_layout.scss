@@ -150,6 +150,14 @@ body {
       .v-card {
         width: 40rem;
       }
+      .v-card-actions {
+        .v-btn {
+          min-width: 82px;
+          &:has(.v-btn__prepend) {
+            min-width: 106px;
+          }
+        }
+      }
     }
     &.popup-lg {
       .v-card {
