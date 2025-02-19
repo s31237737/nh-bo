@@ -149,8 +149,8 @@
       <!-- small/Primary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="primary"
+          size="small"
         >
           28px/small/Primary
         </v-btn>
@@ -159,8 +159,8 @@
       <!-- small/Secondary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="secondary"
+          size="small"
         >
           small/Secondary
         </v-btn>
@@ -169,8 +169,8 @@
       <!-- small/Tertiary -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="tertiary"
+          size="small"
           variant="outlined"
         >
           small/Tertiary
@@ -180,16 +180,16 @@
       <!-- small/Warning -->
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="warning"
+          size="small"
         >
           small/Warning
         </v-btn>
       </v-col>
       <v-col cols="auto">
         <v-btn
-          size="small"
           color="warning"
+          size="small"
           variant="outlined"
         >
           small/Warning
