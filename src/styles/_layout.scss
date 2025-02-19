@@ -326,7 +326,7 @@ body {
           @extend .text-3-md;
           color: $text-point;
         }
-        .swich-flip {
+        .switch-flip {
           padding: 0 10px;
         }
       }
@@ -371,7 +371,8 @@ body {
     }
   }
 
-  .swich-flip {
+.v-switch {
+  &.switch-flip {
     .v-selection-control {
       justify-content: space-between;
       flex-direction: row-reverse;
@@ -380,6 +381,7 @@ body {
         @extend .text-2;
       }
     }
+  }
     .v-selection-control--dirty {
       .v-selection-control__input {
         transform: translateX(6px) !important;

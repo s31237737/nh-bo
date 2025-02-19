@@ -46,6 +46,7 @@
                 <v-btn
                   size="large"
                   color="primary"
+                  to="pop-app01-01"
                 >
                   등록
                 </v-btn>
@@ -82,7 +83,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const dialog = ref(false);
+const dialog = ref(true);
 
 
 // 데이터 테이블

@@ -1,6 +1,6 @@
 <template>
   <PageHeader
-    title="앱 관리 작업중 미완성"
+    title="앱 관리"
   />
 
   <div class="search-wrap">

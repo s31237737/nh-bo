@@ -57,7 +57,7 @@
             <v-switch
               v-model="emailSwitch"
               label="이메일 송신"
-              class="swich-flip"
+              class="switch-flip"
             />
           </v-card-text>
         </template>
