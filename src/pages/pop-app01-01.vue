@@ -73,6 +73,6 @@
 import { ref } from 'vue';
 
 const dialog = ref(true);
-const isSwitch = ref(true);
+const isSwitch = ref(false);
 
 </script>

@@ -282,7 +282,7 @@ body {
       .v-card-text {
         height: 367px;
         overflow-y: scroll;
-        padding: 8px 8px 0;
+        padding: 8px 0 0 8px;
         .v-empty-state {
           height: 309px;
         }
@@ -371,24 +371,37 @@ body {
     }
   }
 
-.v-switch {
-  &.switch-flip {
-    .v-selection-control {
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      .v-label {
-        padding-inline-start: 0;
-        @extend .text-2;
+  .v-switch {
+    &.switch-flip {
+
+      .v-selection-control {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        .v-switch__track {
+          height: 20px;
+          min-width: 32px;
+        }
+        .v-label {
+          padding-inline-start: 0;
+          @extend .text-2;
+        }
+      }
+      .v-selection-control--dirty {
+      .v-selection-control__input {
+          transform: translateX(6px) !important;
+        }
+      }
+      .v-selection-control__input {
+        transform: translateX(-6px) !important;
       }
     }
-  }
     .v-selection-control--dirty {
       .v-selection-control__input {
-        transform: translateX(6px) !important;
+        transform: translateX(8px) !important;
       }
     }
     .v-selection-control__input {
-      transform: translateX(-6px) !important;
+      transform: translateX(-8px) !important;
     }
   }
 
