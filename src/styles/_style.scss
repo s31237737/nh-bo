@@ -13,7 +13,6 @@ body {
 
   .v-switch {
     &.switch-flip {
-
       .v-selection-control {
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -37,11 +36,11 @@ body {
     }
     .v-selection-control--dirty {
       .v-selection-control__input {
-        transform: translateX(8px) !important;
+        transform: translateX(10px) !important;
       }
     }
     .v-selection-control__input {
-      transform: translateX(-8px) !important;
+      transform: translateX(-10px) !important;
     }
   }
 
@@ -264,4 +263,7 @@ body {
       color: #e6171b;
     }
   }
+  .w-10 {width: 10%;}
+  .w-15 {width: 15%;}
+  .w-20 {width: 20%;}
 }

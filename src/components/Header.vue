@@ -80,7 +80,7 @@
           {{ timeLeftFormatted }}
         </span>
         <v-btn
-          color="warning"
+          color="white"
           size="small"
           variant="outlined"
           @click="onExtendClick"

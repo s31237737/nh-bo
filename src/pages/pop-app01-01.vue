@@ -24,25 +24,26 @@
         <v-table-row>
           <tbody>
             <tr>
-              <th width="20%">
+              <th class="w-20">
                 앱 타입명 <i class="required" />
               </th>
-              <td>d</td>
+              <td>
+                <v-text-field />
+              </td>
             </tr>
             <tr>
-              <th width="20%">
+              <th class="w-20">
                 앱 타입 코드
               </th>
-              <td>d</td>
+              <td>APP001</td>
             </tr>
             <tr>
-              <th width="20%">
+              <th class="w-20">
                 사용 여부
               </th>
               <td>
                 <v-switch
                   v-model="isSwitch"
-                  class="swich-flip"
                 />
               </td>
             </tr>

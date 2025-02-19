@@ -469,7 +469,7 @@
             v-for="(row, index) in tableData"
             :key="index"
           >
-            <th width="20%">
+            <th class="w-20">
               {{ row.label }}
             </th>
             <td>{{ row.value }}</td>
