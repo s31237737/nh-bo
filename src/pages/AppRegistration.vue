@@ -1,39 +1,8 @@
 <template>
   <PageHeader
-    title="앱 관리"
+    title="앱 등록"
+    prev-link="/"
   />
-
-  <div class="search-wrap">
-    <v-form>
-      <v-select
-        v-model="select"
-        label="앱 타입"
-        :items="['전체','타입1','타입2']"
-      />
-
-      <v-select
-        v-model="select"
-        label="상태"
-        :items="['전체','상태1','상태2']"
-      />
-
-      <Date v-model="date" />
-
-      <v-text-field
-        v-model="form"
-        class="search-inp"
-        placeholder="전체 앱 이름, 코드를 검색해주세요."
-        append-inner-icon="custom:search"
-        @click:append-inner="onAppendClick"
-      />
-
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-        icon="custom:refresh"
-      />
-    </v-form>
-  </div>
 
   <v-data-table
     v-model="checked"
@@ -46,18 +15,6 @@
       <div class="table-top">
         <div class="control">
           <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-          <div class="control-input">
-            <v-select
-              v-model="itemsPerPage"
-              :items="pageSort"
-              item-title="title"
-              item-value="value"
-            />
-            <v-select
-              v-model="selectDate"
-              :items="['최신순', '업데이트순', '마지막 수정순']"
-            />
-          </div>
         </div>
         <div class="btns">
           <v-btn
@@ -66,13 +23,6 @@
             variant="outlined"
           >
             앱 타입 설정
-          </v-btn>
-          <v-btn
-            size="large"
-            color="tertiary"
-            variant="outlined"
-          >
-            카테고리 태그 설정
           </v-btn>
           <v-btn
             size="large"
@@ -85,10 +35,10 @@
           </v-btn>
           <v-btn
             size="large"
-            color="primary"
-            to="AppRegistration"
+            color="tertiary"
+            variant="outlined"
           >
-            등록
+            불러오기
           </v-btn>
         </div>
       </div>
@@ -121,26 +71,10 @@
 <script setup>
 import { ref } from 'vue';
 
-// 조회조건
-const date = ref(new Date());
-const form = ref('');
-const select = ref('전체');
-const onAppendClick = () => {
-  alert('Append icon clicked!');
-}
-
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref('최신순');
 const checked = ref([]);
-const pageSort = ref([
-  { title: '10개', value: 10 },
-  { title: '20개', value: 20 },
-  { title: '30개', value: 30 },
-  { title: '50개', value: 50 },
-  { title: '100개', value: 100 },
-],);
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
