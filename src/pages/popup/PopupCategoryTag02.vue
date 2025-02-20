@@ -99,29 +99,31 @@
             </tr>
           </tbody>
         </v-table-row>
-        <!-- 스낵바 -->
+        <!-- // dialog contents -->
+        <!-- 토스트 팝업 -->
         <v-snackbar
           v-model="snackbar"
-          timeout="20000"
           contained
+          content-class="toast-info"
           close-on-content-click
-          color="success"
+          :timeout="500000"
         >
           <v-icon start>
-            mdi-information
+            custom:info
           </v-icon>
-          액티브가 3회만 허용 가능합니다. 선택한 액티브 해제하고 다시 시도해 주세요.
+          {{ snackbarText }}
 
           <template #actions>
             <v-btn
               color="white"
               icon="custom:close"
               density="comfortable"
-              @click="showSnackbar = false"
+
+              @click="snackbar = false"
             />
           </template>
         </v-snackbar>
-        <!-- // dialog contents -->
+        <!-- // 토스트 팝업 -->
       </v-card-text>
       <v-card-actions>
         <v-btn
@@ -160,11 +162,11 @@ const isSwitch02 = ref(false);
 const newTag = ref('');
 const tags = ref(['텍스트', '텍스트', '텍스트', '텍스트', '일이삼사오육칠팔구십'])
 const snackbar = ref(false);
-const snackbarText = ref('');
+const snackbarText = ref('태그는 10개까지 추가 가능합니다. 추가한 태그를 확인하고 다시 진행해 주세요.');
 
 const addTag = () => {
   if (tags.value.length >= 10) {
-    showSnackbar('태그는 최대 10개까지 추가할 수 있습니다.');
+    snackbar.value="true"
     return;
   }
 
@@ -178,9 +180,5 @@ const removeTag = (index) => {
   tags.value.splice(index, 1);
 }
 
-const showSnackbar = (message) => {
-  snackbarText.value = message;
-  snackbar.value = true;
-}
 
 </script>
