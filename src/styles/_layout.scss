@@ -165,7 +165,9 @@ body {
       }
     }
 
-    .v-table {margin-top: 0 !important;}
+    .v-table {
+      margin-top: 0 !important;
+    }
   }
 
   .page-header {
@@ -339,6 +341,9 @@ body {
         }
         .switch-flip {
           padding: 0 10px;
+          .v-selection-control--dirty .v-switch__track {
+            background-color: $text-point !important;
+          }
         }
       }
     }
@@ -371,5 +376,4 @@ body {
       border-bottom: 8px solid #ffffff;
     }
   }
-
 }
