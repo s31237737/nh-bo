@@ -300,9 +300,16 @@ body {
     padding: 0;
   }
   .toast-info {
+
     background: #f3f8ff;
     border: thin solid #b0bed2;
+    @extend .text-2;
     color: $text-primary;
+    .v-snackbar__content {
+      display: inline-flex;
+      align-items: center;
+      height: 62px;
+    }
   }
 
   i.required {

@@ -152,7 +152,6 @@
       x-large
     </v-chip>
   </div>
-  <Search />
   <v-checkbox label="Checkbox" />
 
   <v-row class="mt-12">

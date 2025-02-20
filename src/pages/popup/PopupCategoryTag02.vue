@@ -105,20 +105,18 @@
           v-model="snackbar"
           contained
           content-class="toast-info"
-          close-on-content-click
-          :timeout="500000"
         >
-          <v-icon start>
-            custom:info
-          </v-icon>
+          <v-icon
+            start
+            size="24"
+            icon="custom:info"
+          />
           {{ snackbarText }}
-
           <template #actions>
             <v-btn
               color="white"
               icon="custom:close"
               density="comfortable"
-
               @click="snackbar = false"
             />
           </template>
@@ -166,7 +164,7 @@ const snackbarText = ref('태그는 10개까지 추가 가능합니다. 추가�
 
 const addTag = () => {
   if (tags.value.length >= 10) {
-    snackbar.value="true"
+    snackbar.value=true
     return;
   }
 
