@@ -35,7 +35,6 @@
     </v-form>
   </div>
 
-
   <v-data-table
     v-model="checked"
     v-model:page="page"
@@ -65,7 +64,7 @@
             size="large"
             color="tertiary"
             variant="outlined"
-            to="pop-app01"
+            @click="popOpen"
           >
             앱 타입 설정
           </v-btn>
@@ -73,7 +72,6 @@
             size="large"
             color="tertiary"
             variant="outlined"
-            to="pop-app02"
           >
             카테고리 태그 설정
           </v-btn>
@@ -116,6 +114,7 @@
       />
     </template>
   </v-data-table>
+
 </template>
 
 <script setup>
