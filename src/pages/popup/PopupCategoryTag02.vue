@@ -46,6 +46,7 @@
                       color="primary"
                       size="small"
                       prepend-icon="mdi-plus"
+                      :disabled="!(newTag?.trim())"
                       @click="addTag"
                     >
                       추가
