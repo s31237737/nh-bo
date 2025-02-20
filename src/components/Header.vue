@@ -35,7 +35,7 @@
           <v-card-title>
             <span>로그인 연장</span>
             <v-btn
-              icon="mdi-close"
+              icon="custom:close"
               density="comfortable"
               variant="text"
               @click="loginPop = false"
