@@ -138,6 +138,14 @@
         >
           등록
         </v-btn>
+        <!-- <v-btn
+          color="tertiary"
+          size="large"
+          variant="outlined"
+          prepend-icon="custom:edit"
+        >
+          수정
+        </v-btn> -->
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -159,9 +167,12 @@ const isSwitch02 = ref(false);
 
 // 태그 추가
 const newTag = ref('');
-const tags = ref(['텍스트', '텍스트', '텍스트', '텍스트', '일이삼사오육칠팔구십'])
+const tags = ref(['태그명1', '태그명2', '태그명3', '태그명4', '태그명5']);
 const snackbar = ref(false);
 const snackbarText = ref('태그는 10개까지 추가 가능합니다. 추가한 태그를 확인하고 다시 진행해 주세요.');
+// 카테고리는 5개까지 활성화가 가능합니다. 카테고리를 확인하고 다시 설정해 주세요.
+// 카테고리 활성화가 필요합니다. 카테고리 사용 여부를 확인하고 다시 설정해 주세요.
+// 추천 정보는 2개까지 활성화가 가능합니다. 추천 정보를 확인하고 다시 설정해 주세요.
 
 const addTag = () => {
   if (tags.value.length >= 10) {

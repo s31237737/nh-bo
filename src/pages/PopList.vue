@@ -22,12 +22,14 @@
 
 <script setup>
 import { ref,shallowRef  } from 'vue';
+
 import PopupAppType01 from '@/pages/popup/PopupAppType01.vue'
 import PopupAppType02 from '@/pages/popup/PopupAppType02.vue'
 import PopupAppType03 from '@/pages/popup/PopupAppType03.vue'
 import PopupAppType04 from '@/pages/popup/PopupAppType04.vue'
 import PopupCategoryTag01 from '@/pages/popup/PopupCategoryTag01.vue'
 import PopupCategoryTag02 from '@/pages/popup/PopupCategoryTag02.vue'
+import PopupCategoryTag03 from '@/pages/popup/PopupCategoryTag03.vue'
 
 const popups = ref([
   { name: 'PopupAppType01', label: '앱 타입 설정', component: shallowRef(PopupAppType01) },
@@ -36,9 +38,10 @@ const popups = ref([
   { name: 'PopupAppType04', label: '앱 타입 상세', component: shallowRef(PopupAppType04) },
   { name: 'PopupCategoryTag01', label: '카테고리 태그 설정', component: shallowRef(PopupCategoryTag01) },
   { name: 'PopupCategoryTag02', label: '카테고리 태그 등록', component: shallowRef(PopupCategoryTag02) },
+  { name: 'PopupCategoryTag03', label: '카테고리 태그 상세', component: shallowRef(PopupCategoryTag03) },
 ]);
 
-// 팝업 상태를 객체로 관리
+
 const popupVisible = ref({
   PopupAppType01: false,
   PopupAppType02: false,
@@ -46,9 +49,9 @@ const popupVisible = ref({
   PopupAppType04: false,
   PopupCategoryTag01: false,
   PopupCategoryTag02: false,
+  PopupCategoryTag03: false,
 });
 
-// 특정 팝업 열기
 const popOpen = (name) => {
   popupVisible.value[name] = true;
 };
