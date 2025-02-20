@@ -15,7 +15,7 @@
         class="ml-5"
         color="white"
         text="pub"
-        to="/guide"
+        to="/Guide"
       />
       <!-- // 퍼블가이드 확인용 -->
     </template>
