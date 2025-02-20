@@ -46,28 +46,29 @@ import { ref } from 'vue';
 
 
 const menuItems = ref([
+  { to: "/PopList", icon: "mdi-wrench", title: "팝업목록" },
   { to: "/", icon: "custom:mobile", title: "앱 관리" },
   {
     title: "사용신청 관리",
     icon: "custom:apply",
     submenu: [
-      { title: "사용신청 관리", to: "/apply" },
-      { title: "사용내역 관리", to: "/apply-history" }
+      { title: "사용신청 관리", to: "/Apply" },
+      { title: "사용내역 관리", to: "/ApplyHistory" }
     ],
     submenuProps: { value: "apply" },
   },
-  { to: "/authority", icon: "custom:authority", title: "권한 관리" },
-  { to: "/display", icon: "custom:display", title: "전시 관리" },
+  { to: "/Authority", icon: "custom:authority", title: "권한 관리" },
+  { to: "/Display", icon: "custom:display", title: "전시 관리" },
   {
     title: "게시판 관리",
     icon: "custom:board",
     submenu: [
-      { title: "공지사항", to: "/notice" },
-      { title: "자주 묻는 질문", to: "/faq" },
-      { title: "Q&A", to: "/qna" },
-      { title: "앱 가이드", to: "/app-guide" },
-      { title: "커뮤니티", to: "/community" },
-      { title: "불편신고", to: "/complaint" },
+      { title: "공지사항", to: "/Notice" },
+      { title: "자주 묻는 질문", to: "/Faq" },
+      { title: "Q&A", to: "/Qna" },
+      { title: "앱 가이드", to: "/AppGuide" },
+      { title: "커뮤니티", to: "/Community" },
+      { title: "불편신고", to: "/Complaint" },
     ],
     submenuProps: { value: "board" },
   },
@@ -81,6 +82,7 @@ const menuItems = ref([
     ],
     submenuProps: { value: "monitoring" },
   },
-  { to: "/terms", icon: "custom:terms", title: "약관 관리" },
+  { to: "/Terms", icon: "custom:terms", title: "약관 관리" },
 ]);
+
 </script>
