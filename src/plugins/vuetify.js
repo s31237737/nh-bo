@@ -120,7 +120,10 @@ export default createVuetify({
         maxHeight: "872",
       },
       VCardTitle: {
-        VBtn: { width: "32", height: "32" },
+        VBtn: {
+          width: "32", height: "32",
+          style: 'font-size: 1.25rem',
+        },
       },
       VCardActions: {
         VBtn: { variant: "flat" },
@@ -133,7 +136,7 @@ export default createVuetify({
       indeterminate: true,
     },
     VSwitch: {
-      color: "#0279fe",
+      color: "#555D69",
       inset: true,
       hideDetails: true,
     },
