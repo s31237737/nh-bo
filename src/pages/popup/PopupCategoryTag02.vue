@@ -67,20 +67,13 @@
                         <template #append>
                           <v-btn
                             icon="custom:close"
-                            size="32"
+                            density="comfortable"
                             @click="removeTag(index)"
                           />
                         </template>
                       </v-list-item>
                     </v-list>
                   </v-sheet>
-                  <!-- 스낵바 -->
-                  <v-snackbar
-                    v-model="snackbar"
-                    timeout="2000"
-                  >
-                    {{ snackbarText }}
-                  </v-snackbar>
                 </div>
               </td>
             </tr>
@@ -106,6 +99,28 @@
             </tr>
           </tbody>
         </v-table-row>
+        <!-- 스낵바 -->
+        <v-snackbar
+          v-model="snackbar"
+          timeout="20000"
+          contained
+          close-on-content-click
+          color="success"
+        >
+          <v-icon start>
+            mdi-information
+          </v-icon>
+          액티브가 3회만 허용 가능합니다. 선택한 액티브 해제하고 다시 시도해 주세요.
+
+          <template #actions>
+            <v-btn
+              color="white"
+              icon="custom:close"
+              density="comfortable"
+              @click="showSnackbar = false"
+            />
+          </template>
+        </v-snackbar>
         <!-- // dialog contents -->
       </v-card-text>
       <v-card-actions>

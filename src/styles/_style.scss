@@ -296,6 +296,10 @@ body {
     }
   }
 
+  .v-snackbar {
+    padding: 0;
+  }
+
   i.required {
     font-style: normal;
     &:after {

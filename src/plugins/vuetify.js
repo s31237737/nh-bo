@@ -180,5 +180,9 @@ export default createVuetify({
     VCheckbox: {
       baseColor: "#c2c2c2",
     },
+    VSnackbar: {
+      maxWidth: "592px",
+      minWidth: "100%",
+    }
   },
 });
