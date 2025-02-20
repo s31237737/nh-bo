@@ -8,7 +8,7 @@
       <v-card-title>
         <span>카테고리 태그 설정</span>
         <v-btn
-          icon="mdi-close"
+          icon="custom:close"
           density="comfortable"
           @click="emit('update:modelValue', false)"
         />
