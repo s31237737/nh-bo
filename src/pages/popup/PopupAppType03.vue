@@ -8,7 +8,7 @@
       <v-card-title>
         <span>앱 타입 수정</span>
         <v-btn
-          icon="mdi-close"
+          icon="custom:close"
           density="comfortable"
           @click="emit('update:modelValue', false)"
         />
