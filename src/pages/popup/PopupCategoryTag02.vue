@@ -39,6 +39,7 @@
                 <v-text-field
                   v-model="newTag"
                   placeholder="추가하실 태그명을 입력해주세요."
+                  @keyup.enter="addTag"
                 >
                   <template #append-inner>
                     <v-btn
@@ -51,7 +52,10 @@
                     </v-btn>
                   </template>
                 </v-text-field>
-                <div class="tag-add-list">
+                <div
+                  v-if="tags.length"
+                  class="tag-add-list"
+                >
                   <p>전체 <strong>{{ tags.length }}</strong></p>
                   <v-sheet>
                     <v-list>
