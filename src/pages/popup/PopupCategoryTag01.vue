@@ -26,6 +26,14 @@
             <div class="table-top">
               <div class="control">
                 <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+                <div class="control-input">
+                  <v-select
+                    v-model="itemsPerPage"
+                    :items="pageSort"
+                    item-title="title"
+                    item-value="value"
+                  />
+                </div>
               </div>
               <div class="btns">
                 <v-btn
@@ -47,11 +55,6 @@
             </div>
           </template>
 
-          <template #item.appName="{ item }">
-            <div class="text-ellipsis">
-              {{ item.appName }}
-            </div>
-          </template>
           <template #item.addTag="{ item }">
             <div class="d-flex ga-1">
               <v-chip
@@ -102,14 +105,20 @@ const emit = defineEmits(['update:modelValue']);
 const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
-
+const pageSort = ref([
+  { title: '10개', value: 10 },
+  { title: '20개', value: 20 },
+  { title: '30개', value: 30 },
+  { title: '50개', value: 50 },
+  { title: '100개', value: 100 },
+]);
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "카테고리 코드", key: "appCode", sortable: false, width: '150px'},
   { title: "카테고리명", key: "appName", sortable: false, width: '150px'},
-  { title: "등록태그", key: "addTag", sortable: false, },
-  { title: "사용 여부", key: "status", sortable: false, width: '110px'},
-  { title: "추천 정보", key: "recomInfo", sortable: false, width: '110px'},
+  { title: "등록 태그", key: "addTag", sortable: false, },
+  { title: "사용 상태", key: "status", sortable: false, width: '110px'},
+  { title: "추천 상태", key: "recomInfo", sortable: false, width: '110px'},
 ];
 
 const dataTableItem = ref([
