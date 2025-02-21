@@ -261,7 +261,7 @@ body {
     }
   }
 
-  .v-chip-group {
+  .v-chip-group:not(.popover-tab){
     .v-slide-group__content {
       gap: 12px;
     }
@@ -351,6 +351,13 @@ body {
           .v-avatar {width: 100%; height: 100%;}
         }
       }
+    }
+  }
+  .prepend-text {
+    width:769px;
+    .v-input__prepend {
+      width: 105px;
+      margin-inline-end: 8px
     }
   }
 

@@ -260,6 +260,49 @@
 
   <div class="tit-wrap">
     <strong class="title-2">
+      상세 이미지/영상
+    </strong>
+  </div>
+  <v-table-row>
+    <tbody>
+      <tr>
+        <th
+          style="width: 10%;"
+          rowspan="2"
+        >
+          영상
+        </th>
+        <td>
+          <v-text-field
+            v-model="youtubeLink"
+            class="prepend-text"
+            placeholder="유튜브 영상 링크를 입력해주세요."
+          >
+            <template #prepend>
+              유튜브 영상 링크
+            </template>
+          </v-text-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <v-text-field
+            v-model="thumbnailLink"
+            class="prepend-text"
+            placeholder="썸네일 링크를 입력해주세요."
+            :disabled="!youtubeLink"
+          >
+            <template #prepend>
+              썸네일 링크 <i class="required" />
+            </template>
+          </v-text-field>
+        </td>
+      </tr>
+    </tbody>
+  </v-table-row>
+
+  <div class="tit-wrap">
+    <strong class="title-2">
       앱 상세정보
     </strong>
   </div>
@@ -323,12 +366,12 @@
           업데이트 내용
         </th>
         <td>
-          <v-text class="update-text">
+          <p>
             1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
             1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
             1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
             1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
-          </v-text>
+          </p>
         </td>
       </tr>
     </tbody>
@@ -423,6 +466,9 @@ const month9 = ref(false);
 const month10 = ref(false);
 const month11 = ref(false);
 const month12 = ref(false);
+
+const youtubeLink = ref('');
+const thumbnailLink = ref('');
 
 const isSwitch = ref(true);
 
