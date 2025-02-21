@@ -78,6 +78,6 @@ defineProps({
 
 const emit = defineEmits(['update:modelValue']);
 
-const isSwitch = ref(false);
+const isSwitch = ref(true);
 
 </script>
