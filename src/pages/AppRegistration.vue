@@ -55,7 +55,7 @@
           바로가기 링크 <i class="required" />
         </th>
         <td>
-          <v-text-field placeholder="앱 바로가기 링크를 입력해주세요." />
+          <v-text-field placeholder="앱 바로가기, QR코드 링크를 입력해주세요." />
         </td>
         <th
           rowspan="3"
@@ -251,17 +251,6 @@
       </div>
     </template>
 
-    <template #item.registrant="{ item }">
-      <div class="text-ellipsis">
-        {{ item.registrant }}
-      </div>
-    </template>
-    <template #item.appName="{ item }">
-      <div class="text-ellipsis">
-        {{ item.appName }}
-      </div>
-    </template>
-
     <template #no-data>
       <v-empty-state
         text="검색결과가 없습니다."
@@ -295,6 +284,7 @@ const recomm3 = ref(false);
 const recomm4 = ref(false);
 const recomm5 = ref(false);
 
+const month = ref(true);
 const month1 = ref(false);
 const month2 = ref(false);
 const month3 = ref(false);
@@ -308,7 +298,7 @@ const month10 = ref(false);
 const month11 = ref(false);
 const month12 = ref(false);
 
-const isSwitch = ref(false);
+const isSwitch = ref(true);
 
 // 데이터 테이블
 const page = ref(1);
