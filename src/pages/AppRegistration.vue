@@ -12,33 +12,38 @@
   <v-table-row>
     <tbody>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           앱 이름 <i class="required" />
         </th>
-        <td>
+        <td style="width: 40%;">
           <v-text-field placeholder="앱 이름을 입력해주세요." />
         </td>
         <th
-          class="w-10"
+          style="width: 10%;"
           rowspan="3"
         >
           앱 아이콘
         </th>
-        <td rowspan="3">
+        <td
+          rowspan="3"
+          style="width: 40%;"
+        >
           A
         </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           앱 코드
         </th>
-        <td>APP001</td>
+        <td style="width: 40%;">
+          APP001
+        </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           앱 타입 <i class="required" />
         </th>
-        <td>
+        <td style="width: 40%;">
           <v-select
             v-model="select"
             :items="['대여']"
@@ -46,53 +51,154 @@
         </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           바로가기 링크 <i class="required" />
         </th>
         <td>
           <v-text-field placeholder="앱 바로가기 링크를 입력해주세요." />
         </td>
         <th
-          class="w-10"
           rowspan="3"
+          style="width: 10%;"
         >
           메인 추천 이미지
         </th>
-        <td rowspan="3">
+        <td
+          style="width: 40%;"
+          rowspan="3"
+        >
           A
         </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           사용 가이드 링크
         </th>
-        <td><v-text-field placeholder="사용 가이드 링크를 입력해주세요." /></td>
+        <td style="width: 40%;">
+          <v-text-field placeholder="사용 가이드 링크를 입력해주세요." />
+        </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
           플래그
         </th>
-        <td>
+        <td style="width: 40%;">
           <div class="d-flex ga-3">
             <v-checkbox
-              v-model="ex4"
-              color="red"
+              v-model="flag1"
               label="추천"
-              value="red"
-              hide-details
             />
             <v-checkbox
-              v-model="ex4"
-              color="red-darken-3"
-              label="red-darken-3"
-              value="red-darken-3"
-              hide-details
+              v-model="flag2"
+              label="NEW"
+            />
+            <v-checkbox
+              v-model="flag3"
+              label="HOT"
             />
           </div>
         </td>
       </tr>
       <tr>
-        <th class="w-10">
+        <th style="width: 10%;">
+          추천 정보
+        </th>
+        <td colspan="3">
+          <div class="d-flex ga-3">
+            <v-checkbox
+              v-model="recomm1"
+              label="앱 타입"
+            />
+            <v-checkbox
+              v-model="recomm2"
+              label="사용자 수"
+            />
+            <v-checkbox
+              v-model="recomm3"
+              label="좋아요 수"
+            />
+            <v-checkbox
+              v-model="recomm4"
+              label="카테고리 1"
+            />
+            <v-checkbox
+              v-model="recomm5"
+              label="카테고리 2"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th style="width: 10%;">
+          앱 사용 시기 <i class="required" />
+        </th>
+        <td colspan="3">
+          <div class="d-flex ga-3">
+            <v-checkbox
+              v-model="month"
+              label="상시"
+            />
+            <v-checkbox
+              v-model="month1"
+              label="1월"
+            />
+            <v-checkbox
+              v-model="month2"
+              label="2월"
+            />
+            <v-checkbox
+              v-model="month3"
+              label="3월"
+            />
+            <v-checkbox
+              v-model="month4"
+              label="4월"
+            />
+            <v-checkbox
+              v-model="month5"
+              label="5월"
+            />
+            <v-checkbox
+              v-model="month6"
+              label="6월"
+            />
+            <v-checkbox
+              v-model="month7"
+              label="7월"
+            />
+            <v-checkbox
+              v-model="month8"
+              label="8월"
+            />
+            <v-checkbox
+              v-model="month9"
+              label="9월"
+            />
+            <v-checkbox
+              v-model="month10"
+              label="10월"
+            />
+            <v-checkbox
+              v-model="month11"
+              label="11월"
+            />
+            <v-checkbox
+              v-model="month12"
+              label="12월"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th style="width: 10%;">
+          간단 설명 <i class="required" />
+        </th>
+        <td colspan="3">
+          <v-textarea placeholder="간단 설명을 입력해주세요." />
+        </td>
+      </tr>
+      <tr>
+        <th style="width: 10%;">
           앱 상태
         </th>
         <td colspan="3">
@@ -176,8 +282,34 @@
 
 <script setup>
 import { ref } from 'vue';
+
 const select = ref('대여');
+
+const flag1 = ref(false);
+const flag2 = ref(false);
+const flag3 = ref(false);
+
+const recomm1 = ref(false);
+const recomm2 = ref(false);
+const recomm3 = ref(false);
+const recomm4 = ref(false);
+const recomm5 = ref(false);
+
+const month1 = ref(false);
+const month2 = ref(false);
+const month3 = ref(false);
+const month4 = ref(false);
+const month5 = ref(false);
+const month6 = ref(false);
+const month7 = ref(false);
+const month8 = ref(false);
+const month9 = ref(false);
+const month10 = ref(false);
+const month11 = ref(false);
+const month12 = ref(false);
+
 const isSwitch = ref(false);
+
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
