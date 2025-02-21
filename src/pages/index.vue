@@ -94,12 +94,6 @@
       </div>
     </template>
 
-    <template #item.appName="{ item }">
-      <div class="text-ellipsis">
-        {{ item.appName }}
-      </div>
-    </template>
-
     <template #no-data>
       <v-empty-state
         text="검색결과가 없습니다."
@@ -140,7 +134,7 @@ const pageSort = ref([
   { title: '30개', value: 30 },
   { title: '50개', value: 50 },
   { title: '100개', value: 100 },
-],);
+]);
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
