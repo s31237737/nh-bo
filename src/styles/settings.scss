@@ -35,7 +35,7 @@
   $switch-track-opacity: 1,
   $switch-track-background: rgb(194, 194, 194),
   $input-control-height: 44px,
-  $text-field-affix-color:(rgb(0, 0, 0), 1),
+  $text-field-affix-color: (rgb(0, 0, 0), 1),
   $select-content-elevation: 0,
   $list-density: ('default': 0, 'comfortable': -1, 'compact': -3),
   $input-density: ('default': -2, 'comfortable': -3, 'compact': -5),
@@ -44,4 +44,5 @@
   $snackbar-wrapper-margin: 24px,
   $snackbar-content-padding: 14px 24px,
   $icon-margin-start: 4px,
+  $application-color: rgba(28, 28, 28, 1),
 );
