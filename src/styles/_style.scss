@@ -310,13 +310,37 @@ body {
       height: 62px;
     }
   }
-.tit-wrap {
-  margin-bottom: 16px;
-  display: flex;
-  .v-btn {
-    margin-left: auto;
+  .tit-wrap {
+    margin-bottom: 16px;
+    display: flex;
+    .v-btn {
+      margin-left: auto;
+    }
   }
-}
+
+  .file-upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .v-file-upload-items {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 0;
+      .v-list-item {
+        margin: 0;
+        &__prepend {
+          grid-area: unset;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          .v-avatar {width: 100%; height: 100%;}
+        }
+      }
+    }
+  }
 
   i.required {
     font-style: normal;
