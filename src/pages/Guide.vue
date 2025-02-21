@@ -1,4 +1,5 @@
 <template>
+  <Upload />
   <div class="d-flex ga-2">
     <v-chip>
       Default
