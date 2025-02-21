@@ -121,8 +121,9 @@ export default createVuetify({
       },
       VCardTitle: {
         VBtn: {
-          width: "32", height: "32",
-          style: 'font-size: 1.25rem',
+          width: "32",
+          height: "32",
+          style: "font-size: 1.25rem",
         },
       },
       VCardActions: {
@@ -160,6 +161,11 @@ export default createVuetify({
       variant: "outlined",
       hideDetails: true,
     },
+    VTextarea: {
+      persistentPlaceholder: true,
+      variant: "outlined",
+      hideDetails: true,
+    },
     VTextField: {
       clearable: true,
       clearIcon: "custom:clear",
@@ -179,10 +185,11 @@ export default createVuetify({
     },
     VCheckbox: {
       baseColor: "#c2c2c2",
+      hideDetails: true,
     },
     VSnackbar: {
       maxWidth: "592px",
       minWidth: "100%",
-    }
+    },
   },
 });
