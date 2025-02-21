@@ -238,9 +238,98 @@
           </v-chip-group>
         </td>
       </tr>
+      <tr>
+        <th style="width: 10%;">
+          카테고리명
+        </th>
+        <td>
+          <v-chip-group
+            selected-class="acitive"
+            multiple
+          >
+            <v-chip
+              v-for="tag in tags"
+              :key="tag"
+              :text="tag"
+            />
+          </v-chip-group>
+        </td>
+      </tr>
     </tbody>
   </v-table-row>
 
+  <div class="tit-wrap">
+    <strong class="title-2">
+      앱 상세정보
+    </strong>
+  </div>
+  <v-table-row>
+    <tbody>
+      <tr>
+        <th style="width: 10%;">
+          앱 상세정보  <i class="required" />
+        </th>
+        <td>
+          <v-sheet
+            class="d-flex align-center justify-center"
+            color="secondary"
+            width="100%"
+            height="250"
+          >
+            에디터 영역
+          </v-sheet>
+        </td>
+      </tr>
+    </tbody>
+  </v-table-row>
+
+  <div class="tit-wrap">
+    <div>
+      <strong class="title-2">
+        업데이트 정보
+
+      </strong>
+      <p class="text-2">
+        최초 등록시에는 버전 관리를 통해 앱 버전을 등록해주세요.
+      </p>
+    </div>
+    <v-btn
+      color="tertiary"
+      variant="outlined"
+    >
+      버전 관리
+    </v-btn>
+  </div>
+  <v-table-row>
+    <tbody>
+      <tr>
+        <th style="width: 10%;">
+          앱 버전 <i class="required" />
+        </th>
+        <td>
+          <v-select
+            :items="['1.1.1']"
+          />
+        </td>
+      </tr>
+      <tr>
+        <th style="width: 10%;">
+          업데이트 내용
+        </th>
+        <td>
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+          1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용
+        </td>
+      </tr>
+    </tbody>
+  </v-table-row>
 
   <v-data-table
     v-model="checked"
