@@ -2,29 +2,65 @@
   <v-container>
     <div class="image-container">
       <!-- 업로드된 이미지 리스트 -->
-      <div v-for="(image, index) in imageList" :key="index" class="image-box" :style="{ backgroundImage: `url(${image})` }">
+      <div
+        v-for="(image, index) in imageList"
+        :key="index"
+        class="image-box"
+        :style="{ backgroundImage: `url(${image})` }"
+      >
         <!-- 확대 버튼 -->
-        <v-btn icon="mdi-magnify-plus-outline" variant="text" class="zoom-btn" @click="openPreview(image)"></v-btn>
+        <v-btn
+          icon="mdi-magnify-plus-outline"
+          variant="text"
+          class="zoom-btn"
+          @click="openPreview(image)"
+        />
         <!-- 삭제 버튼 -->
-        <v-btn icon="mdi-trash-can" variant="text" class="delete-btn" @click="removeImage(index)"></v-btn>
+        <v-btn
+          icon="mdi-trash-can"
+          variant="text"
+          class="delete-btn"
+          @click="removeImage(index)"
+        />
       </div>
 
       <!-- 새 이미지 추가 버튼 -->
-      <div class="image-box add-button" @click="triggerFileInput">
-        <v-icon size="40">mdi-plus</v-icon>
+      <div
+        class="image-box add-button"
+        @click="triggerFileInput"
+      >
+        <v-icon size="40">
+          mdi-plus
+        </v-icon>
       </div>
     </div>
 
     <!-- 숨겨진 파일 입력 -->
-    <input type="file" ref="fileInput" multiple accept="image/png, image/jpeg" @input="onFileChange" hidden />
+    <input
+      ref="fileInput"
+      type="file"
+      multiple
+      accept="image/png, image/jpeg"
+      hidden
+      @input="onFileChange"
+    >
 
     <!-- 확대된 이미지 다이얼로그 -->
-    <v-dialog v-model="previewDialog" max-width="500">
+    <v-dialog
+      v-model="previewDialog"
+      max-width="500"
+    >
       <v-card>
-        <v-img :src="previewImage" contain></v-img>
+        <v-img
+          :src="previewImage"
+          contain
+        />
         <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn text="닫기" @click="previewDialog = false"></v-btn>
+          <v-spacer />
+          <v-btn
+            text="닫기"
+            @click="previewDialog = false"
+          />
         </v-card-actions>
       </v-card>
     </v-dialog>
