@@ -18,7 +18,7 @@
         <v-table-row>
           <tbody>
             <tr>
-              <th class="w-25">
+              <th style="width: 25%;">
                 카테고리명
               </th>
               <td>
@@ -26,13 +26,13 @@
               </td>
             </tr>
             <tr>
-              <th class="w-25">
+              <th style="width: 25%;">
                 카테고리 코드
               </th>
               <td>C001</td>
             </tr>
             <tr>
-              <th class="w-25">
+              <th style="width: 25%;">
                 태그 등록
               </th>
               <td>
@@ -50,7 +50,7 @@
               </td>
             </tr>
             <tr>
-              <th class="w-25">
+              <th style="width: 25%;">
                 카테고리 사용 상태
               </th>
               <td>
@@ -58,7 +58,7 @@
               </td>
             </tr>
             <tr>
-              <th class="w-25">
+              <th style="width: 25%;">
                 추천 정보 사용 상태
               </th>
               <td>
