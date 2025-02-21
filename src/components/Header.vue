@@ -14,7 +14,7 @@
         size="small"
         class="ml-5"
         color="white"
-        text="pub"
+        text="pub:D"
         to="/Guide"
       />
       <!-- // 퍼블가이드 확인용 -->
