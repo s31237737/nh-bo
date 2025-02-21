@@ -15,6 +15,7 @@ import { aliases, mdi } from "vuetify/lib/iconsets/mdi-svg";
 import { custom } from "@/utils/vuetifyIcons";
 import { VTable } from "vuetify/components";
 import { VDateInput } from "vuetify/labs/VDateInput";
+import { VFileUpload, VFileUploadItem } from "vuetify/labs/VFileUpload";
 
 import { ko } from "vuetify/locale";
 
@@ -75,6 +76,8 @@ export default createVuetify({
   },
   components: {
     VDateInput,
+    VFileUpload,
+    VFileUploadItem,
   },
   defaults: {
     VNavigationDrawer: {
@@ -190,6 +193,17 @@ export default createVuetify({
     VSnackbar: {
       maxWidth: "592px",
       minWidth: "100%",
+    },
+    VFileUpload: {
+      title: false,
+      density: "compact",
+      variant: "compact",
+      width: "100px",
+      height: "100px",
+    },
+    VFileUploadItem: {
+      width: "100px",
+      height: "100px",
     },
   },
 });
