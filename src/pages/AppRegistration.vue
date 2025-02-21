@@ -4,6 +4,106 @@
     prev-link="/"
   />
 
+  <div class="tit-wrap">
+    <strong class="title-2">
+      앱 정보
+    </strong>
+  </div>
+  <v-table-row>
+    <tbody>
+      <tr>
+        <th class="w-10">
+          앱 이름 <i class="required" />
+        </th>
+        <td>
+          <v-text-field placeholder="앱 이름을 입력해주세요." />
+        </td>
+        <th
+          class="w-10"
+          rowspan="3"
+        >
+          앱 아이콘
+        </th>
+        <td rowspan="3">
+          A
+        </td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          앱 코드
+        </th>
+        <td>APP001</td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          앱 타입 <i class="required" />
+        </th>
+        <td>
+          <v-select
+            v-model="select"
+            :items="['대여']"
+          />
+        </td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          바로가기 링크 <i class="required" />
+        </th>
+        <td>
+          <v-text-field placeholder="앱 바로가기 링크를 입력해주세요." />
+        </td>
+        <th
+          class="w-10"
+          rowspan="3"
+        >
+          메인 추천 이미지
+        </th>
+        <td rowspan="3">
+          A
+        </td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          사용 가이드 링크
+        </th>
+        <td><v-text-field placeholder="사용 가이드 링크를 입력해주세요." /></td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          플래그
+        </th>
+        <td>
+          <div class="d-flex ga-3">
+            <v-checkbox
+              v-model="ex4"
+              color="red"
+              label="추천"
+              value="red"
+              hide-details
+            />
+            <v-checkbox
+              v-model="ex4"
+              color="red-darken-3"
+              label="red-darken-3"
+              value="red-darken-3"
+              hide-details
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th class="w-10">
+          앱 상태
+        </th>
+        <td colspan="3">
+          <v-switch
+            v-model="isSwitch"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </v-table-row>
+
   <v-data-table
     v-model="checked"
     v-model:page="page"
@@ -76,7 +176,8 @@
 
 <script setup>
 import { ref } from 'vue';
-
+const select = ref('대여');
+const isSwitch = ref(false);
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
