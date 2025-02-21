@@ -194,7 +194,11 @@
           간단 설명 <i class="required" />
         </th>
         <td colspan="3">
-          <v-textarea placeholder="간단 설명을 입력해주세요." />
+          <v-textarea
+            placeholder="간단 설명을 입력해주세요."
+            :counter="70"
+            :persistent-counter="true"
+          />
         </td>
       </tr>
       <tr>

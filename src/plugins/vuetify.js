@@ -167,7 +167,6 @@ export default createVuetify({
     VTextarea: {
       persistentPlaceholder: true,
       variant: "outlined",
-      hideDetails: true,
     },
     VTextField: {
       clearable: true,
