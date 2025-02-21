@@ -261,6 +261,18 @@ body {
     }
   }
 
+  .v-chip-group {
+    .v-slide-group__content {
+      gap: 12px;
+    }
+    .v-chip {
+      border: thin solid $border-subtle;
+      &__underlay {
+        background: #8a8a8a;
+      }
+    }
+  }
+
   .tag-add-list {
     margin-top: 16px;
     padding-top: 16px;
@@ -362,5 +374,10 @@ body {
   }
   .w-40 {
     width: 40%;
+  }
+  .acitive {
+    color: $text-on;
+    background: $bg-box-black;
+    border-color: $bg-box-black !important;
   }
 }

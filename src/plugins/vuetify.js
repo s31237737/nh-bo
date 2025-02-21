@@ -204,5 +204,8 @@ export default createVuetify({
       width: "100px",
       height: "100px",
     },
+    VChip: {
+      elevation: "0",
+    }
   },
 });

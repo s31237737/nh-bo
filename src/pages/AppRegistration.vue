@@ -214,6 +214,34 @@
     </tbody>
   </v-table-row>
 
+  <div class="tit-wrap">
+    <strong class="title-2">
+      카테고리 태그
+    </strong>
+  </div>
+  <v-table-row>
+    <tbody>
+      <tr>
+        <th style="width: 10%;">
+          카테고리명
+        </th>
+        <td>
+          <v-chip-group
+            selected-class="acitive"
+            multiple
+          >
+            <v-chip
+              v-for="tag in tags"
+              :key="tag"
+              :text="tag"
+            />
+          </v-chip-group>
+        </td>
+      </tr>
+    </tbody>
+  </v-table-row>
+
+
   <v-data-table
     v-model="checked"
     v-model:page="page"
@@ -303,6 +331,20 @@ const month11 = ref(false);
 const month12 = ref(false);
 
 const isSwitch = ref(true);
+
+ const tags = [
+    'Work',
+    'Home Improvement',
+    'Vacation',
+    'Food',
+    'Drawers',
+    'Shopping',
+    'Art',
+    'Tech',
+    'Creative Writing',
+  ]
+
+
 
 // 데이터 테이블
 const page = ref(1);
