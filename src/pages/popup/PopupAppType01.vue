@@ -47,11 +47,6 @@
             </div>
           </template>
 
-          <template #item.appName="{ item }">
-            <div class="text-ellipsis">
-              {{ item.appName }}
-            </div>
-          </template>
           <template #no-data>
             <v-empty-state
               text="검색결과가 없습니다."
@@ -95,7 +90,7 @@ const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "앱 타입 코드", key: "appCode", sortable: false, width: '110px'},
   { title: "앱 타입명", key: "appName", sortable: false, },
-  { title: "상태", key: "status", sortable: false, width: '150px'},
+  { title: "사용 상태", key: "status", sortable: false, width: '150px'},
 ];
 
 const dataTableItem = ref([
