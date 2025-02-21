@@ -298,6 +298,26 @@
           </v-text-field>
         </td>
       </tr>
+      <tr>
+        <th
+          style="width: 10%;"
+          rowspan="2"
+        >
+          영상
+        </th>
+        <td>
+          <p>
+            <v-icon
+              left
+              size="16"
+              style="vertical-align: -2px;"
+            >
+              custom:move
+            </v-icon>
+            노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
+          </p>
+        </td>
+      </tr>
     </tbody>
   </v-table-row>
 
