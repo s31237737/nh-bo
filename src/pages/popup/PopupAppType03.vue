@@ -18,21 +18,21 @@
         <v-table-row>
           <tbody>
             <tr>
-              <th class="w-20">
+              <th style="width: 20%;">
                 앱 타입명 <i class="required" />
               </th>
               <td>
-                <v-text-field placeholder="앱 타입명을 입력해주세요" />
+                <v-text-field placeholder="앱 타입명을 입력해주세요." />
               </td>
             </tr>
             <tr>
-              <th class="w-20">
+              <th style="width: 20%;">
                 앱 타입 코드
               </th>
               <td>APP001</td>
             </tr>
             <tr>
-              <th class="w-20">
+              <th style="width: 20%;">
                 사용 여부
               </th>
               <td>
