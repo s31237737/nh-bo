@@ -223,6 +223,14 @@ body {
     }
     &.v-data-table {
       margin-top: 50px;
+      table {
+        table-layout: fixed;
+      }
+      td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
       .text-ellipsis {
         @include line-clamp(1);
       }
