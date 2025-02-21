@@ -276,7 +276,7 @@ body {
     .v-sheet {
       max-height: 282px;
       overflow-y: auto;
-      padding:0 12px;
+      padding: 0 12px;
       margin-top: 12px;
     }
     .v-list {
@@ -284,7 +284,7 @@ body {
       border: thin solid $border-subtle;
       border-radius: 4px;
       .v-list-item {
-        min-height:56px;
+        min-height: 56px;
         padding-inline: 12px;
         &:not(:first-child) {
           border-top: thin solid $border-subtle;
@@ -300,7 +300,6 @@ body {
     padding: 0;
   }
   .toast-info {
-
     background: #f3f8ff;
     border: thin solid #b0bed2;
     @extend .text-2;
@@ -311,6 +310,13 @@ body {
       height: 62px;
     }
   }
+.tit-wrap {
+  margin-bottom: 16px;
+  display: flex;
+  .v-btn {
+    margin-left: auto;
+  }
+}
 
   i.required {
     font-style: normal;
@@ -320,6 +326,7 @@ body {
       color: #e6171b;
     }
   }
+
   .w-10 {
     width: 10%;
   }
@@ -328,5 +335,8 @@ body {
   }
   .w-20 {
     width: 20%;
+  }
+  .w-40 {
+    width: 40%;
   }
 }
