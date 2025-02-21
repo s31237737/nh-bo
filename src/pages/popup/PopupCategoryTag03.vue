@@ -33,7 +33,7 @@
             </tr>
             <tr>
               <th style="width: 25%;">
-                태그 등록
+                태그명
               </th>
               <td>
                 <div class="d-flex ga-2 flex-wrap">
