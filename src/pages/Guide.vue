@@ -1,55 +1,41 @@
 <template>
-  <Upload />
-  <div class="d-flex ga-1 bg-info">
-    <v-icon
-      icon="custom:alarm"
-    />
-    <v-icon
-      icon="custom:alert"
-    />
-    <v-icon
-      icon="custom:Apply"
-    />
-    <v-icon
-      icon="custom:arrow-down"
-    />
-    <v-icon
-      icon="custom:arrow-up"
-    />
-    <v-icon
-      icon="custom:arrow-first"
-    />
-    <v-icon
-      icon="custom:arrow-last"
-    />
-    <v-icon
-      icon="custom:arrow-left"
-    />
-    <v-icon
-      icon="custom:arrow-right"
-    />
-    <v-icon
-      icon="custom:authority"
-    />
-    <v-icon
-      icon="custom:remove"
-    />
-    <v-icon
-      icon="custom:close"
-    />
-    <v-icon
-      icon="custom:edit"
-    />
-    <v-icon
-      icon="custom:alert"
-    />
-    <v-icon
-      icon="custom:view"
-    />
-    <v-icon
-      icon="custom:new-window"
-    />
+  <div class="d-flex ga-1 bg-info pa-2">
+    <v-icon icon="custom:alarm" />
+    <v-icon icon="custom:apply" />
+    <v-icon icon="custom:arrow-first" />
+    <v-icon icon="custom:arrow-left" />
+    <v-icon icon="custom:arrow-up" />
+    <v-icon icon="custom:board" />
+    <v-icon icon="custom:channel" />
+    <v-icon icon="custom:clock" />
+    <v-icon icon="custom:display" />
+    <v-icon icon="custom:info" />
+    <v-icon icon="custom:monitoring" />
+    <v-icon icon="custom:new-window" />
+    <v-icon icon="custom:remove" />
+    <v-icon icon="custom:setting" />
+    <v-icon icon="custom:sort-desc" />
+    <v-icon icon="custom:view" />
+    <v-icon icon="custom:alert" />
+    <v-icon icon="custom:arrow-down" />
+    <v-icon icon="custom:arrow-last" />
+    <v-icon icon="custom:arrow-right" />
+    <v-icon icon="custom:authority" />
+    <v-icon icon="custom:calendar" />
+    <v-icon icon="custom:clear" />
+    <v-icon icon="custom:close" />
+    <v-icon icon="custom:edit" />
+    <v-icon icon="custom:mobile" />
+    <v-icon icon="custom:move" />
+    <v-icon icon="custom:refresh" />
+    <v-icon icon="custom:search" />
+    <v-icon icon="custom:sort-asc" />
+    <v-icon icon="custom:terms" />
+    <v-icon icon="custom:warning" />
+    <v-icon icon="custom:plus" />
   </div>
+
+  <Upload />
   <div class="d-flex ga-2">
     <v-chip>
       Default
