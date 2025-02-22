@@ -3,7 +3,7 @@
     title="앱 등록"
     prev-link="/"
   />
-
+  <!-- 앱 정보 -->
   <div class="tit-wrap">
     <strong class="title-2">
       앱 정보
@@ -213,7 +213,7 @@
       </tr>
     </tbody>
   </v-table-row>
-
+  <!-- 카테고리 태그 -->
   <div class="tit-wrap">
     <strong class="title-2">
       카테고리 태그
@@ -257,7 +257,7 @@
       </tr>
     </tbody>
   </v-table-row>
-
+  <!-- 상세 이미지/영상 -->
   <div class="tit-wrap">
     <strong class="title-2">
       상세 이미지/영상
@@ -303,7 +303,7 @@
           style="width: 10%;"
           rowspan="2"
         >
-          영상
+          이미지 (0/5)
         </th>
         <td>
           <p>
@@ -320,7 +320,7 @@
       </tr>
     </tbody>
   </v-table-row>
-
+  <!-- 앱 상세정보 -->
   <div class="tit-wrap">
     <strong class="title-2">
       앱 상세정보
@@ -345,7 +345,7 @@
       </tr>
     </tbody>
   </v-table-row>
-
+  <!-- 업데이트 정보 -->
   <div class="tit-wrap">
     <div>
       <strong class="title-2">
@@ -396,7 +396,7 @@
       </tr>
     </tbody>
   </v-table-row>
-
+  <!-- 자주 묻는 질문 -->
   <v-data-table
     v-model="checked"
     v-model:page="page"
@@ -406,6 +406,7 @@
     @click:row="handleClick"
   >
     <template #top>
+      <strong class="title-2">자주 묻는 질문</strong>
       <div class="table-top">
         <div class="control">
           <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
