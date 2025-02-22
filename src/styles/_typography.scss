@@ -1,3 +1,4 @@
+@use "variables" as *;
 $font-family: 'Pretendard';
 
 @mixin typography($size, $weight, $line-height) {
@@ -50,4 +51,17 @@ $font-family: 'Pretendard';
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+  &:hover {
+    color: $text-point;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
 }

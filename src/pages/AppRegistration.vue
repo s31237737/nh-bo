@@ -494,6 +494,7 @@
     <v-btn
       color="primary"
       size="large"
+      disabled
       @click="snackbarOpen"
     >
       등록
