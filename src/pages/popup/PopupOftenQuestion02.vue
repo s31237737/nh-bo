@@ -17,27 +17,31 @@
         <!-- dialog contents -->
         <v-table-row>
           <tbody>
-            <tr
-              v-for="(row, index) in tableData"
-              :key="index"
-            >
-              <th style="width: 10%">
-                {{ row.label }}
-              </th>
-              <td
-                :colspan="row.colspan"
-                :style="row.colspan ? { width: '90%' } : { width: '40%' }"
-              >
-                {{ row.value }}
-              </td>
-              <th
-                v-if="row.label2"
-                style="width: 10%"
-              >
-                {{ row.label2 }}
-              </th>
-              <td style="width: 40%">
-                {{ row.value2 }}
+            <tr>
+              <th style="width: 10%">등록자</th>
+              <td>김농협</td>
+              <th style="width: 10%">등록일</th>
+              <td style="width: 40%">2025.09.09</td>
+            </tr>
+            <tr>
+              <th style="width: 10%">유형</th>
+              <td>앱 사용 시 자주 묻는 질문</td>
+              <th style="width: 10%">공개여부</th>
+              <td style="width: 40%">공개</td>
+            </tr>
+            <tr>
+              <th style="width: 10%">질문</th>
+              <td colspan="3" style="width: 90%">자주 묻는 질문 제목입니다.</td>
+            </tr>
+            <tr>
+              <th style="width: 10%">내용</th>
+              <td colspan="3" style="width: 90%">
+                자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는
+                질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
+                제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
+                제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
+                제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
+                제목입니다. 자주 묻는 질문 제목입니다. 제목입니다. 자주 묻는 질문 제목입니다.
               </td>
             </tr>
           </tbody>
@@ -45,13 +49,7 @@
         <!-- // dialog contents -->
       </v-card-text>
       <v-card-actions>
-        <v-btn
-          color="tertiary"
-          size="large"
-          variant="outlined"
-        >
-          목록
-        </v-btn>
+        <v-btn color="tertiary" size="large" variant="outlined"> 목록 </v-btn>
         <v-spacer />
       </v-card-actions>
     </v-card>
@@ -61,6 +59,7 @@
 <script setup>
 import { ref } from "vue";
 
+
 defineProps({
   modelValue: {
     type: Boolean,
@@ -69,20 +68,4 @@ defineProps({
 });
 
 const emit = defineEmits(["update:modelValue"]);
-
-const tableData = ref([
-  { label: "등록자", value: "김농협", label2: "등록일", value2: "2025.09.09" },
-  {
-    label: "유형",
-    value: "앱 사용 시 자주 문는 질문",
-    label2: "공개여부",
-    value2: "공개",
-  },
-  { label: "질문", value: "자주 묻는 질문 제목입니다.", colspan: "3" },
-  {
-    label: "내용",
-    value:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.",
-  },
-]);
 </script>
