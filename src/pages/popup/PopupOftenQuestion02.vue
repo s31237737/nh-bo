@@ -24,27 +24,11 @@
               <th style="width: 10%">
                 {{ row.label }}
               </th>
-              <td style="width: 40%">
-                {{ row.value }}
-              </td>
-              <th style="width: 10%">
+              <td :colspan="row.colspan" :style="row.colspan ? { width: '90%' } : { width: '40%' }">{{ row.value }}</td>
+              <th style="width: 10%" v-if="row.label2">
                 {{ row.label2 }}
               </th>
-              <td style="width: 40%">
-                {{ row.value2 }}
-              </td>
-            </tr>
-            <tr
-              v-for="(row, index) in tableData2"
-              :key="index"
-            >
-              <th style="width: 10%">
-                {{ row.label }}
-              </th>
-              <td
-                colspan="3"
-                v-html="row.value"
-              />
+              <td style="width: 40%">{{ row.value2 }}</td>
             </tr>
           </tbody>
         </v-table-row>
@@ -84,18 +68,11 @@ const tableData = ref([
     label2: "공개여부",
     value2: "공개",
   },
-]);
-const tableData2 = ref([
-  { label: "질문", value: "자주 묻는 질문 제목입니다." },
+  { label: "질문", value: "자주 묻는 질문 제목입니다.", colspan: "3" },
   {
     label: "내용",
     value:
-      `<p>자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
-      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
-      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
-      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
-      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
-      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.</p>`,
+      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.",
   },
 ]);
 </script>
