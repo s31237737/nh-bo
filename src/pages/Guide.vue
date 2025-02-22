@@ -1,5 +1,55 @@
 <template>
   <Upload />
+  <div class="d-flex ga-1 bg-info">
+    <v-icon
+      icon="custom:alarm"
+    />
+    <v-icon
+      icon="custom:alert"
+    />
+    <v-icon
+      icon="custom:Apply"
+    />
+    <v-icon
+      icon="custom:arrow-down"
+    />
+    <v-icon
+      icon="custom:arrow-up"
+    />
+    <v-icon
+      icon="custom:arrow-first"
+    />
+    <v-icon
+      icon="custom:arrow-last"
+    />
+    <v-icon
+      icon="custom:arrow-left"
+    />
+    <v-icon
+      icon="custom:arrow-right"
+    />
+    <v-icon
+      icon="custom:authority"
+    />
+    <v-icon
+      icon="custom:remove"
+    />
+    <v-icon
+      icon="custom:close"
+    />
+    <v-icon
+      icon="custom:edit"
+    />
+    <v-icon
+      icon="custom:alert"
+    />
+    <v-icon
+      icon="custom:view"
+    />
+    <v-icon
+      icon="custom:new-window"
+    />
+  </div>
   <div class="d-flex ga-2">
     <v-chip>
       Default
