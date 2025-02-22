@@ -27,7 +27,17 @@
         />
       </v-form>
     </div>
-
+    <div
+      class="d-flex justify-end"
+    >
+      <v-btn
+        size="large"
+        variant="outlined"
+      >
+        권한범위 설정
+      </v-btn>
+    </div>
+    <v-divider />
     <v-data-table
       v-model="checked"
       v-model:page="page"
