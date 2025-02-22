@@ -95,7 +95,7 @@
                 size="large"
                 disabled
               >
-                선택완료
+                선택 완료
               </v-btn>
             </v-card-actions>
           </template>

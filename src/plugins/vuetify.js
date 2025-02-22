@@ -179,7 +179,7 @@ export default createVuetify({
       prependIcon: "",
       prependInnerIcon: "custom:calendar",
       cancelText: "취소",
-      okText: "선택완료",
+      okText: "선택 완료",
       showAdjacentMonths: true,
       modeIcon: "custom:arrow-down",
       nextIcon: "custom:arrow-right",

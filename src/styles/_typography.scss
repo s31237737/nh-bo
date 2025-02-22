@@ -53,15 +53,17 @@ $font-family: 'Pretendard';
   white-space: normal;
 }
 
-a {
-  text-decoration: none;
-  color: $text-primary;
-  &:hover {
-    color: $text-point;
-    text-decoration: underline;
-  }
-  &:focus {
-    outline: none;
-    text-decoration: underline;
+table {
+  a {
+    text-decoration: none;
+    color: $text-primary;
+    &:hover {
+      color: $text-point;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
+      text-decoration: underline;
+    }
   }
 }
