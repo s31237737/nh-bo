@@ -17,7 +17,10 @@
         <!-- dialog contents -->
         <v-table-row>
           <tbody>
-            <tr v-for="(row, index) in tableData" :key="index">
+            <tr
+              v-for="(row, index) in tableData"
+              :key="index"
+            >
               <th style="width: 10%">
                 {{ row.label }}
               </th>
@@ -27,18 +30,30 @@
               </th>
               <td>{{ row.value2 }}</td>
             </tr>
-            <tr v-for="(row, index) in tableData2" :key="index">
+            <tr
+              v-for="(row, index) in tableData2"
+              :key="index"
+            >
               <th style="width: 10%">
                 {{ row.label }}
               </th>
-              <td colspan="3">{{ row.value }}</td>
+              <td
+                colspan="3"
+                v-html="row.value"
+              />
             </tr>
           </tbody>
         </v-table-row>
         <!-- // dialog contents -->
       </v-card-text>
       <v-card-actions>
-        <v-btn color="tertiary" size="large" variant="outlined"> 목록 </v-btn>
+        <v-btn
+          color="tertiary"
+          size="large"
+          variant="outlined"
+        >
+          목록
+        </v-btn>
         <v-spacer />
       </v-card-actions>
     </v-card>
@@ -71,7 +86,12 @@ const tableData2 = ref([
   {
     label: "내용",
     value:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.",
+      `<p>자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
+      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
+      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
+      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
+      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.<br>
+      자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다.</p>`,
   },
 ]);
 </script>

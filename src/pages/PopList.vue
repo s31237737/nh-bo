@@ -33,8 +33,8 @@ import PopupCategoryTag03 from '@/pages/popup/PopupCategoryTag03.vue'
 import PopupAppVersion01 from '@/pages/popup/PopupAppVersion01.vue'
 import PopupAppVersion02 from '@/pages/popup/PopupAppVersion02.vue'
 import PopupAppVersion03 from '@/pages/popup/PopupAppVersion03.vue'
-import PopupOftenQuestion from '@/pages/popup/PopupOftenQuestion.vue'
-import PopupOftenQuestionDetail from '@/pages/popup/PopupOftenQuestionDetail.vue'
+import PopupOftenQuestion01 from '@/pages/popup/PopupOftenQuestion01.vue'
+import PopupOftenQuestion02 from '@/pages/popup/PopupOftenQuestion02.vue'
 
 const popups = ref([
   { name: 'PopupAppType01', label: '앱 타입 설정', component: shallowRef(PopupAppType01) },
@@ -43,12 +43,12 @@ const popups = ref([
   { name: 'PopupAppType04', label: '앱 타입 상세', component: shallowRef(PopupAppType04) },
   { name: 'PopupCategoryTag01', label: '카테고리 태그 설정', component: shallowRef(PopupCategoryTag01) },
   { name: 'PopupCategoryTag02', label: '카테고리 태그 등록', component: shallowRef(PopupCategoryTag02) },
-  { name: 'PopupCategoryTag03', label: '카테고리 태그 상세', component: shallowRef(PopupCategoryTag03) },      
-  { name: 'PopupAppVersion01 ', label: '앱 버전 관리', component: shallowRef(PopupAppVersion01) },      
-  { name: 'PopupAppVersion02 ', label: '앱 버전 등록', component: shallowRef(PopupAppVersion02) },      
-  { name: 'PopupAppVersion03 ', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },      
-  { name: 'PopupOftenQuestion ', label: '자주 묻는 질문', component: shallowRef(PopupOftenQuestion) },      
-  { name: 'PopupOftenQuestionDetail ', label: '자주 묻는 질문 상세', component: shallowRef(PopupOftenQuestionDetail) },      
+  { name: 'PopupCategoryTag03', label: '카테고리 태그 상세', component: shallowRef(PopupCategoryTag03) },
+  { name: 'PopupAppVersion01 ', label: '앱 버전 관리', component: shallowRef(PopupAppVersion01) },
+  { name: 'PopupAppVersion02 ', label: '앱 버전 등록', component: shallowRef(PopupAppVersion02) },
+  { name: 'PopupAppVersion03 ', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },
+  { name: 'PopupOftenQuestion01 ', label: '자주 묻는 질문', component: shallowRef(PopupOftenQuestion01) },
+  { name: 'PopupOftenQuestion02 ', label: '자주 묻는 질문 상세', component: shallowRef(PopupOftenQuestion02) },
 ]);
 
 
@@ -63,8 +63,8 @@ const popupVisible = ref({
   PopupAppVersion01: false,
   PopupAppVersion02: false,
   PopupAppVersion03: false,
-  PopupOftenQuestion: false,
-  PopupOftenQuestionDetail: false,
+  PopupOftenQuestion01: false,
+  PopupOftenQuestion02: false,
 });
 
 const popOpen = (name) => {

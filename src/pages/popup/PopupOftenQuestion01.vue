@@ -39,7 +39,11 @@
               @click:append-inner="onAppendClick"
             />
 
-            <v-btn color="tertiary" variant="outlined" icon="custom:refresh" />
+            <v-btn
+              color="tertiary"
+              variant="outlined"
+              icon="custom:refresh"
+            />
           </v-form>
         </div>
         <v-data-table
@@ -52,9 +56,7 @@
           <template #top>
             <div class="table-top">
               <div class="control">
-                <strong class="control-total"
-                  >전체 ({{ dataTableItem.length }})</strong
-                >
+                <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
                 <div class="control-input">
                   <v-select
                     v-model="itemsPerPage"
@@ -66,7 +68,7 @@
                 </div>
               </div>
             </div>
-          </template>          
+          </template>
           <template #no-data>
             <v-empty-state
               text="검색결과가 없습니다."
@@ -88,7 +90,13 @@
               >
                 목록
               </v-btn>
-              <v-btn color="primary" size="large" disabled> 선택완료 </v-btn>
+              <v-btn
+                color="primary"
+                size="large"
+                disabled
+              >
+                선택완료
+              </v-btn>
             </v-card-actions>
           </template>
         </v-data-table>
