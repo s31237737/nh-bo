@@ -117,19 +117,21 @@
     class="popup-lg"
   >
     <v-card>
-      <v-img
-        :src="previewImage"
-        contain
-      />
-      <v-card-actions>
+      <v-card-title>
+        <span>preview</span>
         <v-btn
-          color="secondary"
-          size="large"
+          icon="custom:close"
+          variant="text"
+          density="comfortable"
           @click="previewDialog = false"
-        >
-          닫기
-        </v-btn>
-      </v-card-actions>
+        />
+      </v-card-title>
+      <v-card-text>
+        <v-img
+          :src="previewImage"
+          contain
+        />
+      </v-card-text>
     </v-card>
   </v-dialog>
 </template>
