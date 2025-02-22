@@ -190,8 +190,7 @@ export default createVuetify({
       hideDetails: true,
     },
     VSnackbar: {
-      maxWidth: "592px",
-      minWidth: "100%",
+      width: "592px",
     },
     VFileUpload: {
       title: false,

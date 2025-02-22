@@ -3,116 +3,118 @@
     title="앱 관리"
   />
 
-  <div class="search-wrap">
-    <v-form>
-      <v-select
-        v-model="select"
-        label="앱 타입"
-        :items="['전체','타입1','타입2']"
-      />
+  <div class="page-contents">
+    <div class="search-wrap">
+      <v-form>
+        <v-select
+          v-model="select"
+          label="앱 타입"
+          :items="['전체','타입1','타입2']"
+        />
 
-      <v-select
-        v-model="select"
-        label="상태"
-        :items="['전체','상태1','상태2']"
-      />
+        <v-select
+          v-model="select"
+          label="상태"
+          :items="['전체','상태1','상태2']"
+        />
 
-      <Date v-model="date" />
+        <Date v-model="date" />
 
-      <v-text-field
-        v-model="form"
-        class="search-inp"
-        placeholder="전체 앱 이름, 코드를 검색해주세요."
-        append-inner-icon="custom:search"
-        @click:append-inner="onAppendClick"
-      />
+        <v-text-field
+          v-model="form"
+          class="search-inp"
+          placeholder="전체 앱 이름, 코드를 검색해주세요."
+          append-inner-icon="custom:search"
+          @click:append-inner="onAppendClick"
+        />
 
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-        icon="custom:refresh"
-      />
-    </v-form>
-  </div>
+        <v-btn
+          color="tertiary"
+          variant="outlined"
+          icon="custom:refresh"
+        />
+      </v-form>
+    </div>
 
-  <v-data-table
-    v-model="checked"
-    v-model:page="page"
-    :headers="dataTableheaders"
-    :items="dataTableItem"
-    :items-per-page="itemsPerPage"
-    @click:row="handleClick"
-  >
-    <template #top>
-      <div class="table-top">
-        <div class="control">
-          <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-          <div class="control-input">
-            <v-select
-              v-model="itemsPerPage"
-              :items="pageSort"
-              item-title="title"
-              item-value="value"
-              density="compact"
-            />
-            <v-select
-              v-model="selectDate"
-              :items="['최신순', '업데이트순', '마지막 수정순']"
-              density="compact"
-            />
+    <v-data-table
+      v-model="checked"
+      v-model:page="page"
+      :headers="dataTableheaders"
+      :items="dataTableItem"
+      :items-per-page="itemsPerPage"
+      @click:row="handleClick"
+    >
+      <template #top>
+        <div class="table-top">
+          <div class="control">
+            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+            <div class="control-input">
+              <v-select
+                v-model="itemsPerPage"
+                :items="pageSort"
+                item-title="title"
+                item-value="value"
+                density="compact"
+              />
+              <v-select
+                v-model="selectDate"
+                :items="['최신순', '업데이트순', '마지막 수정순']"
+                density="compact"
+              />
+            </div>
+          </div>
+          <div class="btns">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
+              앱 타입 설정
+            </v-btn>
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
+              카테고리 태그 설정
+            </v-btn>
+            <v-btn
+              size="large"
+              color="warning"
+              variant="outlined"
+              prepend-icon="custom:remove"
+              :disabled="!checked.length"
+            >
+              삭제
+            </v-btn>
+            <v-btn
+              size="large"
+              color="primary"
+              to="AppRegistration"
+            >
+              등록
+            </v-btn>
           </div>
         </div>
-        <div class="btns">
-          <v-btn
-            size="large"
-            color="tertiary"
-            variant="outlined"
-          >
-            앱 타입 설정
-          </v-btn>
-          <v-btn
-            size="large"
-            color="tertiary"
-            variant="outlined"
-          >
-            카테고리 태그 설정
-          </v-btn>
-          <v-btn
-            size="large"
-            color="warning"
-            variant="outlined"
-            prepend-icon="custom:remove"
-            :disabled="!checked.length"
-          >
-            삭제
-          </v-btn>
-          <v-btn
-            size="large"
-            color="primary"
-            to="AppRegistration"
-          >
-            등록
-          </v-btn>
-        </div>
-      </div>
-    </template>
+      </template>
 
-    <template #no-data>
-      <v-empty-state
-        text="검색결과가 없습니다."
-        icon="custom:warning"
-        size="60"
-      />
-    </template>
+      <template #no-data>
+        <v-empty-state
+          text="검색결과가 없습니다."
+          icon="custom:warning"
+          size="60"
+        />
+      </template>
 
-    <template #bottom>
-      <Pagination
-        :total-items="dataTableItem.length"
-        :items-per-page="itemsPerPage"
-        @paging="page = $event.page"
-      />
-    </template>
-  </v-data-table>
+      <template #bottom>
+        <Pagination
+          :total-items="dataTableItem.length"
+          :items-per-page="itemsPerPage"
+          @paging="page = $event.page"
+        />
+      </template>
+    </v-data-table>
+  </div>
 </template>
 
 <script setup>
