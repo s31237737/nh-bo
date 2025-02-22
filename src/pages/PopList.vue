@@ -31,6 +31,8 @@ import PopupCategoryTag01 from '@/pages/popup/PopupCategoryTag01.vue'
 import PopupCategoryTag02 from '@/pages/popup/PopupCategoryTag02.vue'
 import PopupCategoryTag03 from '@/pages/popup/PopupCategoryTag03.vue'
 import PopupAppVersion01 from '@/pages/popup/PopupAppVersion01.vue'
+import PopupAppVersion02 from '@/pages/popup/PopupAppVersion02.vue'
+import PopupAppVersion03 from '@/pages/popup/PopupAppVersion03.vue'
 
 const popups = ref([
   { name: 'PopupAppType01', label: '앱 타입 설정', component: shallowRef(PopupAppType01) },
@@ -41,6 +43,8 @@ const popups = ref([
   { name: 'PopupCategoryTag02', label: '카테고리 태그 등록', component: shallowRef(PopupCategoryTag02) },
   { name: 'PopupCategoryTag03', label: '카테고리 태그 상세', component: shallowRef(PopupCategoryTag03) },      
   { name: 'PopupAppVersion01 ', label: '앱 버전 관리', component: shallowRef(PopupAppVersion01) },      
+  { name: 'PopupAppVersion02 ', label: '앱 버전 등록', component: shallowRef(PopupAppVersion02) },      
+  { name: 'PopupAppVersion03 ', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },      
 ]);
 
 
@@ -53,6 +57,8 @@ const popupVisible = ref({
   PopupCategoryTag02: false,
   PopupCategoryTag03: false,
   PopupAppVersion01: false,
+  PopupAppVersion02: false,
+  PopupAppVersion03: false,
 });
 
 const popOpen = (name) => {
