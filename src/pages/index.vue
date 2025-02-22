@@ -134,7 +134,7 @@ const checked = ref([]);
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push('/Guide');
+  router.push('/AppDetails');
   console.log("Clicked item: ", row.item);
 }
 
