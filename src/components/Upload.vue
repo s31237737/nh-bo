@@ -10,14 +10,14 @@
       >
         <!-- 확대 버튼 -->
         <v-btn
-          icon="mdi-magnify-plus-outline"
+          icon="custom:search-plus"
           variant="text"
           class="zoom-btn"
           @click="openPreview(image)"
         />
         <!-- 삭제 버튼 -->
         <v-btn
-          icon="mdi-trash-can"
+          icon="custom:remove"
           variant="text"
           class="delete-btn"
           @click="removeImage(index)"

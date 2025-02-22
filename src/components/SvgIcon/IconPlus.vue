@@ -19,5 +19,4 @@
       stroke-linecap="round"
     />
   </svg>
-  </svg>
 </template>

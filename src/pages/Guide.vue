@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex ga-1 bg-info pa-2">
+  <div class="d-flex flex-wrap w-50 ga-3 bg-info pa-2">
     <v-icon icon="custom:alarm" />
     <v-icon icon="custom:apply" />
     <v-icon icon="custom:arrow-first" />
@@ -29,6 +29,7 @@
     <v-icon icon="custom:move" />
     <v-icon icon="custom:refresh" />
     <v-icon icon="custom:search" />
+    <v-icon icon="custom:search-plus" />
     <v-icon icon="custom:sort-asc" />
     <v-icon icon="custom:terms" />
     <v-icon icon="custom:warning" />
