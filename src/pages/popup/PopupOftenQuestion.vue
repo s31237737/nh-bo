@@ -66,21 +66,7 @@
                 </div>
               </div>
             </div>
-          </template>
-
-          <template #item.addTag="{ item }">
-            <div class="d-flex ga-1">
-              <v-chip
-                v-for="(tag, index) in item.addTag"
-                :key="index"
-                density="compact"
-                color="state_warn"
-                class="text-2-md"
-              >
-                {{ tag }}
-              </v-chip>
-            </div>
-          </template>
+          </template>          
           <template #no-data>
             <v-empty-state
               text="검색결과가 없습니다."
