@@ -403,6 +403,7 @@
     :headers="dataTableheaders"
     :items="dataTableItem"
     :items-per-page="itemsPerPage"
+    @click:row="handleClick"
   >
     <template #top>
       <div class="table-top">
@@ -493,23 +494,26 @@ const thumbnailLink = ref('');
 const isSwitch = ref(true);
 
  const tags = [
-    'Work',
-    'Home Improvement',
-    'Vacation',
-    'Food',
-    'Drawers',
-    'Shopping',
-    'Art',
-    'Tech',
-    'Creative Writing',
-  ]
-
+  'Work',
+  'Home Improvement',
+  'Vacation',
+  'Food',
+  'Drawers',
+  'Shopping',
+  'Art',
+  'Tech',
+  'Creative Writing',
+]
 
 
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
+
+const handleClick = (event, row) => {
+  console.log("Clicked item: ", row.item);
+}
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},

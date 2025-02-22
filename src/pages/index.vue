@@ -131,13 +131,6 @@ const itemsPerPage = ref(10);
 const selectDate = ref('최신순');
 const checked = ref([]);
 
-const router = useRouter();
-
-const handleClick = (event, row) => {
-  router.push('/AppDetails');
-  console.log("Clicked item: ", row.item);
-}
-
 const pageSort = ref([
   { title: '10개', value: 10 },
   { title: '20개', value: 20 },
@@ -145,6 +138,13 @@ const pageSort = ref([
   { title: '50개', value: 50 },
   { title: '100개', value: 100 },
 ]);
+
+const router = useRouter();
+
+const handleClick = (event, row) => {
+  router.push('/AppDetails');
+  console.log("Clicked item: ", row.item);
+}
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},

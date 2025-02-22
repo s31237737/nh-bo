@@ -21,6 +21,7 @@
           :headers="dataTableheaders"
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
+          @click:row="handleClick"
         >
           <template #top>
             <div class="table-top">
@@ -105,6 +106,7 @@ const emit = defineEmits(['update:modelValue']);
 const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
+
 const pageSort = ref([
   { title: '10개', value: 10 },
   { title: '20개', value: 20 },
@@ -112,6 +114,11 @@ const pageSort = ref([
   { title: '50개', value: 50 },
   { title: '100개', value: 100 },
 ]);
+
+const handleClick = (event, row) => {
+  console.log("Clicked item: ", row.item);
+}
+
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "카테고리 코드", key: "appCode", sortable: false, width: '150px'},

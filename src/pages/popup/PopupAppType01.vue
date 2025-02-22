@@ -21,6 +21,7 @@
           :headers="dataTableheaders"
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
+          @click:row="handleClick"
         >
           <template #top>
             <div class="table-top">
@@ -85,6 +86,10 @@ const emit = defineEmits(['update:modelValue']);
 const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
+
+const handleClick = (event, row) => {
+  console.log("Clicked item: ", row.item);
+}
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
