@@ -24,11 +24,15 @@
               <th style="width: 10%">
                 {{ row.label }}
               </th>
-              <td>{{ row.value }}</td>
+              <td style="width: 40%">
+                {{ row.value }}
+              </td>
               <th style="width: 10%">
                 {{ row.label2 }}
               </th>
-              <td>{{ row.value2 }}</td>
+              <td style="width: 40%">
+                {{ row.value2 }}
+              </td>
             </tr>
             <tr
               v-for="(row, index) in tableData2"
