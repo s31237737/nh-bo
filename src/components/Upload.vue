@@ -30,7 +30,7 @@
         @click="triggerFileInput"
       >
         <v-icon size="40">
-          mdi-plus
+          custom:plus
         </v-icon>
       </div>
     </div>
@@ -142,7 +142,7 @@ const triggerFileInput = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #ccc;
+  border: 1px solid #ccc;
   cursor: pointer;
   background: #f9f9f9;
 }

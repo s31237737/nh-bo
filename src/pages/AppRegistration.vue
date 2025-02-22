@@ -471,7 +471,7 @@
       <v-icon
         start
         size="24"
-        icon="custom:warning"
+        icon="custom:alert"
       />
       {{ snackbarText }}
       <template #actions>

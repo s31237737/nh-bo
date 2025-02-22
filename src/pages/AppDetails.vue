@@ -94,12 +94,23 @@
           <td style="width: 40%;">
             <div class="d-flex ga-3">
               <v-chip
-                v-for="tag in tags"
-                :key="tag"
                 color="secondary"
                 variant="flat"
-                :text="tag"
-              />
+              >
+                추천
+              </v-chip>
+              <v-chip
+                color="secondary"
+                variant="flat"
+              >
+                NEW
+              </v-chip>
+              <v-chip
+                color="secondary"
+                variant="flat"
+              >
+                HOT
+              </v-chip>
             </div>
           </td>
         </tr>
