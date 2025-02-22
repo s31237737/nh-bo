@@ -5,50 +5,33 @@
   />
   <v-table-row>
     <tbody>
-      <tr>
+      <tr
+        v-for="(row, index) in tableData"
+        :key="index"
+      >
         <th style="width: 10%">
-          앱 이름
+          {{ row.label1 }}
         </th>
         <td style="width: 23%">
-          육묘대장
+          {{ row.value1 }}
         </td>
         <th style="width: 10%">
-          앱 코드
+          {{ row.label2 }}
         </th>
         <td style="width: 23%">
-          000000
+          {{ row.value2 }}
         </td>
         <th style="width: 10%">
-          자동신청여부
+          {{ row.label3 }}
         </th>
         <td style="width: 24%">
-          수동
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%">
-          앱 버전
-        </th>
-        <td style="width: 23%">
-          v.0.8
-        </td>
-        <th style="width: 10%">
-          앱 타입
-        </th>
-        <td style="width: 23%">
-          대여
-        </td>
-        <th style="width: 10%">
-          사용신청<br>업데이트 날짜
-        </th>
-        <td style="width: 24%">
-          2025.09.06
+          {{ row.value3 }}
         </td>
       </tr>
     </tbody>
   </v-table-row>
 
-  <div class="flex-end">
+  <div class="search-end">
     <v-text-field
       v-model="form"
       class="search-inp"
@@ -133,14 +116,30 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 
 // 조회조건
 const form = ref("");
-const select = ref("전체");
 const onAppendClick = () => {
   alert("Append icon clicked!");
 };
+const tableData = ref([
+  {
+    label1: "앱 이름",
+    value1: "육묘대장",
+    label2: "앱 코드",
+    value2: "000000",
+    label3: "자동신청여부",
+    value3: "수동",
+  },
+  {
+    label1: "앱 버전",
+    value1: "v.0.8",
+    label2: "앱 타입",
+    value2: "대여",
+    label3: "사용신청\n업데이트 날짜",
+    value3: "2025.09.06",
+  },
+]);
 
 // 데이터 테이블
 const page = ref(1);
