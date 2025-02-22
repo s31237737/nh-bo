@@ -205,6 +205,14 @@ export default createVuetify({
     },
     VChip: {
       elevation: "0",
+    },
+    VExpansionPanels: {
+      collapseIcon: "custom:arrow-up",
+      expandIcon: "custom:arrow-down",
+      elevation: 0,
+    },
+    VExpansionPanel: {
+      elevation: 0
     }
   },
 });

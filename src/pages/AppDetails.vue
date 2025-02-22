@@ -45,10 +45,7 @@
             앱 타입
           </th>
           <td style="width: 40%;">
-            <v-select
-              v-model="select"
-              :items="['대여']"
-            />
+            앱 타입
           </td>
         </tr>
         <tr>
@@ -124,60 +121,7 @@
             앱 사용 시기
           </th>
           <td colspan="3">
-            <div class="d-flex ga-3">
-              <v-checkbox
-                v-model="month"
-                label="상시"
-              />
-              <v-checkbox
-                v-model="month1"
-                label="1월"
-              />
-              <v-checkbox
-                v-model="month2"
-                label="2월"
-              />
-              <v-checkbox
-                v-model="month3"
-                label="3월"
-              />
-              <v-checkbox
-                v-model="month4"
-                label="4월"
-              />
-              <v-checkbox
-                v-model="month5"
-                label="5월"
-              />
-              <v-checkbox
-                v-model="month6"
-                label="6월"
-              />
-              <v-checkbox
-                v-model="month7"
-                label="7월"
-              />
-              <v-checkbox
-                v-model="month8"
-                label="8월"
-              />
-              <v-checkbox
-                v-model="month9"
-                label="9월"
-              />
-              <v-checkbox
-                v-model="month10"
-                label="10월"
-              />
-              <v-checkbox
-                v-model="month11"
-                label="11월"
-              />
-              <v-checkbox
-                v-model="month12"
-                label="12월"
-              />
-            </div>
+            상시
           </td>
         </tr>
         <tr>
@@ -185,11 +129,8 @@
             간단 설명
           </th>
           <td colspan="3">
-            <v-textarea
-              placeholder="간단 설명을 입력해주세요."
-              :counter="70"
-              :persistent-counter="true"
-            />
+            농협 및 축협 이용 시 필수 예약 과정으로 편리한
+            예약 신청 및 관리를 도와주는 편리한 농협 앱
           </td>
         </tr>
         <tr>
@@ -197,9 +138,7 @@
             앱 상태
           </th>
           <td colspan="3">
-            <v-switch
-              v-model="isSwitch"
-            />
+            활성화
           </td>
         </tr>
       </tbody>
@@ -217,14 +156,12 @@
             카테고리명
           </th>
           <td>
-            <v-chip-group
-              selected-class="acitive"
-              multiple
-            >
+            <v-chip-group>
               <v-chip
                 v-for="tag in tags"
                 :key="tag"
                 :text="tag"
+                class="acitive"
               />
             </v-chip-group>
           </td>
@@ -234,14 +171,12 @@
             카테고리명
           </th>
           <td>
-            <v-chip-group
-              selected-class="acitive"
-              multiple
-            >
+            <v-chip-group>
               <v-chip
                 v-for="tag in tags"
                 :key="tag"
                 :text="tag"
+                class="acitive"
               />
             </v-chip-group>
           </td>
@@ -264,29 +199,28 @@
             영상
           </th>
           <td>
-            <v-text-field
-              v-model="youtubeLink"
-              class="prepend-text"
-              placeholder="유튜브 영상 링크를 입력해주세요."
-            >
-              <template #prepend>
-                유튜브 영상 링크
-              </template>
-            </v-text-field>
+            <p class="d-flex ga-2">
+              유튜브 영상 링크
+              <a
+                href="https://nonghyup.com"
+                target="_blank"
+              >
+                https://youtube.com+id값
+              </a>
+            </p>
           </td>
         </tr>
         <tr>
           <td>
-            <v-text-field
-              v-model="thumbnailLink"
-              class="prepend-text"
-              placeholder="썸네일 링크를 입력해주세요."
-              :disabled="!youtubeLink"
-            >
-              <template #prepend>
-                썸네일 링크
-              </template>
-            </v-text-field>
+            <p class="d-flex ga-2">
+              썸네일 링크
+              <a
+                href="https://nonghyup.com"
+                target="_blank"
+              >
+                https://youtube.com+id값
+              </a>
+            </p>
           </td>
         </tr>
         <tr>
@@ -324,14 +258,12 @@
             앱 상세정보
           </th>
           <td>
-            <v-sheet
-              class="d-flex align-center justify-center"
-              color="secondary"
-              width="100%"
-              height="250"
-            >
-              에디터 영역
-            </v-sheet>
+            <p>
+              앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용<br>
+              앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용<br>
+              앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용<br>
+              앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용 앱 정보 내용<br>
+            </p>
           </td>
         </tr>
       </tbody>
@@ -361,15 +293,7 @@
             앱 버전
           </th>
           <td>
-            <v-select
-              v-model="select2"
-              :items="select2Items"
-              width="680"
-            >
-              <template #append>
-                <span>ver</span>
-              </template>
-            </v-select>
+            0.1 ver
           </td>
         </tr>
         <tr>
@@ -393,101 +317,37 @@
       </tbody>
     </v-table-row>
     <!-- 자주 묻는 질문 -->
-    <v-data-table
-      v-model="checked"
-      v-model:page="page"
-      :headers="dataTableheaders"
-      :items="dataTableItem"
-      :items-per-page="itemsPerPage"
-      @click:row="handleClick"
-    >
-      <template #top>
-        <strong class="title-2">자주 묻는 질문</strong>
-        <div class="table-top">
-          <div class="control">
-            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-          </div>
-          <div class="btns">
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-              append-icon="custom:new-window"
-            >
-              자주 묻는 질문 새창열기
-            </v-btn>
-            <v-btn
-              size="large"
-              color="warning"
-              variant="outlined"
-              prepend-icon="custom:remove"
-              :disabled="!checked.length"
-            >
-              삭제
-            </v-btn>
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              불러오기
-            </v-btn>
-          </div>
-        </div>
-      </template>
-
-      <template #no-data>
-        <v-empty-state
-          text="검색결과가 없습니다."
-          icon="custom:warning"
-          size="60"
-        />
-      </template>
-
-      <!-- <template #bottom>
-        <Pagination
-          :total-items="dataTableItem.length"
-          :items-per-page="itemsPerPage"
-          @paging="page = $event.page"
-        />
-      </template> -->
-    </v-data-table>
-    <!-- 토스트 팝업 -->
-    <v-snackbar
-      v-model="snackbar"
-      contained
-      content-class="toast-pop"
-    >
-      <v-icon
-        start
-        size="24"
-        icon="custom:warning"
+    <div class="tit-wrap">
+      <strong class="title-2">
+        자주 묻는 질문
+      </strong>
+    </div>
+    <v-expansion-panels variant="accordion">
+      <v-expansion-panel
+        v-for="i in 3"
+        :key="i"
+        text="질의사항 답변 내용"
+        title="질의사항을 노출합니다.질의사항을 노출합니다."
       />
-      {{ snackbarText }}
-      <template #actions>
-        <v-btn
-          icon="custom:close"
-          density="comfortable"
-          @click="snackbar = false"
-        />
-      </template>
-    </v-snackbar>
-    <!-- // 토스트 팝업 -->
+    </v-expansion-panels>
   </div>
   <div class="page-actions">
+    <v-spacer />
     <v-btn
-      color="secondary"
+      color="warning"
       size="large"
+      variant="outlined"
+      prepend-icon="custom:remove"
     >
-      취소
+      삭제
     </v-btn>
     <v-btn
-      color="primary"
+      color="tertiary"
       size="large"
-      disabled
-      @click="snackbarOpen"
+      variant="outlined"
+      prepend-icon="custom:edit"
     >
-      등록
+      수정
     </v-btn>
   </div>
 </template>

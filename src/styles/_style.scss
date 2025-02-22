@@ -362,6 +362,11 @@ body {
     }
   }
 
+  .v-expansion-panels {
+    border-top: thin solid $border-subtle;
+    border-bottom: thin solid $border-subtle;
+  }
+
   i.required {
     font-style: normal;
     &:after {
