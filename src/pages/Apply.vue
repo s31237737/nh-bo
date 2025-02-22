@@ -24,7 +24,11 @@
           @click:append-inner="onAppendClick"
         />
 
-        <v-btn color="tertiary" variant="outlined" icon="custom:refresh" />
+        <v-btn
+          color="tertiary"
+          variant="outlined"
+          icon="custom:refresh"
+        />
       </v-form>
     </div>
 
@@ -39,9 +43,7 @@
       <template #top>
         <div class="table-top">
           <div class="control">
-            <strong class="control-total"
-              >전체 ({{ dataTableItem.length }})</strong
-            >
+            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
             <div class="control-input">
               <v-select
                 v-model="itemsPerPage"
@@ -58,10 +60,18 @@
             </div>
           </div>
           <div class="btns">
-            <v-btn size="large" color="tertiary" variant="outlined">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
               수동 사용허가
             </v-btn>
-            <v-btn size="large" color="tertiary" variant="outlined">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
               자동 사용허가
             </v-btn>
           </div>

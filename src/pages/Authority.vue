@@ -124,7 +124,6 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 // 조회조건
-const date = ref(new Date());
 const form = ref('');
 const select = ref('전체');
 const onAppendClick = () => {

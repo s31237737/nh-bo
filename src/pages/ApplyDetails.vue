@@ -6,20 +6,44 @@
   <v-table-row>
     <tbody>
       <tr>
-        <th style="width: 10%">앱 이름</th>
-        <td style="width: 23%">육묘대장</td>
-        <th style="width: 10%">앱 코드</th>
-        <td style="width: 23%">000000</td>
-        <th style="width: 10%">자동신청여부</th>
-        <td style="width: 24%">수동</td>
+        <th style="width: 10%">
+          앱 이름
+        </th>
+        <td style="width: 23%">
+          육묘대장
+        </td>
+        <th style="width: 10%">
+          앱 코드
+        </th>
+        <td style="width: 23%">
+          000000
+        </td>
+        <th style="width: 10%">
+          자동신청여부
+        </th>
+        <td style="width: 24%">
+          수동
+        </td>
       </tr>
       <tr>
-        <th style="width: 10%">앱 버전</th>
-        <td style="width: 23%">v.0.8</td>
-        <th style="width: 10%">앱 타입</th>
-        <td style="width: 23%">대여</td>
-        <th style="width: 10%">사용신청<br />업데이트 날짜</th>
-        <td style="width: 24%">2025.09.06</td>
+        <th style="width: 10%">
+          앱 버전
+        </th>
+        <td style="width: 23%">
+          v.0.8
+        </td>
+        <th style="width: 10%">
+          앱 타입
+        </th>
+        <td style="width: 23%">
+          대여
+        </td>
+        <th style="width: 10%">
+          사용신청<br>업데이트 날짜
+        </th>
+        <td style="width: 24%">
+          2025.09.06
+        </td>
       </tr>
     </tbody>
   </v-table-row>
@@ -45,9 +69,7 @@
       <template #top>
         <div class="table-top">
           <div class="control">
-            <strong class="control-total"
-              >전체 ({{ dataTableItem.length }})</strong
-            >
+            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
             <div class="control-input">
               <v-select
                 v-model="itemsPerPage"
@@ -65,13 +87,25 @@
             </div>
           </div>
           <div class="btns">
-            <v-btn size="large" color="tertiary" variant="outlined">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
               사용중단
             </v-btn>
-            <v-btn size="large" color="tertiary" variant="outlined">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
               사용허가
             </v-btn>
-            <v-btn size="large" color="primary" prepend-icon="mdi-plus">
+            <v-btn
+              size="large"
+              color="primary"
+              prepend-icon="mdi-plus"
+            >
               직원추가
             </v-btn>
           </div>
