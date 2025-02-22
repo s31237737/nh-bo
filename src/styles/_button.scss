@@ -32,6 +32,15 @@ body {
     border-color: $border-strong;
   }
   .v-btn--icon {
+    &.v-btn--size-default {
+      font-size: 1.3335rem;
+    }
+    &.v-btn--density-comfortable {
+      font-size: 1rem;
+    }
+    &.v-btn--density-compact {
+      font-size: 0.667rem;
+    }
     &.icon-lg {
       width: 32px;
       height: 32px;
