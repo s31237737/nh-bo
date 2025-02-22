@@ -35,8 +35,21 @@
     <v-icon icon="custom:warning" />
     <v-icon icon="custom:plus" />
   </div>
+  <ImageUploader
+    multiple
+    :images="imageList"
+    @update:images="updateImages"
+  />
+  <ImageUploader
+    :images="imageList"
+    @update:images="updateImages"
+  />
 
-  <Upload />
+  <ImageUploader
+    :images="uploaderList"
+    readonly
+  />
+
   <div class="d-flex ga-2">
     <v-chip>
       Default
@@ -729,4 +742,15 @@
   ]);
 
   const ex4 = ref(['red', 'indigo', 'orange', 'primary', 'secondary', 'success', 'info', 'warning', 'error', 'red darken-3', 'indigo darken-3', 'orange darken-3']);
+
+const imageList = ref([]); // 초기 이미지 목록
+
+const updateImages = (newImages) => {
+  imageList.value = newImages;
+};
+const uploaderList = ref([
+  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg"
+]);
+
 </script>

@@ -47,6 +47,7 @@ body {
     &.icon-lg {
       width: 32px;
       height: 32px;
+
       .v-icon--size-default {
         font-size: 1.75rem;
       }
@@ -54,8 +55,13 @@ body {
     &.icon-md {
       width: 24px;
       height: 24px;
+      &.v-btn--variant-outlined {
+        .v-icon--size-default {
+          font-size: 1.25rem;
+        }
+      }
       .v-icon--size-default {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
       }
     }
     &.icon-sm {
@@ -67,7 +73,6 @@ body {
       }
     }
   }
-
 
   .pagination {
     display: flex;

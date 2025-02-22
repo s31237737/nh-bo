@@ -117,7 +117,6 @@ body {
       &__body {
         padding: 1.5rem 1.5rem 1.25rem;
         .v-date-picker-month {
-
           .v-btn {
             font-size: 0.75rem;
             width: 28px;
@@ -273,16 +272,17 @@ body {
     }
   }
 
-  .v-chip-group:not(.popover-tab){
+  .v-chip-group:not(.popover-tab) {
     .v-slide-group__content {
       gap: 12px;
       .v-chip--size-default {
         border: thin solid $border-subtle;
         background: $bg-gray;
-        .v-chip__underlay {opacity: 0;}
+        .v-chip__underlay {
+          opacity: 0;
+        }
       }
     }
-
   }
 
   .tag-add-list {
@@ -325,7 +325,7 @@ body {
   }
   .toast-pop {
     background: rgba(255, 248, 228, 0.95);
-    border: thin solid #F8DC8B;
+    border: thin solid #f8dc8b;
     @extend .text-2;
     color: $text-primary;
     .v-snackbar__content {
@@ -335,42 +335,21 @@ body {
     }
   }
   .tit-wrap {
-    margin:50px 0 16px;
+    margin: 50px 0 16px;
     display: flex;
-    .text-2 {margin-top: 6px;}
+    .text-2 {
+      margin-top: 6px;
+    }
     .v-btn {
       margin-left: auto;
     }
   }
 
-  .file-upload {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    .v-file-upload-items {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin: 0;
-      .v-list-item {
-        margin: 0;
-        &__prepend {
-          grid-area: unset;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          .v-avatar {width: 100%; height: 100%;}
-        }
-      }
-    }
-  }
   .prepend-text {
-    width:769px;
+    width: 769px;
     .v-input__prepend {
       width: 105px;
-      margin-inline-end: 8px
+      margin-inline-end: 8px;
     }
   }
 
@@ -406,4 +385,39 @@ body {
     border-color: $bg-box-black !important;
   }
 
+  .image-uploader {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    .image-box {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      .btns {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        display: flex;
+        .v-btn {
+          background: transparent;
+        }
+      }
+    }
+    .add-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background: #f9f9f9;
+    }
+  }
 }
