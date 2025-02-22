@@ -311,9 +311,9 @@ body {
   .v-snackbar {
     padding: 0;
   }
-  .toast-info {
-    background: #f3f8ff;
-    border: thin solid #b0bed2;
+  .toast-pop {
+    background: rgba(255, 248, 228, 0.95);
+    border: thin solid #F8DC8B;
     @extend .text-2;
     color: $text-primary;
     .v-snackbar__content {

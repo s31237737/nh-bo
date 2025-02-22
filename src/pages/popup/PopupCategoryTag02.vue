@@ -105,12 +105,12 @@
         <v-snackbar
           v-model="snackbar"
           contained
-          content-class="toast-info"
+          content-class="toast-pop"
         >
           <v-icon
             start
             size="24"
-            icon="custom:info"
+            icon="custom:warning"
           />
           {{ snackbarText }}
           <template #actions>

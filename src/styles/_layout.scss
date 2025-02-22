@@ -221,6 +221,9 @@ body {
     &.tbl-row {
       --v-table-row-height: 4.25rem;
       border-top: thin solid $border-subtle;
+      table {
+        table-layout: fixed;
+      }
       th {
         text-align: center !important;
         border-bottom: thin solid $border-subtle !important;

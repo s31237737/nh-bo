@@ -3,464 +3,488 @@
     title="앱 등록"
     prev-link="/"
   />
-  <!-- 앱 정보 -->
-  <div class="tit-wrap">
-    <strong class="title-2">
-      앱 정보
-    </strong>
-  </div>
-  <v-table-row>
-    <tbody>
-      <tr>
-        <th style="width: 10%;">
-          앱 이름 <i class="required" />
-        </th>
-        <td style="width: 40%;">
-          <v-text-field placeholder="앱 이름을 입력해주세요." />
-        </td>
-        <th
-          style="width: 10%;"
-          rowspan="3"
-        >
-          앱 아이콘
-        </th>
-        <td
-          rowspan="3"
-          style="width: 40%;"
-        >
-          A
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          앱 코드
-        </th>
-        <td style="width: 40%;">
-          APP001
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          앱 타입 <i class="required" />
-        </th>
-        <td style="width: 40%;">
-          <v-select
-            v-model="select"
-            :items="['대여']"
-          />
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          바로가기 링크 <i class="required" />
-        </th>
-        <td>
-          <v-text-field placeholder="앱 바로가기, QR코드 링크를 입력해주세요." />
-        </td>
-        <th
-          rowspan="3"
-          style="width: 10%;"
-        >
-          메인 추천 이미지
-        </th>
-        <td
-          style="width: 40%;"
-          rowspan="3"
-        >
-          A
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          사용 가이드 링크
-        </th>
-        <td style="width: 40%;">
-          <v-text-field placeholder="사용 가이드 링크를 입력해주세요." />
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          플래그
-        </th>
-        <td style="width: 40%;">
-          <div class="d-flex ga-3">
-            <v-checkbox
-              v-model="flag1"
-              label="추천"
-            />
-            <v-checkbox
-              v-model="flag2"
-              label="NEW"
-            />
-            <v-checkbox
-              v-model="flag3"
-              label="HOT"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          추천 정보
-        </th>
-        <td colspan="3">
-          <div class="d-flex ga-3">
-            <v-checkbox
-              v-model="recomm1"
-              label="앱 타입"
-            />
-            <v-checkbox
-              v-model="recomm2"
-              label="사용자 수"
-            />
-            <v-checkbox
-              v-model="recomm3"
-              label="좋아요 수"
-            />
-            <v-checkbox
-              v-model="recomm4"
-              label="카테고리 1"
-            />
-            <v-checkbox
-              v-model="recomm5"
-              label="카테고리 2"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          앱 사용 시기 <i class="required" />
-        </th>
-        <td colspan="3">
-          <div class="d-flex ga-3">
-            <v-checkbox
-              v-model="month"
-              label="상시"
-            />
-            <v-checkbox
-              v-model="month1"
-              label="1월"
-            />
-            <v-checkbox
-              v-model="month2"
-              label="2월"
-            />
-            <v-checkbox
-              v-model="month3"
-              label="3월"
-            />
-            <v-checkbox
-              v-model="month4"
-              label="4월"
-            />
-            <v-checkbox
-              v-model="month5"
-              label="5월"
-            />
-            <v-checkbox
-              v-model="month6"
-              label="6월"
-            />
-            <v-checkbox
-              v-model="month7"
-              label="7월"
-            />
-            <v-checkbox
-              v-model="month8"
-              label="8월"
-            />
-            <v-checkbox
-              v-model="month9"
-              label="9월"
-            />
-            <v-checkbox
-              v-model="month10"
-              label="10월"
-            />
-            <v-checkbox
-              v-model="month11"
-              label="11월"
-            />
-            <v-checkbox
-              v-model="month12"
-              label="12월"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          간단 설명 <i class="required" />
-        </th>
-        <td colspan="3">
-          <v-textarea
-            placeholder="간단 설명을 입력해주세요."
-            :counter="70"
-            :persistent-counter="true"
-          />
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          앱 상태
-        </th>
-        <td colspan="3">
-          <v-switch
-            v-model="isSwitch"
-          />
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-  <!-- 카테고리 태그 -->
-  <div class="tit-wrap">
-    <strong class="title-2">
-      카테고리 태그
-    </strong>
-  </div>
-  <v-table-row>
-    <tbody>
-      <tr>
-        <th style="width: 10%;">
-          카테고리명
-        </th>
-        <td>
-          <v-chip-group
-            selected-class="acitive"
-            multiple
-          >
-            <v-chip
-              v-for="tag in tags"
-              :key="tag"
-              :text="tag"
-            />
-          </v-chip-group>
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          카테고리명
-        </th>
-        <td>
-          <v-chip-group
-            selected-class="acitive"
-            multiple
-          >
-            <v-chip
-              v-for="tag in tags"
-              :key="tag"
-              :text="tag"
-            />
-          </v-chip-group>
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-  <!-- 상세 이미지/영상 -->
-  <div class="tit-wrap">
-    <strong class="title-2">
-      상세 이미지/영상
-    </strong>
-  </div>
-  <v-table-row>
-    <tbody>
-      <tr>
-        <th
-          style="width: 10%;"
-          rowspan="2"
-        >
-          영상
-        </th>
-        <td>
-          <v-text-field
-            v-model="youtubeLink"
-            class="prepend-text"
-            placeholder="유튜브 영상 링크를 입력해주세요."
-          >
-            <template #prepend>
-              유튜브 영상 링크
-            </template>
-          </v-text-field>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <v-text-field
-            v-model="thumbnailLink"
-            class="prepend-text"
-            placeholder="썸네일 링크를 입력해주세요."
-            :disabled="!youtubeLink"
-          >
-            <template #prepend>
-              썸네일 링크 <i class="required" />
-            </template>
-          </v-text-field>
-        </td>
-      </tr>
-      <tr>
-        <th
-          style="width: 10%;"
-          rowspan="2"
-        >
-          이미지 (0/5)
-        </th>
-        <td>
-          <p>
-            <v-icon
-              left
-              size="16"
-              style="vertical-align: -2px;"
-            >
-              custom:move
-            </v-icon>
-            노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-  <!-- 앱 상세정보 -->
-  <div class="tit-wrap">
-    <strong class="title-2">
-      앱 상세정보
-    </strong>
-  </div>
-  <v-table-row>
-    <tbody>
-      <tr>
-        <th style="width: 10%;">
-          앱 상세정보  <i class="required" />
-        </th>
-        <td>
-          <v-sheet
-            class="d-flex align-center justify-center"
-            color="secondary"
-            width="100%"
-            height="250"
-          >
-            에디터 영역
-          </v-sheet>
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-  <!-- 업데이트 정보 -->
-  <div class="tit-wrap">
-    <div>
+  <div>
+    <!-- 앱 정보 -->
+    <div class="tit-wrap">
       <strong class="title-2">
-        업데이트 정보
+        앱 정보
       </strong>
-      <p class="text-2">
-        최초 등록시에는 버전 관리를 통해 앱 버전을 등록해주세요.
-      </p>
     </div>
-    <v-btn
-      color="tertiary"
-      variant="outlined"
-      size="large"
-    >
-      버전 관리
-    </v-btn>
-  </div>
-  <v-table-row>
-    <tbody>
-      <tr>
-        <th style="width: 10%;">
-          앱 버전 <i class="required" />
-        </th>
-        <td>
-          <v-select
-            v-model="select2"
-            :items="select2Items"
-            width="680"
+    <v-table-row>
+      <tbody>
+        <tr>
+          <th style="width: 10%;">
+            앱 이름 <i class="required" />
+          </th>
+          <td style="width: 40%;">
+            <v-text-field placeholder="앱 이름을 입력해주세요." />
+          </td>
+          <th
+            style="width: 10%;"
+            rowspan="3"
           >
-            <template #append>
-              <span>ver</span>
-            </template>
-          </v-select>
-        </td>
-      </tr>
-      <tr>
-        <th style="width: 10%;">
-          업데이트 내용
-        </th>
-        <td>
-          <p>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-            1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-  <!-- 자주 묻는 질문 -->
-  <v-data-table
-    v-model="checked"
-    v-model:page="page"
-    :headers="dataTableheaders"
-    :items="dataTableItem"
-    :items-per-page="itemsPerPage"
-    @click:row="handleClick"
-  >
-    <template #top>
-      <strong class="title-2">자주 묻는 질문</strong>
-      <div class="table-top">
-        <div class="control">
-          <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-        </div>
-        <div class="btns">
-          <v-btn
-            size="large"
-            color="tertiary"
-            variant="outlined"
-            append-icon="custom:new-window"
+            앱 아이콘
+          </th>
+          <td
+            rowspan="3"
+            style="width: 40%;"
           >
-            자주 묻는 질문 새창열기
-          </v-btn>
-          <v-btn
-            size="large"
-            color="warning"
-            variant="outlined"
-            prepend-icon="custom:remove"
-            :disabled="!checked.length"
+            A
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            앱 코드
+          </th>
+          <td style="width: 40%;">
+            APP001
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            앱 타입 <i class="required" />
+          </th>
+          <td style="width: 40%;">
+            <v-select
+              v-model="select"
+              :items="['대여']"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            바로가기 링크 <i class="required" />
+          </th>
+          <td>
+            <v-text-field placeholder="앱 바로가기, QR코드 링크를 입력해주세요." />
+          </td>
+          <th
+            rowspan="3"
+            style="width: 10%;"
           >
-            삭제
-          </v-btn>
-          <v-btn
-            size="large"
-            color="tertiary"
-            variant="outlined"
+            메인 추천 이미지
+          </th>
+          <td
+            style="width: 40%;"
+            rowspan="3"
           >
-            불러오기
-          </v-btn>
-        </div>
+            A
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            사용 가이드 링크
+          </th>
+          <td style="width: 40%;">
+            <v-text-field placeholder="사용 가이드 링크를 입력해주세요." />
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            플래그
+          </th>
+          <td style="width: 40%;">
+            <div class="d-flex ga-3">
+              <v-checkbox
+                v-model="flag1"
+                label="추천"
+              />
+              <v-checkbox
+                v-model="flag2"
+                label="NEW"
+              />
+              <v-checkbox
+                v-model="flag3"
+                label="HOT"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            추천 정보
+          </th>
+          <td colspan="3">
+            <div class="d-flex ga-3">
+              <v-checkbox
+                v-model="recomm1"
+                label="앱 타입"
+              />
+              <v-checkbox
+                v-model="recomm2"
+                label="사용자 수"
+              />
+              <v-checkbox
+                v-model="recomm3"
+                label="좋아요 수"
+              />
+              <v-checkbox
+                v-model="recomm4"
+                label="카테고리 1"
+              />
+              <v-checkbox
+                v-model="recomm5"
+                label="카테고리 2"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            앱 사용 시기 <i class="required" />
+          </th>
+          <td colspan="3">
+            <div class="d-flex ga-3">
+              <v-checkbox
+                v-model="month"
+                label="상시"
+              />
+              <v-checkbox
+                v-model="month1"
+                label="1월"
+              />
+              <v-checkbox
+                v-model="month2"
+                label="2월"
+              />
+              <v-checkbox
+                v-model="month3"
+                label="3월"
+              />
+              <v-checkbox
+                v-model="month4"
+                label="4월"
+              />
+              <v-checkbox
+                v-model="month5"
+                label="5월"
+              />
+              <v-checkbox
+                v-model="month6"
+                label="6월"
+              />
+              <v-checkbox
+                v-model="month7"
+                label="7월"
+              />
+              <v-checkbox
+                v-model="month8"
+                label="8월"
+              />
+              <v-checkbox
+                v-model="month9"
+                label="9월"
+              />
+              <v-checkbox
+                v-model="month10"
+                label="10월"
+              />
+              <v-checkbox
+                v-model="month11"
+                label="11월"
+              />
+              <v-checkbox
+                v-model="month12"
+                label="12월"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            간단 설명 <i class="required" />
+          </th>
+          <td colspan="3">
+            <v-textarea
+              placeholder="간단 설명을 입력해주세요."
+              :counter="70"
+              :persistent-counter="true"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            앱 상태
+          </th>
+          <td colspan="3">
+            <v-switch
+              v-model="isSwitch"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+    <!-- 카테고리 태그 -->
+    <div class="tit-wrap">
+      <strong class="title-2">
+        카테고리 태그
+      </strong>
+    </div>
+    <v-table-row>
+      <tbody>
+        <tr>
+          <th style="width: 10%;">
+            카테고리명
+          </th>
+          <td>
+            <v-chip-group
+              selected-class="acitive"
+              multiple
+            >
+              <v-chip
+                v-for="tag in tags"
+                :key="tag"
+                :text="tag"
+              />
+            </v-chip-group>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            카테고리명
+          </th>
+          <td>
+            <v-chip-group
+              selected-class="acitive"
+              multiple
+            >
+              <v-chip
+                v-for="tag in tags"
+                :key="tag"
+                :text="tag"
+              />
+            </v-chip-group>
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+    <!-- 상세 이미지/영상 -->
+    <div class="tit-wrap">
+      <strong class="title-2">
+        상세 이미지/영상
+      </strong>
+    </div>
+    <v-table-row>
+      <tbody>
+        <tr>
+          <th
+            style="width: 10%;"
+            rowspan="2"
+          >
+            영상
+          </th>
+          <td>
+            <v-text-field
+              v-model="youtubeLink"
+              class="prepend-text"
+              placeholder="유튜브 영상 링크를 입력해주세요."
+            >
+              <template #prepend>
+                유튜브 영상 링크
+              </template>
+            </v-text-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <v-text-field
+              v-model="thumbnailLink"
+              class="prepend-text"
+              placeholder="썸네일 링크를 입력해주세요."
+              :disabled="!youtubeLink"
+            >
+              <template #prepend>
+                썸네일 링크 <i class="required" />
+              </template>
+            </v-text-field>
+          </td>
+        </tr>
+        <tr>
+          <th
+            style="width: 10%;"
+            rowspan="2"
+          >
+            이미지 (0/5)
+          </th>
+          <td>
+            <p>
+              <v-icon
+                left
+                size="16"
+                style="vertical-align: -2px;"
+              >
+                custom:move
+              </v-icon>
+              노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+    <!-- 앱 상세정보 -->
+    <div class="tit-wrap">
+      <strong class="title-2">
+        앱 상세정보
+      </strong>
+    </div>
+    <v-table-row>
+      <tbody>
+        <tr>
+          <th style="width: 10%;">
+            앱 상세정보  <i class="required" />
+          </th>
+          <td>
+            <v-sheet
+              class="d-flex align-center justify-center"
+              color="secondary"
+              width="100%"
+              height="250"
+            >
+              에디터 영역
+            </v-sheet>
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+    <!-- 업데이트 정보 -->
+    <div class="tit-wrap">
+      <div>
+        <strong class="title-2">
+          업데이트 정보
+        </strong>
+        <p class="text-2">
+          최초 등록시에는 버전 관리를 통해 앱 버전을 등록해주세요.
+        </p>
       </div>
-    </template>
+      <v-btn
+        color="tertiary"
+        variant="outlined"
+        size="large"
+      >
+        버전 관리
+      </v-btn>
+    </div>
+    <v-table-row>
+      <tbody>
+        <tr>
+          <th style="width: 10%;">
+            앱 버전 <i class="required" />
+          </th>
+          <td>
+            <v-select
+              v-model="select2"
+              :items="select2Items"
+              width="680"
+            >
+              <template #append>
+                <span>ver</span>
+              </template>
+            </v-select>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%;">
+            업데이트 내용
+          </th>
+          <td>
+            <p>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+              1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용 1.1.1 업데이트 내용<br>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+    <!-- 자주 묻는 질문 -->
+    <v-data-table
+      v-model="checked"
+      v-model:page="page"
+      :headers="dataTableheaders"
+      :items="dataTableItem"
+      :items-per-page="itemsPerPage"
+      @click:row="handleClick"
+    >
+      <template #top>
+        <strong class="title-2">자주 묻는 질문</strong>
+        <div class="table-top">
+          <div class="control">
+            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+          </div>
+          <div class="btns">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+              append-icon="custom:new-window"
+            >
+              자주 묻는 질문 새창열기
+            </v-btn>
+            <v-btn
+              size="large"
+              color="warning"
+              variant="outlined"
+              prepend-icon="custom:remove"
+              :disabled="!checked.length"
+            >
+              삭제
+            </v-btn>
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+            >
+              불러오기
+            </v-btn>
+          </div>
+        </div>
+      </template>
 
-    <template #no-data>
-      <v-empty-state
-        text="검색결과가 없습니다."
+      <template #no-data>
+        <v-empty-state
+          text="검색결과가 없습니다."
+          icon="custom:warning"
+          size="60"
+        />
+      </template>
+
+      <!-- <template #bottom>
+        <Pagination
+          :total-items="dataTableItem.length"
+          :items-per-page="itemsPerPage"
+          @paging="page = $event.page"
+        />
+      </template> -->
+    </v-data-table>
+    <!-- 토스트 팝업 -->
+    <v-snackbar
+      v-model="snackbar"
+      contained
+      content-class="toast-pop"
+    >
+      <v-icon
+        start
+        size="24"
         icon="custom:warning"
-        size="60"
       />
-    </template>
-
-    <!-- <template #bottom>
-      <Pagination
-        :total-items="dataTableItem.length"
-        :items-per-page="itemsPerPage"
-        @paging="page = $event.page"
-      />
-    </template> -->
-  </v-data-table>
+      {{ snackbarText }}
+      <template #actions>
+        <v-btn
+          color="white"
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 -->
+  </div>
   <div class="page-actions">
     <v-btn
       color="secondary"
@@ -471,7 +495,7 @@
     <v-btn
       color="primary"
       size="large"
-      disabled
+      @click="snackbarOpen"
     >
       등록
     </v-btn>
@@ -514,7 +538,7 @@ const thumbnailLink = ref('');
 
 const isSwitch = ref(true);
 
- const tags = [
+const tags = [
   'Work',
   'Home Improvement',
   'Vacation',
@@ -526,6 +550,12 @@ const isSwitch = ref(true);
   'Creative Writing',
 ]
 
+const snackbar = ref(false);
+const snackbarText = ref('코드 전송 오류로 인하여 등록이 불가합니다. 새로고침해주세요.');
+const snackbarOpen = () => {
+  snackbar.value=true
+    return;
+}
 
 // 데이터 테이블
 const page = ref(1);
