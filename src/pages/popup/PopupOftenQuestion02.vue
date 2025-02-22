@@ -24,11 +24,21 @@
               <th style="width: 10%">
                 {{ row.label }}
               </th>
-              <td :colspan="row.colspan" :style="row.colspan ? { width: '90%' } : { width: '40%' }">{{ row.value }}</td>
-              <th style="width: 10%" v-if="row.label2">
+              <td
+                :colspan="row.colspan"
+                :style="row.colspan ? { width: '90%' } : { width: '40%' }"
+              >
+                {{ row.value }}
+              </td>
+              <th
+                v-if="row.label2"
+                style="width: 10%"
+              >
                 {{ row.label2 }}
               </th>
-              <td style="width: 40%">{{ row.value2 }}</td>
+              <td style="width: 40%">
+                {{ row.value2 }}
+              </td>
             </tr>
           </tbody>
         </v-table-row>

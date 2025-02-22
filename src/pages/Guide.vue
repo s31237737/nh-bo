@@ -607,7 +607,6 @@
           icon="custom:refresh"
         />
       </v-col>
-     
     </v-row>
   </div>
   <!-- //버튼 -->
@@ -655,19 +654,6 @@
             </th>
             <td>{{ row.value2 }}</td>
           </tr>
-
-          <!-- 내용 (한 줄 전체 차지) -->
-          <tr>
-            <th>
-              내용
-            </th>
-            <td
-              colspan="3"
-              class="text-left"
-            >
-              {{ content }}
-            </td>
-          </tr>
         </tbody>
       </v-table-row>
     </v-col>
@@ -704,8 +690,6 @@
     { label: '공개상태', value: '공개', label2: '등록일', value2: '25.09.09' },
     { label: '제목', value: '개인정보처리방침', label2: '버전', value2: 'v0.8' },
   ]);
-
-  const content = ref('1.1.1 업데이트 내용 '.repeat(20));
 
   const ex4 = ref(['red', 'indigo', 'orange', 'primary', 'secondary', 'success', 'info', 'warning', 'error', 'red darken-3', 'indigo darken-3', 'orange darken-3']);
 </script>
