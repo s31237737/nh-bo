@@ -373,7 +373,7 @@
           <v-select
             v-model="select2"
             :items="select2Items"
-            width="640"
+            width="680"
           >
             <template #append>
               <span>ver</span>

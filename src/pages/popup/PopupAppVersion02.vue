@@ -18,9 +18,14 @@
         <v-table-row>
           <tbody>
             <tr>
-              <th style="width: 20%">앱 버전 <i class="required" /></th>
+              <th style="width: 10%">
+                앱 버전 <i class="required" />
+              </th>
               <td>
-                <v-text-field placeholder="앱 버전을 입력해주세요." width="100%">
+                <v-text-field
+                  placeholder="앱 버전을 입력해주세요."
+                  width="680"
+                >
                   <template #append>
                     <span>ver</span>
                   </template>
@@ -28,7 +33,9 @@
               </td>
             </tr>
             <tr>
-              <th style="width: 20%">업데이트 내용 <i class="required" /></th>
+              <th style="width: 10%">
+                업데이트 내용 <i class="required" />
+              </th>
               <td>
                 <v-textarea
                   placeholder="업데이트 내용을 입력해주세요."
@@ -38,7 +45,9 @@
               </td>
             </tr>
             <tr>
-              <th style="width: 20%">사용 여부</th>
+              <th style="width: 10%">
+                사용 여부
+              </th>
               <td>
                 <v-switch v-model="isSwitch" />
               </td>
@@ -55,7 +64,13 @@
         >
           취소
         </v-btn>
-        <v-btn color="primary" size="large" disabled> 등록 </v-btn>
+        <v-btn
+          color="primary"
+          size="large"
+          disabled
+        >
+          등록
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

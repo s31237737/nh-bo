@@ -21,7 +21,7 @@
               v-for="(row, index) in tableData"
               :key="index"
             >
-              <th style="width: 20%;">
+              <th style="width: 10%;">
                 {{ row.label }}
               </th>
               <td>{{ row.value }}</td>
