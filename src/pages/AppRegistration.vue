@@ -318,7 +318,7 @@
             style="width: 10%;"
             rowspan="2"
           >
-            이미지 ({{uploaderList.length}}/5)
+            이미지 ({{ uploaderList.length }}/5)
           </th>
           <td>
             <ImageUploader
@@ -337,7 +337,7 @@
                 </v-icon>
                 노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
               </p>
-              <p>권장크기 : 300px X 440px</p>
+              <p>권장크기 : 915px X 515px</p>
               <p>용량 : 10MB 이하, 파일형식 JPG, PNG</p>
             </div>
           </td>

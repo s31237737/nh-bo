@@ -441,4 +441,14 @@ body {
       }
     }
   }
+  .upload-info {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    p {
+      width: 100px;
+      @extend .text-3;
+      color: $text-helper;
+    }
+  }
 }
