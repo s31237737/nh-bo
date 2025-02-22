@@ -114,7 +114,7 @@
   <!-- 확대된 이미지 다이얼로그 -->
   <v-dialog
     v-model="previewDialog"
-    max-width="500"
+    class="popup-lg"
   >
     <v-card>
       <v-img
@@ -122,11 +122,13 @@
         contain
       />
       <v-card-actions>
-        <v-spacer />
         <v-btn
-          text="닫기"
+          color="secondary"
+          size="large"
           @click="previewDialog = false"
-        />
+        >
+          닫기
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
