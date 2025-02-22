@@ -93,17 +93,12 @@
           </th>
           <td style="width: 40%;">
             <div class="d-flex ga-3">
-              <v-checkbox
-                v-model="flag1"
-                label="추천"
-              />
-              <v-checkbox
-                v-model="flag2"
-                label="NEW"
-              />
-              <v-checkbox
-                v-model="flag3"
-                label="HOT"
+              <v-chip
+                v-for="tag in tags"
+                :key="tag"
+                color="secondary"
+                variant="flat"
+                :text="tag"
               />
             </div>
           </td>
@@ -156,14 +151,15 @@
             카테고리명
           </th>
           <td>
-            <v-chip-group>
+            <div class="d-flex ga-3">
               <v-chip
                 v-for="tag in tags"
                 :key="tag"
+                color="primary"
+                variant="flat"
                 :text="tag"
-                class="acitive"
               />
-            </v-chip-group>
+            </div>
           </td>
         </tr>
         <tr>
@@ -171,14 +167,15 @@
             카테고리명
           </th>
           <td>
-            <v-chip-group>
+            <div class="d-flex ga-3">
               <v-chip
                 v-for="tag in tags"
                 :key="tag"
+                color="primary"
+                variant="flat"
                 :text="tag"
-                class="acitive"
               />
-            </v-chip-group>
+            </div>
           </td>
         </tr>
       </tbody>

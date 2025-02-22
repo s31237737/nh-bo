@@ -46,7 +46,7 @@ body {
 
   .date-wrap {
     position: relative;
-    min-width: 338px;
+    min-width: 326px;
     flex-shrink: 0;
     .v-btn {
       position: absolute;
@@ -259,18 +259,21 @@ body {
     &.v-chip--density-compact {
       padding: 0 10px;
     }
+    &.bg-secondary {
+      border: thin solid $border-subtle;
+    }
   }
 
   .v-chip-group:not(.popover-tab){
     .v-slide-group__content {
       gap: 12px;
-    }
-    .v-chip {
-      border: thin solid $border-subtle;
-      &__underlay {
-        background: #8a8a8a;
+      .v-chip--size-default {
+        border: thin solid $border-subtle;
+        background: $bg-gray;
+        .v-chip__underlay {opacity: 0;}
       }
     }
+
   }
 
   .tag-add-list {
@@ -390,7 +393,8 @@ body {
   }
   .acitive {
     color: $text-on;
-    background: $bg-box-black;
+    background: $bg-box-black !important;
     border-color: $bg-box-black !important;
   }
+
 }
