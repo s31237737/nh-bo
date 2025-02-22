@@ -1,7 +1,20 @@
 <template>
+  <!-- <ImageUploader
+    :multiple="true"
+    :images="imageList"
+    :readonly="true"
+    :draggable="true"
+    :max-count="3"
+    @update:images="updateImages"
+  /> -->
   <div class="image-uploader">
-    <!-- 업로드된 이미지 리스트 -->
-    <template v-if="readonly || multiple">
+    <!-- 읽기 전용이면서 드래그 가능할 경우 VueDraggable 적용 -->
+    <VueDraggable
+      v-if="readonly && draggable"
+      v-model="imageList"
+      class="draggable"
+      @end="updateImageOrder"
+    >
       <div
         v-for="(image, index) in imageList"
         :key="index"
@@ -10,7 +23,25 @@
       >
         <div class="btns">
           <v-btn
-            icon="custom:search-plus"
+            icon="custom:zoom"
+            class="icon-md"
+            @click="openPreview(image)"
+          />
+        </div>
+      </div>
+    </VueDraggable>
+
+    <!-- 일반적인 이미지 리스트 (읽기 전용이 아니거나 드래그가 불가능할 때) -->
+    <template v-else-if="readonly || multiple">
+      <div
+        v-for="(image, index) in imageList"
+        :key="index"
+        class="image-box"
+        :style="{ backgroundImage: `url(${image})` }"
+      >
+        <div class="btns">
+          <v-btn
+            icon="custom:zoom"
             class="icon-md"
             @click="openPreview(image)"
           />
@@ -25,6 +56,7 @@
         </div>
       </div>
     </template>
+
     <template v-else>
       <div
         v-if="imageList.length > 0"
@@ -36,7 +68,7 @@
           class="btns"
         >
           <v-btn
-            icon="custom:search-plus"
+            icon="custom:zoom"
             class="icon-md"
             @click="openPreview(imageList[0])"
           />
@@ -51,7 +83,7 @@
       </div>
     </template>
 
-    <!-- 새 이미지 추가 버튼 (readonly=false이고, 조건 충족 시 보임) -->
+    <!-- 새 이미지 추가 버튼 -->
     <div
       v-if="!readonly && (multiple || imageList.length === 0) && imageList.length < maxCount"
       class="image-box add-button"
@@ -95,10 +127,12 @@
 
 <script setup>
 import { ref, defineProps, watch, defineEmits } from "vue";
+import { VueDraggable } from 'vue-draggable-plus'
 
 const props = defineProps({
   multiple: { type: Boolean, default: false }, // 다중 이미지 여부
   readonly: { type: Boolean, default: false }, // 읽기 전용 모드
+  draggable: { type: Boolean, default: false }, // 드래그 가능 여부
   images: { type: Array, default: () => [] }, // 초기 이미지 목록
   maxCount: { type: Number, default: 5 } // 최대 이미지 개수 (기본값 5개)
 });
@@ -151,4 +185,13 @@ const openPreview = (image) => {
 const triggerFileInput = () => {
   if (!props.readonly) fileInput.value.click();
 };
+
+// 이미지 순서 변경 시 부모에게 업데이트 이벤트 전송
+const updateImageOrder = () => {
+  emit("update:images", imageList.value);
+};
 </script>
+
+<style scoped>
+
+</style>

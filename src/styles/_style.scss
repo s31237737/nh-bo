@@ -389,6 +389,14 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    .draggable {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      .image-box {
+        cursor: move;
+      }
+    }
     .image-box {
       width: 100px;
       height: 100px;

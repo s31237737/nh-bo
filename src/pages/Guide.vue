@@ -29,7 +29,7 @@
     <v-icon icon="custom:move" />
     <v-icon icon="custom:refresh" />
     <v-icon icon="custom:search" />
-    <v-icon icon="custom:search-plus" />
+    <v-icon icon="custom:zoom" />
     <v-icon icon="custom:sort-asc" />
     <v-icon icon="custom:terms" />
     <v-icon icon="custom:warning" />
@@ -48,6 +48,7 @@
   <ImageUploader
     :images="uploaderList"
     readonly
+    :draggable="true"
   />
 
   <div class="d-flex ga-2">
@@ -750,7 +751,9 @@ const updateImages = (newImages) => {
 };
 const uploaderList = ref([
   "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
-  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg"
+  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg",
+  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg",
 ]);
 
 </script>
