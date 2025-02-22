@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <div class="d-flex ga-1">
-      <v-btn
-        v-for="popup in popups"
-        :key="popup.name"
-        color="primary"
-        @click="popOpen(popup.name)"
-      >
-        {{ popup.label }}
-      </v-btn>
-    </div>
-
-    <component
-      :is="popup.component"
+  <div class="d-flex ga-1 flex-wrap w-75">
+    <v-btn
       v-for="popup in popups"
       :key="popup.name"
-      v-model="popupVisible[popup.name]"
-    />
+      color="primary"
+      @click="popOpen(popup.name)"
+    >
+      {{ popup.label }}
+    </v-btn>
   </div>
+
+  <component
+    :is="popup.component"
+    v-for="popup in popups"
+    :key="popup.name"
+    v-model="popupVisible[popup.name]"
+  />
 </template>
 
 <script setup>
