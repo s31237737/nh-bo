@@ -181,6 +181,10 @@ body {
       --v-theme-overlay-multiplier: 0;
     }
   }
+  .page-contents {
+    position: relative;
+    .v-snackbar {margin-bottom: 0 !important;}
+  }
   .page-actions {
     margin-top: 50px;
     display: flex;
@@ -221,9 +225,6 @@ body {
     &.tbl-row {
       --v-table-row-height: 4.25rem;
       border-top: thin solid $border-subtle;
-      table {
-        table-layout: fixed;
-      }
       th {
         text-align: center !important;
         border-bottom: thin solid $border-subtle !important;

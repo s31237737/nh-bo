@@ -3,7 +3,7 @@
     title="앱 등록"
     prev-link="/"
   />
-  <div>
+  <div class="page-contents">
     <!-- 앱 정보 -->
     <div class="tit-wrap">
       <strong class="title-2">
@@ -476,7 +476,6 @@
       {{ snackbarText }}
       <template #actions>
         <v-btn
-          color="white"
           icon="custom:close"
           density="comfortable"
           @click="snackbar = false"

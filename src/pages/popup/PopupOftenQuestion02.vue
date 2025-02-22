@@ -18,24 +18,48 @@
         <v-table-row>
           <tbody>
             <tr>
-              <th style="width: 10%">등록자</th>
+              <th style="width: 10%">
+                등록자
+              </th>
               <td>김농협</td>
-              <th style="width: 10%">등록일</th>
-              <td style="width: 40%">2025.09.09</td>
+              <th style="width: 10%">
+                등록일
+              </th>
+              <td style="width: 40%">
+                2025.09.09
+              </td>
             </tr>
             <tr>
-              <th style="width: 10%">유형</th>
+              <th style="width: 10%">
+                유형
+              </th>
               <td>앱 사용 시 자주 묻는 질문</td>
-              <th style="width: 10%">공개여부</th>
-              <td style="width: 40%">공개</td>
+              <th style="width: 10%">
+                공개여부
+              </th>
+              <td style="width: 40%">
+                공개
+              </td>
             </tr>
             <tr>
-              <th style="width: 10%">질문</th>
-              <td colspan="3" style="width: 90%">자주 묻는 질문 제목입니다.</td>
+              <th style="width: 10%">
+                질문
+              </th>
+              <td
+                colspan="3"
+                style="width: 90%"
+              >
+                자주 묻는 질문 제목입니다.
+              </td>
             </tr>
             <tr>
-              <th style="width: 10%">내용</th>
-              <td colspan="3" style="width: 90%">
+              <th style="width: 10%">
+                내용
+              </th>
+              <td
+                colspan="3"
+                style="width: 90%"
+              >
                 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는
                 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
                 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문
@@ -49,7 +73,13 @@
         <!-- // dialog contents -->
       </v-card-text>
       <v-card-actions>
-        <v-btn color="tertiary" size="large" variant="outlined"> 목록 </v-btn>
+        <v-btn
+          color="tertiary"
+          size="large"
+          variant="outlined"
+        >
+          목록
+        </v-btn>
         <v-spacer />
       </v-card-actions>
     </v-card>

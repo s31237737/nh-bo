@@ -115,7 +115,6 @@
           {{ snackbarText }}
           <template #actions>
             <v-btn
-              color="white"
               icon="custom:close"
               density="comfortable"
               @click="snackbar = false"
