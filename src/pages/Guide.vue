@@ -584,6 +584,30 @@
           icon="custom:refresh"
         />
       </v-col>
+      <v-col cols="auto">
+        <v-btn
+          color="tertiary"
+          class="icon-lg"
+          variant="outlined"
+          icon="custom:refresh"
+        />
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          color="tertiary"
+          class="icon-md"
+          variant="outlined"
+          icon="custom:refresh"
+        />
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          color="tertiary"
+          class="icon-sm"
+          icon="custom:refresh"
+        />
+      </v-col>
+     
     </v-row>
   </div>
   <!-- //버튼 -->

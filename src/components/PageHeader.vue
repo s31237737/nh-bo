@@ -3,7 +3,7 @@
     <v-btn
       v-if="prevLink"
       :to="prevLink"
-      density="comfortable"
+      class="icon-lg"
       icon="custom:arrow-left"
       color="white"
     />

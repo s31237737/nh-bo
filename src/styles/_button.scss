@@ -11,7 +11,7 @@ body {
       margin-inline: 0.25rem -0.25rem !important;
     }
     &--disabled {
-      opacity: .4 !important;
+      opacity: 0.4 !important;
     }
   }
   .v-btn--size-x-large {
@@ -24,17 +24,38 @@ body {
     padding: 0 16px;
     .v-btn__prepend .v-icon,
     .v-btn__append .v-icon {
-       font-size: 1.5rem;
+      font-size: 1.5rem;
     }
   }
   .text-tertiary {
     color: $text-primary !important;
     border-color: $border-strong;
   }
-
-  .v-btn--icon.v-btn--density-default {
-    --v-btn-size: 1.3338rem;
+  .v-btn--icon {
+    &.icon-lg {
+      width: 32px;
+      height: 32px;
+      .v-icon--size-default {
+        font-size: 1.5rem;
+      }
+    }
+    &.icon-md {
+      width: 24px;
+      height: 24px;
+      .v-icon--size-default {
+         font-size: 1.25rem;
+      }
+    }
+    &.icon-sm {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      .v-icon--size-default {
+        font-size: 1rem;
+      }
+    }
   }
+
 
   .pagination {
     display: flex;

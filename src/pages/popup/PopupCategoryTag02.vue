@@ -68,7 +68,7 @@
                         <template #append>
                           <v-btn
                             icon="custom:close"
-                            density="comfortable"
+                            class="icon-lg"
                             @click="removeTag(index)"
                           />
                         </template>
