@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex ga-1 flex-wrap w-75">
+  <div class="d-flex ga-3 flex-wrap w-75">
     <v-btn
       v-for="popup in popups"
       :key="popup.name"

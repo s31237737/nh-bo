@@ -46,7 +46,7 @@ body {
 
   .date-wrap {
     position: relative;
-    min-width: 326px;
+    min-width: 300px;
     flex-shrink: 0;
     .v-btn {
       position: absolute;
@@ -62,8 +62,8 @@ body {
     &-month {
       padding: 0;
       &__day {
-        width: 36px;
-        @extend .text-3;
+        width: 28px;
+        height: 32px;
       }
     }
     &-years__content {
@@ -102,7 +102,7 @@ body {
         .v-btn {
           width: 24px;
           height: 24px;
-          --v-btn-size: 1rem;
+          font-size: 1rem;
         }
         &__day {
           width: 28px;
@@ -116,6 +116,15 @@ body {
     .v-picker {
       &__body {
         padding: 1.5rem 1.5rem 1.25rem;
+        .v-date-picker-month {
+
+          .v-btn {
+            font-size: 0.75rem;
+            width: 28px;
+            height: 28px;
+            --v-btn-size: 1rem;
+          }
+        }
       }
       &__actions {
         padding: 0 1.5rem 1.5rem;
