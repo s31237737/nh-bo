@@ -142,6 +142,7 @@ body {
     }
   }
 
+
   .search-wrap {
     margin-bottom: 50px;
     &:has(.v-form) {
@@ -214,7 +215,21 @@ body {
     .search-inp {
       flex-grow: 1;
     }
+    &-end {
+      display: flex;
+      justify-content: flex-end;
+      margin: 68px 0 24px;
+      .search-inp {
+        max-width: 500px;
+      }
+      + .v-data-table {
+        margin-top: 0;
+      }
+    }
   }
+
+
+
 
   .v-field--focused .v-field__outline {
     --v-field-border-width: 1px !important;
@@ -453,11 +468,3 @@ body {
   }
 }
 
-.search-end {
-  display: flex;
-  justify-content: flex-end;
-  margin: 68px 0 24px;
-  .search-inp {
-    max-width: 500px;
-  }
-}

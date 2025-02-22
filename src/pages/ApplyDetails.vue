@@ -3,45 +3,46 @@
     title="사용신청 관리"
     prev-link="Apply"
   />
-  <v-table-row>
-    <tbody>
-      <tr
-        v-for="(row, index) in tableData"
-        :key="index"
-      >
-        <th style="width: 10%">
-          {{ row.label1 }}
-        </th>
-        <td style="width: 23%">
-          {{ row.value1 }}
-        </td>
-        <th style="width: 10%">
-          {{ row.label2 }}
-        </th>
-        <td style="width: 23%">
-          {{ row.value2 }}
-        </td>
-        <th style="width: 10%">
-          {{ row.label3 }}
-        </th>
-        <td style="width: 24%">
-          {{ row.value3 }}
-        </td>
-      </tr>
-    </tbody>
-  </v-table-row>
-
-  <div class="search-end">
-    <v-text-field
-      v-model="form"
-      class="search-inp"
-      placeholder="직원명, 개인번호, 사무소명으로 검색해주세요."
-      append-inner-icon="custom:search"
-      @click:append-inner="onAppendClick"
-    />
-  </div>
 
   <div class="page-contents">
+    <v-table-row>
+      <tbody>
+        <tr
+          v-for="(row, index) in tableData"
+          :key="index"
+        >
+          <th style="width: 10%">
+            {{ row.label1 }}
+          </th>
+          <td style="width: 23%">
+            {{ row.value1 }}
+          </td>
+          <th style="width: 10%">
+            {{ row.label2 }}
+          </th>
+          <td style="width: 23%">
+            {{ row.value2 }}
+          </td>
+          <th style="width: 10%">
+            {{ row.label3 }}
+          </th>
+          <td style="width: 24%">
+            {{ row.value3 }}
+          </td>
+        </tr>
+      </tbody>
+    </v-table-row>
+
+    <div class="search-wrap-end">
+      <v-text-field
+        v-model="form"
+        class="search-inp"
+        placeholder="직원명, 개인번호, 사무소명으로 검색해주세요."
+        append-inner-icon="custom:search"
+        @click:append-inner="onAppendClick"
+      />
+    </div>
+
     <v-data-table
       v-model="checked"
       v-model:page="page"
@@ -66,7 +67,10 @@
                 :items="['최신순', '사용자 업데이트순', '마지막 수정순']"
                 density="compact"
               />
-              <v-checkbox label="신청대기중 모아보기" />
+              <v-checkbox
+                label="신청대기중 모아보기"
+                density="compact"
+              />
             </div>
           </div>
           <div class="btns">
