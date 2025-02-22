@@ -453,14 +453,29 @@
       />
     </template>
 
-    <template #bottom>
+    <!-- <template #bottom>
       <Pagination
         :total-items="dataTableItem.length"
         :items-per-page="itemsPerPage"
         @paging="page = $event.page"
       />
-    </template>
+    </template> -->
   </v-data-table>
+  <div class="page-actions">
+    <v-btn
+      color="secondary"
+      size="large"
+    >
+      취소
+    </v-btn>
+    <v-btn
+      color="primary"
+      size="large"
+      disabled
+    >
+      등록
+    </v-btn>
+  </div>
 </template>
 
 <script setup>

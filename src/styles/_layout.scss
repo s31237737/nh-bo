@@ -181,6 +181,15 @@ body {
       --v-theme-overlay-multiplier: 0;
     }
   }
+  .page-actions {
+    margin-top: 50px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    &:not(:has(.v-spacer)) .v-btn {
+      width: 180px;
+    }
+  }
 
   .v-table {
     th {
