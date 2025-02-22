@@ -33,6 +33,7 @@
                     :items="pageSort"
                     item-title="title"
                     item-value="value"
+                    density="compact"
                   />
                 </div>
               </div>

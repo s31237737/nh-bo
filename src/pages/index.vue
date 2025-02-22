@@ -53,10 +53,12 @@
               :items="pageSort"
               item-title="title"
               item-value="value"
+              density="compact"
             />
             <v-select
               v-model="selectDate"
               :items="['최신순', '업데이트순', '마지막 수정순']"
+              density="compact"
             />
           </div>
         </div>
