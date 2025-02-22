@@ -48,7 +48,7 @@
     </tbody>
   </v-table-row>
 
-  <div class="input-wrap">
+  <div class="flex-end">
     <v-text-field
       v-model="form"
       class="search-inp"
