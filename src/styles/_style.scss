@@ -452,3 +452,12 @@ body {
     }
   }
 }
+
+.input-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin: 68px 0 24px;
+  .search-inp {
+    max-width: 500px;
+  }
+}
