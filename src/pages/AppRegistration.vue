@@ -29,7 +29,14 @@
             rowspan="3"
             style="width: 40%;"
           >
-            A
+            <ImageUploader
+              :images="appIconList"
+              @update:images="updateAppIconList"
+            />
+            <div class="upload-guide">
+              <p>권장크기 : 100px X 100px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG, PNG</p>
+            </div>
           </td>
         </tr>
         <tr>
@@ -68,7 +75,14 @@
             style="width: 40%;"
             rowspan="3"
           >
-            A
+            <ImageUploader
+              :images="mainImgList"
+              @update:images="updateMainImgList"
+            />
+            <div class="upload-guide">
+              <p>권장크기 : 300px X 440px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG, PNG</p>
+            </div>
           </td>
         </tr>
         <tr>
@@ -304,19 +318,28 @@
             style="width: 10%;"
             rowspan="2"
           >
-            이미지 (0/5)
+            이미지 ({{uploaderList.length}}/5)
           </th>
           <td>
-            <p>
-              <v-icon
-                left
-                size="16"
-                style="vertical-align: -2px;"
-              >
-                custom:move
-              </v-icon>
-              노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
-            </p>
+            <ImageUploader
+              :images="uploaderList"
+              multiple
+              draggable
+              @update:images="updateImages"
+            />
+            <div class="upload-guide">
+              <p class="text-1">
+                <v-icon
+                  left
+                  size="16"
+                >
+                  custom:move
+                </v-icon>
+                노출 순서를 바꾸시려면 이미지를 원하는 곳에 끌어다 놓으세요 (드래그&amp;드롭)
+              </p>
+              <p>권장크기 : 300px X 440px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG, PNG</p>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -504,6 +527,27 @@
 
 <script setup>
 import { ref } from 'vue';
+
+
+const appIconList = ref([]); // 초기 이미지 목록
+const updateAppIconList = (newImages) => {
+  appIconList.value = newImages;
+};
+const mainImgList = ref([]); // 초기 이미지 목록
+const updateMainImgList = (newImages) => {
+  mainImgList.value = newImages;
+};
+
+const updateImages = (newImages) => {
+  uploaderList.value = newImages;
+};
+const uploaderList = ref([
+  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg",
+  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
+  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg",
+]);
+
 
 const select = ref('대여');
 const select2 = ref("1.1.1");

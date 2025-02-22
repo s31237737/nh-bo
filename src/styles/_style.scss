@@ -428,4 +428,17 @@ body {
       background: #f9f9f9;
     }
   }
+  .upload-guide {
+    margin-top: 12px;
+    p {
+      @extend .text-2;
+      color: $text-helper;
+      &.text-1 {
+        color: $text-primary;
+        .v-icon {
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
 }

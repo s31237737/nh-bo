@@ -47,7 +47,7 @@
 
   <ImageUploader
     :images="uploaderList"
-    readonly
+    multiple
     :draggable="true"
   />
 

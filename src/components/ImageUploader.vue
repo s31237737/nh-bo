@@ -8,9 +8,9 @@
     @update:images="updateImages"
   /> -->
   <div class="image-uploader">
-    <!-- 읽기 전용이면서 드래그 가능할 경우 VueDraggable 적용 -->
+    <!-- 다건등록이면서 드래그 가능할 경우 VueDraggable 적용 -->
     <VueDraggable
-      v-if="readonly && draggable"
+      v-if="multiple && draggable"
       v-model="imageList"
       class="draggable"
       @end="updateImageOrder"
@@ -26,6 +26,13 @@
             icon="custom:zoom"
             class="icon-md"
             @click="openPreview(image)"
+          />
+          <v-btn
+            icon="custom:remove"
+            class="icon-md"
+            variant="text"
+            color="warning"
+            @click="removeImage(0)"
           />
         </div>
       </div>
