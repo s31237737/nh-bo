@@ -8,10 +8,7 @@
         class="image-box"
         :style="{ backgroundImage: `url(${image})` }"
       >
-        <div
-
-          class="btns"
-        >
+        <div class="btns">
           <v-btn
             icon="custom:search-plus"
             class="icon-md"
@@ -54,9 +51,9 @@
       </div>
     </template>
 
-    <!-- 새 이미지 추가 버튼 (readonly가 false이고, multiple이 false이면 imageList가 비어 있어야 보임) -->
+    <!-- 새 이미지 추가 버튼 (readonly=false이고, 조건 충족 시 보임) -->
     <div
-      v-if="!readonly && (multiple || imageList.length === 0)"
+      v-if="!readonly && (multiple || imageList.length === 0) && imageList.length < maxCount"
       class="image-box add-button"
       @click="triggerFileInput"
     >
@@ -74,8 +71,6 @@
       >
     </div>
   </div>
-
-
 
   <!-- 확대된 이미지 다이얼로그 -->
   <v-dialog
@@ -103,8 +98,9 @@ import { ref, defineProps, watch, defineEmits } from "vue";
 
 const props = defineProps({
   multiple: { type: Boolean, default: false }, // 다중 이미지 여부
-  readonly: { type: Boolean, default: false }, // 읽기 전용 모드 (등록/삭제 불가)
+  readonly: { type: Boolean, default: false }, // 읽기 전용 모드
   images: { type: Array, default: () => [] }, // 초기 이미지 목록
+  maxCount: { type: Number, default: 5 } // 최대 이미지 개수 (기본값 5개)
 });
 
 const emit = defineEmits(["update:images"]);
@@ -124,6 +120,8 @@ const onFileChange = (event) => {
 
   const newFiles = Array.from(event.target.files);
   newFiles.forEach((file) => {
+    if (imageList.value.length >= props.maxCount) return; // 최대 개수 초과 방지
+
     const reader = new FileReader();
     reader.onload = (e) => {
       if (!props.multiple) {
@@ -154,4 +152,3 @@ const triggerFileInput = () => {
   if (!props.readonly) fileInput.value.click();
 };
 </script>
-
