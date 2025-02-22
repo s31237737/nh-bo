@@ -41,6 +41,7 @@
     :headers="dataTableheaders"
     :items="dataTableItem"
     :items-per-page="itemsPerPage"
+    @click:row="handleClick"
   >
     <template #top>
       <div class="table-top">
@@ -114,6 +115,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 // 조회조건
 const date = ref(new Date());
@@ -128,6 +130,14 @@ const page = ref(1);
 const itemsPerPage = ref(10);
 const selectDate = ref('최신순');
 const checked = ref([]);
+
+const router = useRouter();
+
+const handleClick = (event, row) => {
+  router.push('/Guide');
+  console.log("Clicked item: ", row.item);
+}
+
 const pageSort = ref([
   { title: '10개', value: 10 },
   { title: '20개', value: 20 },
