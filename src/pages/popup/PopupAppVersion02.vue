@@ -1,7 +1,7 @@
 <template>
   <v-dialog
     :model-value="modelValue"
-    class="popup-md"
+    class="popup-lg"
     @update:model-value="emit('update:modelValue', $event)"
   >
     <v-card>
