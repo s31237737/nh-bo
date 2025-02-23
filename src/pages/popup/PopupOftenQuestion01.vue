@@ -37,7 +37,7 @@
             <v-text-field
               v-model="form"
               class="search-inp"
-              placeholder="글제목, 등록 ID를 검색해주세요."
+              placeholder="글제목, 등록자를 검색해주세요."
               append-inner-icon="custom:search"
               @click:append-inner="onAppendClick"
             />
@@ -101,7 +101,7 @@
         <v-btn
           color="primary"
           size="large"
-          disabled
+          :disabled="!checked.length"
         >
           선택 완료
         </v-btn>

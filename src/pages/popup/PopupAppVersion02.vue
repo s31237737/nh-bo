@@ -46,7 +46,7 @@
             </tr>
             <tr>
               <th style="width: 10%">
-                사용 여부
+                사용 상태
               </th>
               <td>
                 <v-switch v-model="isSwitch" />

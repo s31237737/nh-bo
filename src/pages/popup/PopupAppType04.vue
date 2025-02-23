@@ -76,7 +76,7 @@ const emit = defineEmits(['update:modelValue']);
 const tableData = ref([
   { label: '앱 타입명', value: '대여' },
   { label: '앱 타입 코드', value: 'APP001' },
-  { label: '사용 여부', value: '사용' },
+  { label: '사용 상태', value: '사용' },
 ]);
 
 </script>

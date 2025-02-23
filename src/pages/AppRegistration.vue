@@ -90,7 +90,7 @@
             사용 가이드 링크
           </th>
           <td style="width: 40%;">
-            <v-text-field placeholder="사용 가이드 링크를 입력해주세요." />
+            <v-text-field placeholder="사용 가이드 바로가기 링크를 입력해주세요." />
           </td>
         </tr>
         <tr>

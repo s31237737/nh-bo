@@ -116,7 +116,7 @@ const pageSort = ref([
 const dataTableheaders = [
   { title: "순서", key: "id", sortable: true, width: '80px'},
   { title: "앱 버전", key: "appVersion", sortable: false,},
-  { title: "사용 여부", key: "status", sortable: false, width: '110px'},
+  { title: "사용 상태", key: "status", sortable: false, width: '110px'},
   { title: "업데이트 날짜", key: "updatedDate", sortable: false, width: '110px'},
 ];
 
