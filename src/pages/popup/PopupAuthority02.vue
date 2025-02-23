@@ -15,24 +15,18 @@
       </v-card-title>
       <v-card-text>
         <!-- dialog contents -->
-        <v-text-field
-          v-model="search"
-          class="search-inp mb-5"
-          placeholder="직원명, 개인번호, 사무소명으로 검색해주세요."
-          append-inner-icon="custom:search"
-        />
+
         <v-data-table
           v-model="checked"
           v-model:page="page"
           :headers="dataTableheaders"
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
-          :search="search"
         >
           <template #top>
             <div class="table-top">
               <div class="control">
-                <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+                <p class="title-2">선택된 직원(15)을 추가하시겠습니까?</p>
               </div>
             </div>
           </template>
@@ -57,15 +51,14 @@
         <v-btn
           color="secondary"
           size="large"
-          @click="emit('update:modelValue', false)"
         >
-          목록
+          이전
         </v-btn>
         <v-btn
           color="primary"
           size="large"
         >
-          다음
+          선택완료
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -74,9 +67,6 @@
 
 <script setup>
 import { ref } from "vue";
-
-// 조회조건
-const search = ref("");
 
 defineProps({
   modelValue: {
