@@ -60,7 +60,7 @@
           >
             <v-textarea
               placeholder="간단 설명을 입력해주세요."
-              :counter="30"
+              :counter="70"
               :persistent-counter="true"
             />
           </td>
@@ -78,8 +78,8 @@
               @update:images="updateAppIconList"
             />
             <div class="upload-guide">
-              <p>권장크기:530px x 330px</p>
-              <p>용량: 10MB 이하, 파일형식 JPG, PNG</p>
+              <p>권장크기: 530px x 330px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG,PNG</p>
             </div>
           </td>
         </tr>
@@ -103,7 +103,10 @@
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th
+            class="th-sub"
+            style="width: 10%"
+          >
             앱 이름
           </th>
           <td style="width: 80%">
@@ -111,7 +114,10 @@
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th
+            class="th-sub"
+            style="width: 10%"
+          >
             앱 타입
           </th>
           <td style="width: 80%">
@@ -126,7 +132,10 @@
             style="width: 80%"
             colspan="2"
           >
-            <v-text-field placeholder="앱 바로가기 링크를 입력해주세요." />
+            <v-text-field
+              placeholder="앱 바로가기 링크를 입력해주세요."
+              style="width: 640px"
+            />
           </td>
         </tr>
         <tr>
@@ -151,7 +160,10 @@
             style="width: 80%"
             colspan="2"
           >
-            <v-switch v-model="isSwitch" />
+            <v-switch
+              v-model="isSwitch"
+              @change="snackbarOpen"
+            />
           </td>
         </tr>
       </tbody>
@@ -200,7 +212,7 @@
           <td>
             <v-textarea
               placeholder="간단 설명을 입력해주세요."
-              :counter="30"
+              :counter="100"
               :persistent-counter="true"
             />
           </td>
@@ -215,8 +227,8 @@
               @update:images="updateAppIconList"
             />
             <div class="upload-guide">
-              <p>권장크기:1920px x 548px</p>
-              <p>용량: 10MB 이하, 파일형식 JPG, PNG</p>
+              <p>권장크기: 1920px x 548px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG,PNG</p>
             </div>
           </td>
         </tr>
@@ -225,7 +237,10 @@
             바로가기 링크
           </th>
           <td style="width: 90%">
-            <v-text-field placeholder="앱 바로가기 링크를 입력해주세요." />
+            <v-text-field
+              placeholder="앱 바로가기 링크를 입력해주세요."
+              style="width: 640px"
+            />
           </td>
         </tr>
         <tr>
@@ -244,11 +259,35 @@
             사용 상태
           </th>
           <td style="width: 90%">
-            <v-switch v-model="isSwitch" />
+            <v-switch
+              v-model="isSwitch"
+              @change="snackbarOpen"
+            />
           </td>
         </tr>
       </tbody>
     </v-table-row>
+    <!-- 토스트 팝업 -->
+    <v-snackbar
+      v-model="snackbar"
+      contained
+      content-class="toast-pop"
+    >
+      <v-icon
+        start
+        size="24"
+        icon="custom:alert"
+      />
+      {{ snackbarText }}
+      <template #actions>
+        <v-btn
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 -->
   </div>
   <div class="page-actions">
     <v-btn
@@ -272,7 +311,7 @@ import { ref } from "vue";
 
 const snackbar = ref(false);
 const snackbarText = ref(
-  "코드 전송 오류로 인하여 등록이 불가합니다. 새로고침해주세요."
+  "콘텐츠는 5개까지 사용 가능합니다. 콘텐츠 사용 개수를 확인하고 다시 설정해 주세요."
 );
 const snackbarOpen = () => {
   snackbar.value = true;
@@ -284,17 +323,6 @@ const updateAppIconList = (newImages) => {
   appIconList.value = newImages;
 };
 
-const mainImgList = ref([]); // 초기 이미지 목록
-const updateMainImgList = (newImages) => {
-  mainImgList.value = newImages;
-};
-
-const updateImages = (newImages) => {
-  uploaderList.value = newImages;
-};
-const uploaderList = ref([
-  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
-]);
 
 // 사용 상태
 const isSwitch = ref(false);

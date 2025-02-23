@@ -37,7 +37,7 @@
             영역 타입
           </th>
           <td style="width: 90%">
-            APPs 슬라이드 배너(930px X 258px)
+            APPs 슬라이드 배너(1920px X 548px)
           </td>
         </tr>
         <tr>
