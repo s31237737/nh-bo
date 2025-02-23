@@ -448,8 +448,8 @@ body {
       }
     }
     .image-box {
-      min-width: 100px;
-      min-height: 100px;
+      width: 100px;
+      height: 100px;
       position: relative;
       display: flex;
       align-items: center;
@@ -476,6 +476,12 @@ body {
       border: 1px solid #ccc;
       cursor: pointer;
       background: #f9f9f9;
+    }
+    &.type02 {
+      .image-box {
+        width: 265px;
+        height: 165px;
+      }
     }
   }
   .upload-guide {

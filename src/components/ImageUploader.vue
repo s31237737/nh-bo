@@ -7,7 +7,10 @@
     :max-count="3"
     @update:images="updateImages"
   /> -->
-  <div class="image-uploader">
+  <div
+    class="image-uploader"
+    :class="class"
+  >
     <!-- 다건등록이면서 드래그 가능할 경우 VueDraggable 적용 -->
     <VueDraggable
       v-if="multiple && draggable"
@@ -141,6 +144,7 @@ import { ref, defineProps, watch, defineEmits } from "vue";
 import { VueDraggable } from 'vue-draggable-plus'
 
 const props = defineProps({
+  class: { type: String, default: '' }, // 다중 이미지 여부
   multiple: { type: Boolean, default: false }, // 다중 이미지 여부
   readonly: { type: Boolean, default: false }, // 읽기 전용 모드
   draggable: { type: Boolean, default: false }, // 드래그 가능 여부
@@ -202,7 +206,3 @@ const updateImageOrder = () => {
   emit("update:images", imageList.value);
 };
 </script>
-
-<style scoped>
-
-</style>
