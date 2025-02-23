@@ -133,9 +133,9 @@ const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
   { title: "앱 코드", key: "appCode", sortable: false, width: "110px" },
   { title: "앱 이름", key: "appName", sortable: false },
-  { title: "앱 타입", key: "appType", sortable: false, width: "110px" },
-  { title: "자동사용여부", key: "status", sortable: false, width: "110px" },
-  { title: "사용자 수", key: "registrant", sortable: false, width: "100px" },
+  { title: "앱 타입", key: "appType", sortable: false, width: "150px" },
+  { title: "자동사용여부", key: "status", sortable: false, width: "150px" },
+  { title: "사용자 수", key: "registrant", sortable: false, width: "150px" },
 ];
 
 const dataTableItem = ref([
