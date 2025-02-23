@@ -52,6 +52,7 @@
           :headers="dataTableheaders"
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
+          @click:row="handleClick"
         >
           <template #top>
             <div class="table-top">
@@ -116,7 +117,9 @@ const select = ref("전체");
 const onAppendClick = () => {
   alert("Append icon clicked!");
 };
-
+const handleClick = (event, row) => {
+  console.log("Clicked item: ", row.item);
+}
 defineProps({
   modelValue: {
     type: Boolean,
