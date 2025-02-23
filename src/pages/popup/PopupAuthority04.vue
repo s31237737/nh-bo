@@ -46,7 +46,53 @@
               <th style="width: 20%;">
                 권한 범위 <i class="required" />
               </th>
-              <td>AG01</td>
+              <td>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions1"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions2"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions3"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions4"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions5"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+              </td>
             </tr>
             <tr>
               <th style="width: 20%;">
@@ -96,6 +142,11 @@ defineProps({
 const emit = defineEmits(['update:modelValue']);
 
 const select = ref('일반 관리자');
+const chkOptions1 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
+const chkOptions2 = ref(['조회', '추가', '승인', '알림송신']);
+const chkOptions3 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
+const chkOptions4 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
+const chkOptions5 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const isSwitch = ref(true);
 
 </script>
