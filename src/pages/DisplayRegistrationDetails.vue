@@ -76,6 +76,7 @@
     </v-table-row>
   </div>
   <div class="page-actions">
+    <v-spacer />
     <v-btn
       size="large"
       color="warning"

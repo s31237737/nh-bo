@@ -508,7 +508,6 @@
     <!-- // 토스트 팝업 -->
   </div>
   <div class="page-actions">
-    <v-spacer />
     <v-btn
       color="secondary"
       size="large"
