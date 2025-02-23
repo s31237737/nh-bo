@@ -23,7 +23,7 @@
         </tr>
         <tr>
           <th style="width: 10%">
-            콘텐츠 제목<i class="required" />
+            콘텐츠 제목 <i class="required" />
           </th>
           <td
             style="width: 90%"
@@ -37,7 +37,7 @@
         </tr>
         <tr>
           <th style="width: 10%">
-            배너 제목<i class="required" />
+            배너 제목 <i class="required" />
           </th>
           <td
             style="width: 90%"
@@ -59,6 +59,26 @@
               :counter="70"
               :persistent-counter="true"
             />
+          </td>
+        </tr>
+        <tr>
+          <th
+            style="width: 10%"
+          >
+            이미지 <i class="required" />
+          </th>
+          <td
+            colspan="4"
+            style="width: 90%"
+          >
+            <ImageUploader
+              :images="appIconList"
+              @update:images="updateAppIconList"
+            />
+            <div class="upload-guide">
+              <p>권장크기:930px x 258px</p>
+              <p>용량: 10MB 이하, 파일형식 JPG, PNG</p>
+            </div>
           </td>
         </tr>
         <tr>
@@ -90,8 +110,8 @@
             style="width: 40%"
           >
             <ImageUploader
-              :images="appIconList"
-              @update:images="updateAppIconList"
+              :images="uploaderList"
+              readonly
             />
             <div class="upload-guide">
               <p>100px X 100px</p>
@@ -150,7 +170,7 @@
     <v-btn
       color="primary"
       size="large"
-      :to="'/'"
+      :to="'/DisplayRegistrationDetails'"
     >
       등록
     </v-btn>
@@ -173,6 +193,18 @@ const appIconList = ref([]); // 초기 이미지 목록
 const updateAppIconList = (newImages) => {
   appIconList.value = newImages;
 };
+
+const mainImgList = ref([]); // 초기 이미지 목록
+const updateMainImgList = (newImages) => {
+  mainImgList.value = newImages;
+};
+
+const updateImages = (newImages) => {
+  uploaderList.value = newImages;
+};
+const uploaderList = ref([
+  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
+]);
 
 // 사용 상태
 const isSwitch = ref(false);
