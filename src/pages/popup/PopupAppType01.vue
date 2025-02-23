@@ -27,6 +27,15 @@
             <div class="table-top">
               <div class="control">
                 <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+                <div class="control-input">
+                  <v-select
+                    v-model="itemsPerPage"
+                    :items="pageSort"
+                    item-title="title"
+                    item-value="value"
+                    density="compact"
+                  />
+                </div>
               </div>
               <div class="btns">
                 <v-btn
@@ -87,6 +96,13 @@ const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
 
+const pageSort = ref([
+  { title: '10개', value: 10 },
+  { title: '20개', value: 20 },
+  { title: '30개', value: 30 },
+  { title: '50개', value: 50 },
+  { title: '100개', value: 100 },
+]);
 const handleClick = (event, row) => {
   console.log("Clicked item: ", row.item);
 }
