@@ -124,9 +124,7 @@ import { ref } from "vue";
 
 // 조회조건
 const search = ref("");
-const onAppendClick = () => {
-  alert("Append icon clicked!");
-};
+
 const tableData = ref([
   {
     label1: "앱 이름",
@@ -141,7 +139,7 @@ const tableData = ref([
     value1: "v.0.8",
     label2: "앱 타입",
     value2: "대여",
-    label3: "사용신청<br />업데이트 날짜",
+    label3: "사용내역<br>업데이트 날짜",
     value3: "2025.09.06",
   },
 ]);

@@ -54,7 +54,7 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['사용자 업데이트 순', '마지막 수정 날짜순']"
+                :items="['사용자 업데이트 순', '사용순']"
                 density="compact"
               />
             </div>
@@ -95,7 +95,7 @@ const onAppendClick = () => {
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
+const selectDate = ref("사용자 업데이트 순");
 const checked = ref([]);
 
 const pageSort = ref([
@@ -115,7 +115,7 @@ const handleClick = (event, row) => {
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
-  { title: "앱 코드", key: "appCode", sortable: false, width: "110px" },
+  { title: "앱 코드", key: "appCode", sortable: false, width: "150px" },
   { title: "앱 이름", key: "appName", sortable: false },
   { title: "앱 타입", key: "appType", sortable: false, width: "150px" },
   { title: "자동사용여부", key: "status", sortable: false, width: "150px" },

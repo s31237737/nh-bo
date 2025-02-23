@@ -65,7 +65,7 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['최신순', '사용자 업데이트 순', '마지막 수정 날짜순']"
+                :items="['사용자 업데이트 순', '사용순']"
                 density="compact"
               />
               <v-checkbox
@@ -79,6 +79,7 @@
               size="large"
               color="tertiary"
               variant="outlined"
+              @click="dialog1 = true"
             >
               사용중단
             </v-btn>
@@ -86,6 +87,7 @@
               size="large"
               color="tertiary"
               variant="outlined"
+              @click="dialog2 = true"
             >
               사용허가
             </v-btn>
@@ -116,11 +118,96 @@
         />
       </template>
     </v-data-table>
+    <!-- 사용중단 alert -->
+    <v-dialog
+      v-model="dialog1"
+      class="popup-sm"
+    >
+      <v-card>
+        <v-card-title>
+          <span>사용중단</span>
+          <v-btn
+            icon="custom:close"
+            density="comfortable"
+            @click="dialog1 = false"
+          />
+        </v-card-title>
+
+        <v-card-text>
+          <!-- dialog contents -->
+          <p class="text-2 alert-txt">
+            앱 사용을 중단하시겠습니까?
+          </p>
+        <!-- // dialog contents -->
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="secondary"
+            size="large"
+            @click="dialog1 = false"
+          >
+            취소
+          </v-btn>
+          <v-btn
+            color="primary"
+            size="large"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <!-- 사용허가 alert -->
+    <v-dialog
+      v-model="dialog2"
+      class="popup-sm"
+    >
+      <v-card>
+        <v-card-title>
+          <span>사용허가</span>
+          <v-btn
+            icon="custom:close"
+            density="comfortable"
+            @click="dialog2 = false"
+          />
+        </v-card-title>
+
+        <v-card-text>
+          <!-- dialog contents -->
+          <p class="text-2 alert-txt">
+            앱 사용을 허가하시겠습니까?
+          </p>
+          <!-- <p class="text-2 alert-txt">
+            해당 앱은 자동사용허가 상태입니다.<br>
+            수동으로 변경하시겠습니까?
+          </p> -->
+        <!-- // dialog contents -->
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="secondary"
+            size="large"
+            @click="dialog2 = false"
+          >
+            취소
+          </v-btn>
+          <v-btn
+            color="primary"
+            size="large"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+const dialog1 = ref(false);
+const dialog2 = ref(false);
 
 // 조회조건
 const search = ref("");
@@ -147,7 +234,7 @@ const tableData = ref([
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
+const selectDate = ref("사용자 업데이트 순");
 const checked = ref([]);
 
 const pageSort = ref([
@@ -162,15 +249,10 @@ const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
   { title: "개인번호", key: "privateNum", sortable: false, width: "150px" },
   { title: "직원명", key: "userName", sortable: false },
-  { title: "사무소명", key: "officeName", sortable: false, width: "150px" },
-  { title: "사용상태", key: "useStatus", sortable: false, width: "150px" },
-  { title: "사용기간", key: "useTerm", sortable: false, width: "230px" },
-  {
-    title: "신청날짜",
-    key: "applicationDate",
-    sortable: false,
-    width: "130px",
-  },
+  { title: "사무소명", key: "officeName", sortable: false, width: "200px" },
+  { title: "사용상태", key: "useStatus", sortable: false, width: "110px" },
+  { title: "사용기간", key: "useTerm", sortable: false, width: "250px" },
+  { title: "신청날짜", key: "applicationDate", sortable: false, width: "140px" },
 ];
 
 const dataTableItem = ref([

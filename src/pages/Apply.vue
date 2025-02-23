@@ -72,6 +72,7 @@
               size="large"
               color="tertiary"
               variant="outlined"
+              @click="dialog2 = true"
             >
               자동 사용허가
             </v-btn>
@@ -96,6 +97,7 @@
       </template>
     </v-data-table>
 
+    <!-- 수동 사용허가 alert -->
     <v-dialog
       v-model="dialog1"
       class="popup-sm"
@@ -122,6 +124,45 @@
             color="secondary"
             size="large"
             @click="dialog1 = false"
+          >
+            취소
+          </v-btn>
+          <v-btn
+            color="primary"
+            size="large"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <!-- 자동 사용허가 alert -->
+    <v-dialog
+      v-model="dialog2"
+      class="popup-sm"
+    >
+      <v-card>
+        <v-card-title>
+          <span>자동 사용허가</span>
+          <v-btn
+            icon="custom:close"
+            density="comfortable"
+            @click="dialog2 = false"
+          />
+        </v-card-title>
+
+        <v-card-text>
+          <!-- dialog contents -->
+          <p class="text-2 alert-txt">
+            앱 사용을 자동으로 허용하시겠습니까?
+          </p>
+        <!-- // dialog contents -->
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="secondary"
+            size="large"
+            @click="dialog2 = false"
           >
             취소
           </v-btn>
