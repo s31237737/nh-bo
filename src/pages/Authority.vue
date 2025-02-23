@@ -13,7 +13,7 @@
         <v-text-field
           v-model="form"
           class="search-inp"
-          placeholder="직원이름, 개인번호로 검색해주세요."
+          placeholder="직원명, 개인번호로 검색해주세요."
           append-inner-icon="custom:search"
           @click:append-inner="onAppendClick"
         />
@@ -74,7 +74,7 @@
         <template #top>
           <div class="flex-column mb-4">
             <p class="text-3">
-              일반관리자
+              비즈니스 관리자
             </p>
             <strong class="title-2"> 김농협 관리자 </strong>
           </div>
@@ -125,7 +125,6 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 
 // 조회조건
 const form = ref("");
@@ -177,10 +176,7 @@ const page = ref(1);
 const itemsPerPage = ref(10);
 const checked = ref([]);
 
-const router = useRouter();
-
 const handleClick = (event, row) => {
-  router.push("/AppDetails");
   console.log("Clicked item: ", row.item);
 };
 

@@ -39,13 +39,13 @@
               size="60"
             />
           </template>
-          <template #bottom>
-            <!-- <Pagination
+          <!-- <template #bottom>
+           <Pagination
               :total-items="dataTableItem.length"
               :items-per-page="itemsPerPage"
               @paging="page = $event.page"
-            /> -->
-          </template>
+            />
+          </template>-->
         </v-data-table>
         <!-- // dialog contents -->
       </v-card-text>

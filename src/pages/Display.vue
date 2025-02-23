@@ -26,14 +26,13 @@
         />
       </template>
 
-      <template #bottom>
-        <!-- 페이징 필요시 사용 -->
-        <!-- <Pagination
+      <!-- <template #bottom>
+         <Pagination
           :total-items="dataTableItem.length"
           :items-per-page="itemsPerPage"
           @paging="page = $event.page"
-        /> -->
-      </template>
+        />
+      </template>-->
     </v-data-table>
   </div>
 </template>
