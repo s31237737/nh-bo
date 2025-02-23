@@ -21,24 +21,25 @@
 <script setup>
 import { ref,shallowRef  } from 'vue';
 
-import PopupAppType01 from '@/pages/popup/PopupAppType01.vue'
-import PopupAppType02 from '@/pages/popup/PopupAppType02.vue'
-import PopupAppType03 from '@/pages/popup/PopupAppType03.vue'
-import PopupAppType04 from '@/pages/popup/PopupAppType04.vue'
-import PopupCategoryTag01 from '@/pages/popup/PopupCategoryTag01.vue'
-import PopupCategoryTag02 from '@/pages/popup/PopupCategoryTag02.vue'
-import PopupCategoryTag03 from '@/pages/popup/PopupCategoryTag03.vue'
-import PopupAppVersion01 from '@/pages/popup/PopupAppVersion01.vue'
-import PopupAppVersion02 from '@/pages/popup/PopupAppVersion02.vue'
-import PopupAppVersion03 from '@/pages/popup/PopupAppVersion03.vue'
-import PopupOftenQuestion01 from '@/pages/popup/PopupOftenQuestion01.vue'
-import PopupOftenQuestion02 from '@/pages/popup/PopupOftenQuestion02.vue'
-import PopupAuthority01 from '@/pages/popup/PopupAuthority01.vue'
-import PopupAuthority02 from '@/pages/popup/PopupAuthority02.vue'
-import PopupAuthority03 from '@/pages/popup/PopupAuthority03.vue'
-import PopupAuthority04 from '@/pages/popup/PopupAuthority04.vue'
-import PopupAuthority05 from '@/pages/popup/PopupAuthority05.vue'
-import PopupDisplay01 from '@/pages/popup/PopupDisplay01.vue'
+import PopupAppType01 from '@/pages/popup/PopupAppType01.vue';
+import PopupAppType02 from '@/pages/popup/PopupAppType02.vue';
+import PopupAppType03 from '@/pages/popup/PopupAppType03.vue';
+import PopupAppType04 from '@/pages/popup/PopupAppType04.vue';
+import PopupCategoryTag01 from '@/pages/popup/PopupCategoryTag01.vue';
+import PopupCategoryTag02 from '@/pages/popup/PopupCategoryTag02.vue';
+import PopupCategoryTag03 from '@/pages/popup/PopupCategoryTag03.vue';
+import PopupAppVersion01 from '@/pages/popup/PopupAppVersion01.vue';
+import PopupAppVersion02 from '@/pages/popup/PopupAppVersion02.vue';
+import PopupAppVersion03 from '@/pages/popup/PopupAppVersion03.vue';
+import PopupOftenQuestion01 from '@/pages/popup/PopupOftenQuestion01.vue';
+import PopupOftenQuestion02 from '@/pages/popup/PopupOftenQuestion02.vue';
+import PopupAuthority01 from '@/pages/popup/PopupAuthority01.vue';
+import PopupAuthority02 from '@/pages/popup/PopupAuthority02.vue';
+import PopupAuthority03 from '@/pages/popup/PopupAuthority03.vue';
+import PopupAuthority04 from '@/pages/popup/PopupAuthority04.vue';
+import PopupAuthority05 from '@/pages/popup/PopupAuthority05.vue';
+import PopupDisplay01 from '@/pages/popup/PopupDisplay01.vue';
+import PopupDisplay02 from '@/pages/popup/PopupDisplay02.vue';
 
 const popups = ref([
   { name: 'PopupAppType01', label: '앱 타입 설정', component: shallowRef(PopupAppType01) },
@@ -59,6 +60,7 @@ const popups = ref([
   { name: 'PopupAuthority04', label: '권한 범위 등록', component: shallowRef(PopupAuthority04) },
   { name: 'PopupAuthority05', label: '권한 범위 상세', component: shallowRef(PopupAuthority05) },
   { name: 'PopupDisplay01', label: '앱 검색', component: shallowRef(PopupDisplay01) },
+  { name: 'PopupDisplay02', label: '콘텐츠 순서 설정', component: shallowRef(PopupDisplay02) },
 ]);
 
 
@@ -81,6 +83,7 @@ const popupVisible = ref({
   PopupAuthority04: false,
   PopupAuthority05: false,
   PopupDisplay01: false,
+  PopupDisplay02: false,
 });
 
 const popOpen = (name) => {

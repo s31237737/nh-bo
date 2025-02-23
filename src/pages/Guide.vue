@@ -14,7 +14,6 @@
     <v-icon icon="custom:new-window" />
     <v-icon icon="custom:remove" />
     <v-icon icon="custom:setting" />
-    <v-icon icon="custom:sort-desc" />
     <v-icon icon="custom:view" />
     <v-icon icon="custom:alert" />
     <v-icon icon="custom:arrow-down" />
@@ -30,6 +29,7 @@
     <v-icon icon="custom:refresh" />
     <v-icon icon="custom:search" />
     <v-icon icon="custom:zoom" />
+    <v-icon icon="custom:sort-desc" />
     <v-icon icon="custom:sort-asc" />
     <v-icon icon="custom:terms" />
     <v-icon icon="custom:warning" />
