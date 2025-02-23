@@ -39,12 +39,9 @@
           <template #item.radioBtn="{ item }">
             <v-radio-group
               v-model="selectedItem"
-              :value="item"
-              row
             >
               <v-radio
-                :key="item.name"
-                :value="item"
+                :value="item.id"
                 hide-details
               />
             </v-radio-group>
