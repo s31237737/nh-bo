@@ -291,21 +291,9 @@
     </v-table-row>
     <!-- 업데이트 정보 -->
     <div class="tit-wrap">
-      <div>
-        <strong class="title-2">
-          업데이트 정보
-        </strong>
-        <p class="text-2">
-          최초 등록시에는 버전 관리를 통해 앱 버전을 등록해주세요.
-        </p>
-      </div>
-      <v-btn
-        color="tertiary"
-        variant="outlined"
-        size="large"
-      >
-        버전 관리
-      </v-btn>
+      <strong class="title-2">
+        업데이트 정보
+      </strong>
     </div>
     <v-table-row>
       <tbody>

@@ -107,7 +107,7 @@
               size="large"
               color="primary"
               prepend-icon="custom:plus"
-              :to="'DisplayRegistration01'"
+              to="DisplayRegistration01"
             >
               등록
             </v-btn>

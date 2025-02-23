@@ -188,7 +188,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      :to="'/AppRegistration'"
+      to="AppRegistration"
     >
       수정
     </v-btn>
