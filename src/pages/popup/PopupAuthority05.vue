@@ -6,7 +6,7 @@
   >
     <v-card>
       <v-card-title>
-        <span>권한 범위 등록</span>
+        <span>권한 범위 상세</span>
         <v-btn
           icon="custom:close"
           density="comfortable"
