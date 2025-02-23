@@ -25,7 +25,7 @@
         <v-text-field
           v-model="form"
           class="search-inp"
-          placeholder="전체 앱 이름, 코드를 검색해주세요."
+          placeholder="앱 이름, 코드를 검색해주세요."
           append-inner-icon="custom:search"
           @click:append-inner="onAppendClick"
         />

@@ -134,6 +134,16 @@ body {
           width: 180px;
         }
       }
+      .v-data-table {
+        .v-table__wrapper {
+          border-left: thin solid $border-subtle;
+          border-right: thin solid $border-subtle;
+          border-radius: 4px;
+          th {
+            border-top: thin solid $border-subtle;
+          }
+        }
+      }
     }
     &.popup-sm {
       .v-card {
@@ -186,7 +196,9 @@ body {
   }
   .page-contents {
     position: relative;
-    .v-snackbar {margin-bottom: 0 !important;}
+    .v-snackbar {
+      margin-bottom: 0 !important;
+    }
   }
   .page-actions {
     margin-top: 50px;
