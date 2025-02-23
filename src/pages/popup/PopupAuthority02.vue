@@ -26,7 +26,9 @@
           <template #top>
             <div class="table-top">
               <div class="control">
-                <p class="title-2">선택된 직원({{checked.length}})을 추가하시겠습니까?</p>
+                <p class="title-2">
+                  선택된 직원({{ checked.length }})을 추가하시겠습니까?
+                </p>
               </div>
             </div>
           </template>
