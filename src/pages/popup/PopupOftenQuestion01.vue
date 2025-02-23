@@ -29,7 +29,10 @@
               :items="['전체', '상태1', '상태2']"
             />
 
-            <Date v-model="date" />
+            <Date
+              v-model="date"
+              label="기간"
+            />
 
             <v-text-field
               v-model="form"

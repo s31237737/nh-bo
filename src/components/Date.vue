@@ -1,9 +1,16 @@
 <template>
   <div class="date-wrap">
     <v-date-input
+      v-if="label"
       :model-value="modelValue"
       variant="outlined"
-      label="기간"
+      :label="label"
+      @update:model-value="updateDate"
+    />
+    <v-date-input
+      v-else
+      :model-value="modelValue"
+      variant="outlined"
       @update:model-value="updateDate"
     />
     <v-btn
@@ -20,6 +27,10 @@ defineProps({
   modelValue: {
     type: Date,
     default: () => new Date(),
+  },
+  label: {
+    type: String,
+    default: '',
   },
 });
 
