@@ -250,11 +250,13 @@ body {
       th {
         text-align: center !important;
         border-bottom: thin solid $border-subtle !important;
+        &.th-sub {background: #f8f8f8 !important;}
       }
       th,
       td {
         padding: 0.75rem !important;
       }
+
     }
     &.v-data-table {
       margin-top: 50px;

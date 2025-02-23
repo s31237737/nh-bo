@@ -25,7 +25,7 @@
           </td>
         </tr>
       </tbody>
-    </v-table-row>      
+    </v-table-row>
 
     <v-data-table
       v-model="checked"
@@ -115,7 +115,6 @@ const tableData = ref([
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
 const checked = ref([]);
 
 const pageSort = ref([
@@ -129,9 +128,9 @@ const pageSort = ref([
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
   { title: "콘텐츠 제목", key: "contetnsTitle", sortable: false},
-  { title: "콘텐츠 유형", key: "contetnsType", sortable: false , width: "100px" },
-  { title: "사용 상태", key: "useStatus", sortable: false, width: "100px" },
-  { title: "노출기간", key: "exposureTerm", sortable: false, width: "230px" },
+  { title: "콘텐츠 유형", key: "contetnsType", sortable: false , width: "150px" },
+  { title: "사용 상태", key: "useStatus", sortable: false, width: "110px" },
+  { title: "노출기간", key: "exposureTerm", sortable: false, width: "250px" },
 ];
 
 const dataTableItem = ref([

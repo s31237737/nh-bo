@@ -37,23 +37,22 @@
             영역 타입
           </th>
           <td style="width: 90%">
-            APPs 슬라이드 배너(930px X 258px )
+            APPs 슬라이드 배너(930px X 258px)
           </td>
         </tr>
         <tr>
           <td style="width: 90%">
-            <p class="banner-options">
-              <strong>슬라이드 재생</strong> 사용
+            <p class="d-flex ga-6">
+              <strong class="text-2-md">슬라이드 재생</strong><span class="text-1">사용</span>
             </p>
-            <p class="banner-options">
-              <strong>슬라이드 속도</strong> 5초
+            <p class="d-flex ga-6">
+              <strong class="text-2-md">슬라이드 속도</strong><span class="text-1">5초</span>
             </p>
           </td>
         </tr>
         <tr>
           <th
             style="width: 10%"
-            rowspan="2"
           >
             사용 상태
           </th>
@@ -62,7 +61,7 @@
           </td>
         </tr>
       </tbody>
-    </v-table-row>      
+    </v-table-row>
 
     <v-data-table
       v-model="checked"
@@ -140,7 +139,6 @@ import { ref } from "vue";
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
 const checked = ref([]);
 
 const pageSort = ref([
@@ -154,9 +152,9 @@ const pageSort = ref([
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
   { title: "콘텐츠 제목", key: "contetnsTitle", sortable: false},
-  { title: "콘텐츠 유형", key: "contetnsType", sortable: false , width: "100px" },
-  { title: "사용 상태", key: "useStatus", sortable: false, width: "100px" },
-  { title: "노출기간", key: "exposureTerm", sortable: false, width: "230px" },
+  { title: "콘텐츠 유형", key: "contetnsType", sortable: false , width: "150px" },
+  { title: "사용 상태", key: "useStatus", sortable: false, width: "110px" },
+  { title: "노출기간", key: "exposureTerm", sortable: false, width: "250px" },
 ];
 
 const dataTableItem = ref([

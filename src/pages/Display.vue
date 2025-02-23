@@ -55,10 +55,10 @@ const handleClick = (event, row) => {
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
-  { title: "영역 코드", key: "code", sortable: false , width: "100px"},
+  { title: "영역 코드", key: "code", sortable: false , width: "110px"},
   { title: "영역 이름", key: "name", sortable: false,},
   { title: "영역 타입", key: "type", sortable: false, width: "300px" },
-  { title: "사용상태", key: "useStatus", sortable: false, width: "100px" },
+  { title: "사용상태", key: "useStatus", sortable: false, width: "120px" },
 ];
 
 const dataTableItem = ref([
