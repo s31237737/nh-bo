@@ -33,6 +33,7 @@ import PopupAppVersion02 from '@/pages/popup/PopupAppVersion02.vue'
 import PopupAppVersion03 from '@/pages/popup/PopupAppVersion03.vue'
 import PopupOftenQuestion01 from '@/pages/popup/PopupOftenQuestion01.vue'
 import PopupOftenQuestion02 from '@/pages/popup/PopupOftenQuestion02.vue'
+import PopupAuthority01 from '@/pages/popup/PopupAuthority01.vue'
 
 const popups = ref([
   { name: 'PopupAppType01', label: '앱 타입 설정', component: shallowRef(PopupAppType01) },
@@ -47,6 +48,7 @@ const popups = ref([
   { name: 'PopupAppVersion03 ', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },
   { name: 'PopupOftenQuestion01 ', label: '자주 묻는 질문', component: shallowRef(PopupOftenQuestion01) },
   { name: 'PopupOftenQuestion02 ', label: '자주 묻는 질문 상세', component: shallowRef(PopupOftenQuestion02) },
+  { name: 'PopupAuthority01 ', label: '직원검색', component: shallowRef(PopupAuthority01) },
 ]);
 
 
@@ -63,6 +65,7 @@ const popupVisible = ref({
   PopupAppVersion03: false,
   PopupOftenQuestion01: false,
   PopupOftenQuestion02: false,
+  PopupAuthority01: false,
 });
 
 const popOpen = (name) => {

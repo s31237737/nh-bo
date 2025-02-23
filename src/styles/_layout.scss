@@ -123,6 +123,9 @@ body {
       .v-card-text {
         position: relative;
         padding: 24px !important;
+        .pagination {
+          margin-bottom: 0;
+        }
       }
       .v-card-actions {
         justify-content: center !important;

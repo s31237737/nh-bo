@@ -1,12 +1,12 @@
 <template>
   <v-dialog
     :model-value="modelValue"
-    class="popup-lg"
+    class="popup-md"
     @update:model-value="emit('update:modelValue', $event)"
   >
     <v-card>
       <v-card-title>
-        <span>자주 묻는 질문</span>
+        <span>직원 검색</span>
         <v-btn
           icon="custom:close"
           density="comfortable"
@@ -15,37 +15,7 @@
       </v-card-title>
       <v-card-text>
         <!-- dialog contents -->
-        <div class="search-wrap">
-          <v-form>
-            <v-select
-              v-model="select"
-              label="유형"
-              :items="['전체', '타입1', '타입2']"
-            />
 
-            <v-select
-              v-model="select"
-              label="공개 여부"
-              :items="['전체', '상태1', '상태2']"
-            />
-
-            <Date v-model="date" />
-
-            <v-text-field
-              v-model="form"
-              class="search-inp"
-              placeholder="글제목, 등록 ID를 검색해주세요."
-              append-inner-icon="custom:search"
-              @click:append-inner="onAppendClick"
-            />
-
-            <v-btn
-              color="tertiary"
-              variant="outlined"
-              icon="custom:refresh"
-            />
-          </v-form>
-        </div>
         <v-data-table
           v-model="checked"
           v-model:page="page"
@@ -57,15 +27,6 @@
             <div class="table-top">
               <div class="control">
                 <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-                <div class="control-input">
-                  <v-select
-                    v-model="itemsPerPage"
-                    :items="pageSort"
-                    item-title="title"
-                    item-value="value"
-                    density="compact"
-                  />
-                </div>
               </div>
             </div>
           </template>
@@ -77,11 +38,11 @@
             />
           </template>
           <template #bottom>
-            <Pagination
+            <!-- <Pagination
               :total-items="dataTableItem.length"
               :items-per-page="itemsPerPage"
               @paging="page = $event.page"
-            />
+            /> -->
           </template>
         </v-data-table>
         <!-- // dialog contents -->
@@ -97,9 +58,8 @@
         <v-btn
           color="primary"
           size="large"
-          disabled
         >
-          선택 완료
+          다음
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -110,12 +70,7 @@
 import { ref } from "vue";
 
 // 조회조건
-const date = ref(new Date());
-const form = ref("");
 const select = ref("전체");
-const onAppendClick = () => {
-  alert("Append icon clicked!");
-};
 
 defineProps({
   modelValue: {
