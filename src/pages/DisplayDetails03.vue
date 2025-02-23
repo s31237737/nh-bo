@@ -18,7 +18,7 @@
             영역 이름
           </th>
           <td style="width: 90%">
-            APPs 슬라이드 배너
+            APPs 이미지 배너
           </td>
         </tr>
         <tr>
@@ -87,13 +87,6 @@
             </div>
           </div>
           <div class="btns">
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              순서 설정
-            </v-btn>
             <v-btn
               size="large"
               color="warning"
