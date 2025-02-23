@@ -23,7 +23,10 @@
           <td style="width: 23%">
             {{ row.value2 }}
           </td>
-          <th style="width: 10%" v-html="row.label3" />
+          <th
+            style="width: 10%"
+            v-html="row.label3"
+          />
           <td style="width: 24%">
             {{ row.value3 }}
           </td>
@@ -62,7 +65,7 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['최신순', '사용자 업데이트순', '마지막 수정순']"
+                :items="['최신순', '사용자 업데이트순', '마지막 수정 날짜순']"
                 density="compact"
               />
               <v-checkbox
