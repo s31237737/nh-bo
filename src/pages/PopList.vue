@@ -43,12 +43,12 @@ const popups = ref([
   { name: 'PopupCategoryTag01', label: '카테고리 태그 설정', component: shallowRef(PopupCategoryTag01) },
   { name: 'PopupCategoryTag02', label: '카테고리 태그 등록', component: shallowRef(PopupCategoryTag02) },
   { name: 'PopupCategoryTag03', label: '카테고리 태그 상세', component: shallowRef(PopupCategoryTag03) },
-  { name: 'PopupAppVersion01 ', label: '앱 버전 관리', component: shallowRef(PopupAppVersion01) },
-  { name: 'PopupAppVersion02 ', label: '앱 버전 등록', component: shallowRef(PopupAppVersion02) },
-  { name: 'PopupAppVersion03 ', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },
-  { name: 'PopupOftenQuestion01 ', label: '자주 묻는 질문', component: shallowRef(PopupOftenQuestion01) },
-  { name: 'PopupOftenQuestion02 ', label: '자주 묻는 질문 상세', component: shallowRef(PopupOftenQuestion02) },
-  { name: 'PopupAuthority01 ', label: '직원검색', component: shallowRef(PopupAuthority01) },
+  { name: 'PopupAppVersion01', label: '앱 버전 관리', component: shallowRef(PopupAppVersion01) },
+  { name: 'PopupAppVersion02', label: '앱 버전 등록', component: shallowRef(PopupAppVersion02) },
+  { name: 'PopupAppVersion03', label: '앱 버전 상세', component: shallowRef(PopupAppVersion03) },
+  { name: 'PopupOftenQuestion01', label: '자주 묻는 질문', component: shallowRef(PopupOftenQuestion01) },
+  { name: 'PopupOftenQuestion02', label: '자주 묻는 질문 상세', component: shallowRef(PopupOftenQuestion02) },
+  { name: 'PopupAuthority01', label: '직원검색', component: shallowRef(PopupAuthority01) },
 ]);
 
 
