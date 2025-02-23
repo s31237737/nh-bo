@@ -65,37 +65,10 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['최신순', '사용자 업데이트 순', '마지막 수정 날짜순']"
-                density="compact"
-              />
-              <v-checkbox
-                label="신청대기중 모아보기"
+                :items="['사용자 업데이트 순', '사용순']"
                 density="compact"
               />
             </div>
-          </div>
-          <div class="btns">
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              사용중단
-            </v-btn>
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              사용허가
-            </v-btn>
-            <v-btn
-              size="large"
-              color="primary"
-              prepend-icon="custom:plus"
-            >
-              직원추가
-            </v-btn>
           </div>
         </div>
       </template>
@@ -147,7 +120,7 @@ const tableData = ref([
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
+const selectDate = ref("사용자 업데이트 순");
 const checked = ref([]);
 
 const pageSort = ref([
