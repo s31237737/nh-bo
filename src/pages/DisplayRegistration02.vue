@@ -296,10 +296,17 @@
     >
       취소
     </v-btn>
+    <!-- <v-btn
+      color="tertiary"
+      size="large"
+      variant="outlined"
+      prepend-icon="custom:edit"
+    >
+      수정
+    </v-btn> -->
     <v-btn
       color="primary"
       size="large"
-      to="DisplayRegistrationDetails02"
     >
       등록
     </v-btn>

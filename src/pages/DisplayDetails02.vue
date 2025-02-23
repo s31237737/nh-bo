@@ -69,6 +69,7 @@
       :headers="dataTableheaders"
       :items="dataTableItem"
       :items-per-page="itemsPerPage"
+      @click:row="handleClick"
     >
       <template #top>
         <strong class="title-2 mb-6">콘텐츠 리스트</strong>
@@ -135,6 +136,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router';
 
 // 데이터 테이블
 const page = ref(1);
@@ -148,6 +150,12 @@ const pageSort = ref([
   { title: "50개", value: 50 },
   { title: "100개", value: 100 },
 ]);
+
+const router = useRouter();
+const handleClick = (event, row) => {
+  router.push('DisplayRegistrationDetails02');
+  console.log("Clicked item: ", row.item);
+}
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },

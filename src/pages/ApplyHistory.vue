@@ -109,7 +109,7 @@ const pageSort = ref([
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push("/ApplyHistoryDetails");
+  router.push("ApplyHistoryDetails");
   console.log("Clicked item: ", row.item);
 };
 

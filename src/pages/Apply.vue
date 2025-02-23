@@ -209,7 +209,7 @@ const pageSort = ref([
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push("/ApplyDetails");
+  router.push("ApplyDetails");
   console.log("Clicked item: ", row.item);
 };
 
