@@ -35,11 +35,10 @@
 
     <div class="search-wrap-end">
       <v-text-field
-        v-model="form"
+        v-model="search"
         class="search-inp"
         placeholder="직원명, 개인번호, 사무소명으로 검색해주세요."
         append-inner-icon="custom:search"
-        @click:append-inner="onAppendClick"
       />
     </div>
 
@@ -49,6 +48,7 @@
       :headers="dataTableheaders"
       :items="dataTableItem"
       :items-per-page="itemsPerPage"
+      :search="search"
     >
       <template #top>
         <div class="table-top">
@@ -122,7 +122,7 @@
 import { ref } from "vue";
 
 // 조회조건
-const form = ref("");
+const search = ref("");
 const onAppendClick = () => {
   alert("Append icon clicked!");
 };
