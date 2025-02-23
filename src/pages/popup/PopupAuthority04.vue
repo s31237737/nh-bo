@@ -56,10 +56,10 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
-                <p class="text-2-md">
+                <p class="text-2-md mt-4">
                   사용신청 관리
                 </p>
                 <div class="d-flex ga-3">
@@ -68,10 +68,10 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
-                <p class="text-2-md">
+                <p class="text-2-md mt-4">
                   권한 관리
                 </p>
                 <div class="d-flex ga-3">
@@ -80,10 +80,10 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
-                <p class="text-2-md">
+                <p class="text-2-md mt-4">
                   게시판 관리
                 </p>
                 <div class="d-flex ga-3">
@@ -92,10 +92,10 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
-                <p class="text-2-md">
+                <p class="text-2-md mt-4">
                   전시 관리
                 </p>
                 <div class="d-flex ga-3">
@@ -104,10 +104,10 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
-                <p class="text-2-md">
+                <p class="text-2-md mt-4">
                   약관 관리
                 </p>
                 <div class="d-flex ga-3">
@@ -116,7 +116,7 @@
                     :key="index"
                     :label="option"
                     :value="option"
-                    density="compact"
+                    density="comfortable"
                   />
                 </div>
               </td>
