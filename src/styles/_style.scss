@@ -375,6 +375,29 @@ body {
     border-bottom: thin solid $border-subtle;
   }
 
+  .admin-list {
+    height: 100%;
+    background: $bg-gray;
+    .v-list-subheader {
+      padding-inline-start: 24px !important;
+      height: 56px;
+      @extend .text-1-md;
+      color: $text-primary;
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+    .v-list-item {
+      padding-inline-start: 24px !important;
+      height: 56px;
+      @extend .text-2;
+    }
+    .selected {
+      background: #fff;
+      color: #4150d5;
+    }
+  }
+
   i.required {
     font-style: normal;
     &:after {

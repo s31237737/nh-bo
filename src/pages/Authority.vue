@@ -41,31 +41,28 @@
     <v-divider class="mt-4" />
     <v-row no-gutters>
       <v-col cols="3">
-        <v-sheet class="pa-2 ma-2">
-          <v-list>
-            <template
-              v-for="(item, index) in adminItems"
-              :key="index"
+        <v-list class="admin-list">
+          <template
+            v-for="(item, index) in adminItems"
+            :key="index"
+          >
+            <v-list-subheader v-if="item.type === 'subheader'">
+              {{ item.title }}
+            </v-list-subheader>
+
+            <!-- 구분선 -->
+            <v-divider v-else-if="item.type === 'divider'" />
+
+            <!-- 클릭 가능한 리스트 아이템 -->
+            <v-list-item
+              v-else
+              :class="{ 'selected': adminSelected === item.value }"
+              @click="adminClick(item)"
             >
-              <v-list-subheader v-if="item.type === 'subheader'">
-                {{ item.title }}
-              </v-list-subheader>
-
-              <!-- 구분선 -->
-              <v-divider v-else-if="item.type === 'divider'" />
-
-              <!-- 클릭 가능한 리스트 아이템 -->
-              <v-list-item
-                v-else
-                :key="item.value"
-                color="primary"
-                @click="adminClick(item)"
-              >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
-              </v-list-item>
-            </template>
-          </v-list>
-        </v-sheet>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+          </template>
+        </v-list>
       </v-col>
       <v-col cols="9">
         <v-data-table
@@ -140,6 +137,7 @@ const select = ref("전체");
 const onAppendClick = () => {
   alert("Append icon clicked!");
 };
+
 const adminItems = [
   { type: "subheader", title: "슈퍼 관리자" },
   { type: "divider" },
@@ -172,8 +170,9 @@ const adminItems = [
     value: 5,
   },
 ];
-
+const adminSelected = ref(null);
 const adminClick = (item) => {
+  adminSelected.value = item.value;
    console.log(`클릭됨: ${item.title} (value: ${item.value})`);
 };
 
