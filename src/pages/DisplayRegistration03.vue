@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <th style="width: 10%">
-            콘텐츠 유형 <i class="required" />
+            콘텐츠 유형
           </th>
           <td style="width: 90%">
             이미지
@@ -57,8 +57,8 @@
               @update:images="updateAppIconList"
             />
             <div class="upload-guide">
-              <p>권장크기:1240px x 140px</p>
-              <p>용량: 10MB 이하, 파일형식 JPG, PNG</p>
+              <p>권장크기: 1240px x 140px</p>
+              <p>용량 : 10MB 이하, 파일형식 JPG,PNG</p>
             </div>
           </td>
         </tr>
@@ -85,11 +85,35 @@
             style="width: 80%"
             colspan="2"
           >
-            <v-switch v-model="isSwitch" />
+            <v-switch
+              v-model="isSwitch"
+              @change="snackbarOpen"
+            />
           </td>
         </tr>
       </tbody>
     </v-table-row>
+    <!-- 토스트 팝업 -->
+    <v-snackbar
+      v-model="snackbar"
+      contained
+      content-class="toast-pop"
+    >
+      <v-icon
+        start
+        size="24"
+        icon="custom:alert"
+      />
+      {{ snackbarText }}
+      <template #actions>
+        <v-btn
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 -->
   </div>
   <div class="page-actions">
     <v-btn
@@ -113,7 +137,7 @@ import { ref } from "vue";
 
 const snackbar = ref(false);
 const snackbarText = ref(
-  "코드 전송 오류로 인하여 등록이 불가합니다. 새로고침해주세요."
+  "콘텐츠는 1개까지 사용 가능합니다. 콘텐츠 사용 개수를 확인하고 다시 설정해 주세요."
 );
 const snackbarOpen = () => {
   snackbar.value = true;
@@ -125,23 +149,9 @@ const updateAppIconList = (newImages) => {
   appIconList.value = newImages;
 };
 
-const mainImgList = ref([]); // 초기 이미지 목록
-const updateMainImgList = (newImages) => {
-  mainImgList.value = newImages;
-};
-
-const updateImages = (newImages) => {
-  uploaderList.value = newImages;
-};
-const uploaderList = ref([
-  "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
-]);
 
 // 사용 상태
 const isSwitch = ref(false);
-
-const select = ref("앱 추천");
-const select2 = ref("이미지");
 
 const dateRange = ref([]);
 </script>

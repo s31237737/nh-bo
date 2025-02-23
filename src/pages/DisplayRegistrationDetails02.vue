@@ -62,6 +62,7 @@
           >
             <ImageUploader
               :images="uploaderList"
+              class="type02"
               readonly
             />
             <div class="upload-guide">
@@ -180,6 +181,7 @@
           <td style="width: 90%">
             <ImageUploader
               :images="uploaderList"
+              class="type02"
               readonly
             />
             <div class="upload-guide">
@@ -241,15 +243,6 @@
 
 <script setup>
 import { ref } from "vue";
-
-const mainImgList = ref([]); // 초기 이미지 목록
-const updateMainImgList = (newImages) => {
-  mainImgList.value = newImages;
-};
-
-const updateImages = (newImages) => {
-  uploaderList.value = newImages;
-};
 const uploaderList = ref([
   "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
 ]);
