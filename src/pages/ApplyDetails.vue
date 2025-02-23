@@ -364,15 +364,6 @@ const dataTableItem = ref([
     applicationDate: "2025.09.06",
   },
   {
-    id: 12,
-    privateNum: "123456",
-    userName: "김농협",
-    officeName: "사무소명",
-    useStatus: "사용중",
-    useTerm: "2025.09.06 ~ 2025.09.08",
-    applicationDate: "2025.09.06",
-  },
-  {
     id: 22,
     privateNum: "123456",
     userName: "김농협",
