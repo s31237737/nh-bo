@@ -28,6 +28,3 @@ const handleLoadingClose = () => {
   loading.value = false;
 };
 </script>
-
-<style scoped>
-</style>

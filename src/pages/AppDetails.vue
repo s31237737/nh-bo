@@ -383,6 +383,4 @@ const tags = [
   'Tech',
   'Creative Writing',
 ]
-
-
 </script>

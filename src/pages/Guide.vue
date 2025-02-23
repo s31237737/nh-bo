@@ -714,7 +714,7 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue';
+  import { ref } from 'vue';
 
   const form = ref('');
 
@@ -744,7 +744,7 @@
 
   const ex4 = ref(['red', 'indigo', 'orange', 'primary', 'secondary', 'success', 'info', 'warning', 'error', 'red darken-3', 'indigo darken-3', 'orange darken-3']);
 
-const imageList = ref([]); // 초기 이미지 목록
+const imageList = ref([]);
 
 const updateImages = (newImages) => {
   imageList.value = newImages;

@@ -90,7 +90,6 @@ defineProps({
 
 const emit = defineEmits(['update:modelValue']);
 
-
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);

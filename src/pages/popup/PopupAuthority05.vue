@@ -155,13 +155,11 @@ defineProps({
 
 const emit = defineEmits(['update:modelValue']);
 
-const select = ref('일반 관리자');
 const chkOptions1 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions2 = ref(['조회', '추가', '승인', '알림송신']);
 const chkOptions3 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions4 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions5 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions6 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
-const isSwitch = ref(true);
 
 </script>

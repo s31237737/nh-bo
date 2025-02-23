@@ -243,6 +243,7 @@
 
 <script setup>
 import { ref } from "vue";
+
 const uploaderList = ref([
   "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
 ]);
