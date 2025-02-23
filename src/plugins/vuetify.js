@@ -152,7 +152,7 @@ export default createVuetify({
       hover: true,
       showSelect: true,
       hideDefaultFooter: true,
-      height: "616px",
+      maxHeight: "616px",
       sortAscIcon: "custom:sort-asc",
       sortDescIcon: "custom:sort-desc",
       VCheckboxBtn: {
@@ -187,6 +187,13 @@ export default createVuetify({
       hideDetails: true,
     },
     VCheckbox: {
+      baseColor: "#c2c2c2",
+      hideDetails: true,
+    },
+    VRadio: {
+      baseColor: "#c2c2c2",
+    },
+    VRadioGroup: {
       baseColor: "#c2c2c2",
       hideDetails: true,
     },

@@ -135,12 +135,27 @@ body {
         }
       }
       .v-data-table {
+        border-radius: 4px;
+        overflow: hidden;
         .v-table__wrapper {
-          border-left: thin solid $border-subtle;
-          border-right: thin solid $border-subtle;
-          border-radius: 4px;
           th {
             border-top: thin solid $border-subtle;
+          }
+          th:first-child,
+          td:first-child {
+            border-left: thin solid $border-subtle;
+          }
+          th:last-child,
+          td:last-child {
+            border-right: thin solid $border-subtle;
+          }
+          tr:last-child {
+            td:first-child {
+              border-radius: 4px 0 0 4px;
+            }
+            td:last-child {
+              border-radius: 0 4px 4px  0;
+            }
           }
         }
       }

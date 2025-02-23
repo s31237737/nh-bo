@@ -59,6 +59,7 @@
         <v-btn
           color="primary"
           size="large"
+          :disabled="!checked.length"
         >
           선택완료
         </v-btn>
