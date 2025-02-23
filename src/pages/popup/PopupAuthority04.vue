@@ -144,12 +144,11 @@
           취소
         </v-btn>
         <v-btn
-          color="tertiary"
+          color="primary"
           size="large"
-          variant="outlined"
-          prepend-icon="custom:edit"
+          disabled
         >
-          수정
+          등록
         </v-btn>
       </v-card-actions>
     </v-card>
