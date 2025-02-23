@@ -184,6 +184,7 @@ export default createVuetify({
       modeIcon: "custom:arrow-down",
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
+      hideDetails: true,
     },
     VCheckbox: {
       baseColor: "#c2c2c2",
