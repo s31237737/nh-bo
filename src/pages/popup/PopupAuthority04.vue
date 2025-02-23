@@ -47,6 +47,9 @@
                 권한 범위 <i class="required" />
               </th>
               <td>
+                <p class="text-2-md">
+                  앱 관리
+                </p>
                 <div class="d-flex ga-3">
                   <v-checkbox
                     v-for="(option, index) in chkOptions1"
@@ -56,6 +59,9 @@
                     density="compact"
                   />
                 </div>
+                <p class="text-2-md">
+                  사용신청 관리
+                </p>
                 <div class="d-flex ga-3">
                   <v-checkbox
                     v-for="(option, index) in chkOptions2"
@@ -65,6 +71,9 @@
                     density="compact"
                   />
                 </div>
+                <p class="text-2-md">
+                  권한 관리
+                </p>
                 <div class="d-flex ga-3">
                   <v-checkbox
                     v-for="(option, index) in chkOptions3"
@@ -74,6 +83,9 @@
                     density="compact"
                   />
                 </div>
+                <p class="text-2-md">
+                  게시판 관리
+                </p>
                 <div class="d-flex ga-3">
                   <v-checkbox
                     v-for="(option, index) in chkOptions4"
@@ -83,9 +95,24 @@
                     density="compact"
                   />
                 </div>
+                <p class="text-2-md">
+                  전시 관리
+                </p>
                 <div class="d-flex ga-3">
                   <v-checkbox
                     v-for="(option, index) in chkOptions5"
+                    :key="index"
+                    :label="option"
+                    :value="option"
+                    density="compact"
+                  />
+                </div>
+                <p class="text-2-md">
+                  약관 관리
+                </p>
+                <div class="d-flex ga-3">
+                  <v-checkbox
+                    v-for="(option, index) in chkOptions6"
                     :key="index"
                     :label="option"
                     :value="option"
@@ -147,6 +174,7 @@ const chkOptions2 = ref(['조회', '추가', '승인', '알림송신']);
 const chkOptions3 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions4 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions5 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
+const chkOptions6 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const isSwitch = ref(true);
 
 </script>
