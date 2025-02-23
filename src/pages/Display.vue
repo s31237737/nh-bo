@@ -3,8 +3,8 @@
 
   <div class="page-contents">
     <v-data-table
-      :showSelect="false"
       v-model:page="page"
+      :show-select="false"
       :headers="dataTableheaders"
       :items="dataTableItem"
       :items-per-page="itemsPerPage"
@@ -13,9 +13,7 @@
       <template #top>
         <div class="table-top">
           <div class="control">
-            <strong class="control-total"
-              >전체 ({{ dataTableItem.length }})</strong
-            >
+            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
           </div>
         </div>
       </template>
@@ -51,7 +49,8 @@ const itemsPerPage = ref(10);
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push("/DisplayDetails");
+  const itemId = row.item.id; // 클릭한 항목의 ID 가져오기
+  router.push(`/DisplayDetails0${itemId}`)
   console.log("Clicked item: ", row.item);
 };
 

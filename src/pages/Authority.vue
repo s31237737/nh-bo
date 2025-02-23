@@ -57,6 +57,8 @@
               <!-- 클릭 가능한 리스트 아이템 -->
               <v-list-item
                 v-else
+                :key="item.value"
+                color="primary"
                 @click="adminClick(item)"
               >
                 <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -147,7 +149,7 @@ const adminItems = [
   },
   { type: "divider" },
   { type: "subheader", title: "시스템 관리자" },
-   { type: "divider" },
+  { type: "divider" },
   {
     title: "- 000관리자",
     value: 2,
@@ -178,16 +180,7 @@ const adminClick = (item) => {
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
 const checked = ref([]);
-
-const pageSort = ref([
-  { title: "10개", value: 10 },
-  { title: "20개", value: 20 },
-  { title: "30개", value: 30 },
-  { title: "50개", value: 50 },
-  { title: "100개", value: 100 },
-]);
 
 const router = useRouter();
 
