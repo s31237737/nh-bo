@@ -150,6 +150,7 @@
     <v-btn
       color="primary"
       size="large"
+      :to="'/'"
     >
       등록
     </v-btn>
