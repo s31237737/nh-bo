@@ -136,10 +136,15 @@ body {
       }
       .v-data-table {
         border-radius: 4px;
-        overflow: hidden;
         .v-table__wrapper {
           th {
             border-top: thin solid $border-subtle;
+            &:first-child {
+              border-radius: 4px 0 0 4px;
+            }
+            &:last-child {
+              border-radius: 0 4px 4px  0;
+            }
           }
           th:first-child,
           td:first-child {

@@ -78,7 +78,6 @@
         <v-btn
           color="primary"
           size="large"
-
         >
           선택완료
         </v-btn>
