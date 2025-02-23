@@ -101,7 +101,7 @@
     <v-btn
       color="primary"
       size="large"
-      :to="'/DisplayRegistrationDetails03'"
+      to="DisplayRegistrationDetails03"
     >
       등록
     </v-btn>

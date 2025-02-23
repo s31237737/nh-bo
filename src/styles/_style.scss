@@ -448,8 +448,8 @@ body {
       }
     }
     .image-box {
-      width: 100px;
-      height: 100px;
+      min-width: 100px;
+      min-height: 100px;
       position: relative;
       display: flex;
       align-items: center;

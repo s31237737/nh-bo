@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 상세"
-    prev-link="DisplayRegistration"
+    prev-link="DisplayRegistration02"
   />
 
   <div class="page-contents">

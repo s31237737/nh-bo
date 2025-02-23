@@ -299,7 +299,7 @@
     <v-btn
       color="primary"
       size="large"
-      :to="'/DisplayRegistrationDetails02'"
+      to="DisplayRegistrationDetails02"
     >
       등록
     </v-btn>

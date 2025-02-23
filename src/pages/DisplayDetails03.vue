@@ -63,7 +63,7 @@
               size="large"
               color="primary"
               prepend-icon="custom:plus"
-              :to="'DisplayRegistration03'"
+              to="DisplayRegistration03"
             >
               등록
             </v-btn>

@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 상세"
-    prev-link="DisplayRegistration"
+    prev-link="DisplayRegistration01"
   />
 
   <div class="page-contents">
@@ -12,7 +12,10 @@
           <th style="width: 10%">
             콘텐츠 유형
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             앱 추천
           </td>
         </tr>
@@ -20,7 +23,10 @@
           <th style="width: 10%">
             콘텐츠 제목
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             육묘대장
           </td>
         </tr>
@@ -28,7 +34,10 @@
           <th style="width: 10%">
             배너 제목
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             육묘대장
           </td>
         </tr>
@@ -36,12 +45,18 @@
           <th style="width: 10%">
             간단 설명
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             간편하고 편리한 '육묘대장'으로 손쉽게 관리하실 수 있습니다.
           </td>
         </tr>
         <tr>
-          <th style="width: 10%" rowspan="2">
+          <th
+            style="width: 10%"
+            rowspan="2"
+          >
             앱 정보
           </th>
           <th style="width: 10%">
@@ -50,10 +65,16 @@
           <td style="width: 30%">
             육묘대장
           </td>
-          <th style="width: 10%" rowspan="2">
+          <th
+            style="width: 10%"
+            rowspan="2"
+          >
             앱 아이콘
           </th>
-          <td style="width: 40%" rowspan="2">
+          <td
+            style="width: 40%"
+            rowspan="2"
+          >
             <ImageUploader
               :images="uploaderList"
               readonly
@@ -75,7 +96,10 @@
           <th style="width: 10%">
             바로가기 링크
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             <a
               href="https://nonghyup.com"
               target="_blank"
@@ -86,7 +110,10 @@
           <th style="width: 10%">
             노출 기간
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             2025.01.21 ~ 2025.01.30
           </td>
         </tr>
@@ -94,7 +121,10 @@
           <th style="width: 10%">
             사용 상태
           </th>
-          <td style="width: 90%" colspan="4">
+          <td
+            style="width: 90%"
+            colspan="4"
+          >
             미사용
           </td>
         </tr>
