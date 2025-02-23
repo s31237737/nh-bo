@@ -39,91 +39,87 @@
       </v-col>
     </v-row>
     <v-divider class="mt-4" />
-    <v-row no-gutters>
-      <v-col cols="3">
-        <v-list class="admin-list">
-          <template
-            v-for="(item, index) in adminItems"
-            :key="index"
-          >
-            <v-list-subheader v-if="item.type === 'subheader'">
-              {{ item.title }}
-            </v-list-subheader>
-
-            <!-- 구분선 -->
-            <v-divider v-else-if="item.type === 'divider'" />
-
-            <!-- 클릭 가능한 리스트 아이템 -->
-            <v-list-item
-              v-else
-              :class="{ 'selected': adminSelected === item.value }"
-              @click="adminClick(item)"
-            >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
-          </template>
-        </v-list>
-      </v-col>
-      <v-col cols="9">
-        <v-data-table
-          v-model="checked"
-          v-model:page="page"
-          class="mt-4"
-          :headers="dataTableheaders"
-          :items="dataTableItem"
-          :items-per-page="itemsPerPage"
-          @click:row="handleClick"
+    <div class="admin-wrap">
+      <v-list class="admin-list">
+        <template
+          v-for="(item, index) in adminItems"
+          :key="index"
         >
-          <template #top>
-            <div class="flex-column mb-4">
-              <p class="text-3">
-                일반관리자
-              </p>
-              <strong class="title-2"> 김농협 관리자 </strong>
-            </div>
-            <div class="table-top">
-              <div class="control">
-                <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-              </div>
-              <div class="btns">
-                <v-btn
-                  size="large"
-                  color="warning"
-                  variant="outlined"
-                  prepend-icon="custom:remove"
-                  :disabled="!checked.length"
-                >
-                  관리자 삭제
-                </v-btn>
-                <v-btn
-                  size="large"
-                  color="primary"
-                  prepend-icon="custom:plus"
-                >
-                  관리자 추가
-                </v-btn>
-              </div>
-            </div>
-          </template>
+          <v-list-subheader v-if="item.type === 'subheader'">
+            {{ item.title }}
+          </v-list-subheader>
 
-          <template #no-data>
-            <v-empty-state
-              text="검색결과가 없습니다."
-              icon="custom:warning"
-              size="60"
-            />
-          </template>
+          <!-- 구분선 -->
+          <v-divider v-else-if="item.type === 'divider'" />
 
-          <template #bottom>
-            <Pagination
-              :total-items="dataTableItem.length"
-              :items-per-page="itemsPerPage"
-              @paging="page = $event.page"
-            />
-          </template>
-        </v-data-table>
-      </v-col>
-    </v-row>
+          <!-- 클릭 가능한 리스트 아이템 -->
+          <v-list-item
+            v-else
+            :class="{ 'selected': adminSelected === item.value }"
+            @click="adminClick(item)"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </template>
+      </v-list>
+
+      <v-data-table
+        v-model="checked"
+        v-model:page="page"
+        :headers="dataTableheaders"
+        :items="dataTableItem"
+        :items-per-page="itemsPerPage"
+        @click:row="handleClick"
+      >
+        <template #top>
+          <div class="flex-column mb-4">
+            <p class="text-3">
+              일반관리자
+            </p>
+            <strong class="title-2"> 김농협 관리자 </strong>
+          </div>
+          <div class="table-top">
+            <div class="control">
+              <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+            </div>
+            <div class="btns">
+              <v-btn
+                size="large"
+                color="warning"
+                variant="outlined"
+                prepend-icon="custom:remove"
+                :disabled="!checked.length"
+              >
+                관리자 삭제
+              </v-btn>
+              <v-btn
+                size="large"
+                color="primary"
+                prepend-icon="custom:plus"
+              >
+                관리자 추가
+              </v-btn>
+            </div>
+          </div>
+        </template>
+
+        <template #no-data>
+          <v-empty-state
+            text="검색결과가 없습니다."
+            icon="custom:warning"
+            size="60"
+          />
+        </template>
+
+        <template #bottom>
+          <Pagination
+            :total-items="dataTableItem.length"
+            :items-per-page="itemsPerPage"
+            @paging="page = $event.page"
+          />
+        </template>
+      </v-data-table>
+    </div>
   </div>
 </template>
 
