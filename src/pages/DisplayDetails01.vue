@@ -15,7 +15,7 @@
       <tbody>
         <tr>
           <th style="width: 10%">
-           영역 이름
+            영역 이름
           </th>
           <td style="width: 90%">
             메인 배너
@@ -23,15 +23,18 @@
         </tr>
         <tr>
           <th style="width: 10%">
-           영역 코드
+            영역 코드
           </th>
           <td style="width: 90%">
             B01
           </td>
         </tr>
         <tr>
-          <th style="width: 10%" rowspan="2">
-           영역 타입
+          <th
+            style="width: 10%"
+            rowspan="2"
+          >
+            영역 타입
           </th>
           <td style="width: 90%">
             메인 슬라이드 배너(930px X 258px )
@@ -39,13 +42,20 @@
         </tr>
         <tr>
           <td style="width: 90%">
-              <p class="banner-options"><strong>슬라이드 재생</strong> 사용</p>
-              <p class="banner-options"><strong>슬라이드 속도</strong> 5초</p>
+            <p class="banner-options">
+              <strong>슬라이드 재생</strong> 사용
+            </p>
+            <p class="banner-options">
+              <strong>슬라이드 속도</strong> 5초
+            </p>
           </td>
         </tr>
         <tr>
-          <th style="width: 10%" rowspan="2">
-           사용 상태
+          <th
+            style="width: 10%"
+            rowspan="2"
+          >
+            사용 상태
           </th>
           <td style="width: 90%">
             사용
@@ -60,10 +70,9 @@
       :headers="dataTableheaders"
       :items="dataTableItem"
       :items-per-page="itemsPerPage"
-      :search="search"
     >
       <template #top>
-        <strong class="title-2">콘텐츠 리스트</strong>
+        <strong class="title-2 mb-6">콘텐츠 리스트</strong>
         <div class="table-top">
           <div class="control">
             <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
