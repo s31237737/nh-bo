@@ -51,7 +51,7 @@ const itemsPerPage = ref(10);
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push("/DisplsyDetails");
+  router.push("/DisplayDetails");
   console.log("Clicked item: ", row.item);
 };
 
