@@ -12,7 +12,7 @@
           <th style="width: 10%">
             콘텐츠 유형
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             앱 추천
           </td>
         </tr>
@@ -20,7 +20,7 @@
           <th style="width: 10%">
             콘텐츠 제목
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             육묘대장
           </td>
         </tr>
@@ -28,7 +28,7 @@
           <th style="width: 10%">
             배너 제목
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             육묘대장
           </td>
         </tr>
@@ -36,8 +36,22 @@
           <th style="width: 10%">
             간단 설명
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             간편하고 편리한 '육묘대장'으로 손쉽게 관리하실 수 있습니다.
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 10%">
+            이미지
+          </th>
+          <td style="width: 90%" colspan="2">
+            <ImageUploader
+              :images="uploaderList"
+              readonly
+            />
+            <div class="upload-guide">
+              <p>530px X 330px</p>
+            </div>
           </td>
         </tr>
         <tr>
@@ -47,27 +61,15 @@
           <th style="width: 10%">
             앱 이름
           </th>
-          <td style="width: 30%">
+          <td style="width: 80%">
             육묘대장
-          </td>
-          <th style="width: 10%" rowspan="2">
-            앱 아이콘
-          </th>
-          <td style="width: 40%" rowspan="2">
-            <ImageUploader
-              :images="uploaderList"
-              readonly
-            />
-            <div class="upload-guide">
-              <p>100px X 100px</p>
-            </div>
           </td>
         </tr>
         <tr>
           <th style="width: 10%">
             앱 타입
           </th>
-          <td style="width: 30%">
+          <td style="width: 80%">
             대여
           </td>
         </tr>
@@ -75,7 +77,7 @@
           <th style="width: 10%">
             바로가기 링크
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             <a
               href="https://nonghyup.com"
               target="_blank"
@@ -86,7 +88,7 @@
           <th style="width: 10%">
             노출 기간
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             2025.01.21 ~ 2025.01.30
           </td>
         </tr>
@@ -94,7 +96,7 @@
           <th style="width: 10%">
             사용 상태
           </th>
-          <td style="width: 90%" colspan="4">
+          <td style="width: 90%" colspan="2">
             미사용
           </td>
         </tr>
@@ -131,8 +133,8 @@
           <th style="width: 10%">
             간단 설명
           </th>
-          <td style="width: 90%">
-            간편하고 편리한 '육묘대장'으로 손쉽게 관리 하실 수 있습니다.
+          <td style="width: 90%" colspan="2">
+            간편하고 편리한 '육묘대장'으로 손쉽게 관리하실 수 있습니다.
           </td>
         </tr>
         <tr>
@@ -145,7 +147,7 @@
               readonly
             />
             <div class="upload-guide">
-              <p>930px X 258px</p>
+              <p>5300px X 330px</p>
             </div>
           </td>
         </tr>
@@ -194,7 +196,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      to="AppRegistration"
+      :to="'/AppRegistration'"
     >
       수정
     </v-btn>
