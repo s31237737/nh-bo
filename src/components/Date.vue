@@ -17,7 +17,7 @@
       color="secondary"
       @click="setToday"
     >
-      today
+      Today
     </v-btn>
   </div>
 </template>
