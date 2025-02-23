@@ -1,7 +1,5 @@
 <template>
-  <PageHeader
-    title="권한관리"
-  />
+  <PageHeader title="권한관리" />
 
   <div class="page-contents">
     <div class="search-wrap">
@@ -9,7 +7,7 @@
         <v-select
           v-model="select"
           label="사용 상태"
-          :items="['전체','타입1','타입2']"
+          :items="['전체', '타입1', '타입2']"
         />
 
         <v-text-field
@@ -44,7 +42,7 @@
     <v-row no-gutters>
       <v-col cols="3">
         <v-sheet class="pa-2 ma-2">
-          .v-col-auto
+          <v-list :items="adminItems" />
         </v-sheet>
       </v-col>
       <v-col cols="9">
@@ -62,9 +60,7 @@
               <p class="text-3">
                 일반관리자
               </p>
-              <strong class="title-2">
-                김농협 관리자
-              </strong>
+              <strong class="title-2"> 김농협 관리자 </strong>
             </div>
             <div class="table-top">
               <div class="control">
@@ -113,65 +109,221 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 // 조회조건
-const form = ref('');
-const select = ref('전체');
+const form = ref("");
+const select = ref("전체");
 const onAppendClick = () => {
-  alert('Append icon clicked!');
-}
+  alert("Append icon clicked!");
+};
+const adminItems = [
+  { type: "subheader", title: "슈퍼 관리자" },
+  { type: "divider" },
+  {
+    title: "- 000관리자",
+    value: 1,
+  },
+  { type: "divider" },
+  { type: "subheader", title: "시스템 관리자" },
+   { type: "divider" },
+  {
+    title: "- 000관리자",
+    value: 2,
+  },
+  { type: "divider" },
+  {
+    title: "- 000관리자",
+    value: 3,
+  },
+  { type: "divider" },
+  { type: "subheader", title: "비즈니스 관리자" },
+   { type: "divider" },
+  {
+    title: "- 000관리자",
+    value: 4,
+  },
+  { type: "divider" },
+  {
+    title: "- 000관리자",
+    value: 5,
+  },
+];
+
+const adminClick = (role) => {
+  console.log(`클릭됨: ${role}`);
+};
 
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref('최신순');
+const selectDate = ref("최신순");
 const checked = ref([]);
 
 const pageSort = ref([
-  { title: '10개', value: 10 },
-  { title: '20개', value: 20 },
-  { title: '30개', value: 30 },
-  { title: '50개', value: 50 },
-  { title: '100개', value: 100 },
+  { title: "10개", value: 10 },
+  { title: "20개", value: 20 },
+  { title: "30개", value: 30 },
+  { title: "50개", value: 50 },
+  { title: "100개", value: 100 },
 ]);
 
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push('/AppDetails');
+  router.push("/AppDetails");
   console.log("Clicked item: ", row.item);
-}
+};
 
 const dataTableheaders = [
-  { title: "순서", key: "id", width: '80px'},
-  { title: "직원명", key: "name", sortable: false, },
-  { title: "사무소명", key: "office", sortable: false, width: '200px'},
-  { title: "개인번호", key: "num", sortable: false, width: '200px' },
-  { title: "등록일", key: "createdDate", sortable: false, width: '200px'},
+  { title: "순서", key: "id", width: "80px" },
+  { title: "직원명", key: "name", sortable: false },
+  { title: "사무소명", key: "office", sortable: false, width: "200px" },
+  { title: "개인번호", key: "num", sortable: false, width: "200px" },
+  { title: "등록일", key: "createdDate", sortable: false, width: "200px" },
 ];
 
 const dataTableItem = ref([
-{ id: 1, name: "김철수", office: "사무소명", num: "123456789", createdDate: "2025.01.10" },
-{ id: 2, name: "이영희", office: "사무소명", num: "123456789", createdDate: "2025.01.15" },
-{ id: 3, name: "박민수", office: "사무소명", num: "123456789", createdDate: "2025.02.01" },
-{ id: 4, name: "최지훈", office: "사무소명", num: "123456789", createdDate: "2025.02.10" },
-{ id: 5, name: "정지혜", office: "사무소명", num: "123456789", createdDate: "2025.01.20" },
-{ id: 6, name: "이수진", office: "사무소명", num: "123456789", createdDate: "2025.02.05" },
-{ id: 7, name: "김동희", office: "사무소명", num: "123456789", createdDate: "2025.01.12" },
-{ id: 8, name: "임성민", office: "사무소명", num: "123456789", createdDate: "2025.02.02" },
-{ id: 9, name: "황정우", office: "사무소명", num: "123456789", createdDate: "2025.01.18" },
-{ id: 10, name: "오민석", office: "사무소명", num: "123456789", createdDate: "2025.01.25" },
-{ id: 11, name: "윤지혜", office: "사무소명", num: "123456789", createdDate: "2025.02.07" },
-{ id: 12, name: "고정호", office: "사무소명", num: "123456789", createdDate: "2025.01.30" },
-{ id: 13, name: "전지영", office: "사무소명", num: "123456789", createdDate: "2025.02.08" },
-{ id: 14, name: "한서진", office: "사무소명", num: "123456789", createdDate: "2025.01.28" },
-{ id: 15, name: "곽지호", office: "사무소명", num: "123456789", createdDate: "2025.02.01" },
-{ id: 16, name: "임지훈", office: "사무소명", num: "123456789", createdDate: "2025.01.22" },
-{ id: 17, name: "김수빈", office: "사무소명", num: "123456789", createdDate: "2025.02.03" },
-{ id: 18, name: "박지성", office: "사무소명", num: "123456789", createdDate: "2025.02.09" },
-{ id: 19, name: "오준호", office: "사무소명", num: "123456789", createdDate: "2025.01.17" },
-{ id: 20, name: "정한나", office: "사무소명", num: "123456789", createdDate: "2025.01.14" }
+  {
+    id: 1,
+    name: "김철수",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.10",
+  },
+  {
+    id: 2,
+    name: "이영희",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.15",
+  },
+  {
+    id: 3,
+    name: "박민수",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.01",
+  },
+  {
+    id: 4,
+    name: "최지훈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.10",
+  },
+  {
+    id: 5,
+    name: "정지혜",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.20",
+  },
+  {
+    id: 6,
+    name: "이수진",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.05",
+  },
+  {
+    id: 7,
+    name: "김동희",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.12",
+  },
+  {
+    id: 8,
+    name: "임성민",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.02",
+  },
+  {
+    id: 9,
+    name: "황정우",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.18",
+  },
+  {
+    id: 10,
+    name: "오민석",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.25",
+  },
+  {
+    id: 11,
+    name: "윤지혜",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.07",
+  },
+  {
+    id: 12,
+    name: "고정호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.30",
+  },
+  {
+    id: 13,
+    name: "전지영",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.08",
+  },
+  {
+    id: 14,
+    name: "한서진",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.28",
+  },
+  {
+    id: 15,
+    name: "곽지호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.01",
+  },
+  {
+    id: 16,
+    name: "임지훈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.22",
+  },
+  {
+    id: 17,
+    name: "김수빈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.03",
+  },
+  {
+    id: 18,
+    name: "박지성",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.09",
+  },
+  {
+    id: 19,
+    name: "오준호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.17",
+  },
+  {
+    id: 20,
+    name: "정한나",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.14",
+  },
 ]);
 </script>
