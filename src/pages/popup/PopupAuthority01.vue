@@ -15,13 +15,19 @@
       </v-card-title>
       <v-card-text>
         <!-- dialog contents -->
-
+        <v-text-field
+          v-model="search"
+          class="search-inp mb-5"
+          placeholder="직원명, 개인번호, 사무소명으로 검색해주세요."
+          append-inner-icon="custom:search"
+        />
         <v-data-table
           v-model="checked"
           v-model:page="page"
           :headers="dataTableheaders"
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
+          :search="search"
         >
           <template #top>
             <div class="table-top">
@@ -81,125 +87,160 @@ defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
+// 조회조건
+const search = ref("");
+
 // 데이터 테이블
 const page = ref(1);
-const itemsPerPage = ref(10);
+const itemsPerPage = ref(1000);
 const checked = ref([]);
-const pageSort = ref([
-  { title: "10개", value: 10 },
-  { title: "20개", value: 20 },
-  { title: "30개", value: 30 },
-  { title: "50개", value: 50 },
-  { title: "100개", value: 100 },
-]);
+
 const dataTableheaders = [
-  { title: "순서", key: "id", sortable: true, width: "80px" },
-  { title: "등록자", key: "registrant", sortable: false, width: "110px" },
-  { title: "제목", key: "subject", sortable: false },
-  { title: "유형", key: "type", sortable: false, width: "110px" },
-  { title: "공개여부", key: "release", sortable: false, width: "110px" },
-  { title: "등록일", key: "registrationDate", sortable: false, width: "110px" },
+  { title: "직원명(직급명)", key: "name", sortable: false,width: "34%" },
+  { title: "사무소명", key: "office", sortable: false, width: "33%" },
+  { title: "개인번호", key: "num", sortable: false, width: "33%" },
 ];
 
 const dataTableItem = ref([
   {
     id: 1,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "업스토어",
-    release: "공개",
-    registrationDate: "25.02.01",
+    name: "김철수",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.10",
   },
   {
     id: 2,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "공개",
-    registrationDate: "25.02.09",
+    name: "이영희",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.15",
   },
   {
     id: 3,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "박민수",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.01",
   },
   {
     id: 4,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "최지훈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.10",
   },
   {
     id: 5,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "정지혜",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.20",
   },
   {
     id: 6,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
-  },
-  {
-    id: 3,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "이수진",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.05",
   },
   {
     id: 7,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "김동희",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.12",
   },
   {
     id: 8,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "임성민",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.02",
   },
   {
     id: 9,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "황정우",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.18",
   },
   {
     id: 10,
-    registrant: "등록자",
-    subject:
-      "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
-    type: "앱",
-    release: "비공개",
-    registrationDate: "25.02.10",
+    name: "오민석",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.25",
+  },
+  {
+    id: 11,
+    name: "윤지혜",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.07",
+  },
+  {
+    id: 12,
+    name: "고정호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.30",
+  },
+  {
+    id: 13,
+    name: "전지영",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.08",
+  },
+  {
+    id: 14,
+    name: "한서진",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.28",
+  },
+  {
+    id: 15,
+    name: "곽지호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.01",
+  },
+  {
+    id: 16,
+    name: "임지훈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.22",
+  },
+  {
+    id: 17,
+    name: "김수빈",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.03",
+  },
+  {
+    id: 18,
+    name: "박지성",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.02.09",
+  },
+  {
+    id: 19,
+    name: "오준호",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.17",
+  },
+  {
+    id: 20,
+    name: "정한나",
+    office: "사무소명",
+    num: "123456789",
+    createdDate: "2025.01.14",
   },
 ]);
 </script>

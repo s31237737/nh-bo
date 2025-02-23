@@ -121,9 +121,7 @@ import { ref } from "vue";
 
 // 조회조건
 const search = ref("");
-const onAppendClick = () => {
-  alert("Append icon clicked!");
-};
+
 const tableData = ref([
   {
     label1: "앱 이름",
