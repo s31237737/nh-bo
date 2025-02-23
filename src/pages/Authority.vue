@@ -27,95 +27,88 @@
         />
       </v-form>
     </div>
-    <div
-      class="d-flex justify-end"
+    <v-row
+      no-gutters
+      justify="end"
     >
-      <v-btn
-        size="large"
-        variant="outlined"
-      >
-        권한범위 설정
-      </v-btn>
-    </div>
-    <v-divider />
-    <v-data-table
-      v-model="checked"
-      v-model:page="page"
-      :headers="dataTableheaders"
-      :items="dataTableItem"
-      :items-per-page="itemsPerPage"
-      @click:row="handleClick"
-    >
-      <template #top>
-        <div class="table-top">
-          <div class="control">
-            <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
-            <div class="control-input">
-              <v-select
-                v-model="itemsPerPage"
-                :items="pageSort"
-                item-title="title"
-                item-value="value"
-                density="compact"
-              />
-              <v-select
-                v-model="selectDate"
-                :items="['최신순', '업데이트순', '마지막 수정순']"
-                density="compact"
-              />
-            </div>
-          </div>
-          <div class="btns">
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              앱 타입 설정
-            </v-btn>
-            <v-btn
-              size="large"
-              color="tertiary"
-              variant="outlined"
-            >
-              카테고리 태그 설정
-            </v-btn>
-            <v-btn
-              size="large"
-              color="warning"
-              variant="outlined"
-              prepend-icon="custom:remove"
-              :disabled="!checked.length"
-            >
-              삭제
-            </v-btn>
-            <v-btn
-              size="large"
-              color="primary"
-              to="AppRegistration"
-            >
-              등록
-            </v-btn>
-          </div>
-        </div>
-      </template>
-
-      <template #no-data>
-        <v-empty-state
-          text="검색결과가 없습니다."
-          icon="custom:warning"
-          size="60"
-        />
-      </template>
-
-      <template #bottom>
-        <Pagination
-          :total-items="dataTableItem.length"
+      <v-col cols="auto">
+        <v-btn
+          size="large"
+          variant="outlined"
+        >
+          권한범위 설정
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-divider class="mt-4" />
+    <v-row no-gutters>
+      <v-col cols="3">
+        <v-sheet class="pa-2 ma-2">
+          .v-col-auto
+        </v-sheet>
+      </v-col>
+      <v-col cols="9">
+        <v-data-table
+          v-model="checked"
+          v-model:page="page"
+          class="mt-4"
+          :headers="dataTableheaders"
+          :items="dataTableItem"
           :items-per-page="itemsPerPage"
-          @paging="page = $event.page"
-        />
-      </template>
-    </v-data-table>
+          @click:row="handleClick"
+        >
+          <template #top>
+            <div class="flex-column mb-4">
+              <p class="text-3">
+                일반관리자
+              </p>
+              <strong class="title-2">
+                김농협 관리자
+              </strong>
+            </div>
+            <div class="table-top">
+              <div class="control">
+                <strong class="control-total">전체 ({{ dataTableItem.length }})</strong>
+              </div>
+              <div class="btns">
+                <v-btn
+                  size="large"
+                  color="warning"
+                  variant="outlined"
+                  prepend-icon="custom:remove"
+                  :disabled="!checked.length"
+                >
+                  관리자 삭제
+                </v-btn>
+                <v-btn
+                  size="large"
+                  color="primary"
+                  prepend-icon="custom:plus"
+                >
+                  관리자 추가
+                </v-btn>
+              </div>
+            </div>
+          </template>
+
+          <template #no-data>
+            <v-empty-state
+              text="검색결과가 없습니다."
+              icon="custom:warning"
+              size="60"
+            />
+          </template>
+
+          <template #bottom>
+            <Pagination
+              :total-items="dataTableItem.length"
+              :items-per-page="itemsPerPage"
+              @paging="page = $event.page"
+            />
+          </template>
+        </v-data-table>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -153,346 +146,32 @@ const handleClick = (event, row) => {
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
-  { title: "앱 코드", key: "appCode", sortable: false, width: '110px'},
-  { title: "앱 이름", key: "appName", sortable: false, },
-  { title: "앱 타입", key: "appType", sortable: false, width: '110px'},
-  { title: "상태", key: "status", sortable: false, width: '110px'},
-  { title: "등록자", key: "registrant", sortable: false, width: '150px' },
-  { title: "등록 날짜", key: "createdDate", sortable: false, width: '150px'},
-  { title: "업데이트 날짜", key: "updatedDate", sortable: false, width: '150px' },
-  { title: "마지막 수정 날짜", key: "lastModifiedDate", sortable: false, width: '150px' },
+  { title: "직원명", key: "name", sortable: false, },
+  { title: "사무소명", key: "office", sortable: false, width: '200px'},
+  { title: "개인번호", key: "num", sortable: false, width: '200px' },
+  { title: "등록일", key: "createdDate", sortable: false, width: '200px'},
 ];
 
 const dataTableItem = ref([
-  {
-    id: 1,
-    appCode: "APP001",
-    appName: "테스트 앱 1",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "25.01.01",
-    updatedDate: "25.02.01",
-    lastModifiedDate: "25.02.15",
-  },
-  {
-    id: 2,
-    appCode: "APP002",
-    appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "25.01.10",
-    updatedDate: "25.02.05",
-    lastModifiedDate: "25.02.16",
-  },
-  {
-    id: 3,
-    appCode: "APP003",
-    appName: "앱3",
-    appType: "모바일",
-    status: "활성",
-    registrant: "이민수",
-    createdDate: "25.01.12",
-    updatedDate: "25.02.03",
-    lastModifiedDate: "25.02.10",
-  },
-  {
-    id: 4,
-    appCode: "APP004",
-    appName: "앱4",
-    appType: "웹",
-    status: "비활성",
-    registrant: "박지은",
-    createdDate: "25.01.15",
-    updatedDate: "25.02.07",
-    lastModifiedDate: "25.02.12",
-  },
-  {
-    id: 5,
-    appCode: "APP005",
-    appName: "앱5",
-    appType: "모바일",
-    status: "활성",
-    registrant: "최영희",
-    createdDate: "25.01.20",
-    updatedDate: "25.02.08",
-    lastModifiedDate: "25.02.14",
-  },
-  {
-    id: 6,
-    appCode: "APP006",
-    appName: "앱6",
-    appType: "웹",
-    status: "비활성",
-    registrant: "정호준",
-    createdDate: "25.01.25",
-    updatedDate: "25.02.09",
-    lastModifiedDate: "25.02.13",
-  },
-  {
-    id: 7,
-    appCode: "APP007",
-    appName: "앱7",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "25.02.01",
-    updatedDate: "25.02.10",
-    lastModifiedDate: "25.02.18",
-  },
-  {
-    id: 8,
-    appCode: "APP008",
-    appName: "앱8",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "25.02.02",
-    updatedDate: "25.02.11",
-    lastModifiedDate: "25.02.17",
-  },
-  {
-    id: 9,
-    appCode: "APP009",
-    appName: "앱9",
-    appType: "모바일",
-    status: "활성",
-    registrant: "이민수",
-    createdDate: "25.02.05",
-    updatedDate: "25.02.12",
-    lastModifiedDate: "25.02.19",
-  },
-  {
-    id: 10,
-    appCode: "APP010",
-    appName: "앱10",
-    appType: "웹",
-    status: "비활성",
-    registrant: "박지은",
-    createdDate: "25.02.08",
-    updatedDate: "25.02.13",
-    lastModifiedDate: "25.02.18",
-  },
-  {
-    id: 11,
-    appCode: "APP011",
-    appName: "앱11",
-    appType: "모바일",
-    status: "활성",
-    registrant: "최영희",
-    createdDate: "25.02.10",
-    updatedDate: "25.02.14",
-    lastModifiedDate: "25.02.20",
-  },
-  {
-    id: 12,
-    appCode: "APP012",
-    appName: "앱12",
-    appType: "웹",
-    status: "비활성",
-    registrant: "정호준",
-    createdDate: "25.02.12",
-    updatedDate: "25.02.15",
-    lastModifiedDate: "25.02.19",
-  },
-  {
-    id: 13,
-    appCode: "APP013",
-    appName: "앱13",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "25.02.15",
-    updatedDate: "25.02.16",
-    lastModifiedDate: "25.02.21",
-  },
-  {
-    id: 14,
-    appCode: "APP014",
-    appName: "앱14",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "25.02.16",
-    updatedDate: "25.02.17",
-    lastModifiedDate: "25.02.22",
-  },
-  {
-    id: 15,
-    appCode: "APP015",
-    appName: "앱15",
-    appType: "모바일",
-    status: "활성",
-    registrant: "이민수",
-    createdDate: "25.02.17",
-    updatedDate: "25.02.18",
-    lastModifiedDate: "25.02.23",
-  },
-  {
-    id: 16,
-    appCode: "APP016",
-    appName: "앱16",
-    appType: "웹",
-    status: "비활성",
-    registrant: "박지은",
-    createdDate: "25.02.18",
-    updatedDate: "25.02.19",
-    lastModifiedDate: "25.02.24",
-  },
-  {
-    id: 17,
-    appCode: "APP017",
-    appName: "앱17",
-    appType: "모바일",
-    status: "활성",
-    registrant: "최영희",
-    createdDate: "25.02.20",
-    updatedDate: "25.02.21",
-    lastModifiedDate: "25.02.25",
-  },
-  {
-    id: 18,
-    appCode: "APP018",
-    appName: "앱18",
-    appType: "웹",
-    status: "비활성",
-    registrant: "정호준",
-    createdDate: "25.02.22",
-    updatedDate: "25.02.23",
-    lastModifiedDate: "25.02.26",
-  },
-  {
-    id: 19,
-    appCode: "APP019",
-    appName: "앱19",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "25.02.25",
-    updatedDate: "25.02.26",
-    lastModifiedDate: "25.02.27",
-  },
-  {
-    id: 20,
-    appCode: "APP020",
-    appName: "앱20",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "25.02.28",
-    updatedDate: "25.02.29",
-    lastModifiedDate: "25.03.01",
-  },
-  {
-    id: 21,
-    appCode: "APP021",
-    appName: "앱21",
-    appType: "모바일",
-    status: "활성",
-    registrant: "이민수",
-    createdDate: "25.03.01",
-    updatedDate: "25.03.02",
-    lastModifiedDate: "25.03.03",
-  },
-  {
-    id: 22,
-    appCode: "APP022",
-    appName: "앱22",
-    appType: "웹",
-    status: "비활성",
-    registrant: "박지은",
-    createdDate: "25.03.02",
-    updatedDate: "25.03.03",
-    lastModifiedDate: "25.03.04",
-  },
-  {
-    id: 23,
-    appCode: "APP023",
-    appName: "앱23",
-    appType: "모바일",
-    status: "활성",
-    registrant: "최영희",
-    createdDate: "25.03.03",
-    updatedDate: "25.03.04",
-    lastModifiedDate: "25.03.05",
-  },
-  {
-    id: 24,
-    appCode: "APP024",
-    appName: "앱24",
-    appType: "웹",
-    status: "비활성",
-    registrant: "정호준",
-    createdDate: "25.03.04",
-    updatedDate: "25.03.05",
-    lastModifiedDate: "25.03.06",
-  },
-  {
-    id: 25,
-    appCode: "APP025",
-    appName: "앱25",
-    appType: "모바일",
-    status: "활성",
-    registrant: "홍길동",
-    createdDate: "25.03.05",
-    updatedDate: "25.03.06",
-    lastModifiedDate: "25.03.07",
-  },
-  {
-    id: 26,
-    appCode: "APP026",
-    appName: "앱26",
-    appType: "웹",
-    status: "비활성",
-    registrant: "김철수",
-    createdDate: "25.03.06",
-    updatedDate: "25.03.07",
-    lastModifiedDate: "25.03.08",
-  },
-  {
-    id: 27,
-    appCode: "APP027",
-    appName: "앱27",
-    appType: "모바일",
-    status: "활성",
-    registrant: "이민수",
-    createdDate: "25.03.07",
-    updatedDate: "25.03.08",
-    lastModifiedDate: "25.03.09",
-  },
-  {
-    id: 28,
-    appCode: "APP028",
-    appName: "앱28",
-    appType: "웹",
-    status: "비활성",
-    registrant: "박지은",
-    createdDate: "25.03.08",
-    updatedDate: "25.03.09",
-    lastModifiedDate: "25.03.10",
-  },
-  {
-    id: 29,
-    appCode: "APP029",
-    appName: "앱29",
-    appType: "모바일",
-    status: "활성",
-    registrant: "최영희",
-    createdDate: "25.03.09",
-    updatedDate: "25.03.10",
-    lastModifiedDate: "25.03.11",
-  },
-  {
-    id: 30,
-    appCode: "APP030",
-    appName: "앱30",
-    appType: "웹",
-    status: "비활성",
-    registrant: "정호준",
-    createdDate: "25.03.10",
-    updatedDate: "25.03.11",
-    lastModifiedDate: "25.03.12",
-  }
+{ id: 1, name: "김철수", office: "사무소명", num: "123456789", createdDate: "2025.01.10" },
+{ id: 2, name: "이영희", office: "사무소명", num: "123456789", createdDate: "2025.01.15" },
+{ id: 3, name: "박민수", office: "사무소명", num: "123456789", createdDate: "2025.02.01" },
+{ id: 4, name: "최지훈", office: "사무소명", num: "123456789", createdDate: "2025.02.10" },
+{ id: 5, name: "정지혜", office: "사무소명", num: "123456789", createdDate: "2025.01.20" },
+{ id: 6, name: "이수진", office: "사무소명", num: "123456789", createdDate: "2025.02.05" },
+{ id: 7, name: "김동희", office: "사무소명", num: "123456789", createdDate: "2025.01.12" },
+{ id: 8, name: "임성민", office: "사무소명", num: "123456789", createdDate: "2025.02.02" },
+{ id: 9, name: "황정우", office: "사무소명", num: "123456789", createdDate: "2025.01.18" },
+{ id: 10, name: "오민석", office: "사무소명", num: "123456789", createdDate: "2025.01.25" },
+{ id: 11, name: "윤지혜", office: "사무소명", num: "123456789", createdDate: "2025.02.07" },
+{ id: 12, name: "고정호", office: "사무소명", num: "123456789", createdDate: "2025.01.30" },
+{ id: 13, name: "전지영", office: "사무소명", num: "123456789", createdDate: "2025.02.08" },
+{ id: 14, name: "한서진", office: "사무소명", num: "123456789", createdDate: "2025.01.28" },
+{ id: 15, name: "곽지호", office: "사무소명", num: "123456789", createdDate: "2025.02.01" },
+{ id: 16, name: "임지훈", office: "사무소명", num: "123456789", createdDate: "2025.01.22" },
+{ id: 17, name: "김수빈", office: "사무소명", num: "123456789", createdDate: "2025.02.03" },
+{ id: 18, name: "박지성", office: "사무소명", num: "123456789", createdDate: "2025.02.09" },
+{ id: 19, name: "오준호", office: "사무소명", num: "123456789", createdDate: "2025.01.17" },
+{ id: 20, name: "정한나", office: "사무소명", num: "123456789", createdDate: "2025.01.14" }
 ]);
 </script>
