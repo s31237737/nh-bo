@@ -150,8 +150,15 @@ body {
         width: 19.5rem;
       }
       .v-card-text {
+        min-height: 80px;
         padding: 16px 24px !important;
         text-align: center;
+        .alert-txt {
+          display: flex;
+          height: 80px;
+          align-items: center;
+          justify-content: center;
+        }
       }
       .v-card-actions {
         padding: 1rem;

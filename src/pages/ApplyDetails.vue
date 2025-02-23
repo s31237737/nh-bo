@@ -65,7 +65,7 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['최신순', '사용자 업데이트순', '마지막 수정 날짜순']"
+                :items="['최신순', '사용자 업데이트 순', '마지막 수정 날짜순']"
                 density="compact"
               />
               <v-checkbox

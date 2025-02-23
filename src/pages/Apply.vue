@@ -54,7 +54,7 @@
               />
               <v-select
                 v-model="selectDate"
-                :items="['사용자 업데이트순', '마지막 수정 날짜순']"
+                :items="['사용자 업데이트 순', '사용순']"
                 density="compact"
               />
             </div>
@@ -64,6 +64,7 @@
               size="large"
               color="tertiary"
               variant="outlined"
+              @click="dialog1 = true"
             >
               수동 사용허가
             </v-btn>
@@ -94,12 +95,54 @@
         />
       </template>
     </v-data-table>
+
+    <v-dialog
+      v-model="dialog1"
+      class="popup-sm"
+    >
+      <v-card>
+        <v-card-title>
+          <span>수동 사용허가</span>
+          <v-btn
+            icon="custom:close"
+            density="comfortable"
+            @click="dialog1 = false"
+          />
+        </v-card-title>
+
+        <v-card-text>
+          <!-- dialog contents -->
+          <p class="text-2 alert-txt">
+            앱 사용을 수동으로 허용하시겠습니까?
+          </p>
+        <!-- // dialog contents -->
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="secondary"
+            size="large"
+            @click="dialog1 = false"
+          >
+            취소
+          </v-btn>
+          <v-btn
+            color="primary"
+            size="large"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
+const dialog1 = ref(false);
+const dialog2 = ref(false);
 
 // 조회조건
 const form = ref("");
@@ -111,7 +154,7 @@ const onAppendClick = () => {
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref("최신순");
+const selectDate = ref("사용자 업데이트 순");
 const checked = ref([]);
 
 const pageSort = ref([
@@ -131,7 +174,7 @@ const handleClick = (event, row) => {
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: "80px" },
-  { title: "앱 코드", key: "appCode", sortable: false, width: "110px" },
+  { title: "앱 코드", key: "appCode", sortable: false, width: "150px" },
   { title: "앱 이름", key: "appName", sortable: false },
   { title: "앱 타입", key: "appType", sortable: false, width: "150px" },
   { title: "자동사용여부", key: "status", sortable: false, width: "150px" },
