@@ -1,7 +1,7 @@
 <template>
   <PageHeader
-    title="사용신청 관리"
-    prev-link="Apply"
+    title="사용내역 관리"
+    prev-link="ApplyHistory"
   />
 
   <div class="page-contents">
