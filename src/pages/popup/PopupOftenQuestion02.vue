@@ -77,6 +77,7 @@
           color="tertiary"
           size="large"
           variant="outlined"
+          @click="emit('update:modelValue', false)"
         >
           목록
         </v-btn>

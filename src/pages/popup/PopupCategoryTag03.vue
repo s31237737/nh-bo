@@ -74,6 +74,7 @@
           color="tertiary"
           size="large"
           variant="outlined"
+          @click="emit('update:modelValue', false)"
         >
           목록
         </v-btn>
@@ -83,7 +84,6 @@
           size="large"
           variant="outlined"
           prepend-icon="custom:remove"
-          @click="emit('update:modelValue', false)"
         >
           삭제
         </v-btn>
