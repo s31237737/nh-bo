@@ -48,6 +48,17 @@
             </div>
           </template>
 
+          <template #item.authority="{ item }">
+            <div class="d-flex ga-1">
+              <v-chip
+                color="secondary"
+                variant="flat"
+              >
+                {{ item.authority }}
+              </v-chip>
+            </div>
+          </template>
+
           <template #no-data>
             <v-empty-state
               text="검색결과가 없습니다."
@@ -93,13 +104,13 @@ const handleClick = (event, row) => {
 
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
-  { title: "앱 타입 코드", key: "appCode", sortable: false, width: '110px'},
-  { title: "앱 타입명", key: "appName", sortable: false, },
-  { title: "사용 상태", key: "status", sortable: false, width: '150px'},
+  { title: "권한 그룹 코드", key: "appCode", sortable: false, width: '150px'},
+  { title: "권한 그룹명", key: "appName", sortable: false, },
+  { title: "권한", key: "authority", sortable: false, width: '150px'},
+  { title: "사용 상태", key: "status", sortable: false, width: '110px'},
 ];
 
-const dataTableItem = ref([
-  {
+const dataTableItem = ref([ {
     id: 1,
     appCode: "APP001",
     appName: "테스트 앱 1",
@@ -109,6 +120,7 @@ const dataTableItem = ref([
     createdDate: "25.01.01",
     updatedDate: "25.02.01",
     lastModifiedDate: "25.02.15",
+    authority: "슈퍼관리자",
   },
   {
     id: 2,
@@ -120,6 +132,7 @@ const dataTableItem = ref([
     createdDate: "25.01.10",
     updatedDate: "25.02.05",
     lastModifiedDate: "25.02.16",
+    authority: "비즈니스관리자",
   },
   {
     id: 3,
@@ -131,6 +144,7 @@ const dataTableItem = ref([
     createdDate: "25.01.12",
     updatedDate: "25.02.03",
     lastModifiedDate: "25.02.10",
+    authority: "시스템관리자",
   },
   {
     id: 4,
@@ -142,6 +156,7 @@ const dataTableItem = ref([
     createdDate: "25.01.15",
     updatedDate: "25.02.07",
     lastModifiedDate: "25.02.12",
+    authority: "슈퍼관리자",
   },
   {
     id: 5,
@@ -153,6 +168,7 @@ const dataTableItem = ref([
     createdDate: "25.01.20",
     updatedDate: "25.02.08",
     lastModifiedDate: "25.02.14",
+    authority: "비즈니스관리자",
   },
   {
     id: 6,
@@ -164,6 +180,7 @@ const dataTableItem = ref([
     createdDate: "25.01.25",
     updatedDate: "25.02.09",
     lastModifiedDate: "25.02.13",
+    authority: "시스템관리자",
   },
   {
     id: 7,
@@ -175,6 +192,7 @@ const dataTableItem = ref([
     createdDate: "25.02.01",
     updatedDate: "25.02.10",
     lastModifiedDate: "25.02.18",
+    authority: "슈퍼관리자",
   },
   {
     id: 8,
@@ -186,6 +204,7 @@ const dataTableItem = ref([
     createdDate: "25.02.02",
     updatedDate: "25.02.11",
     lastModifiedDate: "25.02.17",
+    authority: "비즈니스관리자",
   },
   {
     id: 9,
@@ -197,6 +216,7 @@ const dataTableItem = ref([
     createdDate: "25.02.05",
     updatedDate: "25.02.12",
     lastModifiedDate: "25.02.19",
+    authority: "시스템관리자",
   },
   {
     id: 10,
@@ -208,226 +228,7 @@ const dataTableItem = ref([
     createdDate: "25.02.08",
     updatedDate: "25.02.13",
     lastModifiedDate: "25.02.18",
+    authority: "슈퍼관리자",
   },
-  {
-    id: 11,
-    appCode: "APP011",
-    appName: "앱11",
-    appType: "모바일",
-    status: "사용",
-    registrant: "최영희",
-    createdDate: "25.02.10",
-    updatedDate: "25.02.14",
-    lastModifiedDate: "25.02.20",
-  },
-  {
-    id: 12,
-    appCode: "APP012",
-    appName: "앱12",
-    appType: "웹",
-    status: "미사용",
-    registrant: "정호준",
-    createdDate: "25.02.12",
-    updatedDate: "25.02.15",
-    lastModifiedDate: "25.02.19",
-  },
-  {
-    id: 13,
-    appCode: "APP013",
-    appName: "앱13",
-    appType: "모바일",
-    status: "사용",
-    registrant: "홍길동",
-    createdDate: "25.02.15",
-    updatedDate: "25.02.16",
-    lastModifiedDate: "25.02.21",
-  },
-  {
-    id: 14,
-    appCode: "APP014",
-    appName: "앱14",
-    appType: "웹",
-    status: "미사용",
-    registrant: "김철수",
-    createdDate: "25.02.16",
-    updatedDate: "25.02.17",
-    lastModifiedDate: "25.02.22",
-  },
-  {
-    id: 15,
-    appCode: "APP015",
-    appName: "앱15",
-    appType: "모바일",
-    status: "사용",
-    registrant: "이민수",
-    createdDate: "25.02.17",
-    updatedDate: "25.02.18",
-    lastModifiedDate: "25.02.23",
-  },
-  {
-    id: 16,
-    appCode: "APP016",
-    appName: "앱16",
-    appType: "웹",
-    status: "미사용",
-    registrant: "박지은",
-    createdDate: "25.02.18",
-    updatedDate: "25.02.19",
-    lastModifiedDate: "25.02.24",
-  },
-  {
-    id: 17,
-    appCode: "APP017",
-    appName: "앱17",
-    appType: "모바일",
-    status: "사용",
-    registrant: "최영희",
-    createdDate: "25.02.20",
-    updatedDate: "25.02.21",
-    lastModifiedDate: "25.02.25",
-  },
-  {
-    id: 18,
-    appCode: "APP018",
-    appName: "앱18",
-    appType: "웹",
-    status: "미사용",
-    registrant: "정호준",
-    createdDate: "25.02.22",
-    updatedDate: "25.02.23",
-    lastModifiedDate: "25.02.26",
-  },
-  {
-    id: 19,
-    appCode: "APP019",
-    appName: "앱19",
-    appType: "모바일",
-    status: "사용",
-    registrant: "홍길동",
-    createdDate: "25.02.25",
-    updatedDate: "25.02.26",
-    lastModifiedDate: "25.02.27",
-  },
-  {
-    id: 20,
-    appCode: "APP020",
-    appName: "앱20",
-    appType: "웹",
-    status: "미사용",
-    registrant: "김철수",
-    createdDate: "25.02.28",
-    updatedDate: "25.02.29",
-    lastModifiedDate: "25.03.01",
-  },
-  {
-    id: 21,
-    appCode: "APP021",
-    appName: "앱21",
-    appType: "모바일",
-    status: "사용",
-    registrant: "이민수",
-    createdDate: "25.03.01",
-    updatedDate: "25.03.02",
-    lastModifiedDate: "25.03.03",
-  },
-  {
-    id: 22,
-    appCode: "APP022",
-    appName: "앱22",
-    appType: "웹",
-    status: "미사용",
-    registrant: "박지은",
-    createdDate: "25.03.02",
-    updatedDate: "25.03.03",
-    lastModifiedDate: "25.03.04",
-  },
-  {
-    id: 23,
-    appCode: "APP023",
-    appName: "앱23",
-    appType: "모바일",
-    status: "사용",
-    registrant: "최영희",
-    createdDate: "25.03.03",
-    updatedDate: "25.03.04",
-    lastModifiedDate: "25.03.05",
-  },
-  {
-    id: 24,
-    appCode: "APP024",
-    appName: "앱24",
-    appType: "웹",
-    status: "미사용",
-    registrant: "정호준",
-    createdDate: "25.03.04",
-    updatedDate: "25.03.05",
-    lastModifiedDate: "25.03.06",
-  },
-  {
-    id: 25,
-    appCode: "APP025",
-    appName: "앱25",
-    appType: "모바일",
-    status: "사용",
-    registrant: "홍길동",
-    createdDate: "25.03.05",
-    updatedDate: "25.03.06",
-    lastModifiedDate: "25.03.07",
-  },
-  {
-    id: 26,
-    appCode: "APP026",
-    appName: "앱26",
-    appType: "웹",
-    status: "미사용",
-    registrant: "김철수",
-    createdDate: "25.03.06",
-    updatedDate: "25.03.07",
-    lastModifiedDate: "25.03.08",
-  },
-  {
-    id: 27,
-    appCode: "APP027",
-    appName: "앱27",
-    appType: "모바일",
-    status: "사용",
-    registrant: "이민수",
-    createdDate: "25.03.07",
-    updatedDate: "25.03.08",
-    lastModifiedDate: "25.03.09",
-  },
-  {
-    id: 28,
-    appCode: "APP028",
-    appName: "앱28",
-    appType: "웹",
-    status: "미사용",
-    registrant: "박지은",
-    createdDate: "25.03.08",
-    updatedDate: "25.03.09",
-    lastModifiedDate: "25.03.10",
-  },
-  {
-    id: 29,
-    appCode: "APP029",
-    appName: "앱29",
-    appType: "모바일",
-    status: "사용",
-    registrant: "최영희",
-    createdDate: "25.03.09",
-    updatedDate: "25.03.10",
-    lastModifiedDate: "25.03.11",
-  },
-  {
-    id: 30,
-    appCode: "APP030",
-    appName: "앱30",
-    appType: "웹",
-    status: "미사용",
-    registrant: "정호준",
-    createdDate: "25.03.10",
-    updatedDate: "25.03.11",
-    lastModifiedDate: "25.03.12",
-  }
 ]);
 </script>
