@@ -42,7 +42,27 @@
     <v-row no-gutters>
       <v-col cols="3">
         <v-sheet class="pa-2 ma-2">
-          <v-list :items="adminItems" />
+          <v-list>
+            <template
+              v-for="(item, index) in adminItems"
+              :key="index"
+            >
+              <v-list-subheader v-if="item.type === 'subheader'">
+                {{ item.title }}
+              </v-list-subheader>
+
+              <!-- 구분선 -->
+              <v-divider v-else-if="item.type === 'divider'" />
+
+              <!-- 클릭 가능한 리스트 아이템 -->
+              <v-list-item
+                v-else
+                @click="adminClick(item)"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </template>
+          </v-list>
         </v-sheet>
       </v-col>
       <v-col cols="9">
@@ -139,7 +159,7 @@ const adminItems = [
   },
   { type: "divider" },
   { type: "subheader", title: "비즈니스 관리자" },
-   { type: "divider" },
+  { type: "divider" },
   {
     title: "- 000관리자",
     value: 4,
@@ -151,8 +171,8 @@ const adminItems = [
   },
 ];
 
-const adminClick = (role) => {
-  console.log(`클릭됨: ${role}`);
+const adminClick = (item) => {
+   console.log(`클릭됨: ${item.title} (value: ${item.value})`);
 };
 
 // 데이터 테이블
