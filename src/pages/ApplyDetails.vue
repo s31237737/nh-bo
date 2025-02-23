@@ -91,7 +91,7 @@
             <v-btn
               size="large"
               color="primary"
-              prepend-icon="mdi-plus"
+              prepend-icon="custom:plus"
             >
               직원추가
             </v-btn>
