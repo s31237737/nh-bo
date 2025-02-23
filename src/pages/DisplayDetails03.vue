@@ -13,52 +13,15 @@
     </div>
     <v-table-row>
       <tbody>
-        <tr>
+        <tr
+          v-for="(row, index) in tableData"
+          :key="index"
+        >
           <th style="width: 10%">
-            영역 이름
+            {{ row.label }}
           </th>
           <td style="width: 90%">
-            APPs 이미지 배너
-          </td>
-        </tr>
-        <tr>
-          <th style="width: 10%">
-            영역 코드
-          </th>
-          <td style="width: 90%">
-            B02
-          </td>
-        </tr>
-        <tr>
-          <th
-            style="width: 10%"
-            rowspan="2"
-          >
-            영역 타입
-          </th>
-          <td style="width: 90%">
-            APPs 슬라이드 배너(930px X 258px )
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 90%">
-            <p class="banner-options">
-              <strong>슬라이드 재생</strong> 사용
-            </p>
-            <p class="banner-options">
-              <strong>슬라이드 속도</strong> 5초
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <th
-            style="width: 10%"
-            rowspan="2"
-          >
-            사용 상태
-          </th>
-          <td style="width: 90%">
-            사용
+            {{ row.value }}
           </td>
         </tr>
       </tbody>
@@ -100,6 +63,7 @@
               size="large"
               color="primary"
               prepend-icon="custom:plus"
+              :to="'DisplayRegistration03'"
             >
               등록
             </v-btn>
@@ -128,6 +92,25 @@
 
 <script setup>
 import { ref } from "vue";
+
+const tableData = ref([
+  {
+    label: "영역 이름",
+    value: "Apps 이미지 배너",
+  },
+  {
+    label: "영역 코드",
+    value: "B03",
+  },
+  {
+    label: "영역 타입",
+    value: "이미지 배너(930px X 258px)",
+  },
+  {
+    label: "사용 상태",
+    value: "사용",
+  },
+]);
 
 // 데이터 테이블
 const page = ref(1);
