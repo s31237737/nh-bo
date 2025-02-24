@@ -135,7 +135,7 @@
 
         <v-card-text>
           <!-- dialog contents -->
-          <p class="text-2 alert-txt">
+          <p class="alert-txt">
             앱 사용을 중단하시겠습니까?
           </p>
         <!-- // dialog contents -->
@@ -174,10 +174,10 @@
 
         <v-card-text>
           <!-- dialog contents -->
-          <p class="text-2 alert-txt">
+          <p class="alert-txt">
             앱 사용을 허가하시겠습니까?
           </p>
-          <!-- <p class="text-2 alert-txt">
+          <!-- <p class="alert-txt">
             해당 앱은 자동사용허가 상태입니다.<br>
             수동으로 변경하시겠습니까?
           </p> -->

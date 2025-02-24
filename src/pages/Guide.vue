@@ -37,6 +37,7 @@
     <v-icon icon="custom:warning" />
     <v-icon icon="custom:plus" />
     <v-icon icon="custom:file" />
+    <v-icon icon="custom:download" />
   </div>
   <ImageUploader
     multiple

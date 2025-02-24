@@ -2,6 +2,12 @@
   <div class="d-flex ga-3 flex-wrap w-75">
     <v-btn
       color="primary"
+      @click="alert=true"
+    >
+      얼럿
+    </v-btn>
+    <v-btn
+      color="primary"
       @click="snackbarOpen01"
     >
       토스트팝업 성공
@@ -18,6 +24,46 @@
     >
       토스트팝업 오류
     </v-btn>
+    <!-- alert -->
+    <v-dialog
+      v-model="alert"
+      class="popup-sm"
+    >
+      <v-card>
+        <v-card-title>
+          <span>사용중단</span>
+          <v-btn
+            icon="custom:close"
+            density="comfortable"
+            @click="alert = false"
+          />
+        </v-card-title>
+
+        <v-card-text>
+          <!-- dialog contents -->
+          <p class="alert-txt">
+            입력하신 정보가 저장되지 않습니다.<br>정말 나가시겠습니까?
+          </p>
+        <!-- // dialog contents -->
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="secondary"
+            size="large"
+            @click="alert = false"
+          >
+            취소
+          </v-btn>
+          <v-btn
+            color="primary"
+            size="large"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <!-- alert -->
 
     <!-- 팝업에 넣을시에 <v-card-text>내 제일 아래에 -->
     <!-- 페이지에 넣을시에  <div class="page-contents">내 제일 아래에 -->
@@ -174,6 +220,8 @@ const popOpen = (name) => {
   popupVisible.value[name] = true;
 };
 
+
+const alert = ref(false);
 
 const snackbar01 = ref(false);
 const snackbarText01 = ref('등록이 완료되었습니다.');

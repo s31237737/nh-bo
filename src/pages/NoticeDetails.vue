@@ -48,10 +48,24 @@
           <td colspan="7">
             <v-img
               width="100%"
-              aspect-ratio="16/9"
+              height="150px"
               cover
               src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
             />
+            <br>
+            <p>
+              Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text  Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+
+              Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text  Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+            </p>
           </td>
         </tr>
         <tr>
@@ -59,7 +73,23 @@
             첨부파일
           </th>
           <td colspan="7">
-            공지사항 제목
+            <ul
+              class="download-list"
+            >
+              <li
+                v-for="(file, index) in files"
+                :key="index"
+              >
+                <v-icon icon="custom:file" />
+                <span>{{ file.name }}</span>
+                <em>{{ file.size }}</em>
+                <v-btn
+                  class="icon-md"
+                  icon="custom:download"
+                  @click="downloadFile(file)"
+                />
+              </li>
+            </ul>
           </td>
         </tr>
       </tbody>
@@ -89,175 +119,15 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from 'vue-router';
 
-// 데이터 테이블
-const page = ref(1);
-const itemsPerPage = ref(10);
-const checked = ref([]);
-
-const pageSort = ref([
-  { title: "10개", value: 10 },
-  { title: "20개", value: 20 },
-  { title: "30개", value: 30 },
-  { title: "50개", value: 50 },
-  { title: "100개", value: 100 },
+const files = ref([
+  { name: "C:/Download/Filename.png", size: "10.3MB", url: "#" },
+  { name: "C:/Download/Filename123.png", size: "10.3MB", url: "#" },
+  { name: "C:/Download/Filename456.png", size: "10.3MB", url: "#" },
 ]);
 
-const router = useRouter();
-const handleClick = (event, row) => {
-  router.push('DisplayRegistrationDetails01');
-  console.log("Clicked item: ", row.item);
-}
+const downloadFile = (files) => {
+  console.log(files.name)
+};
 
-const dataTableheaders = [
-  { title: "순서", key: "id", width: "80px" },
-  { title: "콘텐츠 제목", key: "contetnsTitle", sortable: false},
-  { title: "콘텐츠 유형", key: "contetnsType", sortable: false , width: "150px" },
-  { title: "사용 상태", key: "useStatus", sortable: false, width: "110px" },
-  { title: "노출기간", key: "exposureTerm", sortable: false, width: "250px" },
-];
-
-const dataTableItem = ref([
-  {
-    id: 1,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 2,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "이미지",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 3,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 4,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 5,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "이미지",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 6,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 7,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 8,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 9,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 10,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 11,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 12,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 13,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 14,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 15,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 16,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 17,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 18,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 19,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-  {
-    id: 20,
-    contetnsTitle: "콘텐츠명을 노출합니다. 콘텐츠명을 노출합니다.",
-    contetnsType: "앱 추천",
-    useStatus: "사용",
-    exposureTerm: "2025.09.06 ~ 2025.09.08",
-  },
-]);
 </script>

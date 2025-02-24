@@ -44,11 +44,8 @@
 
       <v-card-text>
         <!-- dialog contents -->
-        <p class="text-2">
-          등록을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
-        </p>
-        <p class="text-1-md mt-5">
-          남은 시간 : 60초
+        <p class="alert-txt">
+          등록하시겠습니까?
         </p>
         <!-- // dialog contents -->
       </v-card-text>

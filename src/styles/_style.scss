@@ -514,5 +514,22 @@ body {
       color: $text-helper;
     }
   }
+
+  .download-list {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      > .v-icon {
+        margin-right: -6px;
+      }
+      em {
+        color: $text-tertiary;
+      }
+    }
+  }
 }
 

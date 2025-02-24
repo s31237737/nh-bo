@@ -114,7 +114,7 @@
 
         <v-card-text>
           <!-- dialog contents -->
-          <p class="text-2 alert-txt">
+          <p class="alert-txt">
             앱 사용을 수동으로 허용하시겠습니까?
           </p>
         <!-- // dialog contents -->
@@ -153,7 +153,7 @@
 
         <v-card-text>
           <!-- dialog contents -->
-          <p class="text-2 alert-txt">
+          <p class="alert-txt">
             앱 사용을 자동으로 허용하시겠습니까?
           </p>
         <!-- // dialog contents -->
