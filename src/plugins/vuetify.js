@@ -185,14 +185,18 @@ export default createVuetify({
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
       hideDetails: true,
-      placeholder: "YYYY.MM.DD"
+      placeholder: "YYYY.MM.DD",
     },
     VCheckbox: {
       baseColor: "#c2c2c2",
       hideDetails: true,
+      falseIcon: "custom:checkbox-off",
+      trueIcon: "custom:checkbox-on",
     },
     VRadio: {
       baseColor: "#c2c2c2",
+      falseIcon: "custom:radio-off",
+      trueIcon: "custom:radio-on",
     },
     VRadioGroup: {
       baseColor: "#c2c2c2",
@@ -221,7 +225,7 @@ export default createVuetify({
       elevation: 0,
     },
     VExpansionPanel: {
-      elevation: 0
-    }
+      elevation: 0,
+    },
   },
 });
