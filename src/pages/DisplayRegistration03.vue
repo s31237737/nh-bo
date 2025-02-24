@@ -160,5 +160,5 @@ const updateAppIconList = (newImages) => {
 // 사용 상태
 const isSwitch = ref(false);
 
-const dateRange = ref([]);
+const dateRange = ref(['2025.02.01', '2025.02.01']);
 </script>
