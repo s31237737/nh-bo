@@ -91,7 +91,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      :to="'/AppRegistration'"
+      to="DisplayRegistration03"
     >
       수정
     </v-btn>
