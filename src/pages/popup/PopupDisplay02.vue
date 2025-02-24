@@ -22,6 +22,7 @@
           :items="dataTableItem"
           :items-per-page="itemsPerPage"
           :show-select="false"
+          height="auto"
         >
           <template #top>
             <div class="table-top">
@@ -41,13 +42,13 @@
           <template #item.move="{ item, index }">
             <v-icon
               icon="custom:sort-asc"
-              size="small"
+              size="24"
               :disabled="index === 0"
               @click="moveUp(index)"
             />
             <v-icon
               icon="custom:sort-desc"
-              size="small"
+              size="24"
               :disabled="index === dataTableItem.length - 1"
               @click="moveDown(index)"
             />

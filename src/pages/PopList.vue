@@ -19,6 +19,8 @@
       토스트팝업 오류
     </v-btn>
 
+    <!-- 팝업에 넣을시에 <v-card-text>내 제일 아래에 -->
+    <!-- 페이지에 넣을시에  <div class="page-contents">내 제일 아래에 -->
     <!-- 토스트 팝업 01 -->
     <v-snackbar
       v-model="snackbar01"

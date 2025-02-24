@@ -15,7 +15,9 @@
     <v-icon icon="custom:remove" />
     <v-icon icon="custom:setting" />
     <v-icon icon="custom:view" />
+    <v-icon icon="custom:alert-success" />
     <v-icon icon="custom:alert" />
+    <v-icon icon="custom:alert-error" />
     <v-icon icon="custom:arrow-down" />
     <v-icon icon="custom:arrow-last" />
     <v-icon icon="custom:arrow-right" />
@@ -34,6 +36,7 @@
     <v-icon icon="custom:terms" />
     <v-icon icon="custom:warning" />
     <v-icon icon="custom:plus" />
+    <v-icon icon="custom:file" />
   </div>
   <ImageUploader
     multiple

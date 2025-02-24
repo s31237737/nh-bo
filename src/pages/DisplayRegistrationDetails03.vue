@@ -48,8 +48,8 @@
           </th>
           <td style="width: 90%">
             <ImageUploader
-              :images="uploaderList"
               class="type02"
+              :images="uploaderList"
               readonly
             />
             <div class="upload-guide">

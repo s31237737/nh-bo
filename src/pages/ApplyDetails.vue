@@ -70,7 +70,7 @@
               />
               <v-checkbox
                 label="신청대기중 모아보기"
-                density="compact"
+                density="comfortable"
               />
             </div>
           </div>

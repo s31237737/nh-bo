@@ -171,9 +171,9 @@
           </th>
           <td style="width: 90%">
             <ImageUploader
+              class="type02"
               :images="uploaderList"
               readonly
-              class="type02"
             />
             <div class="upload-guide">
               <p>930px X 258px</p>
