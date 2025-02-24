@@ -152,7 +152,7 @@ export default createVuetify({
       hover: true,
       showSelect: true,
       hideDefaultFooter: true,
-      maxHeight: "616px",
+      height: "616px",
       sortAscIcon: "custom:sort-asc",
       sortDescIcon: "custom:sort-desc",
       VCheckboxBtn: {

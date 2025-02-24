@@ -140,10 +140,10 @@ body {
           th {
             border-top: thin solid $border-subtle;
             &:first-child {
-              border-radius: 4px 0 0 4px;
+              border-radius: 4px 0 0 0;
             }
             &:last-child {
-              border-radius: 0 4px 4px  0;
+              border-radius: 0 4px 0  0;
             }
           }
           th:first-child,
@@ -156,10 +156,10 @@ body {
           }
           tr:last-child {
             td:first-child {
-              border-radius: 4px 0 0 4px;
+              border-radius: 0 0 0 4px;
             }
             td:last-child {
-              border-radius: 0 4px 4px  0;
+              border-radius: 0 0 4px  0;
             }
           }
         }
