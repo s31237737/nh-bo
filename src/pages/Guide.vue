@@ -214,57 +214,7 @@
     >
       <v-checkbox
         v-model="ex4"
-        color="primary"
-        label="primary"
-        value="primary"
-        hide-details
-      />
-      <v-checkbox
-        v-model="ex4"
-        color="secondary"
-        label="secondary"
-        value="secondary"
-        hide-details
-      />
-    </v-col>
-    <v-col
-      cols="12"
-      md="4"
-      sm="4"
-    >
-      <v-checkbox
-        v-model="ex4"
-        color="success"
-        label="success"
-        value="success"
-        hide-details
-      />
-      <v-checkbox
-        v-model="ex4"
-        color="info"
-        label="info"
-        value="info"
-        hide-details
-      />
-    </v-col>
-    <v-col
-      cols="12"
-      md="4"
-      sm="4"
-    >
-      <v-checkbox
-        v-model="ex4"
-        color="warning"
-        label="warning"
-        value="warning"
-        hide-details
-      />
-      <v-checkbox
-        v-model="ex4"
-        color="error"
-        label="error"
-        value="error"
-        hide-details
+        label="체크박스"
       />
     </v-col>
   </v-row>
