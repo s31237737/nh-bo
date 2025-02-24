@@ -163,6 +163,7 @@ export default createVuetify({
       persistentPlaceholder: true,
       variant: "outlined",
       hideDetails: true,
+      menuIcon: "custom:select",
     },
     VTextarea: {
       persistentPlaceholder: true,
