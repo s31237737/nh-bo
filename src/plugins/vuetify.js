@@ -204,6 +204,7 @@ export default createVuetify({
     },
     VSnackbar: {
       minWidth: "592px",
+      timeout: "2000",
     },
     VFileUpload: {
       title: false,
