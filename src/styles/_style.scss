@@ -337,7 +337,7 @@ body {
   .v-snackbar {
     padding: 0;
   }
-  .toast-pop {
+  [class*="toast-pop"] {
     background: rgba(255, 248, 228, 0.95);
     border: thin solid #f8dc8b;
     @extend .text-2;
@@ -348,6 +348,16 @@ body {
       height: 62px;
     }
   }
+  .toast-pop__success{
+    background: #F1FFF0;
+    border: thin solid #B1D9AF;
+  }
+  .toast-pop__error{
+    background: rgba(255, 243, 244, 0.95);
+    border: thin solid #F29FA3;
+  }
+
+
   .tit-wrap {
     margin: 50px 0 16px;
     display: flex;

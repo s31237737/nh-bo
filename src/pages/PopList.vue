@@ -1,6 +1,88 @@
 <template>
   <div class="d-flex ga-3 flex-wrap w-75">
     <v-btn
+      color="primary"
+      @click="snackbarOpen01"
+    >
+      토스트팝업 성공
+    </v-btn>
+    <v-btn
+      color="primary"
+      @click="snackbarOpen02"
+    >
+      토스트팝업 정보
+    </v-btn>
+    <v-btn
+      color="primary"
+      @click="snackbarOpen03"
+    >
+      토스트팝업 오류
+    </v-btn>
+
+    <!-- 토스트 팝업 01 -->
+    <v-snackbar
+      v-model="snackbar01"
+      contained
+      content-class="toast-pop__success"
+    >
+      <v-icon
+        start
+        size="24"
+        icon="custom:alert-success"
+      />
+      {{ snackbarText01 }}
+      <template #actions>
+        <v-btn
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar01 = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 01-->
+    <!-- 토스트 팝업 02 -->
+    <v-snackbar
+      v-model="snackbar02"
+      contained
+      content-class="toast-pop"
+    >
+      <v-icon
+        start
+        size="24"
+        icon="custom:alert"
+      />
+      {{ snackbarText02 }}
+      <template #actions>
+        <v-btn
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar02 = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 02-->
+    <!-- 토스트 팝업 03 -->
+    <v-snackbar
+      v-model="snackbar03"
+      contained
+      content-class="toast-pop__error"
+    >
+      <v-icon
+        start
+        size="24"
+        icon="custom:alert-error"
+      />
+      {{ snackbarText03 }}
+      <template #actions>
+        <v-btn
+          icon="custom:close"
+          density="comfortable"
+          @click="snackbar03 = false"
+        />
+      </template>
+    </v-snackbar>
+    <!-- // 토스트 팝업 02-->
+    <v-btn
       v-for="popup in popups"
       :key="popup.name"
       color="primary"
@@ -89,4 +171,24 @@ const popupVisible = ref({
 const popOpen = (name) => {
   popupVisible.value[name] = true;
 };
+
+
+const snackbar01 = ref(false);
+const snackbarText01 = ref('등록이 완료되었습니다.');
+const snackbarOpen01 = () => {
+  snackbar01.value=true
+    return;
+}
+const snackbar02 = ref(false);
+const snackbarText02 = ref('태그는 10개까지 추가 가능합니다. 추가한 태그를 확인하고 다시 진행해 주세요.');
+const snackbarOpen02 = () => {
+  snackbar02.value=true
+    return;
+}
+const snackbar03 = ref(false);
+const snackbarText03 = ref('제한된 크기 10MB가 초과되어, 업로드에 실패하였습니다.');
+const snackbarOpen03 = () => {
+  snackbar03.value=true
+    return;
+}
 </script>
