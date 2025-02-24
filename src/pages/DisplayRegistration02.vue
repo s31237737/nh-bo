@@ -337,5 +337,5 @@ const isSwitch = ref(false);
 const select = ref("앱 추천");
 const select2 = ref("이미지");
 
-const dateRange = ref([]);
+const dateRange = ref(['2025.02.01', '2025.02.01']);
 </script>
