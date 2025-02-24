@@ -185,6 +185,7 @@ export default createVuetify({
       nextIcon: "custom:arrow-right",
       prevIcon: "custom:arrow-left",
       hideDetails: true,
+      placeholder: "YYYY.MM.DD"
     },
     VCheckbox: {
       baseColor: "#c2c2c2",
