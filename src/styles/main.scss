@@ -14,12 +14,17 @@ body {
   height: calc(100vh - 80px);
 }
 
-ul, li {list-style: none;}
+ul,
+li {
+  list-style: none;
+}
 b,
 strong {
   font-weight: 600;
 }
-em {font-style: normal;}
+em {
+  font-style: normal;
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
