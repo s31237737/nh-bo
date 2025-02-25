@@ -137,13 +137,7 @@ const dataTableheaders = [
   { title: "직원명", key: "userName", sortable: false },
   { title: "사무소명", key: "officeName", sortable: false, width: "150px" },
   { title: "사용상태", key: "useStatus", sortable: false, width: "150px" },
-  { title: "사용기간", key: "useTerm", sortable: false, width: "230px" },
-  {
-    title: "신청날짜",
-    key: "applicationDate",
-    sortable: false,
-    width: "130px",
-  },
+  { title: "사용기간", key: "useTerm", sortable: false, width: "250px" },
 ];
 
 const dataTableItem = ref([
