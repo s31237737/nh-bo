@@ -147,7 +147,7 @@ const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "등록자", key: "registrant", sortable: false, width: '150px' },
   { title: "제목", key: "appName", sortable: false, },
-  { title: "파일", key: "file", sortable: false, width: '76px'},
+  { title: "파일", key: "file", sortable: false, width: '76px', align: 'center'},
   { title: "고정여부", key: "appType", sortable: false, width: '110px'},
   { title: "공개여부", key: "appType", sortable: false, width: '110px'},
   { title: "메인노출여부", key: "status", sortable: false, width: '110px'},
