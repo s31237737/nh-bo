@@ -68,7 +68,7 @@ const menuItems = ref([
       { title: "Q&A", to: "Qna" },
       { title: "앱 가이드", to: "AppGuide" },
       { title: "커뮤니티", to: "Community" },
-      { title: "불편신고", to: "Complaint" },
+      { title: "불편신고", to: "Complain" },
     ],
     submenuProps: { value: "board" },
   },
