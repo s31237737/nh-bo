@@ -7,12 +7,12 @@
         <v-select
           v-model="select01"
           label="유형"
-          :items="['전체', '공개', '비공개']"
+          :items="['전체', '앱', '업스토어', '기타']"
         />
 
         <v-select
           v-model="select02"
-          label="답변상태"
+          label="답변상태 여부"
           :items="['전체', '미답변', '답변완료']"
         />
 
@@ -63,6 +63,14 @@
             </div>
           </div>
           <div class="btns">
+            <v-btn
+              size="large"
+              color="tertiary"
+              variant="outlined"
+              prepend-icon="custom:download"
+            >
+              엑셀 다운로드
+            </v-btn>
             <v-btn
               size="large"
               color="warning"
@@ -141,8 +149,7 @@ const dataTableheaders = [
   { title: "제목", key: "appName", sortable: false, },
   { title: "유형", key: "appType", sortable: false, width: '110px'},
   { title: "등록자", key: "registrant", sortable: false, width: '150px' },
-  { title: "공개여부", key: "status", sortable: false, width: '110px'},
-  { title: "답변상태", key: "answer", sortable: false, width: '110px'},
+  { title: "답변상태", key: "answer", sortable: false, width: '150px'},
   { title: "등록일", key: "createdDate", sortable: false, width: '150px'},
 ];
 
@@ -151,7 +158,7 @@ const dataTableItem = ref([
     id: 1,
     appCode: "APP001",
     appName: "테스트 앱 1",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "홍길동",
@@ -163,7 +170,7 @@ const dataTableItem = ref([
     id: 2,
     appCode: "APP002",
     appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "김철수",
@@ -175,7 +182,7 @@ const dataTableItem = ref([
     id: 3,
     appCode: "APP003",
     appName: "앱3",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "이민수",
@@ -187,7 +194,7 @@ const dataTableItem = ref([
     id: 4,
     appCode: "APP004",
     appName: "앱4",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "박지은",
@@ -199,7 +206,7 @@ const dataTableItem = ref([
     id: 5,
     appCode: "APP005",
     appName: "앱5",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "최영희",
@@ -211,7 +218,7 @@ const dataTableItem = ref([
     id: 6,
     appCode: "APP006",
     appName: "앱6",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "정호준",
@@ -223,7 +230,7 @@ const dataTableItem = ref([
     id: 7,
     appCode: "APP007",
     appName: "앱7",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "홍길동",
@@ -235,7 +242,7 @@ const dataTableItem = ref([
     id: 8,
     appCode: "APP008",
     appName: "앱8",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "김철수",
@@ -247,7 +254,7 @@ const dataTableItem = ref([
     id: 9,
     appCode: "APP009",
     appName: "앱9",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "이민수",
@@ -259,7 +266,7 @@ const dataTableItem = ref([
     id: 10,
     appCode: "APP010",
     appName: "앱10",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "박지은",
@@ -271,7 +278,7 @@ const dataTableItem = ref([
     id: 11,
     appCode: "APP011",
     appName: "앱11",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "최영희",
@@ -283,7 +290,7 @@ const dataTableItem = ref([
     id: 12,
     appCode: "APP012",
     appName: "앱12",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "정호준",
@@ -295,7 +302,7 @@ const dataTableItem = ref([
     id: 13,
     appCode: "APP013",
     appName: "앱13",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "홍길동",
@@ -307,7 +314,7 @@ const dataTableItem = ref([
     id: 14,
     appCode: "APP014",
     appName: "앱14",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "김철수",
@@ -319,7 +326,7 @@ const dataTableItem = ref([
     id: 15,
     appCode: "APP015",
     appName: "앱15",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "이민수",
@@ -331,7 +338,7 @@ const dataTableItem = ref([
     id: 16,
     appCode: "APP016",
     appName: "앱16",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "박지은",
@@ -343,7 +350,7 @@ const dataTableItem = ref([
     id: 17,
     appCode: "APP017",
     appName: "앱17",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "최영희",
@@ -355,7 +362,7 @@ const dataTableItem = ref([
     id: 18,
     appCode: "APP018",
     appName: "앱18",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "정호준",
@@ -367,7 +374,7 @@ const dataTableItem = ref([
     id: 19,
     appCode: "APP019",
     appName: "앱19",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "홍길동",
@@ -379,7 +386,7 @@ const dataTableItem = ref([
     id: 20,
     appCode: "APP020",
     appName: "앱20",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "김철수",
@@ -391,7 +398,7 @@ const dataTableItem = ref([
     id: 21,
     appCode: "APP021",
     appName: "앱21",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "이민수",
@@ -403,7 +410,7 @@ const dataTableItem = ref([
     id: 22,
     appCode: "APP022",
     appName: "앱22",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "박지은",
@@ -415,7 +422,7 @@ const dataTableItem = ref([
     id: 23,
     appCode: "APP023",
     appName: "앱23",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "최영희",
@@ -427,7 +434,7 @@ const dataTableItem = ref([
     id: 24,
     appCode: "APP024",
     appName: "앱24",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "정호준",
@@ -439,7 +446,7 @@ const dataTableItem = ref([
     id: 25,
     appCode: "APP025",
     appName: "앱25",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "홍길동",
@@ -451,7 +458,7 @@ const dataTableItem = ref([
     id: 26,
     appCode: "APP026",
     appName: "앱26",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "김철수",
@@ -463,7 +470,7 @@ const dataTableItem = ref([
     id: 27,
     appCode: "APP027",
     appName: "앱27",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "이민수",
@@ -475,7 +482,7 @@ const dataTableItem = ref([
     id: 28,
     appCode: "APP028",
     appName: "앱28",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "박지은",
@@ -487,7 +494,7 @@ const dataTableItem = ref([
     id: 29,
     appCode: "APP029",
     appName: "앱29",
-    appType: "고정",
+    appType: "앱",
     status: "노출",
     answer: "답변완료",
     registrant: "최영희",
@@ -499,7 +506,7 @@ const dataTableItem = ref([
     id: 30,
     appCode: "APP030",
     appName: "앱30",
-    appType: "고정",
+    appType: "앱",
     status: "미노출",
     answer: "미답변",
     registrant: "정호준",
