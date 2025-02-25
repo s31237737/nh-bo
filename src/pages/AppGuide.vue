@@ -148,7 +148,7 @@ const pageSort = ref([
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push('NoticeDetails');
+  router.push('AppGuideDetails');
   console.log("Clicked item: ", row.item);
 }
 
