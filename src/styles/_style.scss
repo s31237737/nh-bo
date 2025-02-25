@@ -505,6 +505,7 @@ body {
         }
       }
     }
+    & + .file-list {margin-top: 12px;}
   }
   .upload-info {
     margin-top: 8px;
@@ -517,7 +518,7 @@ body {
     }
   }
 
-  .download-list {
+  .file-list {
     display: inline-flex;
     flex-direction: column;
     gap: 8px;
