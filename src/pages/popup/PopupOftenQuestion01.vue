@@ -160,7 +160,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "업스토어",
     release: "공개",
-    registrationDate: "25.02.01",
+    registrationDate: "2025.02.01",
   },
   {
     id: 2,
@@ -169,7 +169,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "공개",
-    registrationDate: "25.02.09",
+    registrationDate: "2025.02.09",
   },
   {
     id: 3,
@@ -178,7 +178,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 4,
@@ -187,7 +187,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 5,
@@ -196,7 +196,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 6,
@@ -205,7 +205,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 3,
@@ -214,7 +214,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 7,
@@ -223,7 +223,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 8,
@@ -232,7 +232,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 9,
@@ -241,7 +241,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
   {
     id: 10,
@@ -250,7 +250,7 @@ const dataTableItem = ref([
       "자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. 자주 묻는 질문 제목입니다. ",
     type: "앱",
     release: "비공개",
-    registrationDate: "25.02.10",
+    registrationDate: "2025.02.10",
   },
 ]);
 </script>
