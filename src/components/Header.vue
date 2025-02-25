@@ -44,10 +44,10 @@
 
           <v-card-text>
             <p class="text-2">
-              로그인 연장을 원하지 않으실 경우<br>자동 로그아웃 됩니다.
+              $60$초 후 자동 로그아웃 됩니다.<br>계속 사용하려면 로그인을 연장해주세요.
             </p>
             <p class="text-1-md mt-5">
-              남은 시간 : 60초
+              남은 시간 : $60$초
             </p>
           </v-card-text>
           <v-card-actions>
