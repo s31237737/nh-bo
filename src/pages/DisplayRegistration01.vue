@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 등록"
-    prev-link="/DisplayDetails01"
+    prev-link="DisplayDetails01"
   />
   <div class="page-contents">
     <!-- 콘텐츠 유형 : 앱추천 -->
@@ -324,5 +324,5 @@ const isSwitch = ref(false);
 const select = ref("앱 추천");
 const select2 = ref("이미지");
 
-const dateRange = ref(['2025.02.01', '2025.02.01']);
+const dateRange = ref([new Date(), new Date()]);
 </script>
