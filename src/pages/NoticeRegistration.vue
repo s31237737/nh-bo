@@ -70,8 +70,6 @@
               v-model="files"
               placeholder="글제목, 등록자를 검색해주세요."
               multiple
-              persistent-hint
-              hint="*첨부 가능 최대 용량은 100MB, 5개 까지 업로드 가능합니다."
             >
               <template #append-inner>
                 <v-btn
@@ -82,22 +80,26 @@
               </template>
             </v-file-input>
             <!-- 첨부된 파일 목록 표시 -->
-            <v-list v-if="files.length">
-              <v-list-item
+            <div class="upload-guide">
+              <p>*첨부 가능 최대 용량은 100MB, 5개 까지 업로드 가능합니다.</p>
+            </div>
+            <ul
+              v-if="files.length"
+              class="file-list"
+            >
+              <li
                 v-for="(file, index) in files"
                 :key="index"
               >
-                <v-list-item-title>{{ file.name }}</v-list-item-title>
-                <v-list-item-action>
-                  <v-btn
-                    icon
-                    @click="removeFile(index)"
-                  >
-                    <v-icon>mdi-delete</v-icon>
-                  </v-btn>
-                </v-list-item-action>
-              </v-list-item>
-            </v-list>
+                <v-icon icon="custom:file" />
+                <span>{{ file.name }}</span>
+                <v-btn
+                  class="icon-md"
+                  icon="custom:close"
+                  @click="removeFile(index)"
+                />
+              </li>
+            </ul>
           </td>
         </tr>
       </tbody>
