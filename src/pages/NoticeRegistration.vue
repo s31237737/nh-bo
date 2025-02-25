@@ -133,6 +133,14 @@
     >
       취소
     </v-btn>
+    <!-- <v-btn
+      color="tertiary"
+      size="large"
+      variant="outlined"
+      prepend-icon="custom:edit"
+    >
+      수정
+    </v-btn> -->
     <v-btn
       color="primary"
       size="large"
@@ -158,7 +166,6 @@ const snackbarOpen = () => {
 }
 
 const files = ref([]);
-
 const removeFile = (index) => {
   files.value.splice(index, 1);
 };
