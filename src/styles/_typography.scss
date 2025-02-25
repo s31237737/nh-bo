@@ -1,5 +1,5 @@
 @use "variables" as *;
-$font-family: 'Pretendard';
+$font-family: "Pretendard";
 
 @mixin typography($size, $weight, $line-height) {
   font-size: $size !important;
