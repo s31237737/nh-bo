@@ -14,7 +14,7 @@
 
         <v-select
           v-model="select02"
-          label="상태"
+          label="공개 여부"
           :items="['전체','공개','비공개']"
         />
 
