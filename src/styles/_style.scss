@@ -469,7 +469,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #ddd;
+      border: 1px solid $border-subtle;
       border-radius: 8px;
       overflow: hidden;
       background-size: cover;
@@ -488,9 +488,9 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #ccc;
+      border: 1px solid $border-subtle;
       cursor: pointer;
-      background: #f9f9f9;
+      background: $bg-default;
     }
     &.type02 {
       .image-box {

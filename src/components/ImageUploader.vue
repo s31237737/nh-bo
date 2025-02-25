@@ -99,7 +99,7 @@
       class="image-box add-button"
       @click="triggerFileInput"
     >
-      <v-icon size="40">
+      <v-icon size="24">
         custom:plus
       </v-icon>
       <input

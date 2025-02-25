@@ -49,7 +49,7 @@ const router = useRouter();
 
 const handleClick = (event, row) => {
   const itemId = row.item.id; // 클릭한 항목의 ID 가져오기
-  router.push(`DisplayDetails0${itemId}`)
+  router.push(`Display0${itemId}`)
   console.log("Clicked item: ", row.item);
 };
 
