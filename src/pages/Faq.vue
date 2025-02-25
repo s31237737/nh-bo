@@ -26,7 +26,7 @@
         <v-text-field
           v-model="form"
           class="search-inp"
-          placeholder="전체 글제목, 등록자를 검색해주세요."
+          placeholder="글제목, 등록자를 검색해주세요."
           append-inner-icon="custom:search"
           @click:append-inner="onAppendClick"
         />
@@ -74,7 +74,7 @@
             <v-btn
               size="large"
               color="primary"
-              to="AppRegistration"
+              to="FaqRegistration"
             >
               등록
             </v-btn>
@@ -117,7 +117,6 @@ const onAppendClick = () => {
 // 데이터 테이블
 const page = ref(1);
 const itemsPerPage = ref(10);
-const selectDate = ref('최신순');
 const checked = ref([]);
 
 const pageSort = ref([
