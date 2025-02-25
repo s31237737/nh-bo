@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 등록"
-    prev-link="/DisplayDetails01"
+    prev-link="DisplayDetails01"
   />
   <div class="page-contents">
     <v-table-row>
@@ -160,5 +160,5 @@ const updateAppIconList = (newImages) => {
 // 사용 상태
 const isSwitch = ref(false);
 
-const dateRange = ref(['2025.02.01', '2025.02.01']);
+const dateRange = ref([new Date(), new Date()]);
 </script>
