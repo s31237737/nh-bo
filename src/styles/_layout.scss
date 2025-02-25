@@ -116,8 +116,12 @@ body {
         @extend .title-2;
         border-bottom: 1px solid $border-subtle;
         .v-btn {
+          margin-left: auto;
           padding: 0;
           border-radius: 50%;
+        }
+        &:has(:not(span)) {
+          border-bottom-color: transparent;
         }
       }
       .v-card-text {
@@ -143,7 +147,7 @@ body {
               border-radius: 4px 0 0 0;
             }
             &:last-child {
-              border-radius: 0 4px 0  0;
+              border-radius: 0 4px 0 0;
             }
           }
           th:first-child,
@@ -159,7 +163,7 @@ body {
               border-radius: 0 0 0 4px;
             }
             td:last-child {
-              border-radius: 0 0 4px  0;
+              border-radius: 0 0 4px 0;
             }
           }
         }
@@ -270,13 +274,14 @@ body {
       th {
         text-align: center !important;
         border-bottom: thin solid $border-subtle !important;
-        &.th-sub {background: #f8f8f8 !important;}
+        &.th-sub {
+          background: #f8f8f8 !important;
+        }
       }
       th,
       td {
         padding: 0.75rem !important;
       }
-
     }
     &.v-data-table {
       margin-top: 50px;
