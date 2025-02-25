@@ -74,7 +74,7 @@
           </th>
           <td colspan="7">
             <ul
-              class="download-list"
+              class="file-list"
             >
               <li
                 v-for="(file, index) in files"
@@ -110,7 +110,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      to=""
+      to="NoticeRegistration"
     >
       수정
     </v-btn>
