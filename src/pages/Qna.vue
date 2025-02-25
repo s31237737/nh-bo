@@ -128,7 +128,11 @@ const pageSort = ref([
 const router = useRouter();
 
 const handleClick = (event, row) => {
-  router.push('QnaDetails');
+  if (row.item.answer === '미답변') {
+    router.push('QnaRegistration');
+  } else {
+    router.push('QnaDetails');
+  }
   console.log("Clicked item: ", row.item);
 }
 
