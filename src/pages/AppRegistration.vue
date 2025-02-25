@@ -354,7 +354,7 @@
       <tbody>
         <tr>
           <th style="width: 10%;">
-            앱 상세정보  <i class="required" />
+            앱 상세정보 <i class="required" />
           </th>
           <td>
             <v-sheet
