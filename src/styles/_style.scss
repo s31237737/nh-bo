@@ -361,8 +361,14 @@ body {
   .tit-wrap {
     margin: 50px 0 16px;
     display: flex;
+    justify-content: space-between;
+
     .text-2 {
       margin-top: 6px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
     }
     .v-btn {
       margin-left: auto;
