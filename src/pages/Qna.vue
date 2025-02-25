@@ -72,13 +72,6 @@
             >
               삭제
             </v-btn>
-            <v-btn
-              size="large"
-              color="primary"
-              to="QnaRegistration"
-            >
-              등록
-            </v-btn>
           </div>
         </div>
       </template>
