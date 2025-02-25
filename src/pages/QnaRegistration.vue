@@ -167,11 +167,11 @@
               <p>*첨부 가능 최대 용량은 100MB, 5개 까지 업로드 가능합니다.</p>
             </div>
             <ul
-              v-if="files.length"
+              v-if="files02.length"
               class="file-list"
             >
               <li
-                v-for="(file, index) in files"
+                v-for="(file, index) in files02"
                 :key="index"
               >
                 <v-icon icon="custom:file" />

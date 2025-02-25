@@ -1,6 +1,6 @@
 <template>
   <PageHeader
-    title="Q&A 답변 등록"
+    title="불편신고 답변 등록"
     prev-link="Complain"
   />
   <div class="page-contents">
@@ -120,7 +120,7 @@
           </th>
           <td>
             <v-file-input
-              v-model="files02"
+              v-model="files"
               placeholder="글제목, 등록자를 검색해주세요."
               multiple
             >
@@ -194,18 +194,8 @@
 <script setup>
 import { ref } from 'vue';
 
-const files = ref([
-  { name: "C:/Download/Filename.png", size: "10.3MB", url: "#" },
-  { name: "C:/Download/Filename123.png", size: "10.3MB", url: "#" },
-  { name: "C:/Download/Filename456.png", size: "10.3MB", url: "#" },
-]);
-
-const downloadFile = (files) => {
-  console.log(files.name)
-};
-
-const files02 = ref([]);
+const files = ref([]);
 const removeFile = (index) => {
-  files02.value.splice(index, 1);
+  files.value.splice(index, 1);
 };
 </script>

@@ -102,6 +102,7 @@
           size="large"
           variant="outlined"
           prepend-icon="custom:edit"
+          to="ComplainRegistration"
         >
           답변 수정
         </v-btn>

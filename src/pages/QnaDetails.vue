@@ -132,6 +132,7 @@
           size="large"
           variant="outlined"
           prepend-icon="custom:edit"
+          to="QnaRegistration"
         >
           답변 수정
         </v-btn>
