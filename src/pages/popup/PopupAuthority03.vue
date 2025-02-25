@@ -49,7 +49,7 @@
           </template>
 
           <template #item.authority="{ item }">
-            <div class="d-flex ga-1">
+            <div class="ml-m10">
               <v-chip
                 color="secondary"
                 variant="flat"

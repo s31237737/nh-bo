@@ -24,7 +24,7 @@
               <td>
                 <v-select
                   v-model="select"
-                  :items="['일반 관리자', '슈퍼관리자', '비즈니스관리자']"
+                  :items="['슈퍼 관리자', '운영 관리자', '일반 관리자']"
                 />
               </td>
             </tr>
@@ -38,7 +38,7 @@
             </tr>
             <tr>
               <th style="width: 20%;">
-                권한 그룹 코드 <i class="required" />
+                권한 그룹 코드
               </th>
               <td>AG01</td>
             </tr>
@@ -167,7 +167,7 @@ defineProps({
 
 const emit = defineEmits(['update:modelValue']);
 
-const select = ref('일반 관리자');
+const select = ref('슈퍼 관리자');
 const chkOptions1 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
 const chkOptions2 = ref(['조회', '추가', '승인', '알림송신']);
 const chkOptions3 = ref(['조회', '등록', '수정', '삭제', '알림송신']);
