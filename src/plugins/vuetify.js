@@ -206,7 +206,12 @@ export default createVuetify({
     },
     VFileInput: {
       variant: "outlined",
+      hideDetails: true,
       prependIcon: "",
+      clearable: false,
+      VField: {
+        style: [{ fontSize: "0" }],
+      },
     },
     VChip: {
       elevation: "0",
