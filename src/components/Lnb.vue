@@ -72,6 +72,7 @@ const menuItems = ref([
     ],
     submenuProps: { value: "board" },
   },
+  { to: "Terms", icon: "custom:terms", title: "약관 관리" },
   { to: "", icon: "custom:channel", title: "업스토어 채널 관리" },
   {
     title: "모니터링",
@@ -82,7 +83,6 @@ const menuItems = ref([
     ],
     submenuProps: { value: "monitoring" },
   },
-  { to: "Terms", icon: "custom:terms", title: "약관 관리" },
 ]);
 
 </script>
