@@ -256,11 +256,11 @@
               readonly
             />
             <div class="upload-info">
-              <p>910px X 440px</p>
-              <p>910px X 440px</p>
-              <p>910px X 440px</p>
-              <p>910px X 440px</p>
-              <p>910px X 440px</p>
+              <p>915px X 515px</p>
+              <p>915px X 515px</p>
+              <p>915px X 515px</p>
+              <p>915px X 515px</p>
+              <p>915px X 515px</p>
             </div>
           </td>
         </tr>
