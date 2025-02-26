@@ -119,7 +119,7 @@
       color="tertiary"
       size="large"
       variant="outlined"
-      prepend-icon="custom:edit"
+      prepend-icon="custom:refresh"
     >
       초기화
     </v-btn>
