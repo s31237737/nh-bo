@@ -91,6 +91,11 @@ body {
       > .v-btn {
         z-index: 1;
         --v-btn-height: 24px;
+        padding: 0 8px;
+        font-weight: 700 !important;
+        .v-icon {
+          font-size: 1rem;
+        }
       }
       &__month {
         position: absolute;
