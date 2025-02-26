@@ -130,12 +130,12 @@
         </tr>
         <tr>
           <th style="width: 10%">
-            노출 기간
+            노출 기간 <i class="required" />
           </th>
           <td colspan="4">
             <DateRange
               v-model="dateRange"
-              style="width: 640px"
+              style="width: 340px"
             />
           </td>
         </tr>
@@ -234,7 +234,7 @@
           <td>
             <DateRange
               v-model="dateRange"
-              style="width: 640px"
+              style="width: 340px"
             />
           </td>
         </tr>
