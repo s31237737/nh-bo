@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 등록"
-    prev-link="DisplayDetails01"
+    prev-link="Display02"
   />
   <div class="page-contents">
     <v-table-row>
