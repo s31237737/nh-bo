@@ -81,6 +81,9 @@ export default createVuetify({
       width: "253",
       permanent: true,
       class: "lnb",
+      VList: {
+        openStrategy: "single",
+      },
       VListItem: {
         minHeight: "52",
       },
