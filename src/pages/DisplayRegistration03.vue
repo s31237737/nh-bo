@@ -40,7 +40,7 @@
           <th style="width: 10%">
             바로가기 링크
           </th>
-          <td style="width: 80%">
+          <td style="width: 90%">
             <v-text-field
               placeholder="바로가기 링크를 입력해주세요."
               style="width: 640px"
