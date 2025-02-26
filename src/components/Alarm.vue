@@ -140,7 +140,7 @@ const hasNotification = ref(true); // 알림이 있는지 여부
 const isSetting= ref(false); // 설정 버튼 클릭시
 
 const activeTab = ref('store'); // 현재 활성화된 탭
-const emailSwitch = ref(false); // 이메일 송신 스위치
+const emailSwitch = ref(true); // 이메일 송신 스위치
 
 const notifications = ref([
   {

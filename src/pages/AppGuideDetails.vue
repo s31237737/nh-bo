@@ -114,6 +114,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
+      to="AppGuideRegistration"
     >
       수정
     </v-btn>
