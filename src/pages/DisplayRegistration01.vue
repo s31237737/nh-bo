@@ -4,7 +4,6 @@
     prev-link="DisplayDetails01"
   />
   <div class="page-contents">
-    <!-- 콘텐츠 유형 : 앱추천 -->
     <v-table-row>
       <tbody>
         <tr>
@@ -208,7 +207,7 @@
             </th>
             <td>
               <v-text-field
-                placeholder="앱 바로가기 링크를 입력해주세요."
+                placeholder="바로가기 링크를 입력해주세요."
                 style="width: 640px"
               />
             </td>
