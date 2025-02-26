@@ -96,7 +96,7 @@
                   class="d-flex align-center justify-center"
                   color="secondary"
                   width="100%"
-                  height="250"
+                  height="200"
                 >
                   에디터 영역
                 </v-sheet>
