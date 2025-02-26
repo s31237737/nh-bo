@@ -81,7 +81,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      to="NoticeRegistration"
+      to="TermsRegistration"
     >
       수정
     </v-btn>
