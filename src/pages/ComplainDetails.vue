@@ -167,6 +167,7 @@
         <div class="comment">
           <v-chip
             v-if="item.hasReply"
+            density="compact"
             label
           >
             <v-icon
