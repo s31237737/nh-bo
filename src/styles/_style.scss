@@ -278,6 +278,12 @@ body {
     }
   }
 
+  .v-radio-group {
+    .v-selection-control-group--inline {
+      gap: 12px;
+    }
+  }
+
   .v-chip {
     &.v-chip--density-compact {
       padding: 0 10px;
@@ -514,7 +520,9 @@ body {
         }
       }
     }
-    & + .file-list {margin-top: 12px;}
+    & + .file-list {
+      margin-top: 12px;
+    }
   }
   .upload-info {
     margin-top: 8px;
@@ -541,6 +549,22 @@ body {
       em {
         color: $text-tertiary;
       }
+    }
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    .v-chip {
+      min-width: 0;
+      @extend .text-2-md;
+      color: $text-secondary;
+    }
+    p {
+      flex: 1;
+      @include line-clamp(3);
     }
   }
 }
