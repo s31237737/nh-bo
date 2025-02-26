@@ -44,7 +44,7 @@
           <th>
             앱
           </th>
-          <td>
+          <td colspan="3">
             <div class="d-flex align-center ga-3">
               <v-btn color="primary">
                 앱 검색
