@@ -12,7 +12,6 @@
             콘텐츠 유형
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             앱 추천
@@ -23,7 +22,6 @@
             콘텐츠 제목
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             육묘대장
@@ -34,7 +32,6 @@
             배너 제목
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             육묘대장
@@ -45,7 +42,6 @@
             간단 설명
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             간편하고 편리한 '육묘대장'으로 손쉽게 관리하실 수 있습니다.
@@ -56,7 +52,6 @@
             이미지
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             <ImageUploader
@@ -102,7 +97,6 @@
             바로가기 링크
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             <a
@@ -116,7 +110,6 @@
             노출 기간
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             2025.01.21 ~ 2025.01.30
@@ -127,7 +120,6 @@
             사용 상태
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             미사용
