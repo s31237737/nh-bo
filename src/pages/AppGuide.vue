@@ -78,7 +78,7 @@
             <v-btn
               size="large"
               color="primary"
-              to="NoticeRegistration"
+              to="AppGuideRegistration"
             >
               등록
             </v-btn>
