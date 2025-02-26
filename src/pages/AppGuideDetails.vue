@@ -41,8 +41,8 @@
           </td>
         </tr>
         <tr>
-           <th style="width: 10%">
-            첨부파일
+          <th style="width: 10%">
+            사용가이드<br>첨부파일
           </th>
           <td colspan="7">
             <ul
