@@ -16,37 +16,36 @@
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             콘텐츠 제목
           </th>
-          <td style="width: 90%">
+          <td>
             육묘대장
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             배너 제목
           </th>
-          <td style="width: 90%">
+          <td>
             육묘대장
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             간단 설명
           </th>
           <td
-            style="width: 90%"
             colspan="2"
           >
             간편하고 편리한 '육묘대장'으로 손쉽게 관리하실 수 있습니다.
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             이미지
           </th>
-          <td style="width: 90%">
+          <td>
             <ImageUploader
               class="type02"
               :images="uploaderList"
@@ -58,10 +57,10 @@
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             바로가기 링크
           </th>
-          <td style="width: 90%">
+          <td>
             <a
               href="https://nonghyup.com"
               target="_blank"
@@ -69,18 +68,18 @@
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             노출 기간
           </th>
-          <td style="width: 90%">
+          <td>
             2025.01.21 ~ 2025.01.30
           </td>
         </tr>
         <tr>
-          <th style="width: 10%">
+          <th>
             사용 상태
           </th>
-          <td style="width: 90%">
+          <td>
             미사용
           </td>
         </tr>
