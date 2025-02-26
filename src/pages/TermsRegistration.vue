@@ -54,40 +54,55 @@
             내용 <i class="required" />
           </th>
           <td colspan="3">
-            <v-sheet
-              height="300"
-              class="overflow-auto"
+            <div
+              style="height: 400px;"
+              class="terms-add-box"
             >
-              <div class="d-flex justify-end">
+              <div class="terms-add">
                 <v-btn
                   color="primary"
                   size="large"
                   prepend-icon="custom:plus"
+                  @click="addSection"
                 >
                   섹션 추가
                 </v-btn>
               </div>
-              <v-text-field>
-                <template #append>
-                  <v-btn
-                    color="tertiary"
-                    size="large"
-                    prepend-icon="custom:minus"
-                    variant="outlined"
-                  >
-                    섹션 삭제
-                  </v-btn>
-                </template>
-              </v-text-field>
-              <v-sheet
-                class="d-flex align-center justify-center"
-                color="secondary"
-                width="100%"
-                height="250"
+              <!-- 섹션 리스트 -->
+              <div
+                v-for="(section, index) in sections"
+                :key="section.id"
+                class="terms-section"
               >
-                에디터 영역
-              </v-sheet>
-            </v-sheet>
+                <v-text-field
+                  v-model="section.title"
+                  placeholder="섹션명을 입력해주세요."
+                >
+                  <template #append>
+                    <v-btn
+                      color="tertiary"
+                      size="large"
+                      prepend-icon="custom:minus"
+                      variant="outlined"
+                      :disabled="sections.length === 1"
+                      @click="removeSection(section.id)"
+                    >
+                      섹션 삭제
+                    </v-btn>
+                  </template>
+                </v-text-field>
+
+                <v-sheet
+                  class="d-flex align-center justify-center"
+                  color="secondary"
+                  width="100%"
+                  height="250"
+                >
+                  에디터 영역
+                </v-sheet>
+                <v-divider v-if="index < sections.length - 1" />
+              </div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -122,7 +137,22 @@
 import { ref } from "vue";
 
 // 사용 상태
-const isSwitch = ref(false);
+const isSwitch = ref(true);
 
 const dateRange = ref([new Date(), new Date()]);
+
+const sections = ref([{ id: 1, title: "" }]);
+
+const addSection = () => {
+  sections.value.push({
+    id: Date.now(),
+    title: "",
+  });
+};
+
+const removeSection = (id) => {
+  if (sections.value.length > 1) {
+    sections.value = sections.value.filter(section => section.id !== id);
+  }
+};
 </script>
