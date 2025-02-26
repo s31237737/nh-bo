@@ -167,6 +167,7 @@
         <div class="comment">
           <v-chip
             v-if="item.hasReply"
+            density="compact"
             label
           >
             <v-icon
@@ -176,7 +177,7 @@
             />
             답글
           </v-chip>
-          <p class="text-ellipsis3">
+          <p>
             {{ item.commentContent }}
           </p>
         </div>
@@ -262,8 +263,8 @@ const dataTableItem = [
     commentContent:
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
-    hasReply: true,
-    replyCount: 20,
+    hasReply: false,
+    replyCount: 3,
     likes: 999,
     status: "신고",
     createdDate: "2025.09.09 09:29",
@@ -273,8 +274,8 @@ const dataTableItem = [
     commentContent:
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~ 댓글 내용이 노출되는 영역입니다. 최대 3줄까지 표시되며 초과 시 닷(...) 처리됩니다. 댓글 내용이 노출되는 영역입니다. 최대 3줄까지 표시되며 초과 시 닷(...) 처리됩니다. 댓글 내용이 노출되는 영역입니다. 최대 3줄까지 표시되며 초과 시 닷(...) 처리됩니다.",
     registrant: "홍길동",
-    hasReply: false,
-    replyCount: 12,
+    hasReply: true,
+    replyCount: '',
     likes: 999,
     status: "삭제",
     createdDate: "2025.09.09 09:29",
@@ -284,8 +285,8 @@ const dataTableItem = [
     commentContent:
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
-    hasReply: true,
-    replyCount: 2,
+    hasReply: false,
+    replyCount: 12,
     likes: 999,
     status: "등록",
     createdDate: "2025.09.09 09:29",
@@ -307,7 +308,7 @@ const dataTableItem = [
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
     hasReply: true,
-    replyCount: 20,
+    replyCount: '',
     likes: 999,
     status: "삭제",
     createdDate: "2025.09.09 09:29",
@@ -328,8 +329,8 @@ const dataTableItem = [
     commentContent:
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
-    hasReply: true,
-    replyCount: 2,
+    hasReply: false,
+    replyCount: 12,
     likes: 999,
     status: "신고",
     createdDate: "2025.09.09 09:29",
@@ -350,8 +351,8 @@ const dataTableItem = [
     commentContent:
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
-    hasReply: true,
-    replyCount: 2,
+     hasReply: false,
+    replyCount: 12,
     likes: 999,
     status: "신고",
     createdDate: "2025.09.09 09:29",
@@ -373,7 +374,7 @@ const dataTableItem = [
       "너무 좋은 의견 주셔서 감사합니다. 저도 일일점검 앱을 사용하다보니 같은 문제로 고민이 되더라구요. 말씀하신 부분에 대한 기능이 개선되었으면 좋겠네요. 좋아요 누르고 갑니다~",
     registrant: "홍길동",
     hasReply: true,
-    replyCount: 2,
+    replyCount: '',
     likes: 999,
     status: "신고",
     createdDate: "2025.09.09 09:29",
