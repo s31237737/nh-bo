@@ -177,7 +177,7 @@
             />
             답글
           </v-chip>
-          <p class="text-ellipsis3">
+          <p>
             {{ item.commentContent }}
           </p>
         </div>
