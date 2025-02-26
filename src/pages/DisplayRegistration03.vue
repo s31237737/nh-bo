@@ -73,7 +73,7 @@
           >
             <DateRange
               v-model="dateRange"
-              style="width: 340px"
+              :width="340"
             />
           </td>
         </tr>

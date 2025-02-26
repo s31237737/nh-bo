@@ -6,6 +6,7 @@
       variant="outlined"
       :label="label"
       multiple="range"
+      :width="width"
       @update:model-value="updateDate"
     />
     <v-date-input
@@ -13,6 +14,7 @@
       :model-value="modelValue"
       variant="outlined"
       multiple="range"
+      :width="width"
       @update:model-value="updateDate"
     />
     <v-btn
@@ -33,6 +35,10 @@ defineProps({
   label: {
     type: String,
     default: '',
+  },
+   width: {
+    type: [Number, String],
+    default: '300',
   },
 });
 

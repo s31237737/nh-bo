@@ -133,7 +133,7 @@
             <td colspan="4">
               <DateRange
                 v-model="dateRange"
-                style="width: 340px"
+                :width="340"
               />
             </td>
           </tr>
@@ -217,7 +217,7 @@
             <td colspan="4">
               <DateRange
                 v-model="dateRange"
-                style="width: 340px"
+                :width="340"
               />
             </td>
           </tr>
