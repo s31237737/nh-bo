@@ -67,7 +67,7 @@
           <th>
             내용 <i class="required" />
           </th>
-          <td colspan="4">
+          <td colspan="3">
             <v-textarea
               placeholder="내용을 입력해주세요."
               :counter="1000"
