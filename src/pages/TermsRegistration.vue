@@ -55,7 +55,7 @@
           </th>
           <td colspan="3">
             <div
-              style="height: 400px;"
+              style="max-height: 400px;"
               class="terms-add-box"
             >
               <div class="terms-add">
