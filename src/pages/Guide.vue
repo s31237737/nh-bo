@@ -36,6 +36,7 @@
     <v-icon icon="custom:terms" />
     <v-icon icon="custom:warning" />
     <v-icon icon="custom:plus" />
+    <v-icon icon="custom:minus" />
     <v-icon icon="custom:file" />
     <v-icon icon="custom:download" />
     <v-icon icon="custom:play" />
