@@ -69,7 +69,7 @@
             style="width: 10%;"
             rowspan="2"
           >
-            영상
+            링크
           </th>
           <td colspan="3">
             <p class="d-flex ga-2">
