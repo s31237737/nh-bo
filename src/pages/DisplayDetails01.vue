@@ -5,7 +5,6 @@
   />
 
   <div class="page-contents">
-    <!-- 콘텐츠 유형 : 앱 추천 -->
     <v-table-row>
       <tbody>
         <tr>
