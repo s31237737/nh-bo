@@ -157,6 +157,14 @@ export default createVuetify({
       sortDescIcon: "custom:sort-desc",
       VCheckboxBtn: {
         baseColor: "#c2c2c2",
+        hideDetails: true,
+        falseIcon: "custom:checkbox-off",
+        trueIcon: "custom:checkbox-on",
+      },
+       VRadio: {
+        baseColor: "#c2c2c2",
+        falseIcon: "custom:radio-off",
+        trueIcon: "custom:radio-on",
       },
     },
     VSelect: {
