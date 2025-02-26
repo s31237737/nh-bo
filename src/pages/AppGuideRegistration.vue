@@ -49,7 +49,7 @@
           <td colspan="3">
             <v-file-input
               v-model="files"
-              placeholder="글제목, 등록자를 검색해주세요."
+              label="버튼을 클릭하여 파일을 첨부하거나 원하는 파일을 마우스로 끌어오세요."
               multiple
             >
               <template #append-inner>

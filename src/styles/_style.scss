@@ -148,6 +148,13 @@ body {
     }
   }
 
+  .v-file-input {
+    .v-field--active .v-label.v-field-label {visibility: unset;}
+    .v-field--variant-outlined .v-label.v-field-label--floating,
+    .v-field__input {font-size: 0;}
+    .v-field--active.v-field--variant-outlined .v-field__outline__notch::before {opacity: var(--v-field-border-opacity);}
+  }
+
   .search-wrap {
     margin-bottom: 50px;
     &:has(.v-form) {

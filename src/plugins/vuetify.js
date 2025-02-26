@@ -223,8 +223,9 @@ export default createVuetify({
       hideDetails: true,
       prependIcon: "",
       clearable: false,
+      dirty: true,
       VField: {
-        style: [{ fontSize: "0" }],
+        dirty: true
       },
     },
     VChip: {
