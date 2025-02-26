@@ -11,7 +11,7 @@
             콘텐츠 유형 <i class="required" />
           </th>
           <td
-            style="width: 90%"
+
             colspan="4"
           >
             <v-select
@@ -27,7 +27,6 @@
               콘텐츠 제목 <i class="required" />
             </th>
             <td
-              style="width: 90%"
               colspan="4"
             >
               <v-text-field
@@ -41,7 +40,6 @@
               배너 제목 <i class="required" />
             </th>
             <td
-              style="width: 90%"
               colspan="4"
             >
               <v-text-field
@@ -75,7 +73,7 @@
             >
               앱 검색
             </th>
-            <td style="width: 30%">
+            <td style="width: 35%">
               <v-btn color="primary">
                 앱 검색
               </v-btn>
@@ -88,7 +86,7 @@
             </th>
             <td
               rowspan="3"
-              style="width: 40%"
+              style="width: 35%"
             >
               <ImageUploader
                 :images="uploaderList"
@@ -156,7 +154,7 @@
             <th style="width: 10%">
               콘텐츠 제목
             </th>
-            <td style="width: 90%">
+            <td colspan="4">
               <v-text-field
                 placeholder="콘텐츠 제목을 입력해주세요."
                 style="width: 640px"
@@ -167,7 +165,7 @@
             <th style="width: 10%">
               배너 제목
             </th>
-            <td style="width: 90%">
+            <td colspan="4">
               <v-text-field
                 placeholder="배너 제목을 입력해주세요."
                 style="width: 640px"
@@ -178,7 +176,7 @@
             <th style="width: 10%">
               간단 설명
             </th>
-            <td>
+            <td colspan="4">
               <v-textarea
                 placeholder="간단 설명을 입력해주세요."
                 :counter="30"
@@ -190,7 +188,7 @@
             <th style="width: 10%">
               이미지 <i class="required" />
             </th>
-            <td style="width: 90%">
+            <td colspan="4">
               <ImageUploader
                 :images="appIconList"
                 @update:images="updateAppIconList"
@@ -205,7 +203,7 @@
             <th style="width: 10%">
               바로가기 링크
             </th>
-            <td>
+            <td colspan="4">
               <v-text-field
                 placeholder="바로가기 링크를 입력해주세요."
                 style="width: 640px"
@@ -216,7 +214,7 @@
             <th style="width: 10%">
               노출 기간 <i class="required" />
             </th>
-            <td>
+            <td colspan="4">
               <DateRange
                 v-model="dateRange"
                 style="width: 340px"
@@ -227,7 +225,7 @@
             <th style="width: 10%">
               사용 상태
             </th>
-            <td>
+            <td colspan="4">
               <v-switch
                 v-model="isSwitch02"
                 @change="snackbarOpen"
