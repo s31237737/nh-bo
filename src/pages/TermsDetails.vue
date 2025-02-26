@@ -49,17 +49,17 @@
           </th>
           <td colspan="3">
             <p>
-              Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text  Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text  Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
 
-              Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text  Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
-              Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text Notice Text<br>
+              Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text  Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
+              Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text Terms Text<br>
             </p>
           </td>
         </tr>
