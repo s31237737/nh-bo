@@ -80,7 +80,7 @@ const dataTableItem = ref([
     id: 3,
     code: "B03",
     name: "APPs 이미지 배너",
-    type: "APPs 이미지 배너(1240px X 5140px)",
+    type: "APPs 이미지 배너(1240px X 140px)",
     useStatus: "사용",
   },
 ]);
