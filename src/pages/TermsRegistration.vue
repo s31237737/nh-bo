@@ -54,11 +54,40 @@
             내용 <i class="required" />
           </th>
           <td colspan="3">
-            <v-textarea
-              placeholder="내용을 입력해주세요."
-              :counter="1000"
-              :persistent-counter="true"
-            />
+            <v-sheet
+              height="300"
+              class="overflow-auto"
+            >
+              <div class="d-flex justify-end">
+                <v-btn
+                  color="primary"
+                  size="large"
+                  prepend-icon="custom:plus"
+                >
+                  섹션 추가
+                </v-btn>
+              </div>
+              <v-text-field>
+                <template #append>
+                  <v-btn
+                    color="tertiary"
+                    size="large"
+                    prepend-icon="custom:minus"
+                    variant="outlined"
+                  >
+                    섹션 삭제
+                  </v-btn>
+                </template>
+              </v-text-field>
+              <v-sheet
+                class="d-flex align-center justify-center"
+                color="secondary"
+                width="100%"
+                height="250"
+              >
+                에디터 영역
+              </v-sheet>
+            </v-sheet>
           </td>
         </tr>
       </tbody>
