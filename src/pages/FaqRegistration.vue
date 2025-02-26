@@ -42,7 +42,7 @@
         </tr>
         <tr>
           <th>
-            앱 검색
+            앱
           </th>
           <td>
             <div class="d-flex align-center ga-3">
