@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="자주 묻는 질문 상세"
-    prev-link="Fap"
+    prev-link="Faq"
   />
 
   <div class="page-contents">
@@ -39,13 +39,13 @@
           <th>
             앱 검색
           </th>
-          <td>
+          <td colspan="3">
             육묘대장
           </td>
         </tr>
         <tr>
           <th>
-            질문 <i class="required" />
+            질문
           </th>
           <td colspan="3">
             texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
@@ -53,9 +53,9 @@
         </tr>
         <tr>
           <th>
-            내용 <i class="required" />
+            내용
           </th>
-          <td colspan="4">
+          <td colspan="3">
             <p>
               Notice Text Notice Text Notice Text Notice Text<br>
               Notice Text Notice Text Notice Text Notice Text  Notice Text<br>
@@ -89,7 +89,7 @@
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
-      to="NoticeRegistration"
+      to="FaqRegistration"
     >
       수정
     </v-btn>
