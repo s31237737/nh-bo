@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="콘텐츠 등록"
-    prev-link="DisplayDetails01"
+    prev-link="Display03"
   />
   <div class="page-contents">
     <v-table-row>
@@ -42,7 +42,7 @@
           </th>
           <td style="width: 80%">
             <v-text-field
-              placeholder="앱 바로가기 링크를 입력해주세요."
+              placeholder="바로가기 링크를 입력해주세요."
               style="width: 640px"
             />
           </td>
@@ -65,7 +65,7 @@
 
         <tr>
           <th style="width: 10%">
-            노출 기간
+            노출 기간 <i class="required" />
           </th>
           <td
             style="width: 80%"
@@ -73,7 +73,7 @@
           >
             <DateRange
               v-model="dateRange"
-              style="width: 640px"
+              style="width: 340px"
             />
           </td>
         </tr>
