@@ -39,6 +39,7 @@
     <v-icon icon="custom:file" />
     <v-icon icon="custom:download" />
     <v-icon icon="custom:play" />
+    <v-icon icon="custom:comment" />
   </div>
   <ImageUploader
     multiple
