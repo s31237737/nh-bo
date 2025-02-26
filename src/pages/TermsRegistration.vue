@@ -115,14 +115,14 @@
     >
       취소
     </v-btn>
-    <!-- <v-btn
+    <v-btn
       color="tertiary"
       size="large"
       variant="outlined"
       prepend-icon="custom:edit"
     >
-      수정
-    </v-btn> -->
+      초기화
+    </v-btn>
     <v-btn
       color="primary"
       size="large"
