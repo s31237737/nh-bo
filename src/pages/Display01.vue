@@ -152,8 +152,14 @@ const pageSort = ref([
 ]);
 
 const router = useRouter();
+
 const handleClick = (event, row) => {
-  router.push('DisplayDetails01');
+  if (row.item.contetnsType === '이미지') {
+    router.push('DisplayDetails01-img');
+  } else {
+    router.push('DisplayDetails01');
+  }
+
   console.log("Clicked item: ", row.item);
 }
 
