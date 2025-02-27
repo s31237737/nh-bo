@@ -155,7 +155,8 @@ const handleClick = (event, row) => {
 const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "등록자", key: "registrant", sortable: false, width: '150px' },
-  { title: "제목", key: "appName", sortable: false, },
+  { title: "제목", key: "appTit", sortable: false, },
+  { title: "앱이름", key: "appName", sortable: false, width: '120px',},
   { title: "사용가이드", key: "guide", sortable: false, width: '100px', align: 'center'},
   { title: "활용튜토리얼", key: "tutorial", sortable: false, width: '120px', align: 'center' },
   { title: "공개여부", key: "appType", sortable: false, width: '100px'},
@@ -166,7 +167,8 @@ const dataTableItem = ref([
   {
     id: 1,
     appCode: "APP001",
-    appName: "테스트 앱 1",
+    appTit: "테스트 앱 1",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "홍길동",
@@ -177,7 +179,8 @@ const dataTableItem = ref([
   {
     id: 2,
     appCode: "APP002",
-    appName: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    appTit: "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "김철수",
@@ -188,7 +191,8 @@ const dataTableItem = ref([
   {
     id: 3,
     appCode: "APP003",
-    appName: "앱3",
+    appTit: "앱3",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "이민수",
@@ -199,7 +203,8 @@ const dataTableItem = ref([
   {
     id: 4,
     appCode: "APP004",
-    appName: "앱4",
+    appTit: "앱4",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "박지은",
@@ -210,7 +215,8 @@ const dataTableItem = ref([
   {
     id: 5,
     appCode: "APP005",
-    appName: "앱5",
+    appTit: "앱5",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "최영희",
@@ -221,7 +227,8 @@ const dataTableItem = ref([
   {
     id: 6,
     appCode: "APP006",
-    appName: "앱6",
+    appTit: "앱6",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "정호준",
@@ -232,7 +239,8 @@ const dataTableItem = ref([
   {
     id: 7,
     appCode: "APP007",
-    appName: "앱7",
+    appTit: "앱7",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "홍길동",
@@ -243,7 +251,8 @@ const dataTableItem = ref([
   {
     id: 8,
     appCode: "APP008",
-    appName: "앱8",
+    appTit: "앱8",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "김철수",
@@ -254,7 +263,8 @@ const dataTableItem = ref([
   {
     id: 9,
     appCode: "APP009",
-    appName: "앱9",
+    appTit: "앱9",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "이민수",
@@ -265,7 +275,8 @@ const dataTableItem = ref([
   {
     id: 10,
     appCode: "APP010",
-    appName: "앱10",
+    appTit: "앱10",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "박지은",
@@ -276,7 +287,8 @@ const dataTableItem = ref([
   {
     id: 11,
     appCode: "APP011",
-    appName: "앱11",
+    appTit: "앱11",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "최영희",
@@ -287,7 +299,8 @@ const dataTableItem = ref([
   {
     id: 12,
     appCode: "APP012",
-    appName: "앱12",
+    appTit: "앱12",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "정호준",
@@ -298,7 +311,8 @@ const dataTableItem = ref([
   {
     id: 13,
     appCode: "APP013",
-    appName: "앱13",
+    appTit: "앱13",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "홍길동",
@@ -309,7 +323,8 @@ const dataTableItem = ref([
   {
     id: 14,
     appCode: "APP014",
-    appName: "앱14",
+    appTit: "앱14",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "김철수",
@@ -320,7 +335,8 @@ const dataTableItem = ref([
   {
     id: 15,
     appCode: "APP015",
-    appName: "앱15",
+    appTit: "앱15",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "이민수",
@@ -331,7 +347,8 @@ const dataTableItem = ref([
   {
     id: 16,
     appCode: "APP016",
-    appName: "앱16",
+    appTit: "앱16",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "박지은",
@@ -342,7 +359,8 @@ const dataTableItem = ref([
   {
     id: 17,
     appCode: "APP017",
-    appName: "앱17",
+    appTit: "앱17",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "최영희",
@@ -353,7 +371,8 @@ const dataTableItem = ref([
   {
     id: 18,
     appCode: "APP018",
-    appName: "앱18",
+    appTit: "앱18",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "정호준",
@@ -364,7 +383,8 @@ const dataTableItem = ref([
   {
     id: 19,
     appCode: "APP019",
-    appName: "앱19",
+    appTit: "앱19",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "홍길동",
@@ -375,7 +395,8 @@ const dataTableItem = ref([
   {
     id: 20,
     appCode: "APP020",
-    appName: "앱20",
+    appTit: "앱20",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "김철수",
@@ -386,7 +407,8 @@ const dataTableItem = ref([
   {
     id: 21,
     appCode: "APP021",
-    appName: "앱21",
+    appTit: "앱21",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "이민수",
@@ -397,7 +419,8 @@ const dataTableItem = ref([
   {
     id: 22,
     appCode: "APP022",
-    appName: "앱22",
+    appTit: "앱22",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "박지은",
@@ -408,7 +431,8 @@ const dataTableItem = ref([
   {
     id: 23,
     appCode: "APP023",
-    appName: "앱23",
+    appTit: "앱23",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "최영희",
@@ -419,7 +443,8 @@ const dataTableItem = ref([
   {
     id: 24,
     appCode: "APP024",
-    appName: "앱24",
+    appTit: "앱24",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "정호준",
@@ -430,7 +455,8 @@ const dataTableItem = ref([
   {
     id: 25,
     appCode: "APP025",
-    appName: "앱25",
+    appTit: "앱25",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "홍길동",
@@ -441,7 +467,8 @@ const dataTableItem = ref([
   {
     id: 26,
     appCode: "APP026",
-    appName: "앱26",
+    appTit: "앱26",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "김철수",
@@ -452,7 +479,8 @@ const dataTableItem = ref([
   {
     id: 27,
     appCode: "APP027",
-    appName: "앱27",
+    appTit: "앱27",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "이민수",
@@ -463,7 +491,8 @@ const dataTableItem = ref([
   {
     id: 28,
     appCode: "APP028",
-    appName: "앱28",
+    appTit: "앱28",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "박지은",
@@ -474,7 +503,8 @@ const dataTableItem = ref([
   {
     id: 29,
     appCode: "APP029",
-    appName: "앱29",
+    appTit: "앱29",
+    appName: "육묘대장",
     appType: "고정",
     status: "노출",
     registrant: "최영희",
@@ -485,7 +515,8 @@ const dataTableItem = ref([
   {
     id: 30,
     appCode: "APP030",
-    appName: "앱30",
+    appTit: "앱30",
+    appName: "육묘대장",
     appType: "고정",
     status: "미노출",
     registrant: "정호준",
