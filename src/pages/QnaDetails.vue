@@ -144,15 +144,21 @@
           <th style="width: 10%;">
             답변자
           </th>
-          <td>
+          <td style="width: 40%">
             관리자
+          </td>
+          <th style="width: 10%">
+            답변일
+          </th>
+          <td style="width: 40%">
+            YYYY.MM.DD.hh.mm
           </td>
         </tr>
         <tr>
           <th style="width: 10%;">
             내용
           </th>
-          <td>
+          <td colspan="3">
             <p>
               Q&A 내용입니다. Q&A 내용입니다.<br>
               Q&A 내용입니다. Q&A 내용입니다.<br>
@@ -168,7 +174,7 @@
           <th style="width: 10%;">
             첨부파일
           </th>
-          <td>
+          <td colspan="3">
             <ul
               class="file-list"
             >
