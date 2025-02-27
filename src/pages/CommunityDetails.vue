@@ -4,10 +4,10 @@
     prev-link="Community"
   />
   <div class="page-contents">
-    <!-- 문의내용 -->
+    <!-- 작성내용 -->
     <div class="tit-wrap">
       <strong class="title-2">
-        문의 내용
+        작성내용
       </strong>
     </div>
     <v-table-row>
