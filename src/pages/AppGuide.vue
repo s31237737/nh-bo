@@ -156,7 +156,7 @@ const dataTableheaders = [
   { title: "순서", key: "id", width: '80px'},
   { title: "등록자", key: "registrant", sortable: false, width: '150px' },
   { title: "제목", key: "appTit", sortable: false, },
-  { title: "앱이름", key: "appName", sortable: false, width: '120px',},
+  { title: "앱이름", key: "appName", sortable: false, width: '260px',},
   { title: "사용가이드", key: "guide", sortable: false, width: '100px', align: 'center'},
   { title: "활용튜토리얼", key: "tutorial", sortable: false, width: '120px', align: 'center' },
   { title: "공개여부", key: "appType", sortable: false, width: '100px'},
