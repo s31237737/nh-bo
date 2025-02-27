@@ -107,7 +107,7 @@
 import { ref } from "vue";
 
 // 사용 상태
-const isSwitch = ref(false);
+const isSwitch = ref(true);
 
 const select = ref("앱 사용 질문");
 </script>
