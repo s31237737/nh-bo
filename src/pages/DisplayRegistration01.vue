@@ -131,10 +131,7 @@
               노출 기간 <i class="required" />
             </th>
             <td colspan="4">
-              <DateRange
-                v-model="dateRange"
-                :width="340"
-              />
+              <DateRange v-model="dateRange" />
             </td>
           </tr>
           <tr>
@@ -215,10 +212,7 @@
               노출 기간 <i class="required" />
             </th>
             <td colspan="4">
-              <DateRange
-                v-model="dateRange"
-                :width="340"
-              />
+              <DateRange v-model="dateRange" />
             </td>
           </tr>
           <tr>
