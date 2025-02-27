@@ -38,7 +38,7 @@ defineProps({
   },
    width: {
     type: [Number, String],
-    default: '300',
+    default: '340',
   },
 });
 
