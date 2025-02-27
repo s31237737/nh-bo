@@ -139,7 +139,7 @@ const dataTableheaders = [
   { title: "약관종류", key: "termsType", sortable: false },
   { title: "업데이트 버전", key: "version", sortable: false, width: "150px" },
   { title: "등록자", key: "registrant", sortable: false, width: "150px" },
-  { title: "공개상태", key: "visibility", sortable: false, width: "120px" },
+  { title: "공개 상태", key: "visibility", sortable: false, width: "120px" },
   { title: "시행일", key: "effectiveDate", sortable: false, width: "230px" },
   { title: "등록일", key: "createdDate", sortable: false, width: "150px" },
 ];
