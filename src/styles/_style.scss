@@ -398,6 +398,16 @@ body {
     .v-btn {
       margin-left: auto;
     }
+    &:has(.v-btn) {
+      strong {
+        align-self: end;
+      }
+    }
+    &:has(.btns) {
+      strong {
+        align-self: end;
+      }
+    }
   }
 
   .prepend-text {
