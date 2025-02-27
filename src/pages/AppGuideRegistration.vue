@@ -153,4 +153,7 @@ const files = ref([]);
 const removeFile = (index) => {
   files.value.splice(index, 1);
 };
+
+const youtubeLink = ref('');
+const thumbnailLink = ref('');
 </script>
