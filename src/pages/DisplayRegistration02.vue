@@ -135,7 +135,7 @@
           </tr>
           <tr>
             <th style="width: 10%">
-              노출 기간
+              노출 기간 <i class="required" />
             </th>
             <td
               style="width: 80%"
