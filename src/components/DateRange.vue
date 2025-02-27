@@ -1,4 +1,8 @@
 <template>
+  <!--
+    개발 : 날짜 포멧 변경해야함
+    2025. 02. 27. - 2025. 02. 27.  -> 2025.02.27 ~ 2025.02.27
+  -->
   <div class="date-wrap">
     <v-date-input
       v-if="label"
