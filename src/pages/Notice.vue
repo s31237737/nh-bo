@@ -174,7 +174,7 @@ const dataTableItem = ref([
     file: "파일명2",
     fixedStatus: "미설정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.01.10",
     updatedDate: "2025.02.05",
     lastModifiedDate: "2025.02.10"
@@ -210,7 +210,7 @@ const dataTableItem = ref([
     file: "파일명5",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.02.12",
     updatedDate: "2025.02.14",
     lastModifiedDate: "2025.02.16"
@@ -234,7 +234,7 @@ const dataTableItem = ref([
     file: "파일명7",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.02.01",
     updatedDate: "2025.02.06",
     lastModifiedDate: "2025.02.09"
@@ -258,7 +258,7 @@ const dataTableItem = ref([
     file: "파일명9",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.01.25",
     updatedDate: "2025.02.07",
     lastModifiedDate: "2025.02.12"
@@ -282,7 +282,7 @@ const dataTableItem = ref([
     file: "파일명11",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.02.02",
     updatedDate: "2025.02.04",
     lastModifiedDate: "2025.02.08"
@@ -306,7 +306,7 @@ const dataTableItem = ref([
     file: "파일명13",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.01.22",
     updatedDate: "2025.02.08",
     lastModifiedDate: "2025.02.13"
@@ -330,7 +330,7 @@ const dataTableItem = ref([
     file: "파일명15",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.02.07",
     updatedDate: "2025.02.09",
     lastModifiedDate: "2025.02.14"
@@ -354,7 +354,7 @@ const dataTableItem = ref([
     file: "파일명17",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.01.28",
     updatedDate: "2025.02.02",
     lastModifiedDate: "2025.02.06"
@@ -378,7 +378,7 @@ const dataTableItem = ref([
     file: "파일명19",
     fixedStatus: "고정",
     visibility: "비공개",
-    mainExposure: "비노출",
+    mainExposure: "미노출",
     createdDate: "2025.01.17",
     updatedDate: "2025.02.04",
     lastModifiedDate: "2025.02.07"
