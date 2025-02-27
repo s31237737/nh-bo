@@ -43,10 +43,7 @@
             시행일
           </th>
           <td colspan="3">
-            <DateRange
-              v-model="dateRange"
-              :width="340"
-            />
+            <DateRange v-model="dateRange" />
           </td>
         </tr>
         <tr>
