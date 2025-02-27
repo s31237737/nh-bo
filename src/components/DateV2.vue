@@ -1,6 +1,7 @@
 <template>
   <v-menu
     v-model="menu"
+    v-model:return-value="date"
     location="center"
   >
     <template #activator="{ props }">
@@ -11,21 +12,29 @@
         v-bind="props"
       />
     </template>
-    <div class="position-relative">
-      <v-date-picker
-        v-model="date"
-        height="auto"
-        show-adjacent-months
-      />
-      <v-btn
-        class="position-absolute top-0 right-0"
-        color="white"
-        icon="mdi-close"
-        size="small"
-        variant="text"
-        @click="menu = false"
-      />
-    </div>
+    <v-date-picker
+      v-model="date"
+      hide-header
+      scrollable
+      show-adjacent-months
+    >
+      <template #actions>
+        <v-btn
+          text
+          color="primary"
+          @click="menu = false"
+        >
+          Cancel
+        </v-btn>
+        <v-btn
+          text
+          color="primary"
+          @click="$refs.menu.save(date)"
+        >
+          OK
+        </v-btn>
+      </template>
+    </v-date-picker>
   </v-menu>
 </template>
 
