@@ -9,15 +9,6 @@
         width="100"
         src="@/assets/images/logo.png"
       />
-      <!-- 퍼블가이드 확인용 -->
-      <v-btn
-        size="small"
-        class="ml-5"
-        color="white"
-        text="pub:D"
-        to="/Guide"
-      />
-      <!-- // 퍼블가이드 확인용 -->
     </template>
     <template #append>
       <!-- 로그인 연장 팝업 -->
