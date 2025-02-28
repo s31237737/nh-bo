@@ -199,6 +199,17 @@ export default createVuetify({
         ripple: false,
       }
     },
+    VDatePicker: {
+      showAdjacentMonths: true,
+      modeIcon: "custom:arrow-down",
+      nextIcon: "custom:arrow-right",
+      prevIcon: "custom:arrow-left",
+      hideHeader: true,
+      hideDetails: true,
+      VBtn: {
+        ripple: false,
+      },
+    },
     VCheckbox: {
       baseColor: "#c2c2c2",
       hideDetails: true,
