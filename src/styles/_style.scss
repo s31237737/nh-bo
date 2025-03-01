@@ -49,8 +49,6 @@ body {
     display: inline-block;
     min-width: 300px;
     flex-shrink: 0;
-    .v-field {padding-right: 90px;}
-    .v-field__clearable {margin: 0;}
     .v-btn {
       position: absolute;
       bottom: 6px;
@@ -64,16 +62,9 @@ body {
 
     &-month {
       padding: 0;
-      &__days {
-        display: flex;
-        flex-wrap: wrap;
-      }
       &__day {
-        width: calc(100% / 7);
-        height: 28px;
-        &:not(.v-date-picker-month__weekday) {
-          justify-content: flex-end;
-        }
+        width: 28px;
+        height: 32px;
       }
     }
     &-years__content {
@@ -137,9 +128,6 @@ body {
             width: 28px;
             height: 28px;
             --v-btn-size: 1rem;
-          }
-          &__day--selected ~ .v-date-picker-month__day--selected {
-            background-color: red;
           }
         }
       }
