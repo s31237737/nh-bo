@@ -29,7 +29,6 @@
       multiple="range"
       :width="width"
       @update:model-value="updateDate"
-      class="date-range"
     >
       <template #actions>
         <v-btn
