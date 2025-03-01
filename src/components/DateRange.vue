@@ -113,6 +113,7 @@ const setToday = () => {
 // 메뉴 닫기 (취소 버튼 클릭 시)
 const cancelDatePicker = () => {
   menu.value = false;
+  setToday();
 };
 </script>
 
