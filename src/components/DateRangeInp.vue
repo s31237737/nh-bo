@@ -26,6 +26,7 @@
     </template>
     <v-date-picker
       :model-value="modelValue"
+      multiple="range"
       :width="width"
       @update:model-value="updateDate"
     >
@@ -39,7 +40,7 @@
         </v-btn>
         <v-btn
           text
-          :disabled="!modelValue"
+          :disabled="!modelValue || modelValue.length === 0"
           @click="menu = false"
         >
           선택완료
@@ -54,8 +55,8 @@ import { ref, defineProps, defineEmits, computed } from 'vue';
 
 const props = defineProps({
   modelValue: {
-    type: Date,
-    default: () => new Date(),
+    type: Array,
+    default: () => [new Date(), new Date()],
   },
   label: {
     type: String,
@@ -63,50 +64,55 @@ const props = defineProps({
   },
   width: {
     type: [Number, String],
-    default: '300',
+    default: '350',
   },
   placeholder: {
     type: String,
-    default: 'YYYY.MM.DD',
+    default: 'YYYY.MM.DD~YYYY.MM.DD', // 잘려서 ~ 여백을 없앴음
   },
 });
 
 const emit = defineEmits(['update:modelValue']);
 
-const menu = ref(false);  // 메뉴 상태
+const menu = ref(false);
 
 // 날짜 포맷 함수
-const formatDate = (date, format) => {
+const formatDate = (date) => {
   if (!date) return null;
-
   const d = new Date(date);
-
   const year = d.getFullYear();
   const month = (d.getMonth() + 1).toString().padStart(2, '0');
   const day = d.getDate().toString().padStart(2, '0');
-
   return `${year}.${month}.${day}`;
 };
 
-// computed로 포맷된 날짜를 계산
+// computed로 포맷된 날짜를 계산 (범위 정렬 후 표시)
 const formattedDate = computed(() => {
-  return formatDate(props.modelValue, 'MM/DD/YYYY') ?? '';
+  if (!props.modelValue || props.modelValue.length === 0) return '';
+
+  const sortedDates = [...props.modelValue].sort((a, b) => new Date(a) - new Date(b)); // 날짜 정렬
+  const startDate = formatDate(sortedDates[0]);
+  const endDate = formatDate(sortedDates[sortedDates.length - 1]);
+
+  return `${startDate} ~ ${endDate}`;
 });
 
-// 날짜 업데이트
+// 날짜 업데이트 (정렬해서 저장)
 const updateDate = (newDate) => {
-  emit('update:modelValue', newDate);
+  const sortedDates = [...newDate].sort((a, b) => new Date(a) - new Date(b));
+  emit('update:modelValue', sortedDates);
 };
 
-// 오늘 날짜 설정
+// 오늘 날짜 설정 (오늘 하루 범위)
 const setToday = () => {
   const today = new Date();
-  emit('update:modelValue', today);
+  const todayRange = [today, today]; // 동일한 날짜를 배열로 보관
+  emit('update:modelValue', [...todayRange]); // Vue 반응성을 유지하기 위해 새로운 배열 생성
 };
 
 // 메뉴 닫기 (취소 버튼 클릭 시)
 const cancelDatePicker = () => {
-  menu.value = false;  // 메뉴 닫기
-  emit('update:modelValue', null);
+  menu.value = false;
 };
 </script>
+
