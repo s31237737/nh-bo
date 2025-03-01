@@ -49,6 +49,7 @@ body {
     display: inline-block;
     min-width: 300px;
     flex-shrink: 0;
+    .v-field {padding-right: 90px;}
     .v-btn {
       position: absolute;
       bottom: 6px;
