@@ -7,7 +7,6 @@
 <template>
   <v-menu
     v-model="menu"
-    transition="scale-transition"
     offset-y
     :close-on-content-click="false"
   >
