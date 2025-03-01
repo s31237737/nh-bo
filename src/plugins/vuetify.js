@@ -35,27 +35,8 @@ export default createVuetify({
           warning: "#d32226",
           white: "#fefefe",
           gray: "#c2c2c2",
-          // Background Colors
-          background: "#fefefe", // 기본 배경 색상
-          // surface: "#fafafa", // 서페이스 색상
-          // bg_overlay: "rgba(0, 0, 0, 0.5)", // 오버레이 배경 색상
-
-          // Text Colors
-          text_secondary: "#545454", // 보조 텍스트 색상
-          text_tertiary: "#767676", // 3차 텍스트 색상
-          text_hovered: "#252525", // 호버된 텍스트 색상
-          text_success: "#12852a", // 성공 텍스트 색상
-
-          // Border Colors
-          border_selected: "#252525", // 선택된 항목의 테두리 색상
-          border_subtle: "#e5e5e5", // 미세한 테두리 색상
-
-          // Icon Colors
-          icon_deepgray: "#666666", // 진한 회색 아이콘 색상
-
-          // State Colors
-          state_positive: "#12852a", // 긍정적인 상태 색상 (성공)
-          state_warn: "#1b4dd6", // 경고 상태 색상
+          background: "#fefefe",
+          state_warn: "#1b4dd6",
         },
       },
     },
