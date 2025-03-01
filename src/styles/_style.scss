@@ -64,9 +64,16 @@ body {
 
     &-month {
       padding: 0;
+      &__days {
+        display: flex;
+        flex-wrap: wrap;
+      }
       &__day {
-        width: 28px;
-        height: 32px;
+        width: calc(100% / 7);
+        height: 28px;
+        &:not(.v-date-picker-month__weekday) {
+          justify-content: flex-end;
+        }
       }
     }
     &-years__content {
@@ -130,6 +137,9 @@ body {
             width: 28px;
             height: 28px;
             --v-btn-size: 1rem;
+          }
+          &__day--selected ~ .v-date-picker-month__day--selected {
+            background-color: red;
           }
         }
       }

@@ -48,7 +48,7 @@
           :disabled="!modelValue"
           @click="menu = false"
         >
-          선택완료
+          선택 완료
         </v-btn>
       </template>
     </v-date-picker>

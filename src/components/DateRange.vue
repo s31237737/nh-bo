@@ -29,6 +29,7 @@
       multiple="range"
       :width="width"
       @update:model-value="updateDate"
+      class="date-range"
     >
       <template #actions>
         <v-btn
@@ -43,7 +44,7 @@
           :disabled="!modelValue || modelValue.length === 0"
           @click="menu = false"
         >
-          선택완료
+          선택 완료
         </v-btn>
       </template>
     </v-date-picker>
