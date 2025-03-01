@@ -112,7 +112,6 @@ const setToday = () => {
 
 // 메뉴 닫기 (취소 버튼 클릭 시)
 const cancelDatePicker = () => {
-  menu.value = false;  // 메뉴 닫기
-  emit('update:modelValue', null);
+  menu.value = false;
 };
 </script>
