@@ -4,7 +4,7 @@ body {
   .header {
     .v-toolbar {
       &__append {
-        gap: 1rem;
+        gap: 16px;
       }
     }
     .v-badge {
@@ -16,7 +16,7 @@ body {
       }
     }
     .v-btn--icon {
-      --v-btn-height: 2rem;
+      --v-btn-height: 32px;
       border-radius: 50%;
     }
     .login-session {
@@ -26,12 +26,12 @@ body {
       .timer {
         display: flex;
         align-items: center;
-        width: 4.6875rem;
+        width: 75px;
         @extend .text-1;
         color: $bg-default;
       }
       .v-btn {
-        width: 2.75rem;
+        width: 44px;
         padding: 0;
         font-size: 1rem;
         font-weight: 500;
@@ -42,7 +42,7 @@ body {
   .lnb {
     border-color: $border-subtle !important;
     .v-list {
-      padding: 1.25rem 1rem;
+      padding: 20px 16px;
       &-item {
         border-radius: 0.5rem !important;
         color: #1c1c1c;
@@ -65,14 +65,14 @@ body {
       }
       &-group {
         > .v-list-item {
-          min-height: 3rem !important;
+          min-height: 48px !important;
         }
         &__items {
           .v-list-item:first-child {
-            margin-top: 0.25rem;
+            margin-top: 4px;
           }
           .v-list-item:last-child {
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
           }
         }
         &--open {
@@ -84,7 +84,7 @@ body {
         }
       }
       .sub-menu {
-        min-height: 2.5rem !important;
+        min-height: 40px !important;
       }
       .is-active {
         background: rgba(87, 101, 229, 0.1);
@@ -112,7 +112,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+        padding: 12px 12px 12px 24px;
         @extend .title-2;
         border-bottom: 1px solid $border-subtle;
         .v-btn {
@@ -133,7 +133,7 @@ body {
       }
       .v-card-actions {
         justify-content: center !important;
-        padding: 1rem 1.5rem 1.5rem;
+        padding: 16px 24px 24px;
         &:not(:has(.v-spacer)) .v-btn {
           width: 180px;
         }
@@ -181,7 +181,7 @@ body {
     }
     &.popup-sm {
       .v-card {
-        width: 19.5rem;
+        width: 312px;
       }
       .v-card-text {
         min-height: 80px;
@@ -195,7 +195,7 @@ body {
         }
       }
       .v-card-actions {
-        padding: 1rem;
+        padding: 16px;
         .v-btn {
           flex: 1;
         }
@@ -203,12 +203,12 @@ body {
     }
     &.popup-md {
       .v-card {
-        width: 40rem;
+        width: 640px;
       }
     }
     &.popup-lg {
       .v-card {
-        width: 75rem;
+        width: 1200px;
       }
     }
 
@@ -269,7 +269,7 @@ body {
     .v-empty-state {
       height: 559px;
       &__media {
-        margin-bottom: 2.25rem;
+        margin-bottom: 36px;
       }
       &__text {
         @extend .title-2;
@@ -277,7 +277,7 @@ body {
       }
     }
     &.tbl-row {
-      --v-table-row-height: 4.25rem;
+      --v-table-row-height: 68px;
       border-top: thin solid $border-subtle;
       th {
         text-align: center !important;

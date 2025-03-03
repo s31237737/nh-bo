@@ -5,10 +5,10 @@ body {
     border-radius: 8px;
 
     &__prepend {
-      margin-inline: -0.25rem 0.25rem !important;
+      margin-inline: -4px 4px !important;
     }
     &__append {
-      margin-inline: 0.25rem -0.25rem !important;
+      margin-inline: 4px -4px !important;
     }
     &--disabled {
       opacity: 0.4 !important;
