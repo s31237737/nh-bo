@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-wrap ga-2">
+  <div class="d-flex flex-wrap ga-2 bg-info">
     <div class="icon-item">
       <v-icon icon="custom:alarm" />
       <span>alarm</span>
