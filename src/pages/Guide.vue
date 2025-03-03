@@ -849,3 +849,4 @@ const uploaderList = ref([
   margin-top: 5px;
   font-size: 12px;
 }
+</style>
