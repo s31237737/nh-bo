@@ -25,7 +25,7 @@
       :close-on-content-click="false"
     >
       <v-card
-        class="alram"
+        class="alarm"
         scrollable
       >
         <v-toolbar>
@@ -52,7 +52,7 @@
         </v-toolbar>
         <v-divider />
         <template v-if="isSetting">
-          <v-card-text class="alram-setting">
+          <v-card-text class="alarm-setting">
             <p>알림 송신 채널 설정</p>
             <v-switch
               v-model="emailSwitch"

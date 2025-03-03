@@ -365,7 +365,7 @@
 <script setup>
 import { ref } from 'vue';
 const appIconList = ref(["https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg"]);
-const mainImgList = ref([  "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg"]);
+const mainImgList = ref(["https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg"]);
 const uploaderList = ref([
   "https://cdn.pixabay.com/photo/2025/01/08/14/52/beach-9319305_1280.jpg",
   "https://cdn.pixabay.com/photo/2024/08/26/23/38/maranhao-sheets-9000410_1280.jpg",
