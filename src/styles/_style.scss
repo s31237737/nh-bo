@@ -248,9 +248,6 @@ body {
   .v-field__outline {
     color: #ababab;
   }
-  .v-field--focused .v-field__outline {
-    --v-field-border-width: 1px !important;
-  }
 
   .search-inp {
     position: relative;

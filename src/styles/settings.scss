@@ -23,7 +23,7 @@
   $badge-font-weight: 600,
   $badge-theme: (
     #d32226,
-    #fff
+    #fff,
   ),
   $overlay-opacity: 0.5,
   $table-header-font-weight: 600,
@@ -38,25 +38,22 @@
   $switch-track-opacity: 1,
   $switch-track-background: rgb(194, 194, 194),
   $input-control-height: 44px,
-  $text-field-affix-color: (
-    rgb(0, 0, 0),
-    1
-  ),
+  $text-field-affix-color: (rgb(0, 0, 0),1),
   $select-content-elevation: 0,
   $list-density: (
     "default": 0,
     "comfortable": -1,
-    "compact": -3
+    "compact": -3,
   ),
   $input-density: (
     "default": -2,
     "comfortable": -3,
-    "compact": -5
+    "compact": -5,
   ),
   $button-icon-density: (
     "default": 3,
     "comfortable": 0,
-    "compact": -2
+    "compact": -2,
   ),
   $snackbar-elevation: 0,
   $snackbar-wrapper-margin: 24px,
@@ -69,5 +66,6 @@
   $expansion-panel-active-title-min-height: 56px,
   $expansion-panel-title-font-size: 1rem,
   $expansion-panel-title-padding: 16px 56px,
-  $expansion-panel-text-padding: 8px 56px 16px
+  $expansion-panel-text-padding: 8px 56px 16px,
+  $field-focused-border-width: 1px,
 );
