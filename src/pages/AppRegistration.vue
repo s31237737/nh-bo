@@ -34,7 +34,7 @@
               @update:images="updateAppIconList"
             />
             <div class="upload-guide">
-              <p>권장크기 : 100px X 100px</p>
+              <p>권장크기 : 200px X 200px</p>
               <p>용량 : 10MB 이하, 파일형식 JPG, PNG</p>
             </div>
           </td>

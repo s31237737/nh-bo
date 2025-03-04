@@ -93,7 +93,7 @@
                 readonly
               />
               <div class="upload-guide">
-                <p>100px X 100px</p>
+                <p>200px X 200px</p>
               </div>
             </td>
           </tr>
