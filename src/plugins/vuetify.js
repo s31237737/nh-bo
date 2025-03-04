@@ -78,7 +78,6 @@ export default createVuetify({
     },
     VBtn: {
       variant: "flat",
-      textTransform: "none",
     },
     VListItem: {
       ripple: false,
