@@ -78,7 +78,12 @@ const menuItems = ref([
     title: "모니터링",
     icon: "custom:monitoring",
     submenu: [
-      { title: "앱 사용현황", to: "" },
+      { title: "활성 사용자 수", to: "" },
+      { title: "신규 사용자 유입률", to: "" },
+      { title: "사용 빈도", to: "" },
+      { title: "재방문율", to: "" },
+      { title: "이탈률", to: "" },
+      { title: "평균 세션 길이", to: "" },
       { title: "라이선스 현황", to: "" }
     ],
     submenuProps: { value: "monitoring" },

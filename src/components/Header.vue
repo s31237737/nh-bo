@@ -88,10 +88,10 @@
         size="40"
       >
         <v-avatar>
-          <img
+          <v-img
             width="40"
             src="@/assets/images/profile.png"
-          >
+          />
         </v-avatar>
         <v-menu
           activator="parent"
