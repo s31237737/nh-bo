@@ -81,7 +81,7 @@ export default createVuetify({
     },
     VListItem: {
       ripple: false,
-      rounded: "8",
+      rounded: "lg",
     },
     VAppBar: {
       VMenu: {
