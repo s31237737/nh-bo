@@ -408,8 +408,8 @@ body {
 
             &-subtitle {
               margin-top: 6px;
-              @extend .text-3; // 텍스트 스타일 확장
-              color: $text-gray; // 날짜 텍스트 색상 변수
+              @extend .text-3;
+              color: $text-gray;
             }
           }
         }
