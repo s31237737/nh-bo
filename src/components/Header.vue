@@ -107,7 +107,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 // 남은 시간을 초 단위로 관리
 const remainingTime = ref(5 * 60);
@@ -119,11 +119,15 @@ const timeLeftFormatted = computed(() => {
 });
 
 onMounted(() => {
-  setInterval(() => {
+  const intervalId = setInterval(() => {
     if (remainingTime.value > 0) {
       remainingTime.value -= 1;
     }
-  }, 1000); // 1초마다 갱신
+  }, 1000);
+
+  onUnmounted(() => {
+    clearInterval(intervalId);
+  });
 });
 
 // 시간 연장
