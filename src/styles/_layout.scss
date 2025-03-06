@@ -411,6 +411,11 @@ body {
               @extend .text-3;
               color: $text-gray;
             }
+            &:hover {
+              .v-list-item-title {
+                font-weight: 400 !important;
+              }
+            }
           }
         }
       }
