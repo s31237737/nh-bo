@@ -613,3 +613,15 @@ body {
     }
   }
 }
+
+.editor {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .ql-toolbar.ql-snow {
+    height: 44px;
+  }
+  .ql-container.ql-snow {
+    height: calc(100% - 44px);
+  }
+}

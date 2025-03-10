@@ -105,12 +105,12 @@
           </th>
           <td>
             <v-sheet
-              class="d-flex align-center justify-center"
-              color="secondary"
-              width="100%"
-              height="250"
+              class="editor"
+              height="300"
             >
-              에디터 영역
+              <QuillEditor
+                toolbar="full"
+              />
             </v-sheet>
           </td>
         </tr>

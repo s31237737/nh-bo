@@ -90,12 +90,12 @@
                 </v-text-field>
 
                 <v-sheet
-                  class="d-flex align-center justify-center"
-                  color="secondary"
-                  width="100%"
-                  height="200"
+                  class="editor"
+                  height="300"
                 >
-                  에디터 영역
+                  <QuillEditor
+                    toolbar="full"
+                  />
                 </v-sheet>
                 <v-divider v-if="index < sections.length - 1" />
               </div>
