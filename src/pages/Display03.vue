@@ -106,7 +106,7 @@ const tableData = ref([
   },
   {
     label: "영역 타입",
-    value: "이미지 배너(930px X 258px)",
+    value: "이미지 배너(1240px X 140px)",
   },
   {
     label: "사용 상태",
