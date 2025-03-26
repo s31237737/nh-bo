@@ -225,9 +225,9 @@
 import { ref } from 'vue';
 
 const files = ref([
-  { name: "C:/Download/Filename.png", size: "10.3MB", url: "#" },
-  { name: "C:/Download/Filename123.png", size: "10.3MB", url: "#" },
-  { name: "C:/Download/Filename456.png", size: "10.3MB", url: "#" },
+  { name: "C:/Download/Filename.png", size: "10.3MB" },
+  { name: "C:/Download/Filename123.png", size: "10.3MB" },
+  { name: "C:/Download/Filename456.png", size: "10.3MB"},
 ]);
 
 const downloadFile = (files) => {

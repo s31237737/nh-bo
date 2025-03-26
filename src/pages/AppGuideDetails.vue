@@ -124,7 +124,7 @@
 <script setup>
 import { ref } from 'vue';
 const files = ref([
-  { name: "C:/Download/Filename.png", size: "10.3MB", url: "#" },
+  { name: "C:/Download/Filename.png", size: "10.3MB"},
 ]);
 
 const downloadFile = (files) => {
