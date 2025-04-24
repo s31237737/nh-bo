@@ -40,7 +40,7 @@
             010-0000-0000
           </td>
           <th style="width: 10%">
-            이메일
+            개인우편
           </th>
           <td style="width: 23%">
             Nonghyup@gmail.com

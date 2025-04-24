@@ -36,7 +36,7 @@
             </v-radio-group>
           </td>
           <th style="width: 10%">
-            이메일
+            개인우편
           </th>
           <td style="width: 24%">
             Nonghyup@gmail.com

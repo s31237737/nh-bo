@@ -48,7 +48,7 @@
             010-0000-0000
           </td>
           <th>
-            이메일
+            개인우편
           </th>
           <td>
             Nonghyup@gmail.com
